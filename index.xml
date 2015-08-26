@@ -797,7 +797,7 @@ var hello = R(&#39;ctrl&#39;, &#39;hello.js&#39;, true);
 &lt;li&gt;&lt;strong&gt;Licence 3 économie et gestion parcours MIAGE&lt;/strong&gt;&lt;br /&gt;
 &lt;small&gt;2011-2012 | Université Paris Est-Créteil&lt;/small&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Diplôme universitaire de technologie informatique&lt;/strong&gt;&lt;br /&gt;
-&lt;small&gt;2009-2011 | Université Paris Descartes&lt;/small&gt;&lt;/li&gt;
+&lt;small&gt;2009-2011 | Université Paris Descartes&lt;/small&gt;&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Baccalauréat des sciences et technologies de la gestion&lt;/strong&gt;&lt;br /&gt;
 &lt;small&gt;2007-2009&lt;/small&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Brevet d&amp;rsquo;étude professionnelle des métiers de la comptabilité&lt;/strong&gt;&lt;br /&gt;
@@ -808,14 +808,117 @@ var hello = R(&#39;ctrl&#39;, &#39;hello.js&#39;, true);
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Ingénieur de recherche et développement en informatique&lt;/strong&gt;&lt;br /&gt;
-&lt;small&gt;2015 à aujourd&amp;rsquo;hui | &lt;a href=&#34;http://leuville.com&#34;&gt;Leuville Objects&lt;/a&gt; (Versailles)&lt;/small&gt;&lt;/li&gt;
+&lt;small&gt;2015 à aujourd&amp;rsquo;hui | &lt;a href=&#34;http://leuville.com&#34;&gt;Leuville Objects&lt;/a&gt; (Versailles)&lt;/small&gt;&lt;br /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Android &amp;middot; Bash &amp;middot; C &amp;middot; Cloudlet &amp;middot; Docker&lt;/li&gt;
+&lt;li&gt;Go &amp;middot; Git &amp;middot; Java 8 &amp;middot; Javascript &amp;middot; Linux&lt;/li&gt;
+&lt;li&gt;LXC &amp;middot; Mesos &amp;middot; Node &amp;middot; OpenContainer &amp;middot; rkt&lt;/li&gt;
+&lt;li&gt;runc &amp;middot; Rom cooking &amp;middot; Shell &amp;middot; Vagrant &amp;middot; Virtualisation&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Enseignant/Formateur&lt;/strong&gt;&lt;br /&gt;
+&lt;small&gt;2014-2015&lt;/small&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.epf.fr/fr&#34;&gt;EPF - École d&amp;rsquo;ingénieur-e-s&lt;/a&gt; : Android&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.insset.u-picardie.fr/&#34;&gt;INSSET - Institut Supérieur des Sciences et Techniques&lt;/a&gt; : Android&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.orsys.fr&#34;&gt;Orsys&lt;/a&gt; : Android, Git, Java 8&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Responsable d&amp;rsquo;outils de reporting&lt;/strong&gt;&lt;br /&gt;
-&lt;small&gt;2011-2014 | Direction des opérations d&amp;rsquo;&lt;a href=&#34;http://essilor.com&#34;&gt;Essilor&lt;/a&gt; France (Vincennes)&lt;/small&gt;&lt;/li&gt;
+&lt;small&gt;2011-2014 | Direction des opérations d&amp;rsquo;&lt;a href=&#34;http://essilor.com&#34;&gt;Essilor&lt;/a&gt; France (Vincennes)&lt;/small&gt;&lt;br /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Microsoft SQL Server&lt;/li&gt;
+&lt;li&gt;Microsoft SQL Server Reporting Services&lt;/li&gt;
+&lt;li&gt;SQL (Transact-SQL)&lt;/li&gt;
+&lt;li&gt;Reporting&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Assistant pédagogique&lt;/strong&gt;&lt;br /&gt;
-&lt;small&gt;2009-2011 | Lycée Jean Macé (Vitry-sur-Seine)&lt;/small&gt;&lt;/li&gt;
+&lt;small&gt;2009-2011 | Lycée Jean Macé (Vitry-sur-Seine)&lt;/small&gt;&lt;br /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Droit et économie&lt;/li&gt;
+&lt;li&gt;Gestion des systèmes d&amp;rsquo;information&lt;/li&gt;
+&lt;li&gt;Management&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Web développeur junior&lt;/strong&gt;&lt;br /&gt;
-&lt;small&gt;2008-2009 | &lt;a href=&#34;http://spill.net&#34;&gt;Spill.net&lt;/a&gt; creative agency (Paris)&lt;/small&gt;&lt;/li&gt;
+&lt;small&gt;2008-2009 | &lt;a href=&#34;http://spill.net&#34;&gt;Spill.net&lt;/a&gt; creative agency (Paris)&lt;/small&gt;&lt;br /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;CSS&lt;/li&gt;
+&lt;li&gt;Javascript&lt;/li&gt;
+&lt;li&gt;HTML&lt;/li&gt;
+&lt;li&gt;PHP&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h3 id=&#34;compétences&#34;&gt;Compétences&lt;/h3&gt;
+
+&lt;p&gt;&lt;span class=&#34;label&#34;&gt;activemq&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;agile&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;ajax&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;android&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;angular&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;bootstrap&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;bower&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;cakephp&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;codeigniter&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;composer&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;container&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;continuous deployment&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;css&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;debian&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;docker&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;flux&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;fuelphp&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;git&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;github&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;gohugo&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;google maps api&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;grunt&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;gulp&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;html&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;iojs&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;java&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;javascript&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;jenkins&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;jeykill&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;jquery&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;json&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;junit&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;koa&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;less&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;linux&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;lxc&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;maven&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;memcached&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;meterial design&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;mesos&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;meteor&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;mongodb&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;mysql&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;node&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;nosql&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;npm&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;php&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;poo&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;prestashop&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;qemu&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;rkt&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;react&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;responsive design&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;rest&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;runc&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;rom Cooking&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;sass&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;scrum&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;sprintg&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;travis&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;uml&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;vagrant&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;virtualisation&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;web services&lt;/span&gt;
+&lt;span class=&#34;label&#34;&gt;xml&lt;/span&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;divers&#34;&gt;Divers&lt;/h3&gt;
 
@@ -825,8 +928,6 @@ var hello = R(&#39;ctrl&#39;, &#39;hello.js&#39;, true);
 &lt;li&gt;Brevet des collèges (2005)&lt;/li&gt;
 &lt;li&gt;Centres d&amp;rsquo;intérêts : le sport et la lecture&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;&lt;small&gt;Dernière mise à jour : mercredi 5 novembre 2014&lt;/small&gt;&lt;/p&gt;
 </description>
     </item>
     
