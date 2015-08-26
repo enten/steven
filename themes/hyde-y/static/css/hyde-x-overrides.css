@@ -100,3 +100,8 @@ ul.badges a, ul.badges img {
   display: inline;
   margin: 0;
 }
+
+.post ul li ul {
+  margin-bottom: 0;
+  font-size: 0.8em;
+}
