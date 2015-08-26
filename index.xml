@@ -865,7 +865,6 @@ var hello = R(&#39;ctrl&#39;, &#39;hello.js&#39;, true);
 &lt;span class=&#34;label&#34;&gt;cakephp&lt;/span&gt;
 &lt;span class=&#34;label&#34;&gt;codeigniter&lt;/span&gt;
 &lt;span class=&#34;label&#34;&gt;composer&lt;/span&gt;
-&lt;span class=&#34;label&#34;&gt;container&lt;/span&gt;
 &lt;span class=&#34;label&#34;&gt;continuous deployment&lt;/span&gt;
 &lt;span class=&#34;label&#34;&gt;css&lt;/span&gt;
 &lt;span class=&#34;label&#34;&gt;debian&lt;/span&gt;
