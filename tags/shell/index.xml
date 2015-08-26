@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shell on enten.fr</title>
+    <link>http://enten.github.io/steven/tags/shell/</link>
+    <description>Recent content in Shell on enten.fr</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-FR</language>
+    <managingEditor>steven@enten.fr (Steven Enten)</managingEditor>
+    <webMaster>steven@enten.fr (Steven Enten)</webMaster>
+    <lastBuildDate>Wed, 15 Jul 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://enten.github.io/steven/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>losh</title>
+      <link>http://enten.github.io/steven/losh</link>
+      <pubDate>Wed, 15 Jul 2015 00:00:00 +0000</pubDate>
+      <author>steven@enten.fr (Steven Enten)</author>
+      <guid>http://enten.github.io/steven/losh</guid>
+      <description>
+
+&lt;h2 id=&#34;purpose&#34;&gt;Purpose&lt;/h2&gt;
+
+&lt;p&gt;Used one script to rule the others. The losh script wraps the usage of the others. Technically, losh looks for &lt;code&gt;CMDUSAGE&lt;/code&gt; and &lt;code&gt;CMDDESC&lt;/code&gt; variables into the others scripts. That variables allow losh to print the usage of every scripts.&lt;/p&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Change directory into your awesome project
+$ cd ~/code/awesome-project
+
+# Create directory to store your scripts
+$ mkdir scripts
+
+# Change directory into the new scripts directory
+$ cd scripts
+
+# Install losh
+$ curl https://enten.github.io/losh/install-losh | sh
+Install losh (from http://enten.github.io/losh/losh)
+Install update-losh (from http://enten.github.io/losh/install-losh)
+
+# Test losh
+$ ./losh
+NAME:
+    losh - Lord of the shell scripts (one script to rull them all)
+
+VERSION:
+    0.0.1
+
+USAGE:
+    losh [command] [arg...]
+
+COMMANDS:
+    losh update-losh
+                Update losh
+    losh [?|h|help]
+                Print this help message
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;test&#34;&gt;Test&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Change directory into the scripts directory
+$ cd ~/awesome-project/scripts
+
+$ echo &#39;#!/bin/bash
+CMDUSAGE=&amp;quot;&amp;lt;username&amp;gt;&amp;quot;
+CMDDESC=&amp;quot;Print custom welcome message&amp;quot;
+echo &amp;quot;Hello $1&amp;quot;&#39; &amp;gt; hello
+
+$ chmod +x hello
+
+$ ./losh
+NAME:
+    losh - Lord of the shell scripts (one script to rull them all)
+
+VERSION:
+    0.0.1
+
+USAGE:
+    losh [command] [arg...]
+
+COMMANDS:
+    losh hello &amp;lt;username&amp;gt;
+                Print custom welcome message
+    losh update-losh
+                Update losh
+    losh [?|h|help]
+                Print this help message
+
+$ ./losh hello world
+Hello world
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

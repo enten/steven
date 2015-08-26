@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Installer Apache Mesos 0.20.1 sur Ubuntu 14.04.1.LTS  &middot; enten.fr</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="description" content="" />
+
+<meta name="keywords" content="cluster manager, apache, mesos, ">
+
+
+<meta property="og:title" content="Installer Apache Mesos 0.20.1 sur Ubuntu 14.04.1.LTS  &middot; enten.fr ">
+<meta property="og:site_name" content="enten.fr"/>
+<meta property="og:url" content="http://enten.github.io/steven/2014/11/17/installer-apache-mesos-0.20.1-sur-ubuntu-14.04.1.lts/" />
+<meta property="og:locale" content="fr-FR">
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content=""/>
+<meta property="og:article:published_time" content="2014-11-17T00:00:00Z" />
+<meta property="og:article:modified_time" content="2014-11-17T00:00:00Z" />
+
+<meta property="og:article:tag" content="cluster manager">
+<meta property="og:article:tag" content="apache">
+<meta property="og:article:tag" content="mesos">
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "Installer Apache Mesos 0.20.1 sur Ubuntu 14.04.1.LTS",
+    "author": {
+      "@type": "Person",
+      "name": "http://profiles.google.com/+?rel=author"
+    },
+    "datePublished": "2014-11-17",
+    "description": "",
+    "wordCount":  815 
+  }
+</script>
+
+
+
+<link rel="canonical" href="http://enten.github.io/steven/2014/11/17/installer-apache-mesos-0.20.1-sur-ubuntu-14.04.1.lts/" />
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://enten.github.io/steven/touch-icon-144-precomposed.png">
+<link href="http://enten.github.io/steven/favicon.png" rel="icon">
+
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="stylesheet" href="http://enten.github.io/steven/css/poole.css">
+<link rel="stylesheet" href="http://enten.github.io/steven/css/hyde.css">
+<link rel="stylesheet" href="http://enten.github.io/steven/css/hyde-x.css">
+<link rel="stylesheet" href="http://enten.github.io/steven/css/poole-overrides.css">
+<link rel="stylesheet" href="http://enten.github.io/steven/css/hyde-overrides.css">
+<link rel="stylesheet" href="http://enten.github.io/steven/css/hyde-x-overrides.css">
+
+<link rel="stylesheet" href="http://enten.github.io/steven/css/highlight/sunburst.css">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:400,300">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+</head>
+<body class="theme-base-00">
+<header id="header" class="sidebar">
+  <div class="container sidebar-sticky">
+
+    <div class="sidebar-title">
+      <h1><a href="http://enten.github.io/steven/">enten.fr</a></h1>
+      <p class="lead">code by Steven Enten</p>
+    </div>
+
+    
+
+    <nav id="nav">
+      <ul id="main-nav" class="sidebar-nav">
+        <li class="sidebar-nav-item"><a href="http://enten.github.io/steven/">Home</a></li>
+        
+        <li class="sidebar-nav-item">
+          <a href="http://enten.github.io/steven/about">
+            About
+          </a>
+        </li>
+        
+        <li class="sidebar-nav-item">
+          <a href="http://enten.github.io/steven/code">
+            Code
+          </a>
+        </li>
+        
+        <li class="sidebar-nav-item">
+          <a href="http://enten.github.io/steven/post" title="Show list of posts">
+            Posts
+          </a>
+        </li>
+        
+        <li class="sidebar-nav-item">
+          <a href="http://enten.github.io/steven/tags" title="Show list of tags">
+            Tags
+          </a>
+        </li>
+        
+      </ul>
+      <ul id="social-nav" class="sidebar-nav">
+        <li class="sidebar-nav-item">
+        <a href="https://github.com/enten"><i class="fa fa-github-square fa-2x"></i></a>
+        
+        
+        
+        
+        
+        
+        <a href="" type="application/rss+xml"><i class="fa fa-rss-square fa-2x"></i></a>
+        </li>
+      </ul>
+    </nav>
+
+    
+
+    
+    <div class="sidebar-copyright">
+      &copy; 2015
+      <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Steven Enten</span>
+      </span>
+    </div>
+    
+
+  </div>
+</header>
+
+
+<section class="content container">
+  <div class="post">
+    <h1>Installer Apache Mesos 0.20.1 sur Ubuntu 14.04.1.LTS</h1>
+    <div class="post-metas">
+  <div class="post-date">
+    17 Nov, 2014
+    &middot; Read in about 4 Min (900 Words)
+    &middot; <a href="http://enten.github.io/steven/2014/11/17/installer-apache-mesos-0.20.1-sur-ubuntu-14.04.1.lts/#disqus_thread">Comments</a>
+  </div>
+  
+  <div class="post-tags"><a class="label" href="http://enten.github.io/steven/tags/cluster-manager">cluster manager</a> <a class="label" href="http://enten.github.io/steven/tags/apache">apache</a> <a class="label" href="http://enten.github.io/steven/tags/mesos">mesos</a> </div>
+  
+</div>
+
+    <article>
+      
+
+<h2 id="a-propos-d-apache-mesos">A propos d&rsquo;Apache Mesos</h2>
+
+<p><a href="http://mesos.apache.org/">Mesos</a> est un projet de la fondation Apache présenté comme un noyau de systèmes distribués. Il permet d&rsquo;exploiter les ressources de plusieurs machines comme un seul système. Il assure l&rsquo;isolation et la haute disponibilité d&rsquo;exécutions de programmes. Mesos fournit deux composants logiciels :</p>
+
+<ul>
+<li><strong>mesos-slave</strong> : composant installé sur un noeud slave pour mettre à disposition ses ressources à un noeud master ;</li>
+<li><strong>mesos-master</strong> : composant installé sur un noeud master pour gérer un système distribué (gérer les ressources des noeuds slaves et des exécutions de programmes initiées par l&rsquo;utilisateur).</li>
+</ul>
+
+<p><em>En environnement de production, il est recommandé de configurer plusieurs noeuds mesos-master et d&rsquo;utiliser <a href="http://zookeeper.apache.org">Apache Zookeeper</a> pour l&rsquo;élection du noeud master actif. Ainsi, quand le noeud master actif rencontre un problème, Zookeeper se charge d&rsquo;élire un nouveau noeud master.</em></p>
+
+<h2 id="exemple-d-utilisation-d-apache-mesos">Exemple d&rsquo;utilisation d&rsquo;Apache Mesos</h2>
+
+<h3 id="plateforme-cible">Plateforme cible</h3>
+
+<p>L&rsquo;objectif de nos manipulations est de configurer un système distribué avec Mesos. Nous allons configurer Mesos sur deux noeuds Ubuntu 14.04.1 LTS :</p>
+
+<ul>
+<li>Noeud master (192.168.1.101) avec Zookeeper et mesos-master pour gérer le système distribué ;</li>
+<li>Noeud slave (192.168.1.102) avec mesos-slave pour mettre à disposition les ressources du noeud au système distribué (il se connecte à mesos-master en utilisant Zookeeper).</li>
+</ul>
+
+<p><em>En environnement de production, il est recommandé d&rsquo;installer Zookeeper sur un noeud différent du noeud mesos-master car s&rsquo;il rencontre un problème, Zookeeper ne sera plus disponible pour élire un nouveau noeud mesos-master et rediriger les noeuds mesos-slave.</em></p>
+
+<h3 id="diagramme-de-déploiement">Diagramme de déploiement</h3>
+
+<pre><code>          192.168.1.101
++---------------------------------+
+|                   +-----------+ |
+|                   | zookeeper | |
+|                   +--[2181]---+ |        192.168.1.102
+|                       ^  ^      |   +---------------------+
+| +--------------+      |  |      |   |   +-------------+   |
+| | mesos-master |------+  +------|---|---| mesos-slave |   |
+| +----[5050]----+                |   |   +-------------+   |
+|        ^                        |   +----------|----------+
+|        |                        |              |
+|        +------------------------|--------------+
++---------------------------------+
+</code></pre>
+
+<h2 id="installer-apache-mesos-sur-plusieurs-noeuds-ubuntu">Installer Apache Mesos sur plusieurs noeuds Ubuntu</h2>
+
+<h3 id="prérequis">Prérequis</h3>
+
+<ul>
+<li><a href="http://releases.ubuntu.com/14.04.1">Ubuntu 14.04.1 LTS</a> 64-bit est installé sur les noeuds master et slave</li>
+<li>Le paquet <a href="http://packages.ubuntu.com/fr/trusty/openjdk-7-jdk">openjdk-7-jdk</a> est installé sur les noeuds</li>
+<li>La dépôt mesosphere est configurée sur les noeuds master et slave :</li>
+</ul>
+
+<pre><code class="language-bash">$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv E56151BF
+$ echo &quot;deb http://repos.mesosphere.io/ubuntu trusty main&quot; | sudo tee /etc/apt/sources.list.d/mesosphere.list
+$ sudo apt-get update -y
+</code></pre>
+
+<h3 id="configuration-du-noeud-master">Configuration du noeud master</h3>
+
+<p>Installation du paquet <strong>mesos</strong> et du paquet <strong>zookeeper</strong> (par dépendance) :</p>
+
+<pre><code class="language-bash">$ sudo apt-get install mesos -y
+</code></pre>
+
+<p>Configuration de l&rsquo;interface réseau utilisée par mesos-master :</p>
+
+<pre><code class="language-bash">$ echo 192.168.1.101 | sudo tee /etc/mesos-master/ip
+</code></pre>
+
+<p>Configuration du nom du système distribué :</p>
+
+<pre><code class="language-bash">$ echo MyCluster | sudo tee /etc/mesos-master/cluster
+</code></pre>
+
+<p>Configuration de l&rsquo;URL Zookeeper pour identifier le noeud mesos-master  :</p>
+
+<pre><code class="language-bash">$ echo zk://192.168.1.101:2181/mesos | sudo tee /etc/mesos/zk
+</code></pre>
+
+<p>Configuration de l&rsquo;instance Zookeeper :</p>
+
+<pre><code class="language-bash">$ echo 1 | sudo tee /etc/zookeeper/conf/myid
+</code></pre>
+
+<p>Redémarrage des services Zookeeper et mesos-master :</p>
+
+<pre><code class="language-bash">$ sudo service zookeeper restart
+$ sudo service mesos-master restart
+</code></pre>
+
+<h3 id="configuration-du-noeud-slave">Configuration du noeud slave</h3>
+
+<p>Installation du paquet <strong>mesos</strong> sans le paquet <strong>zookeeper</strong> :</p>
+
+<pre><code class="language-bash">$ sudo apt-get download mesos
+$ dpkg -i mesos_0.20.1-1.0.ubuntu1404_amd64.deb
+</code></pre>
+
+<p>Configuration de l&rsquo;interface réseau utilisée par mesos-slave :</p>
+
+<pre><code class="language-bash">$ echo 192.168.1.102 | sudo tee /etc/mesos-slave/ip
+$ echo 192.168.1.102 | sudo tee /etc/mesos-slave/hostname
+</code></pre>
+
+<p>Configuration de l&rsquo;URL Zookeeper pour identifier le noeud mesos-master :</p>
+
+<pre><code class="language-bash">$ echo zk://192.168.1.101:2181/mesos | sudo tee /etc/mesos/zk
+</code></pre>
+
+<p>Démarrage du service mesos-slave :</p>
+
+<pre><code class="language-bash">$ sudo service mesos-slave start
+</code></pre>
+
+<h2 id="configuration-additionnelle">Configuration additionnelle</h2>
+
+<p>Pour notre test, il est intéressant de configurer le noeud master pour pouvoir intégrer ses ressources au système distribué en démarrant le service mesos-slave. <strong>Attention!</strong> Cette pratique est déconseillée en environnement de production.</p>
+
+<p>Sur le noeud master :</p>
+
+<pre><code class="language-bash">$ echo 192.168.1.101 | sudo tee /etc/mesos-slave/ip
+$ echo 192.168.1.101 | sudo tee /etc/mesos-slave/hostname
+</code></pre>
+
+<p>La commande <code>sudo service mesos-slave start</code> intégère les ressources du noeud master au système distribué (les ressources du noeud master peuvent alors être utilisées pour réaliser des traitements).</p>
+
+<h2 id="tester-l-installation-d-apache-mesos">Tester l&rsquo;installation d&rsquo;Apache Mesos</h2>
+
+<p>Rendez-vous sur l&rsquo;interface web de mesos-master en consultant l&rsquo;URL <a href="http://192.168.1.101:5050">http://192.168.1.101:5050</a>.
+Le cadre à gauche indique le nombre de noeud slaves actifs (1 si mesos-slave est démarré sur le noeud slave, 2 si mesos-slave est également démarré sur le noeud master ou 0 si mesos-slave est arrêté sur les deux noeuds).</p>
+
+<p>Pour tester rapidement l&rsquo;exécution d&rsquo;un programme, exécutez la commande suivante depuis le terminal d&rsquo;un des noeuds :</p>
+
+<pre><code class="language-bash">$ mesos-execute --master=$(mesos-resolve zk://192.168.1.101:2181/mesos) --name=&quot;hello&quot; --command=&quot;echo hello world&quot; --resources=&quot;cpus:0.1;mem:16&quot;
+</code></pre>
+
+<p>Note : le programme mesos-resolve permet de trouver le noeud mesos-master actif via Zookeeper.</p>
+
+<p>L&rsquo;installation peut être testée avec le framework <a href="https://mesosphere.github.io/marathon">Marathon</a>. Il est disponible sur le dépôt mesosphere ajouté précédemment. Exécutez la commande suivante sur le noeud master pour installer Marathon :</p>
+
+<pre><code class="language-bash">$ sudo apt-get install marathon -y
+</code></pre>
+
+<p>Une fois installée, il suffit de démarrer le service Marathon&hellip;</p>
+
+<pre><code class="language-bash">$ sudo service marathon start
+</code></pre>
+
+<p>&hellip;et de lancer des applications via son interface web en consultant l&rsquo;URL <a href="http://192.168.1.101:8080">http://192.168.1.101:8080</a>.</p>
+
+<p>Marathon négocie avec Mesos l&rsquo;exécution d&rsquo;applications et assure quelles soient toujours actives : lorsqu&rsquo;une application se termine, Marathon se charge de la relancer. Marathon fournit une <a href="https://mesosphere.github.io/marathon/docs/rest-api.html">API Rest</a> pour réaliser des opérations par requêtes http.</p>
+
+<h2 id="références">Références</h2>
+
+<ul>
+<li>Apache Mesos : <a href="http://mesos.apache.org">http://mesos.apache.org</a></li>
+<li>Apache Zookeeper : <a href="http://zookeeper.apache.org">http://zookeeper.apache.org</a></li>
+<li>Marathon : <a href="https://mesosphere.github.io/marathon">https://mesosphere.github.io/marathon</a></li>
+<li>Installing Mesosphere Packages on Ubuntu / Debian : <a href="https://mesosphere.com/docs/tutorials/install_ubuntu_debian">https://mesosphere.com/docs/tutorials/install_ubuntu_debian</a></li>
+</ul>
+
+    </article>
+    
+<aside class="post-nav">
+  <section class="next">
+    <a class="next" href="http://enten.github.io/steven/2014/11/30/virtualiser-android-5-lollipop-avec-qemu/" title="Virtualiser Android 5 Lollipop avec Qemu">Next &rarr;</a>
+  </section>
+  <section class="prev">
+    <a class="previous" href="http://enten.github.io/steven/2014/06/01/communications-dans-les-syst%C3%A8mes-embarqu%C3%A9s-par-lemploi-dagents-mobiles/" title="Communications dans les systèmes embarqués par l’emploi d’agents mobiles">&larr; Previous</a><br>
+  </section>
+<aside>
+
+
+    
+<h2>Comments</h2>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  (function() {
+    
+    
+    if (window.location.hostname == "localhost")
+      return;
+
+    var dsq = document.createElement('script'); dsq.async = true; dsq.type = 'text/javascript';
+    dsq.src = '//enten.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  </div>
+</section>
+
+<script type="text/javascript">
+  (function() {
+    
+    
+    if (window.location.hostname == "localhost")
+      return;
+
+    var dsq = document.createElement('script'); dsq.async = true; dsq.type = 'text/javascript';
+    dsq.src = '//enten.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+
+    <script src="http://enten.github.io/steven/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  </body>
+</html>
+

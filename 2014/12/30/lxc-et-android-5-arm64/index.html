@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>LXC et Android 5 ARM64  &middot; enten.fr</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="description" content="" />
+
+<meta name="keywords" content="container engine, isolation, android, arm64, ">
+
+
+<meta property="og:title" content="LXC et Android 5 ARM64  &middot; enten.fr ">
+<meta property="og:site_name" content="enten.fr"/>
+<meta property="og:url" content="http://enten.github.io/steven/2014/12/30/lxc-et-android-5-arm64/" />
+<meta property="og:locale" content="fr-FR">
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content=""/>
+<meta property="og:article:published_time" content="2014-12-30T00:00:00Z" />
+<meta property="og:article:modified_time" content="2014-12-30T00:00:00Z" />
+
+<meta property="og:article:tag" content="container engine">
+<meta property="og:article:tag" content="isolation">
+<meta property="og:article:tag" content="android">
+<meta property="og:article:tag" content="arm64">
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "LXC et Android 5 ARM64",
+    "author": {
+      "@type": "Person",
+      "name": "http://profiles.google.com/+?rel=author"
+    },
+    "datePublished": "2014-12-30",
+    "description": "",
+    "wordCount":  1695 
+  }
+</script>
+
+
+
+<link rel="canonical" href="http://enten.github.io/steven/2014/12/30/lxc-et-android-5-arm64/" />
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://enten.github.io/steven/touch-icon-144-precomposed.png">
+<link href="http://enten.github.io/steven/favicon.png" rel="icon">
+
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="stylesheet" href="http://enten.github.io/steven/css/poole.css">
+<link rel="stylesheet" href="http://enten.github.io/steven/css/hyde.css">
+<link rel="stylesheet" href="http://enten.github.io/steven/css/hyde-x.css">
+<link rel="stylesheet" href="http://enten.github.io/steven/css/poole-overrides.css">
+<link rel="stylesheet" href="http://enten.github.io/steven/css/hyde-overrides.css">
+<link rel="stylesheet" href="http://enten.github.io/steven/css/hyde-x-overrides.css">
+
+<link rel="stylesheet" href="http://enten.github.io/steven/css/highlight/sunburst.css">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:400,300">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+</head>
+<body class="theme-base-00">
+<header id="header" class="sidebar">
+  <div class="container sidebar-sticky">
+
+    <div class="sidebar-title">
+      <h1><a href="http://enten.github.io/steven/">enten.fr</a></h1>
+      <p class="lead">code by Steven Enten</p>
+    </div>
+
+    
+
+    <nav id="nav">
+      <ul id="main-nav" class="sidebar-nav">
+        <li class="sidebar-nav-item"><a href="http://enten.github.io/steven/">Home</a></li>
+        
+        <li class="sidebar-nav-item">
+          <a href="http://enten.github.io/steven/about">
+            About
+          </a>
+        </li>
+        
+        <li class="sidebar-nav-item">
+          <a href="http://enten.github.io/steven/code">
+            Code
+          </a>
+        </li>
+        
+        <li class="sidebar-nav-item">
+          <a href="http://enten.github.io/steven/post" title="Show list of posts">
+            Posts
+          </a>
+        </li>
+        
+        <li class="sidebar-nav-item">
+          <a href="http://enten.github.io/steven/tags" title="Show list of tags">
+            Tags
+          </a>
+        </li>
+        
+      </ul>
+      <ul id="social-nav" class="sidebar-nav">
+        <li class="sidebar-nav-item">
+        <a href="https://github.com/enten"><i class="fa fa-github-square fa-2x"></i></a>
+        
+        
+        
+        
+        
+        
+        <a href="" type="application/rss+xml"><i class="fa fa-rss-square fa-2x"></i></a>
+        </li>
+      </ul>
+    </nav>
+
+    
+
+    
+    <div class="sidebar-copyright">
+      &copy; 2015
+      <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Steven Enten</span>
+      </span>
+    </div>
+    
+
+  </div>
+</header>
+
+
+<section class="content container">
+  <div class="post">
+    <h1>LXC et Android 5 ARM64</h1>
+    <div class="post-metas">
+  <div class="post-date">
+    30 Dec, 2014
+    &middot; Read in about 8 Min (1700 Words)
+    &middot; <a href="http://enten.github.io/steven/2014/12/30/lxc-et-android-5-arm64/#disqus_thread">Comments</a>
+  </div>
+  
+  <div class="post-tags"><a class="label" href="http://enten.github.io/steven/tags/container-engine">container engine</a> <a class="label" href="http://enten.github.io/steven/tags/isolation">isolation</a> <a class="label" href="http://enten.github.io/steven/tags/android">android</a> <a class="label" href="http://enten.github.io/steven/tags/arm64">arm64</a> </div>
+  
+</div>
+
+    <article>
+      
+
+<h2 id="introduction">Introduction</h2>
+
+<p><a href="https://linuxcontainers.org/lxc/introduction/">LXC</a> (contraction de <em>Linux Containers</em>) est un logiciel permettant de gérer des conteneurs logiciels. Conrètement, LXC peut isole l&rsquo;exécution de plusieurs environnements Linux sur une même machine. L&rsquo;isolation est réalisée grâce à l&rsquo;exploitation des modules de gestion de namespaces du Kernel Linux.</p>
+
+<p>Depuis la publication d&rsquo;un <a href="https://www.stgraber.org/2013/12/23/lxc-1-0-some-more-advanced-container-usage/">article en décembre 2013 sur le blog d&rsquo;un des principaux développeurs de LXC (Stéphane Graber)</a>, la communauté d&rsquo;utilisateurs de conteneurs logiciels est consciente de la possibilité d&rsquo;utiliser LXC sur un appareil Android. Stéphane Graber en a fait la <a href="https://www.youtube.com/watch?v=XZWy2g9YY30">démonstration à l&rsquo;occasion de l&rsquo;évènement Linux Plumbers Conference de septembre 2013</a>.</p>
+
+<p>Les gestionnaires de conteneurs boulversent progressivement les domaines de l&rsquo;informatique liés à la virtualisation. Le possible usage de LXC sur Android offre des perspectives nouvelles pour l&rsquo;industrie et la recherche. Un développeur a d&rsquo;ailleurs démontré (durant l&rsquo;évènement Droidconf de décembre 2013) le potentiel de LXC en étant capable de <a href="https://www.youtube.com/watch?v=UpIFByNLM5U">changer à chaud la version d&rsquo;Android avec une simple application</a>.</p>
+
+<p>LXC n&rsquo;étant pas une application du Google Play Store, son installation sur Android n&rsquo;est pas évidente. L&rsquo;utilisateur qui souhaite se lancer sur cette voie est rapidement confronté à des problèmes systèmes. <strong>Dans la sections suivantes, nous décrivons les principaux problèmes que nous avons rencontrés pour installer et utiliser LXC sur Android 5 Lollipop</strong>.</p>
+
+<h2 id="contexte">Contexte</h2>
+
+<p>Avant d&rsquo;aborder les problèmes d&rsquo;installation de LXC sur Android que nous avons rencontrés, il est important que le lecteur ait connaissance de notre plateforme de test.</p>
+
+<h3 id="matériel">Matériel</h3>
+
+<p>Nous avons souhaité réaliser ces tests sur un appareil disposant d&rsquo;une architecture ARM 64-bits (ARMv8). Ce type d&rsquo;appareil n&rsquo;étant pas encore démocratisé, nous avons fait le choix d&rsquo;utiliser une machine virtuelle Qemu.</p>
+
+<p>Pour lancer la machine virtuelle de notre appareil fictif, nous utilisons une version dérivée de Qemu. Cette version est issue de la compilation de la branche <a href="https://qemu-android.googlesource.com/qemu-android/+/ranchu">ranchu</a> du projet <a href="https://qemu-android.googlesource.com/qemu-android/">qemu-android</a> d&rsquo;AOSP. L&rsquo;avantage de cette version est son support de machines virtuelles à l&rsquo;architecture ARM 64-bits.</p>
+
+<p>Une fois lancé, notre appareil virtuel dispose d&rsquo;un CPU cortex-a57 et de 4Go de mémoire vive. Il dispose également de 16Go de mémoire disque (en modifiant la taille de l&rsquo;image <code>data.img</code>, voir section suivante).</p>
+
+<h3 id="système-d-exploitation">Système d&rsquo;exploitation</h3>
+
+<p>Notre choix d&rsquo;architecture ARM 64-bits nous impose l&rsquo;utilisation de la version 5 (Lollipop) d&rsquo;Android car c&rsquo;est la seule version supportant ce type d&rsquo;architecture.</p>
+
+<p>Pour obtenir les images des systèmes de fichiers d&rsquo;Android 5 utilisées pour lancer notre appareil virtuel (<code>ramdisk.img</code>, <code>system.img</code>, <code>userdata.img</code> et <code>cache.img</code>), nous avons utilisé la configuration de compilation <code>ranchu</code> de la branche <a href="https://android.googlesource.com/platform/manifest/+/refs/heads/android-5.0.0_r7">android-5.0.0_r7</a> des sources du projet <a href="https://source.android.com/">Android Open Source Project</a>.</p>
+
+<p>Pour obtenir un espace disque important dans notre appareil virtuel, nous avons redimensionné l&rsquo;image du système de fichiers utilisateur (<code>userdata.img</code>).</p>
+
+<pre><code class="language-bash"># Augmenter la taille de l'image userdata.img d'environs 16Go
+dd if=/dev/zero bs=1M count=16000 &gt;&gt; userdata.img
+e2fsck -f userdata.img
+resize2fs userdata.img
+e2fsck -f userdata.img
+</code></pre>
+
+<h3 id="kernel-linux">Kernel Linux</h3>
+
+<p>Nous utilisons une version dérivée du noyau Linux. Cette version correspond à la version 3.10 du noyau officiel. Ce noyau est précompilé dans les sources d&rsquo;AOSP et est disponible dans le répertoire <code>prebuilts/qemu-kernel/arm64</code> sous le fichier <code>kernel-qemu</code>.</p>
+
+<p>Un projet spécifique est consacré à ce noyau dans le dépôt des sources d&rsquo;AOSP : <a href="https://android.googlesource.com/kernel/goldfish/">kernel/goldfish</a>. Pour recompiler ce noyau adapté à Qemu, nous avons utilisé la branche <a href="https://android.googlesource.com/kernel/goldfish/+/android-goldfish-3.10">android-goldfish-3.10</a> du projet.</p>
+
+<p><em>Note : <code>goldfish</code> désigne les modules des périphériques virtuels nécessaires pour virtualiser Android avec Qemu. Nous vous recommandons la lecture de <a href="https://android.googlesource.com/platform/external/qemu.git/+/master/docs/GOLDFISH-VIRTUAL-HARDWARE.TXT">GOLDFISH-VIRTUAL-HARDWARE.TXT</a> pour en savoir plus.</em></p>
+
+<h3 id="configuration-réseau">Configuration réseau</h3>
+
+<p>Pour que notre appareil fictif ait sa propre adresse IP, nous avons configuré une interface réseau virtuelle connectée à la machine host (utilisée pour les tests) via une interface bridge.</p>
+
+<p>Ainsi, lorsque l&rsquo;appareil virtuel Android est démarré, il suffit de lancer la directive <code>dhcpcd eth0</code> pour demander au DHCP du réseau l&rsquo;attribution d&rsquo;une adresse IP (grâce à l&rsquo;interface bridge, le DHCP traite la requête de notre périphérique virtuel comme celle de n&rsquo;importe quelle machine physique du réseau).</p>
+
+<h2 id="problèmes-fondamentaux">Problèmes fondamentaux</h2>
+
+<h3 id="système-unix-restreint">Système Unix restreint</h3>
+
+<h4 id="problème">Problème</h4>
+
+<p>Android est un système d&rsquo;exploitation Linux destiné à piloter des systèmes embarqués. La philosophie d&rsquo;Android a conduit ses développeurs à intégrer les outils systèmes uniquement nécessaire à son fonctionnement.</p>
+
+<p>Cette optimisation du système fait d&rsquo;Android une <strong>distribution Linux &laquo;restrictive&raquo; dans le sens où les utilisateurs</strong>, familiarisés à l&rsquo;utilisation d&rsquo;une des distribution Linux majeures (Debian par exemple), <strong>ne retrouvent pas les outils nécessaires à leurs usages habituels</strong> (comme un gestionnaire de paquets).</p>
+
+<h4 id="solution">Solution</h4>
+
+<p>Pour pouvoir utiliser certains utilitaires UNIX absents d&rsquo;Android, il est d&rsquo;usage d&rsquo;<strong>installer une version ARM de <a href="http://busybox.net/about.html">busybox</a></strong> (en copiant son binaire dans le répertoire <code>/system/bin</code>).</p>
+
+<p>Les utilitaires fournis par <code>busybox</code> ne suffisent pas à combler les lacunes d&rsquo;Android. Néanmoins ils nous ont permis d&rsquo;<strong>installer et de configurer un rootfs Archlinux</strong>. Ainsi, nous disposons maintenant d&rsquo;une distribution Archlinux embarquée dans notre appareil Android afin d&rsquo;étendre son fonctionnement.</p>
+
+<p>On peut alors installer facilement LXC grâce à <code>pacman</code>, le gestionnaire de paquets d&rsquo;Archlinux.</p>
+
+<h3 id="echec-des-connexions-https">Echec des connexions HTTPS</h3>
+
+<h4 id="problème-1">Problème</h4>
+
+<p>Une fois le rootfs Archlinux installé et configuré, nous avons souhaité mettre à jour les paquets et installer le paquet LXC. Au cours de cette manipulation, nous avons constaté l&rsquo;<strong>impossibilité d&rsquo;établir une connexion via le protocole <code>https</code></strong>.</p>
+
+<h4 id="solution-1">Solution</h4>
+
+<p>Ce problème est lié à la date du système. En effet, la date de notre appareil virtuel une fois lancé est assignée au 1/1/1970. Pour corriger ce problème, <strong>il suffit de mettre à jour la date du système</strong> (avec l&rsquo;utilitaire <code>rdate</code> de <code>busybox</code> par exemple).</p>
+
+<pre><code class="language-bash">busybox rdate -s ntp.unice.fr
+</code></pre>
+
+<h3 id="modules-du-kernel-manquants">Modules du Kernel manquants</h3>
+
+<h4 id="problème-2">Problème</h4>
+
+<p>Après avoir installé LXC avec <code>pacman</code>, et avant de lancer notre premier test de conteneur, nous avons utilisé le script <a href="https://github.com/lxc/lxc/blob/master/src/lxc/lxc-checkconfig.in">lxc-checkconfig</a>. Ce script lit la configuration du kernel utilisée pour sa compilation. Il vérifit la présence de certaines constantes nécessaires à la compilation des modules requis par LXC. Avec ce script, nous avons pu constater l&rsquo;<strong>absence de modules (du kernel précompilé) nécessaires au bon fonctionnement de LXC</strong>.</p>
+
+<h4 id="solution-2">Solution</h4>
+
+<p>Nous avons <strong>recompilé le kernel</strong> à partir des sources du projet <code>kernel/goldfish</code>. Avant de recompiler le kernel, nous avons <strong>modifié la configuration de compilation <code>ranchu_defconfig</code></strong> (fichier uniquement présent dans le répertoire <code>arch/arm64/configs/</code> de la branche <code>android-goldfish-3.10</code>) pour y ajouter les constantes suivantes :</p>
+
+<pre><code class="language-bash">CONFIG_IPC_NS=y
+CONFIG_PID_NS=y
+CONFIG_PID_IN_CONTEXTIDR=y
+CONFIG_NET_NS=y
+CONFIG_DEVPTS_MULTIPLE_INSTANCES=y
+CONFIG_CGROUP_DEVICE=y
+CONFIG_CGROUP_CPUACCT=y
+CONFIG_CPUSETS=y
+CONFIG_VETH=y
+CONFIG_UTS_NS=y
+CONFIG_CGROUP_FREEZER=y
+CONFIG_CGROUP_PERF=y
+CONFIG_RESOURCE_COUNTERS=y
+CONFIG_MEMCG=y
+CONFIG_MEMCG_SWAP=y
+#CONFIG_USER_NS=y
+CONFIG_BTRFS_FS=y
+CONFIG_EXT4_FS_POSIX_ACL=y
+CONFIG_EXT4_FS_SECURITY=y
+CONFIG_MACVLAN=y
+CONFIG_NETFILTER_XT_MATCH_ADDRTYPE=y
+CONFIG_VLAN_8021Q=y
+CONFIG_BLK_CGROUP=y
+CONFIG_CFQ_GROUP_IOSCHED=y
+</code></pre>
+
+<p><strong>Important</strong> : La constante <code>CONFIG_USER_NS</code> est volontairement désactivée à cause d&rsquo;un problème de compilation (lié à la version des sources de ce module).</p>
+
+<h3 id="impossibilité-de-lancer-des-binaires-non-pie">Impossibilité de lancer des binaires non-PIE</h3>
+
+<h4 id="problème-3">Problème</h4>
+
+<p>Au cours de nos tests, nous avons rencontré une sécurité système propre à Android 5 (branche <code>android-5.0.0_r7</code>). Ce test de sécurité <strong>bloque l&rsquo;exécution de fichiers binaires non-<a href="http://en.wikipedia.org/wiki/Position-independent_code">PIE</a></strong>. Pour qu&rsquo;un exécutable soit PIE, il faut le spécifier à sa compilation.</p>
+
+<h4 id="solution-3">Solution</h4>
+
+<p>Pour outre passer cette sécurité, un <a href="http://forum.xda-developers.com/google-nexus-5/development/fix-bypassing-pie-security-check-t2797731">patch a été développé par un membre du forum XDA-Developers</a>. Cette solution semble fonctionner selon certains utilisateurs. Nous avons préférés <strong>recompiler le code source en désactivant cette sécurité</strong>. Pour cela nous avons commenter le bloc de code ci-dessous dans le fichier <code>bionic/linker/linker.cpp</code></p>
+
+<pre><code class="language-cpp">2181    //if (elf_hdr-&gt;e_type != ET_DYN) {
+2182    //    __libc_format_fd(2, &quot;error: only position independent executables (PIE) are supported.\n&quot;);
+2183    //    exit(EXIT_FAILURE);
+2184    //}
+</code></pre>
+
+<h3 id="cgroups-non-montés">Cgroups non-montés</h3>
+
+<h4 id="problème-4">Problème</h4>
+
+<p>Lorsque non consultons le fichier <code>/proc/cgroups</code>, nous constatons la présence plusieurs cgroups. Or lorsque nous consultons les périphériques montés (avec la commande <code>mount</code>), nous avons constaté que seul le cgroup <code>memory</code> était monté. <strong>La majorité des cgroups ne sont donc pas montés</strong>.</p>
+
+<h4 id="solution-4">Solution</h4>
+
+<p>Il faut <strong>monter les cgroups manquants</strong>. Pour cela nous nous sommes basés sur les <a href="https://github.com/tianon/cgroupfs-mount/">scripts de tianon</a> à la différence que nous montons les cgroups dans la racine de notre rootfs Archlinux (étant donné que nous utilisons LXC à travers ce rootfs).</p>
+
+<pre><code class="language-bash">for i in $(busybox awk '!/^#/ { if ($4 == 1) print $1 }' /proc/cgroups); do
+    if ! grep -q &quot; $ROOTFS/$i &quot; /proc/mounts; then
+        mkdir -p $ROOTFS/$i
+        /system/bin/busybox mount -n -t cgroup -o $i cgroup $ROOTFS/$i
+    fi
+done 
+</code></pre>
+
+<p><strong>Important</strong> : si l&rsquo;arborescence des cgroups n&rsquo;est pas montée dans le rootfs, il ne sera pas possible de lancer plus d&rsquo;un conteneur à la fois.</p>
+
+<h3 id="echec-d-utilisation-des-cgroups-dans-un-rootfs">Echec d&rsquo;utilisation des cgroups dans un rootfs</h3>
+
+<h4 id="problème-5">Problème</h4>
+
+<p>Bien que les cgroups soient montés, ceux-ci sont <strong>inutilisables à cause d&rsquo;un problème d&rsquo;autorisation d&rsquo;écriture</strong> semble-t-il. N&rsquo;ayant aucune expérience en matière d&rsquo;utilisation des modules de gestion des namespaces, nous ne savions pas comment corriger ce problème. Néanmoins, nous étions persuadés que le problème était propre à Android (et probablement au fait qu&rsquo;on utilise LXC à travers un rootfs).</p>
+
+<h4 id="solution-5">Solution</h4>
+
+<p>Pour tenter de résoudre ce problème, nous avons analysés les <a href="https://web.archive.org/web/20140723085319/https://qa.linuxcontainers.org/master/current/android-armel/lxc-android.tar.gz">fichiers utilisés par S. Graber</a> dans sa démonstration de décembre 2013. Nous avons constaté qu&rsquo;il utilisait un programme appellé <code>sbin</code> pour remonter recursivement la racine du téléphone <code>/</code> en mode privé.</p>
+
+<p><strong>En remontant la racine de notre appareil virtuel en mode privé (avec le programme <code>sbin</code>) et en démarrant le programme <a href="https://linuxcontainers.org/fr/cgmanager/introduction/">cgmanager</a> dans notre rootfs Archlinux, nous avons pu lancer notre premier conteneur LXC sur Android.</strong></p>
+
+<p><em>Note : le programme <code>sbin</code> récupérée dans l&rsquo;archive de S. Graber est non-PIE. Il est inutilisable si le programme <code>linker</code> d&rsquo;Android 5 n&rsquo;est pas patché (comme expliqué précédemment).</em></p>
+
+<h3 id="conteneur-sans-accès-réseau">Conteneur sans accès réseau</h3>
+
+<h4 id="problème-6">Problème</h4>
+
+<p>Par défaut, la configuration réseau d&rsquo;un conteneur est vide. Sans configuration réseau, <strong>le conteneur ne dispose pas d&rsquo;interface pour être connecté en réseau (pas d&rsquo;adresse IP)</strong>. La configuration réseau &laquo;vide&raquo; est indiquée dans le fichier de configuration d&rsquo;un conteneur par la ligne suivante :</p>
+
+<pre><code># Network configuration
+lxc.network.type = empty
+</code></pre>
+
+<h4 id="solution-6">Solution</h4>
+
+<p>Parmis les différents types de configuration réseau supportés par LXC, <strong>le type <code>macvlan</code> et son mode <code>bridge</code> nous ont permis d&rsquo;obtenir une IP propre pour nos conteneurs</strong>. Nous vous recommandons la lecture de cet <a href="http://containerops.org/2013/11/19/lxc-networking/">excellent article du blog containerops.org</a> pour en savoir plus sur les différents types de configuration réseau de LXC.</p>
+
+<pre><code># Network configuration
+lxc.network.type = macvlan
+lxc.network.macvlan.mode = bridge
+lxc.network.flags = up
+lxc.network.link = eth0
+</code></pre>
+
+<p><strong>Attention</strong> ! Souvenez-vous que l&rsquo;utilisation d&rsquo;un type de configuration réseau dépend des modules du kernel et du matériel sur lequel il est installé (par exemple l&rsquo;option <code>CONFIG_MACVLAN=y</code> utilisée pour recompiler le kernel est nécessaire pour utiliser le type de configuration <code>macvlan</code> de LXC).</p>
+
+<h2 id="démonstration">Démonstration</h2>
+
+<p><em>Cliquer sur l&rsquo;image pour voir la vidéo.</em></p>
+
+<p><a href="http://www.youtube.com/watch?v=1rW_lFyVY_w"><img src="http://img.youtube.com/vi/1rW_lFyVY_w/0.jpg" alt="LXC on Android - Test 1" />
+</a></p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>L&rsquo;installation de LXC sur Android requiert différentes maniputions du système. Afin de capitaliser les bonnes pratiques pour utiliser LXC sur Android, nous avons développé le script <a href="https://gist.github.com/enten/63cedaca9bf019feb71a">alfred</a>. Cet outil est utilisé dans notre vidéo de démonstration.</p>
+
+    </article>
+    
+<aside class="post-nav">
+  <section class="next">
+    <a class="next" href="http://enten.github.io/steven/2015/06/15/android-5.1.1-x86_64/" title="Android 5.1.1 x86_64">Next &rarr;</a>
+  </section>
+  <section class="prev">
+    <a class="previous" href="http://enten.github.io/steven/2014/11/30/virtualiser-android-5-lollipop-avec-qemu/" title="Virtualiser Android 5 Lollipop avec Qemu">&larr; Previous</a><br>
+  </section>
+<aside>
+
+
+    
+<h2>Comments</h2>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  (function() {
+    
+    
+    if (window.location.hostname == "localhost")
+      return;
+
+    var dsq = document.createElement('script'); dsq.async = true; dsq.type = 'text/javascript';
+    dsq.src = '//enten.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  </div>
+</section>
+
+<script type="text/javascript">
+  (function() {
+    
+    
+    if (window.location.hostname == "localhost")
+      return;
+
+    var dsq = document.createElement('script'); dsq.async = true; dsq.type = 'text/javascript';
+    dsq.src = '//enten.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+
+    <script src="http://enten.github.io/steven/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  </body>
+</html>
+

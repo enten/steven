@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Virtualiser Android 5 Lollipop avec Qemu  &middot; enten.fr</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="description" content="" />
+
+<meta name="keywords" content="android, lollipop, virtualization, qemu, embedded system, arm64, ">
+
+
+<meta property="og:title" content="Virtualiser Android 5 Lollipop avec Qemu  &middot; enten.fr ">
+<meta property="og:site_name" content="enten.fr"/>
+<meta property="og:url" content="http://enten.github.io/steven/2014/11/30/virtualiser-android-5-lollipop-avec-qemu/" />
+<meta property="og:locale" content="fr-FR">
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content=""/>
+<meta property="og:article:published_time" content="2014-11-30T00:00:00Z" />
+<meta property="og:article:modified_time" content="2014-11-30T00:00:00Z" />
+
+<meta property="og:article:tag" content="android">
+<meta property="og:article:tag" content="lollipop">
+<meta property="og:article:tag" content="virtualization">
+<meta property="og:article:tag" content="qemu">
+<meta property="og:article:tag" content="embedded system">
+<meta property="og:article:tag" content="arm64">
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "Virtualiser Android 5 Lollipop avec Qemu",
+    "author": {
+      "@type": "Person",
+      "name": "http://profiles.google.com/+?rel=author"
+    },
+    "datePublished": "2014-11-30",
+    "description": "",
+    "wordCount":  1118 
+  }
+</script>
+
+
+
+<link rel="canonical" href="http://enten.github.io/steven/2014/11/30/virtualiser-android-5-lollipop-avec-qemu/" />
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://enten.github.io/steven/touch-icon-144-precomposed.png">
+<link href="http://enten.github.io/steven/favicon.png" rel="icon">
+
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="stylesheet" href="http://enten.github.io/steven/css/poole.css">
+<link rel="stylesheet" href="http://enten.github.io/steven/css/hyde.css">
+<link rel="stylesheet" href="http://enten.github.io/steven/css/hyde-x.css">
+<link rel="stylesheet" href="http://enten.github.io/steven/css/poole-overrides.css">
+<link rel="stylesheet" href="http://enten.github.io/steven/css/hyde-overrides.css">
+<link rel="stylesheet" href="http://enten.github.io/steven/css/hyde-x-overrides.css">
+
+<link rel="stylesheet" href="http://enten.github.io/steven/css/highlight/sunburst.css">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:400,300">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+</head>
+<body class="theme-base-00">
+<header id="header" class="sidebar">
+  <div class="container sidebar-sticky">
+
+    <div class="sidebar-title">
+      <h1><a href="http://enten.github.io/steven/">enten.fr</a></h1>
+      <p class="lead">code by Steven Enten</p>
+    </div>
+
+    
+
+    <nav id="nav">
+      <ul id="main-nav" class="sidebar-nav">
+        <li class="sidebar-nav-item"><a href="http://enten.github.io/steven/">Home</a></li>
+        
+        <li class="sidebar-nav-item">
+          <a href="http://enten.github.io/steven/about">
+            About
+          </a>
+        </li>
+        
+        <li class="sidebar-nav-item">
+          <a href="http://enten.github.io/steven/code">
+            Code
+          </a>
+        </li>
+        
+        <li class="sidebar-nav-item">
+          <a href="http://enten.github.io/steven/post" title="Show list of posts">
+            Posts
+          </a>
+        </li>
+        
+        <li class="sidebar-nav-item">
+          <a href="http://enten.github.io/steven/tags" title="Show list of tags">
+            Tags
+          </a>
+        </li>
+        
+      </ul>
+      <ul id="social-nav" class="sidebar-nav">
+        <li class="sidebar-nav-item">
+        <a href="https://github.com/enten"><i class="fa fa-github-square fa-2x"></i></a>
+        
+        
+        
+        
+        
+        
+        <a href="" type="application/rss+xml"><i class="fa fa-rss-square fa-2x"></i></a>
+        </li>
+      </ul>
+    </nav>
+
+    
+
+    
+    <div class="sidebar-copyright">
+      &copy; 2015
+      <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Steven Enten</span>
+      </span>
+    </div>
+    
+
+  </div>
+</header>
+
+
+<section class="content container">
+  <div class="post">
+    <h1>Virtualiser Android 5 Lollipop avec Qemu</h1>
+    <div class="post-metas">
+  <div class="post-date">
+    30 Nov, 2014
+    &middot; Read in about 6 Min (1200 Words)
+    &middot; <a href="http://enten.github.io/steven/2014/11/30/virtualiser-android-5-lollipop-avec-qemu/#disqus_thread">Comments</a>
+  </div>
+  
+  <div class="post-tags"><a class="label" href="http://enten.github.io/steven/tags/android">android</a> <a class="label" href="http://enten.github.io/steven/tags/lollipop">lollipop</a> <a class="label" href="http://enten.github.io/steven/tags/virtualization">virtualization</a> <a class="label" href="http://enten.github.io/steven/tags/qemu">qemu</a> <a class="label" href="http://enten.github.io/steven/tags/embedded-system">embedded system</a> <a class="label" href="http://enten.github.io/steven/tags/arm64">arm64</a> </div>
+  
+</div>
+
+    <article>
+      
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Les dernières branches d&rsquo;<a href="https://source.android.com/">Android Open Source Project</a> (AOSP) – branches <code>android-5.x</code> – proposent différentes configurations d&rsquo;assemblages d&rsquo;<a href="https://www.android.com/versions/lollipop-5-0/">Android 5 Lollipop</a>.
+Chaque configuration d&rsquo;assemblage correspond à un produit adapté à un type de plateformes d&rsquo;exécutions. Pour compiler une version complète d&rsquo;Android 5 pour plateformes ARM, il faut utiliser la configuration d&rsquo;assemblage <code>aosp_arm-eng</code> (pour les plateformes ARM 32-bits) ou <code>aosp_arm64-eng</code> (pour les plateformes ARM 64-bits).</p>
+
+<p>D&rsquo;autres produits sont proposées à la compilation notamment les produits <code>ranchu_arm64-eng</code> et <code>mini_emulator_arm64-userdebug</code> :</p>
+
+<ul>
+<li><strong><code>ranchu_arm64-eng</code></strong> : la compilation de ce produit permet d&rsquo;obtenir une version complète d&rsquo;Android 5 ARM 64-bits destinée à être exécutée dans une machine virtuelle (VM) Qemu ;</li>
+<li>__<code>mini_emulator_arm64-userdebug</code>__ : ce produit est similaire à <code>ranchu_arm64-eng</code> à la différence que sa compilation permet d&rsquo;obtenir une version simplifiée d&rsquo;Android 5 embarquant le minimum de composants nécessaires à son fonctionnement.</li>
+</ul>
+
+<p>La compilation d&rsquo;un de ces produits créer des images de systèmes de fichiers (<code>ramdisk.img</code>, <code>system.img</code>, <code>cache.img</code> et <code>userdata.img</code>) devant être utilisées avec le <a href="http://qemu.org/">logiciel de virtualisation Qemu</a>.
+L&rsquo;initialisation d&rsquo;une VM Qemu avec le produit <code>ranchu_arm64-eng</code> permet de virtualiser Android 5 et de le contrôler via son terminal ou son interface graphique. L&rsquo;initialisation d&rsquo;une VM Qemu avec le produit <code>mini_emulator_arm64-userdebug</code> est beaucoup plus rapide car les composants de l&rsquo;environnement graphique ne sont pas chargés : seul le terminal permet de contrôler cette version allégée d&rsquo;Android 5.</p>
+
+<p>Les dernières versions de Qemu (<code>2.x</code>) permettent de virtualiser des machines ARM 64-bits. Cependant, aucun programme du projet officiel Qemu ne supporte la virtualisation de machines virtuelles pouvant exécuter le système d&rsquo;exploitation (OS) Android. Google s&rsquo;est chargé d&rsquo;enrichir le projet Qemu pour proposer des programmes capables de virtualiser l&rsquo;OS Android : c&rsquo;est le projet <a href="https://qemu-android.googlesource.com/">qemu-android</a>.
+La compilation des sources du projet <code>qemu-android</code> permet d&rsquo;obtenir l&rsquo;exécutable <code>qemu-system-aarch64</code> nécessaire à la virtualisation de versions d&rsquo;Android ARM 64-bits.</p>
+
+<p>Dans les sections suivantes, nous allons voir comment compiler Android 5 (produit <code>ranchu_arm64-eng</code> ou <code>mini_emulator_arm64-userdebug</code>) et le virtualiser dans une VM Qemu.</p>
+
+<h2 id="prérequis">Prérequis</h2>
+
+<ul>
+<li>Capacités processeur et mémoire importantes (la compilation nécessite parfois jusqu’à 4 Go de RAM) ;</li>
+<li>Une configuration du bios autorisant la virtualisation ;</li>
+<li>Environ 100 Go d’espace disque libre (pour pouvoir compiler les deux produits) ;</li>
+<li>Une distribution d’un système d’exploitation Linux récente.</li>
+</ul>
+
+<p><em>Note : les manipulations décritent ci-dessous ont été réalisées sur un ordinateur disposant d’un processeur Intel Core i5 (2 cœurs cadencés à 1.8 Ghz supportant jusqu’à 4 threads par coeur), de 8 Go de mémoire RAM et de la distribution <a href="http://releases.ubuntu.com/14.04.1">Ubuntu 14.04.1 LTS</a> 64-bits.</em></p>
+
+<h2 id="préparer-l-environnement-d-assemblage">Préparer l&rsquo;environnement d&rsquo;assemblage</h2>
+
+<p>Installer la machine virtuelle Java (JVM) Open JDK 7 (nécessaire pour compiler les dernières branches d&rsquo;Android)</p>
+
+<pre><code class="language-bash">$ sudo apt-get install openjdk-7-jdk –y
+</code></pre>
+
+<p>Vérifier que Open JDK 7 est la JVM utilisée par défaut</p>
+
+<pre><code class="language-bash">$ sudo update-alternatives --config java
+$ sudo update-alternatives --config javac
+</code></pre>
+
+<p>Installer des packages nécessaires pour la compilation</p>
+
+<pre><code class="language-bash">$ sudo apt-get install bison build-essential curl flex g++-multilib git gperf lib32z1 lib32z1-dev libglib2.0-dev libpixman-1-dev libswitch-perl libxml2-utils yasm zlib1g zlib1g-dev
+</code></pre>
+
+<p>Configurer une identité utilisateur sous Git</p>
+
+<pre><code class="language-bash">$ git config --global user.name &quot;John Doe&quot;
+$ git config --global user.email &quot;jd@android.com&quot;
+</code></pre>
+
+<p>Récupérer l&rsquo;utilitaire repo de Google et le charger dans le PATH courrant</p>
+
+<pre><code class="language-bash">$ mkdir ~/bin &amp;&amp; PATH=~/bin:$PATH
+$ curl https://storage.googleapis.com/git-repo-downloads/repo &gt; ~/bin/repo
+$ chmod a+x ~/bin/repo
+</code></pre>
+
+<h2 id="récupérer-les-sources-d-aosp">Récupérer les sources d&rsquo;AOSP</h2>
+
+<p>Créer un répertoire pour le dépôt des sources d&rsquo;AOSP</p>
+
+<pre><code class="language-bash">$ mkdir –p ~/dev/aosp &amp;&amp; cd ~/dev/aosp
+</code></pre>
+
+<p>Initialiser le dépôt avec la branche <code>android-5.0.0_r7</code> d&rsquo;Android</p>
+
+<pre><code class="language-bash">$ repo init -u https://android.googlesource.com/platform/manifest -b android-5.0.0_r7
+</code></pre>
+
+<p>Synchroniser le dépôt pour récupérer les sources (l&rsquo;opération dure plusieurs heures à cause du volume important de données à télécharger)</p>
+
+<pre><code class="language-bash">$ repo sync
+</code></pre>
+
+<h2 id="corriger-les-configurations-d-assemblage">Corriger les configurations d&rsquo;assemblage</h2>
+
+<p>Les premières branches d&rsquo;Android 5 souffrent de petits bugs nécessitant une modification manuelle des sources pour pouvoir compiler les produits <code>ranchu_arm64-eng</code> et <code>mini_emulator_arm64-userdebug</code> :</p>
+
+<ul>
+<li><strong><code>ranchu_arm64-eng</code></strong> : le script permettant de proposer ce produit à la compilation n&rsquo;existe pas, il faut le rajouter ;</li>
+<li><strong><code>mini_emulator_arm64-userdebug</code></strong> : le choix de la configuration d&rsquo;assemblage de ce produit indique que les fichiers compilés sont destinés à des plateformes ARM 32-bits (armv7), il faut modifier cela pour que les fichiers soit compilés pour plateformes ARM 64-bits (armv8).</li>
+</ul>
+
+<p>Merci à <a href="https://www.linkedin.com/in/vitorallo">Vito Rallo</a> qui a identifié ces bugs et qui propose une archive à décompresser dans le répertoire <code>device/generic</code> pour les corriger.</p>
+
+<pre><code class="language-bash">$ cd ~/dev
+$ wget https://dl.dropboxusercontent.com/u/2930979/fixit.tar.gz
+$ tar -xvf fixit.tar.gz -C aosp/device/generic
+</code></pre>
+
+<h2 id="compiler-les-sources-d-aosp">Compiler les sources d&rsquo;AOSP</h2>
+
+<p>Se placer dans le dossier principal des sources d&rsquo;AOSP</p>
+
+<pre><code class="language-bash">$ cd ~/dev/aosp
+</code></pre>
+
+<p>Initialiser l&rsquo;environnement de compilation dans le terminal</p>
+
+<pre><code class="language-bash">$ source build/envsetup.sh
+</code></pre>
+
+<p>Charger la configuration d&rsquo;assemblage du produit <code>ranchu_arm64-eng</code> ou</p>
+
+<p><code>mini_emulator_arm64-userdebug</code></p>
+
+<pre><code class="language-bash">$ lunch ranchu_arm64-eng
+</code></pre>
+
+<p>Lancer la compilation en fonction des capacités de l&rsquo;ordinateur (pour un processeur dual core supportant 4 threads par cœur, 8 threads peuvent être utilisés pour la compilation)</p>
+
+<pre><code class="language-bash">$ make –j8
+</code></pre>
+
+<p>A la fin de la comilation, les images des systèmes de fichiers créées sont disponibles dans un sous répertoire du dossier &laquo;out&raquo;</p>
+
+<ul>
+<li>Pour <code>ranchu_arm64-eng</code> : out/target/product/generic_arm64/</li>
+<li>Pour <code>mini_emulator_arm64-userdebug</code> : out/target/product/mini-emulator-arm64/</li>
+</ul>
+
+<h2 id="virtualiser-la-version-compilée-d-android-avec-qemu">Virtualiser la version compilée d&rsquo;Android avec Qemu</h2>
+
+<p>Pour virtualiser une version d&rsquo;Android 5 ARM 64-bits, nous avons besoin du programme <code>qemu-system-aarch64</code> modifié par Google pour supporter l&rsquo;exécution de la machine virtuelle &laquo;ranchu&raquo; (et du type de processeur &laquo;cortex-v57&raquo;).</p>
+
+<p>Initialiser le dépôt du projet <code>qemu-android</code></p>
+
+<pre><code class="language-bash">$ cd ~/dev
+$ git clone https://qemu-android.googlesource.com/qemu-android
+$ cd qemu-android
+</code></pre>
+
+<p>Compiler l&rsquo;exécutable <code>qemu-system-aarch64</code></p>
+
+<pre><code class="language-bash">$ git submodule update --init dtc
+$ git checkout origin/ranchu
+$ ./configure --target-list=aarch64-softmmu
+$ make -j8
+</code></pre>
+
+<p>Charger le programme compilée dans le PATH courrant (par lien symbolique)</p>
+
+<pre><code class="language-bash">$ ln -s ~/dev/qemu-android/aarch64-softmmu/qemu-system-aarch64 ~/bin/qemu-system-aarch64
+</code></pre>
+
+<p>Nous sommes maintenant prêt à virtualiser Android 5 pour plateformes ARM 64-bits dans une VM Qemu grâce à l&rsquo;exécutable <code>qemu-system-aarch64</code>, nos images compilées de systèmes de fichiers et un kernel Qemu précompilé par Google.</p>
+
+<p>Se positionner dans le répertoire d&rsquo;un des produits compilés</p>
+
+<pre><code class="language-bash">$ cd ~/dev/aosp/out/product/generic_arm64
+</code></pre>
+
+<p>Démarrer une VM Qemu avec Android 5 Lollipop</p>
+
+<pre><code class="language-bash">qemu-system-aarch64 -machine type=ranchu -cpu cortex-a57 -m 2048 -serial mon:stdio -show-cursor -kernel ~/dev/aosp/prebuilts/qemu-kernel/arm64/kernel-qemu -initrd ramdisk.img -drive index=2,id=userdata,file=userdata.img -device virtio-blk-device,drive=userdata -device virtio-blk-device,drive=cache -drive index=1,id=cache,file=cache.img -device virtio-blk-device,drive=system -drive index=0,id=system,file=system.img -netdev user,id=mynet -device virtio-net-device,netdev=mynet
+</code></pre>
+
+<p><strong>Explication de la commande</strong> :</p>
+
+<ul>
+<li><code>-machine type=ranchu</code> : on sélectionne le type de machine virtuelle &laquo;ranchu&raquo; adaptée à la virtualisation d&rsquo;Android</li>
+<li><code>-cpu cortex-a57</code> : on sélectionne le processeur virtuel pour plateformes ARM 64-bits</li>
+<li><code>-m 2048</code> : on alloue 2048 Mo de mémoire à la VM</li>
+<li><code>-serial mon:stdio</code> : pour pouvoir contrôler le terminal de la VM</li>
+<li><code>-show-cursor</code> : pour afficher le pointeur de la souris dans la VM</li>
+<li><code>-kernel</code> : on utilise le kernel Qemu pour plateformes ARM 64-bits précompilé par Google</li>
+<li><code>-initrd</code> : on utilise le fichier compilé &laquo;ramdisk.img&raquo; comme disque RAM initial</li>
+<li><code>-drive et -device</code> : on monte les images de systèmes de fichiers compilés</li>
+<li><code>-netdev</code> : pour profiter de la connexion réseau</li>
+</ul>
+
+<p><strong>Aperçu de <code>ranchu_arm64-eng</code></strong> :</p>
+
+<p><a href="/assets/images/fig/ranchu_arm64-eng.png"><img src="/assets/images/fig/ranchu_arm64-eng-tiny.png" alt="ranchu_arm64-eng preview" />
+</a></p>
+
+<p><strong>Aperçu de <code>mini_emulator_arm64-userdebug</code></strong> :</p>
+
+<p><a href="/assets/images/fig/mini_emulator_arm64-userdebug.png"><img src="/assets/images/fig/mini_emulator_arm64-userdebug-tiny.png" alt="mini_emulator_arm64-userdebug preview" />
+</a></p>
+
+<h2 id="références">Références</h2>
+
+<ul>
+<li><a href="https://source.android.com/source/building.html">AOSP documentation - Downloading and Building</a></li>
+<li><a href="http://restart-thinking.vitorallo.com/2014/11/ranchu-where-are-you-kernel-and.html">Ranchu where are you, kernel and emulator aarch64 (arm64)</a></li>
+<li><a href="https://android.googlesource.com/platform/external/qemu/+/android-5.0.0_r7/android/qemu-launcher/emulator-qemu.cpp#694">Code source du fichier emulator-qemu.cpp</a>, lignes 694-761</li>
+</ul>
+
+    </article>
+    
+<aside class="post-nav">
+  <section class="next">
+    <a class="next" href="http://enten.github.io/steven/2014/12/30/lxc-et-android-5-arm64/" title="LXC et Android 5 ARM64">Next &rarr;</a>
+  </section>
+  <section class="prev">
+    <a class="previous" href="http://enten.github.io/steven/2014/11/17/installer-apache-mesos-0.20.1-sur-ubuntu-14.04.1.lts/" title="Installer Apache Mesos 0.20.1 sur Ubuntu 14.04.1.LTS">&larr; Previous</a><br>
+  </section>
+<aside>
+
+
+    
+<h2>Comments</h2>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  (function() {
+    
+    
+    if (window.location.hostname == "localhost")
+      return;
+
+    var dsq = document.createElement('script'); dsq.async = true; dsq.type = 'text/javascript';
+    dsq.src = '//enten.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  </div>
+</section>
+
+<script type="text/javascript">
+  (function() {
+    
+    
+    if (window.location.hostname == "localhost")
+      return;
+
+    var dsq = document.createElement('script'); dsq.async = true; dsq.type = 'text/javascript';
+    dsq.src = '//enten.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+
+    <script src="http://enten.github.io/steven/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  </body>
+</html>
+

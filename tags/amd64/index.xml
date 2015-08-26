@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Amd64 on enten.fr</title>
+    <link>http://enten.github.io/steven/tags/amd64/</link>
+    <description>Recent content in Amd64 on enten.fr</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-FR</language>
+    <managingEditor>steven@enten.fr (Steven Enten)</managingEditor>
+    <webMaster>steven@enten.fr (Steven Enten)</webMaster>
+    <lastBuildDate>Mon, 15 Jun 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://enten.github.io/steven/tags/amd64/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Android 5.1.1 x86_64</title>
+      <link>http://enten.github.io/steven/2015/06/15/android-5.1.1-x86_64/</link>
+      <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
+      <author>steven@enten.fr (Steven Enten)</author>
+      <guid>http://enten.github.io/steven/2015/06/15/android-5.1.1-x86_64/</guid>
+      <description>
+
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;Le projet &lt;a href=&#34;http://www.android-x86.org/&#34;&gt;android-x86&lt;/a&gt; est un fork d&amp;rsquo;Android Open Source Project (&lt;a href=&#34;http://source.android.com/&#34;&gt;AOSP&lt;/a&gt;) permettant d&amp;rsquo;installer Android sur PC (la compilation de ses sources produit une image CD bootable). Ce fork fût longtemps la seule solution pour compiler simplement Android pour plateforme x86.&lt;/p&gt;
+
+&lt;p&gt;Avec &lt;a href=&#34;http://www.android.com/versions/lollipop-5-0/&#34;&gt;Android 5 Lollipop&lt;/a&gt;, Google a ouvert la voix à la compilation d&amp;rsquo;&lt;a href=&#34;http://source.android.com/&#34;&gt;AOSP&lt;/a&gt; pour architectures 64-bits (ARM et x86). Cette possibilité ne rend pas le fork &lt;a href=&#34;http://www.android-x86.org/&#34;&gt;android-x86&lt;/a&gt; obsolète pour autant.
+En effet la compilation de ces 2 projets ne produit pas le même résultat (une unique image iso pour android-x86 contre plusieurs images de systèmes de fichiers pour AOSP).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Nous discuterons dans cette article uniquement d&amp;rsquo;AOSP et de la manière de compiler ses sources pour des architectures 64-bits.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;contexte&#34;&gt;Contexte&lt;/h2&gt;
+
+&lt;p&gt;Peu de temps après notre expérience de &lt;a href=&#34;http://enten.github.io/steven/page/virtualiser-android-5-lollipop-avec-qemu/&#34;&gt;virtualisation d&amp;rsquo;Android 5 Lollipop avec Qemu&lt;/a&gt;, nous avons constaté que des images 64-bits précompilées d&amp;rsquo;Android étaient proposées en téléchargement par le &lt;a href=&#34;http://developer.android.com/tools/help/sdk-manager.html&#34;&gt;SDK Manager&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;!TODO Screen SDK images/fig/sdk-manager-images-64bits.png&lt;/p&gt;
+
+&lt;p&gt;Le tableau ci-dessous montre les différentes images 64-bits (par version d&amp;rsquo;Android) actuellement disponibles en téléchargement via le &lt;a href=&#34;http://developer.android.com/tools/help/sdk-manager.html&#34;&gt;SDK Manager&lt;/a&gt;.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Codename&lt;/th&gt;
+&lt;th&gt; Version&lt;/th&gt;
+&lt;th&gt;API&lt;/th&gt;
+&lt;th&gt;Images&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;M&lt;/td&gt;
+&lt;td&gt;5.1.1&lt;/td&gt;
+&lt;td&gt;22 MNC Preview&lt;/td&gt;
+&lt;td&gt;ARM 64 v8a System Image&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;M&lt;/td&gt;
+&lt;td&gt;5.1.1&lt;/td&gt;
+&lt;td&gt;22 MNC Preview&lt;/td&gt;
+&lt;td&gt;Intel x86 Atom_64 System Image&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Lollipop&lt;/td&gt;
+&lt;td&gt;5.1.1&lt;/td&gt;
+&lt;td&gt;22&lt;/td&gt;
+&lt;td&gt;Intel x86 Atom_64 System Image&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Lollipop&lt;/td&gt;
+&lt;td&gt;5.1.1&lt;/td&gt;
+&lt;td&gt;22&lt;/td&gt;
+&lt;td&gt;Goole APIs Intel x86 Atom-64 System Image&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Lollipop&lt;/td&gt;
+&lt;td&gt;5.0.1&lt;/td&gt;
+&lt;td&gt;21&lt;/td&gt;
+&lt;td&gt;Intel x86 Atom_64 System Image&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Lollipop&lt;/td&gt;
+&lt;td&gt;5.0.1&lt;/td&gt;
+&lt;td&gt;21&lt;/td&gt;
+&lt;td&gt;Goole APIs Intel x86 Atom-64 System Image&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;em&gt;Android M est semble-t-il la première version proposant une image ARM 64-bits précompilée (ce qui évite de prendre des heures à compiler soit-même AOSP pour ARM 64-bits).&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Nous sommes maintenant certains qu&amp;rsquo;il est possible de compiler AOSP pour des architectures x86_64, et ce depuis la version 5.0.1 d&amp;rsquo;Android.&lt;/p&gt;
+
+&lt;h2 id=&#34;expérience&#34;&gt;Expérience&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Dans cette section, nous allons compiler Android pour architecture x86_64 à partir des sources du projet officiel (AOSP).&lt;/strong&gt; Les images résultantes de la compilation pourront être utilisées directement avec Qemu ou l&amp;rsquo;outil &lt;a href=&#34;http://developer.android.com/tools/help/emulator.html&#34;&gt;emulator&lt;/a&gt; du SDK. &lt;strong&gt;Nous souhaitons également recompiler un kernel  Linux compatible&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;L&amp;rsquo;expérience semble simple. Toute fois, des problèmes de compatibilité de versions peuvent rendrent l&amp;rsquo;expérience moins évidente.&lt;/p&gt;
+
+&lt;h3 id=&#34;prérequis-matériel&#34;&gt;Prérequis matériel&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Processeur amd64&lt;/li&gt;
+&lt;li&gt;RAM &amp;ge; 4 Go&lt;/li&gt;
+&lt;li&gt;Espace disque &amp;ge; 50 Go&lt;/li&gt;
+&lt;li&gt;Système d&amp;rsquo;exploitation GNU/Linux récent&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;versions&#34;&gt;Versions&lt;/h3&gt;
+
+&lt;p&gt;Voici les différentes versions des composants utilisés pour compiler AOSP x86_64.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Système d&amp;rsquo;exploitation : &lt;a href=&#34;https://www.debian.org/releases/jessie/&#34;&gt;Debian GNU/Linux 8 (jessie)&lt;/a&gt; 64-bits&lt;/li&gt;
+&lt;li&gt;Java Development Kit : &lt;a href=&#34;http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html&#34;&gt;Oracle JDK 7 (1.7.0_79-b15)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Android Open Source Project : &lt;a href=&#34;https://android.googlesource.com/platform/manifest/+/android-5.1.1_r4&#34;&gt;android-5.1.1_r4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Toolchain : &lt;a href=&#34;https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.8/+/android-5.1.1_r4&#34;&gt;x86_64-linux-android-4.8&lt;/a&gt; (branche android-5.1.1_r4)&lt;/li&gt;
+&lt;li&gt;Kernel : &lt;a href=&#34;https://android.googlesource.com/kernel/goldfish/+/43dbfdb838603e823d75cec871f0c317e8c20fc9&#34;&gt;android-goldfish-3.10 commit 43dbfdb838&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;WARNING&lt;/strong&gt;
+Pour pouvoir compiler un kernel Linux compatible avec les images résultantes de la compilation d&amp;rsquo;AOSP branche &lt;code&gt;android-5.1.1_r4&lt;/code&gt;, il est important d&amp;rsquo;utiliser la branche &lt;code&gt;android-goldfish-3.10&lt;/code&gt; du projet &lt;code&gt;kernel/goldfish&lt;/code&gt; à son état du 16 sept. 2014 (commit 43dbfdb838).&lt;/p&gt;
+
+&lt;h3 id=&#34;préparer-l-environnement-d-assemblage&#34;&gt;Préparer l&amp;rsquo;environnement d&amp;rsquo;assemblage&lt;/h3&gt;
+
+&lt;h4 id=&#34;jdk-7&#34;&gt;JDK 7&lt;/h4&gt;
+
+&lt;p&gt;Installer un JDK 7 (Java Open JDK 7 par exemple).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo apt-get install openjdk-7-jdk –y
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Vérifier qu&amp;rsquo;il est bien utilisé par défaut.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo update-alternatives --config java
+$ sudo update-alternatives --config javac
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;packages-requis&#34;&gt;Packages requis&lt;/h4&gt;
+
+&lt;p&gt;Installer les packages nécessaires pour compiler AOSP.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ dpkg --add-architecture i386
+$ sudo apt-get install bison g++-multilib git gperf libxml2-utils make zlib1g-dev:i386 zip
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Configurer une identité utilisateur sous Git&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ git config --global user.name &amp;quot;John Doe&amp;quot;
+$ git config --global user.email &amp;quot;jd@android.com&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Récupérer l&amp;rsquo;utilitaire repo de Google et le charger dans le &lt;code&gt;PATH&lt;/code&gt; courrant.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ mkdir ~/bin
+$ curl https://storage.googleapis.com/git-repo-downloads/repo &amp;gt; ~/bin/repo
+$ chmod a+x ~/bin/repo
+$ PATH=~/bin:$PATH
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;small&gt;Référence : &lt;a href=&#34;http://source.android.com/source/initializing.html#setting-up-a-linux-build-environment&#34;&gt;Setting up a Linux build environment&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;sources-d-aosp&#34;&gt;Sources d&amp;rsquo;AOSP&lt;/h3&gt;
+
+&lt;p&gt;Nous allons maintenant récupérer les sources officielles d&amp;rsquo;Android.&lt;/p&gt;
+
+&lt;p&gt;Pour cela il suffit de créer un répertoire, de l&amp;rsquo;initialiser avec l&amp;rsquo;outil &lt;code&gt;repo&lt;/code&gt; et la branche souhaitée (&lt;code&gt;android-5.1.1_r4&lt;/code&gt;) puis de lancer le téchargement des sources.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ mkdir ~/aosp
+$ cd ~/aosp
+$ repo init -u https://android.googlesource.com/platform/manifest -b android-5.1.1_r4
+$ repo sync
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Attention&lt;/strong&gt; La synchronisation des sources d&amp;rsquo;AOSP dure plusieurs heures (à la faveur d&amp;rsquo;une connexion Internet grand public).&lt;/p&gt;
+
+&lt;h3 id=&#34;compiler-aosp&#34;&gt;Compiler AOSP&lt;/h3&gt;
+
+&lt;p&gt;Une fois les sources d&amp;rsquo;AOSP récupérées, quelques lignes de commandes suffisent à charger la configuration d&amp;rsquo;assemblage &lt;code&gt;aosp_x86_64-eng&lt;/code&gt; pour produire des images x86_64 d&amp;rsquo;Android.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ cd ~/aosp
+$ source build/envsetup.sh
+$ lunch aosp_x86_64-eng
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Avant de lancer la compilation, vérifions que le toolchain &lt;a href=&#34;https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.8/+/android-5.1.1_r4&#34;&gt;x86_64-linux-android-4.8&lt;/a&gt; figure bien dans notre &lt;code&gt;PATH&lt;/code&gt; (il a automatiquement été chargé dedans via &lt;code&gt;lunch&lt;/code&gt;).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ echo $PATH | grep &#39;x86_64-linux-android-4.8&#39;
+
+# Le contenu du PATH doit s&#39;afficher à l&#39;écran
+# avec le tooclhain dans le répertoire :
+# &amp;lt;aosp&amp;gt;/prebuilts/gcc/linux_x86/x86/x86_64-linuxandroid-4.8/bin
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maintenant que tout est prêt nous pouvons lancer la compilation via plusieurs threads en fonction des capacités de l&amp;rsquo;ordinateur.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ make –j8
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Attention&lt;/strong&gt; La compilation dure également plusieurs heures selon le nombre de threads utilisés pour compiler et les capacités de l&amp;rsquo;ordinateur :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;environs 3h30 pour un PC avec un processeur 4 coeurs, 8 Go  de RAM et 8 threads pour compiler ;&lt;/li&gt;
+&lt;li&gt;environs 1h30 pour un PC avec un processeur 8 coeurs, 32 Go de RAM et 32 threads pour compiler.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;A la fin de la comilation, les images des systèmes de fichiers créées sont disponibles dans le répertoire &lt;code&gt;&amp;lt;aosp&amp;gt;/out/target/production/generic_x86_64&lt;/code&gt;.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;compiler-goldfish&#34;&gt;Compiler Goldfish&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://android.googlesource.com/kernel/goldfish&#34;&gt;Goldfish&lt;/a&gt; est une version du kernel Linux adaptée pour Android. Lorsque l&amp;rsquo;on utilise l&amp;rsquo;&lt;a href=&#34;http://developer.android.com/tools/help/avd-manager.html&#34;&gt;AVD Manager&lt;/a&gt; pour créer des émulateurs, des images pré-compilées du kernel Goldfish sont utilisées.&lt;/p&gt;
+
+&lt;p&gt;Comme on aime les défis, nous allons le compiler nous-même. Les sources de Goldfish ne faisant pas parties d&amp;rsquo;AOSP (mais du projet Linux), elles sont stockées dans un dépôt à part entière.&lt;/p&gt;
+
+&lt;p&gt;Récupérer le dépôt du kernel Linux Goldfish.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ git clone https://android.googlesource.com/kernel/goldfish.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Une fois le dépôt récupéré, nous allons sélectionner la branche &lt;code&gt;android-goldfish-3.10&lt;/code&gt; et ramener les sources à leur état du 16/09/2014.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ cd goldfish
+$ git checkout android-goldfish-3.10
+$ git reset --hard 43dbfdb838603e823d75cec871f0c317e8c20fc9
+# HEAD is now at 43dbfdb goldfish: Disable Seccomp for Intel builds.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Avant de compiler le kernel Goldfish, il faut vérifier que le toolchain 4.8 est toujours dans notre PATH. Si ce n&amp;rsquo;est pas le cas, rajoutez le.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;PATH=$PATH:~/aosp/prebuilts/gcc/linux_x86/x86/x86_64-linuxandroid-4.8/bin
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Il ne nous reste qu&amp;rsquo;à préparer la configuration d&amp;rsquo;assemblage et de lancer la compilation.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;make x86_64_emu_defconfig
+make -j8
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;A la fin de la comilation, le kernel compilé est disponible dans le répertoire &lt;code&gt;&amp;lt;goldfish&amp;gt;/arch/x86/boot&lt;/code&gt; sous le nom &lt;code&gt;bzImage&lt;/code&gt;.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;tester&#34;&gt;Tester&lt;/h3&gt;
+
+&lt;p&gt;Nous disposons maintenant de tous les fichiers nécessaires pour lancer un émulateur Android x86_64 100% custom (recompilé par nos soins).&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Images de systèmes de fichiers issues de la compilation d&amp;rsquo;AOSP dans le répertoire &lt;code&gt;&amp;lt;aosp&amp;gt;/out/target/product/generic_x86_64/&lt;/code&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;cache.img&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;hardware-qemu.ini&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ramdisk.img&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;system.img&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;userdata-qemu.img&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Kernel Linux adapté à Android dans le répertoire : &lt;code&gt;&amp;lt;goldfish&amp;gt;/arch/x86/boot/&lt;/code&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;bzImage&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

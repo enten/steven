@@ -1,0 +1,779 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Codes on enten.fr</title>
+    <link>http://enten.github.io/steven/code/</link>
+    <description>Recent content in Codes on enten.fr</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-FR</language>
+    <managingEditor>steven@enten.fr (Steven Enten)</managingEditor>
+    <webMaster>steven@enten.fr (Steven Enten)</webMaster>
+    <lastBuildDate>Sat, 15 Aug 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://enten.github.io/steven/code/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>confectioner</title>
+      <link>http://enten.github.io/steven/confectioner</link>
+      <pubDate>Mon, 01 Jun 2015 00:00:00 +0000</pubDate>
+      <author>steven@enten.fr (Steven Enten)</author>
+      <guid>http://enten.github.io/steven/confectioner</guid>
+      <description>
+
+&lt;p&gt;Simpliest configuration builder which used the environment.&lt;/p&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;npm install confectioner --save
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// example.js
+
+var confectioner = require(&#39;confectioner&#39;);
+
+var config = confectioner({
+    env: { envname: &#39;NODE_ENV&#39;, defaultValue: &#39;development&#39; },
+    hostname: { envname: &#39;MY_HOST&#39;, defaultValue: &#39;localhost&#39; },
+    port: { envname: &#39;MY_PORT&#39;, defaultValue: 1337, type: &#39;int&#39; },
+    baseuri: { envname: &#39;MY_BASEURI&#39;, defaultValue: &#39;/myapp&#39; }
+});
+
+console.log(config.getValuesMap());
+
+// $ NODE_ENV=production MY_PORT=80 node --harmony example.js
+// { env: &#39;production&#39;,
+//   hostname: &#39;localhost&#39;,
+//   port: &#39;80&#39;,
+//   baseuri: &#39;/myapp&#39; }
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;api&#34;&gt;API&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://cdn.rawgit.com/enten/confectioner/master/docs/confectioner/0.1.1/index.html&#34;&gt;API documentation&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;tests&#34;&gt;Tests&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;make test
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;or&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm test
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;release-history&#34;&gt;Release History&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;0.1.0 Initial release&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;credits&#34;&gt;Credits&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://leuville.com&#34;&gt;Leuville Objects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/enten&#34;&gt;Steven Enten&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;LICENSE.md&#34;&gt;MIT&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>dotresolver</title>
+      <link>http://enten.github.io/steven/dotresolver</link>
+      <pubDate>Mon, 13 Apr 2015 00:00:00 +0000</pubDate>
+      <author>steven@enten.fr (Steven Enten)</author>
+      <guid>http://enten.github.io/steven/dotresolver</guid>
+      <description>
+
+&lt;p&gt;A small library providing the R method to make work with paths and imports less involved.&lt;/p&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;npm install dotresolver --save
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;basic-usage&#34;&gt;Basic usage&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var R = require(&#39;dotresolver&#39;)(&#39;.&#39;);
+
+// displays the root path .
+console.log(R());
+
+// displays the path ./src/controllers/hello.js
+console.log(R(&#39;src.controllers&#39;, &#39;hello.js&#39;));
+
+// imports the module hello.js
+var hello = R(&#39;src.controllers&#39;, &#39;hello.js&#39;, true);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;builder-usage&#34;&gt;Builder usage&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var Resolver = require(&#39;dotresolver&#39;);
+
+// builds resolver with some aliases
+var R = Resolver.Builder(__dirname)
+            .set(&#39;ctrl&#39;, &#39;src.controllers&#39;)
+            .set(&#39;css&#39;, &#39;public.styles&#39;)
+            .get();
+
+// displays the path /home/steven/myapp/public/src/styles/base.css
+console.log(R(&#39;css&#39;, &#39;base.css&#39;));
+
+// imports the module hello.js
+var hello = R(&#39;ctrl&#39;, &#39;hello.js&#39;, true);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;tests&#34;&gt;Tests&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;make test
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;or&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm test
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;release-history&#34;&gt;Release History&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;0.2.5 Support object of aliases with setAlias()&lt;/li&gt;
+&lt;li&gt;0.2.3 Improve the path building&lt;/li&gt;
+&lt;li&gt;0.2.0 Remove real root path features&lt;/li&gt;
+&lt;li&gt;0.1.0 Initial release&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;credits&#34;&gt;Credits&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://leuville.com&#34;&gt;Leuville Objects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/enten&#34;&gt;Steven Enten&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;LICENSE.md&#34;&gt;MIT&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>gitbook-boilerplate</title>
+      <link>http://enten.github.io/steven/gitbook-boilerplate</link>
+      <pubDate>Tue, 28 Jul 2015 00:00:00 +0000</pubDate>
+      <author>steven@enten.fr (Steven Enten)</author>
+      <guid>http://enten.github.io/steven/gitbook-boilerplate</guid>
+      <description>
+
+&lt;h2 id=&#34;demo&#34;&gt;Demo&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://enten.github.io/gitbook-boilerplate/&#34;&gt;Github Pages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/enten/gitbook-boilerplate/wiki&#34;&gt;Github Wiki&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;cd ~/code
+
+git clone https://github.com/enten/gitbook-boilerplate.git awesome-project
+
+cd awesome-project
+
+rm -fr .git
+
+vi package.json
+# edit repository.url and repository.wiki
+
+git remote add origin &amp;lt;url&amp;gt;
+
+npm run build
+# or
+# npm run generate-gitbook &amp;amp;&amp;amp; npm run generate-wiki
+
+npm run deploy
+# or
+# npm run deploy-gitbook &amp;amp;&amp;amp; npm run deploy-wiki
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Important&lt;/strong&gt;: Wiki must be created on Github&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>hugo-boilerplate</title>
+      <link>http://enten.github.io/steven/hugo-boilerplate</link>
+      <pubDate>Sat, 15 Aug 2015 00:00:00 +0000</pubDate>
+      <author>steven@enten.fr (Steven Enten)</author>
+      <guid>http://enten.github.io/steven/hugo-boilerplate</guid>
+      <description>
+
+&lt;h2 id=&#34;demo-http-enten-github-io-hugo-boilerplate&#34;&gt;&lt;a href=&#34;http://enten.github.io/hugo-boilerplate/&#34;&gt;Demo&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;requirements&#34;&gt;Requirements&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://git-scm.com&#34;&gt;git&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gohugo.io&#34;&gt;hugo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://nodejs.org&#34;&gt;node&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.npmjs.com/about&#34;&gt;npm&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git clone https://github.com/enten/hugo-boilerplate awesome-site
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;configuration&#34;&gt;Configuration&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# change directory to your awesome site
+cd awesome-site
+
+# building configuration
+vi config.toml
+
+# ftp deployement configuration
+echo &#39;{
+  &amp;quot;host&amp;quot;: &amp;quot;ftp.example.com&amp;quot;,
+  &amp;quot;port&amp;quot;: 21,
+  &amp;quot;dest&amp;quot;: &amp;quot;/www&amp;quot;,
+  &amp;quot;username&amp;quot;: &amp;quot;*****&amp;quot;,
+  &amp;quot;password&amp;quot;: &amp;quot;*****&amp;quot;
+}&#39; &amp;gt; ./scripts/ftp-config.json
+vi scripts/ftp-config.json
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;workflow&#34;&gt;Workflow&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# change directory to your awesome site
+cd awesome-site
+
+# one script to rule them all..
+./scripts/losh
+
+NAME:
+    losh - Lord of the shell scripts (one script to rull them all)
+
+VERSION:
+    0.0.2
+
+USAGE:
+    losh [command] [arg...]
+
+COMMANDS:
+    losh build [hugo options...]
+                Build site into &amp;lt;root&amp;gt;/public
+    losh deploy [hugo options...]
+                Build site and deploy on FTP server
+    losh deploy-gh [hugo options...]
+                Build site and deploy on Github Pages
+    losh server [hugo options...]
+                Build site and run test server
+    losh update-losh
+                Update losh
+    losh [?|h|help]
+                Print this help message
+
+
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>hyde-y</title>
+      <link>http://enten.github.io/steven/hyde-y</link>
+      <pubDate>Thu, 13 Aug 2015 00:00:00 +0000</pubDate>
+      <author>steven@enten.fr (Steven Enten)</author>
+      <guid>http://enten.github.io/steven/hyde-y</guid>
+      <description>
+
+&lt;p&gt;&lt;small&gt;Forked from &lt;a href=&#34;https://github.com/zyro/hyde-x&#34;&gt;Hyde-X&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;Enhanced port of the Jekyll &amp;laquo;&lt;a href=&#34;https://github.com/poole/hyde&#34;&gt;Hyde&lt;/a&gt;&amp;raquo; theme to the &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt; site generator. Check below for a list of enhancements.&lt;/p&gt;
+
+&lt;p&gt;You can find a live site using this theme &lt;a href=&#34;http://andreimihu.com&#34;&gt;here&lt;/a&gt; and the corresponding source code &lt;a href=&#34;https://github.com/zyro/andreimihu.com&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#installation&#34;&gt;Installation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#usage&#34;&gt;Usage&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#configuration&#34;&gt;Configuration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#built-in-colour-themes&#34;&gt;Built-in colour themes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#tips&#34;&gt;Tips&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#changes-and-enhancements-from-the-original-theme&#34;&gt;Changes and enhancements from the original theme&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#attribution&#34;&gt;Attribution&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#questions-ideas-bugs-pull-requests&#34;&gt;Questions, ideas, bugs, pull requests?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#license&#34;&gt;License&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;installation&#34;&gt;Installation&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cd your_site_repo/
+$ mkdir themes
+$ cd themes
+$ git clone https://github.com/enten/hyde-y
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;See the &lt;a href=&#34;http://gohugo.io/themes/installing&#34;&gt;official Hugo themes documentation&lt;/a&gt; for more info.&lt;/p&gt;
+
+&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
+
+&lt;p&gt;This theme expects a relatively standard Hugo blog/personal site layout:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.
+└── content
+    ├── post
+    |   ├── post1.md
+    |   └── post2.md
+    ├── license.md        // this is used in the sidebar footer link
+    └── other_page.md
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Just run &lt;code&gt;hugo --theme=hyde-y&lt;/code&gt; to generate your site!&lt;/p&gt;
+
+&lt;h3 id=&#34;configuration&#34;&gt;Configuration&lt;/h3&gt;
+
+&lt;p&gt;An example of what your site&amp;rsquo;s &lt;code&gt;config.toml&lt;/code&gt; could look like. All theme-specific parameters are under &lt;code&gt;[params]&lt;/code&gt; and standard Hugo parameters are used where possible.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;# hostname (and path) to the root eg. http://spf13.com/
+baseurl = &amp;quot;http://www.example.com&amp;quot;
+
+# Site title
+title = &amp;quot;Your site&amp;quot;
+
+# Language
+languageCode = &amp;quot;en-EN&amp;quot;
+
+# theme to use (located in /themes/THEMENAME/)
+theme = &amp;quot;hyde-y&amp;quot;
+
+# pagination
+paginate = 5
+paginatePath = &amp;quot;page&amp;quot;
+
+[permalinks]
+    post = &amp;quot;/:year/:month/:day/:slug/&amp;quot;
+
+[taxonomies]
+    tag = &amp;quot;tags&amp;quot;
+    topic = &amp;quot;topics&amp;quot;
+
+[author]
+    name = &amp;quot;Your Name&amp;quot;
+    email = &amp;quot;yourname@example.com&amp;quot;
+    gravatarHash = &amp;quot;&amp;quot; # MD5 hash of your Gravatar email address
+    sidebarDisplay = false
+    copyrightDisplay = true
+
+[[menu.main]]
+    name = &amp;quot;Posts&amp;quot;
+    identifier = &amp;quot;posts&amp;quot;
+    url = &amp;quot;/post/&amp;quot;
+
+[[menu.main]]
+    name = &amp;quot;Tags&amp;quot;
+    identifier = &amp;quot;tags&amp;quot;
+    url = &amp;quot;/tags/&amp;quot;
+
+#
+# All parameters below here are optional and can be mixed and matched.
+#
+[params]
+    # Displays under the author name in the sidebar, keep it short.
+    # You can use markdown here.
+    tagline = &amp;quot;Short description about your site&amp;quot;
+
+    # Text for the top menu link, which goes the root URL for the site.
+    # Default (if omitted) is &amp;quot;Home&amp;quot;.
+    home = &amp;quot;Home&amp;quot;
+
+    # Changes sidebar background and link/accent colours.
+    # See below for more colour options.
+    # This also works: &amp;quot;theme-base-08 layout-reverse&amp;quot;, or just &amp;quot;layout-reverse&amp;quot;.
+    theme = &amp;quot;theme-base-00&amp;quot;
+
+    # Select a syntax highight.
+    # Check the static/css/highlight directory for options.
+    highlight = &amp;quot;sunburst&amp;quot;
+
+    # Enable Disqus integration
+    disqusShortname = &amp;quot;your_disqus_shortname&amp;quot;
+
+    # Google Analytics.
+    googleAnalytics = &amp;quot;Your Google Analytics tracking code&amp;quot;
+
+    # Sidebar social links.
+    github = &amp;quot;&amp;quot; # Your Github profile ID
+    bitbucket = &amp;quot;&amp;quot; # Your Bitbucket profile ID
+    linkedin = &amp;quot;&amp;quot; # Your LinkedIn profile ID (from public URL)
+    googleplus = &amp;quot;&amp;quot; # Your Google+ profile ID
+    facebook = &amp;quot;&amp;quot; # Your Facebook profile ID
+    twitter = &amp;quot;&amp;quot; # Your Twitter profile ID
+    youtube = &amp;quot;&amp;quot;  # Your Youtube channel ID
+    flattr = &amp;quot;&amp;quot;  # populate with your flattr uid
+    rss = true  # switch to true to enable RSS icon link
+
+[blackfriday]
+    angledQuotes = true
+    fractions = false
+    hrefTargetBlank = false
+    latexDashes = true
+    plainIdAnchors = true
+    extensions = []
+    extensionmask = []
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;menu&#34;&gt;Menu&lt;/h2&gt;
+
+&lt;p&gt;Create &lt;code&gt;data/Menu.toml&lt;/code&gt; to configure the sidebar navigation menu. Example below.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[about]
+    Name = &amp;quot;About&amp;quot;
+    URL = &amp;quot;/about&amp;quot;
+
+[posts]
+    Name = &amp;quot;Posts&amp;quot;
+    Title = &amp;quot;Show list of posts&amp;quot;
+    URL = &amp;quot;/post&amp;quot;
+
+[tags]
+    Name = &amp;quot;Tags&amp;quot;
+    Title = &amp;quot;Show list of tags&amp;quot;
+    URL = &amp;quot;/tags&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;built-in-colour-themes&#34;&gt;Built-in colour themes&lt;/h3&gt;
+
+&lt;p&gt;Hyde-Y provides 8 built-in colour themes by default, with the option to define more in your own custom CSS.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://github.com/enten/hyde-y/blob/master/images/theme-colours.png&#34; alt=&#34;Hyde-Y theme classes&#34; /&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;tips&#34;&gt;Tips&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;If you&amp;rsquo;ve added &lt;code&gt;theme = &amp;quot;hyde-y&amp;quot;&lt;/code&gt; to your &lt;code&gt;config.toml&lt;/code&gt;, you don&amp;rsquo;t need to keep using the &lt;code&gt;--theme=hyde-y&lt;/code&gt; flag!&lt;/li&gt;
+&lt;li&gt;Although all of the syntax highlight CSS files under the theme&amp;rsquo;s &lt;code&gt;static/css/highlight&lt;/code&gt; are bundled with the site, only the one you choose will be included in the page and delivered to the browser.&lt;/li&gt;
+&lt;li&gt;Change the favicon by providing your own as &lt;code&gt;static/favicon.png&lt;/code&gt; in your site directory.&lt;/li&gt;
+&lt;li&gt;Hugo makes it easy to override theme layout and behaviour, read about it &lt;a href=&#34;http://gohugo.io/themes/customizing&#34;&gt;here&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Pagination is set to 10 items by default, change it by updating &lt;code&gt;paginate = 10&lt;/code&gt; in your &lt;code&gt;config.toml&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;changes-and-enhancements-from-the-original-theme&#34;&gt;Changes and enhancements from the original theme&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Category labels and lists.&lt;/li&gt;
+&lt;li&gt;Client-side syntax highlighting through &lt;a href=&#34;https://highlightjs.org/&#34;&gt;highlight.js&lt;/a&gt;, sane fallback if disabled or no JS - infinitely more flexible than the standard Hugo highlighting.&lt;/li&gt;
+&lt;li&gt;Disqus integration: comment counts listed under blog entry names in post list, comments displayed at the bottom of each post.&lt;/li&gt;
+&lt;li&gt;Gravatar image in sidebar.&lt;/li&gt;
+&lt;li&gt;Google Analytics integration.&lt;/li&gt;
+&lt;li&gt;Google Authorship metadata.&lt;/li&gt;
+&lt;li&gt;Sidebar link layout and footer format changes.&lt;/li&gt;
+&lt;li&gt;Blog post list now contains only the post description, not the full contents.&lt;/li&gt;
+&lt;li&gt;Paginated blog listing.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://fortawesome.github.io/Font-Awesome&#34;&gt;FontAwesome&lt;/a&gt; social links.&lt;/li&gt;
+&lt;li&gt;&amp;hellip;many other small layout tweaks!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;attribution&#34;&gt;Attribution&lt;/h3&gt;
+
+&lt;p&gt;Obviously largely a port of the awesome &lt;a href=&#34;https://github.com/poole/hyde&#34;&gt;Hyde&lt;/a&gt; theme.&lt;/p&gt;
+
+&lt;h3 id=&#34;questions-ideas-bugs-pull-requests&#34;&gt;Questions, ideas, bugs, pull requests?&lt;/h3&gt;
+
+&lt;p&gt;All feedback is welcome! Head over to the &lt;a href=&#34;https://github.com/enten/hyde-y/issues&#34;&gt;issue tracker&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;license&#34;&gt;License&lt;/h3&gt;
+
+&lt;p&gt;Open sourced under the &lt;a href=&#34;https://github.com/enten/hyde-y/blob/master/LICENSE&#34;&gt;MIT license&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>kaio</title>
+      <link>http://enten.github.io/steven/kaio</link>
+      <pubDate>Sun, 14 Jun 2015 00:00:00 +0000</pubDate>
+      <author>steven@enten.fr (Steven Enten)</author>
+      <guid>http://enten.github.io/steven/kaio</guid>
+      <description>
+
+&lt;p&gt;A small library providing the R method to make work with paths and imports less involved.&lt;/p&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;npm install kaio --save
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// example.js
+
+var kaio = require(&#39;kaio&#39;);
+
+var ko = kaio(&#39;root&#39;, __dirname, function() {
+
+    this.setUri(&#39;/api&#39;);
+    this.setPort(8080);
+    this.setAliases({ctrl:&#39;lib&#39;,pub:&#39;views&#39;,css:&#39;pub.styles&#39;});
+
+    this.use(mw1);
+    this.bind(&#39;hello&#39;, mw2);
+});
+
+ko.listen();
+
+function mw1() {
+    return function *(next) {
+        yield next;
+
+        if (this.res.statusCode === 200)
+            return;
+
+        this.body = &#39;Styles folder: &#39;+this.kaio.R(&#39;css&#39;);
+    }
+}
+
+function *mw2(next) {
+    yield next;
+
+    this.body = &#39;Hello world! You are on &#39;+this.kaio.uri(&#39;/hello&#39;);
+}
+
+// $ PORT=1333 DEBUG=* node --harmony example.js
+//
+// $ curl http://localhost:1333/api/hello
+// Hello world! You are on /api/hello
+//
+// $ curl http://localhost:1333/api
+// Styles folder: /home/steven/w/code/kaio/views/styles
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;api&#34;&gt;API&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://cdn.rawgit.com/enten/kaio/master/docs/kaio/0.5.0/index.html&#34;&gt;API documentation&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;tests&#34;&gt;Tests&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;make test
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;or&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm test
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;release-history&#34;&gt;Release History&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;0.5.0 Use confectioner module, add tests and upgrade public API&lt;/li&gt;
+&lt;li&gt;0.3.0 Replace custom resolver by &lt;a href=&#34;https://github.com/enten/dotresolver&#34;&gt;dotresolver&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;0.1.0 Initial release&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;credits&#34;&gt;Credits&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://leuville.com&#34;&gt;Leuville Objects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/enten&#34;&gt;Steven Enten&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;LICENSE.md&#34;&gt;MIT&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>losh</title>
+      <link>http://enten.github.io/steven/losh</link>
+      <pubDate>Wed, 15 Jul 2015 00:00:00 +0000</pubDate>
+      <author>steven@enten.fr (Steven Enten)</author>
+      <guid>http://enten.github.io/steven/losh</guid>
+      <description>
+
+&lt;h2 id=&#34;purpose&#34;&gt;Purpose&lt;/h2&gt;
+
+&lt;p&gt;Used one script to rule the others. The losh script wraps the usage of the others. Technically, losh looks for &lt;code&gt;CMDUSAGE&lt;/code&gt; and &lt;code&gt;CMDDESC&lt;/code&gt; variables into the others scripts. That variables allow losh to print the usage of every scripts.&lt;/p&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Change directory into your awesome project
+$ cd ~/code/awesome-project
+
+# Create directory to store your scripts
+$ mkdir scripts
+
+# Change directory into the new scripts directory
+$ cd scripts
+
+# Install losh
+$ curl https://enten.github.io/losh/install-losh | sh
+Install losh (from http://enten.github.io/losh/losh)
+Install update-losh (from http://enten.github.io/losh/install-losh)
+
+# Test losh
+$ ./losh
+NAME:
+    losh - Lord of the shell scripts (one script to rull them all)
+
+VERSION:
+    0.0.1
+
+USAGE:
+    losh [command] [arg...]
+
+COMMANDS:
+    losh update-losh
+                Update losh
+    losh [?|h|help]
+                Print this help message
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;test&#34;&gt;Test&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Change directory into the scripts directory
+$ cd ~/awesome-project/scripts
+
+$ echo &#39;#!/bin/bash
+CMDUSAGE=&amp;quot;&amp;lt;username&amp;gt;&amp;quot;
+CMDDESC=&amp;quot;Print custom welcome message&amp;quot;
+echo &amp;quot;Hello $1&amp;quot;&#39; &amp;gt; hello
+
+$ chmod +x hello
+
+$ ./losh
+NAME:
+    losh - Lord of the shell scripts (one script to rull them all)
+
+VERSION:
+    0.0.1
+
+USAGE:
+    losh [command] [arg...]
+
+COMMANDS:
+    losh hello &amp;lt;username&amp;gt;
+                Print custom welcome message
+    losh update-losh
+                Update losh
+    losh [?|h|help]
+                Print this help message
+
+$ ./losh hello world
+Hello world
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ps-loyaltydiscount</title>
+      <link>http://enten.github.io/steven/ps-loyaltydiscount</link>
+      <pubDate>Sun, 05 Jul 2015 00:00:00 +0000</pubDate>
+      <author>steven@enten.fr (Steven Enten)</author>
+      <guid>http://enten.github.io/steven/ps-loyaltydiscount</guid>
+      <description>
+
+&lt;h2 id=&#34;présentation&#34;&gt;Présentation&lt;/h2&gt;
+
+&lt;p&gt;Module &lt;a href=&#34;http://doc.prestashop.com/display/PS16/&#34;&gt;PrestaShop 1.6&lt;/a&gt; permettant de gérer
+des remises conditionnées par l&amp;rsquo;achat.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Illustration : l&amp;rsquo;achat d&amp;rsquo;un produit A par un client lui fait bénéficier d&amp;rsquo;une remise sur un produit B.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;cd &amp;lt;PRESTASHOP_HOME&amp;gt;/modules
+git clone https://github.com/enten/ps-loyaltydiscount loyaltydiscount
+chown -R www-data loyaltydiscount
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Se rendre dans le menu &lt;code&gt;Modules&lt;/code&gt; de l&amp;rsquo;interface d&amp;rsquo;administration et
+installer le nouveau module &lt;code&gt;Loyalty Discount&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;administration&#34;&gt;Administration&lt;/h2&gt;
+
+&lt;p&gt;L&amp;rsquo;installation du module ajoute le lien &lt;code&gt;Loyalty Discount&lt;/code&gt; dans le menu &lt;code&gt;Price Rules&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;L&amp;rsquo;interface proposée permet de configurer simplement de nouvelles réductions de fidélité.&lt;/p&gt;
+
+&lt;h2 id=&#34;fonctionnement&#34;&gt;Fonctionnement&lt;/h2&gt;
+
+&lt;h3 id=&#34;tables-de-données&#34;&gt;Tables de données&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;+-------------------------------+
+|        loyaltydiscount        |
++-------------------------------+
+| - id_loyaltydiscount : int    |
+| - id_product_purchased : int  |
+| - id_product_discounted : int |
+| - rate : float                |
+| - active : bit                |
+| - date_add : datetime         |
+| - date_upd : datetime         |
+|                               |
+| PK: id_loyaltydiscount        |
++-------------------------------+
+    |  |
+    |  |    +------------------------------------------+
+    |  +---&amp;gt;|           loyaltydiscount_lang           |
+    |       +------------------------------------------+
+    |       | - id_loyaldiscount : int                 |
+    |       | - id_shop : int                          |
+    |       | - id_lang : int                          |
+    |       | - name : varchar                         |
+    |       | - description : text                     |
+    |       |                                          |
+    |       | PK: id_loyaltydiscount, id_shop, id_lang |
+    |       +------------------------------------------+
+    |
+    |       +---------------------------------+
+    +------&amp;gt;|       loyaltydiscount_shop      |
+            +---------------------------------+
+            | - id_loyaldiscount : int        |
+            | - id_shop : int                 |
+            |                                 |
+            | PK: id_loyaltydiscount, id_shop |
+            +---------------------------------+
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;surcharge-de-la-classe-specificprice-https-github-com-prestashop-prestashop-blob-1-6-classes-specificprice-php&#34;&gt;Surcharge de la classe &lt;a href=&#34;https://github.com/PrestaShop/PrestaShop/blob/1.6/classes/SpecificPrice.php&#34;&gt;SpecificPrice&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;La méthode &lt;a href=&#34;https://github.com/PrestaShop/PrestaShop/blob/1.6/classes/SpecificPrice.php#L201&#34;&gt;getSpecificPrice&lt;/a&gt;
+de la classe &lt;a href=&#34;https://github.com/PrestaShop/PrestaShop/blob/1.6/classes/SpecificPrice.php&#34;&gt;SpecificPrice&lt;/a&gt; est
+surchargée pour appliquer une éventuelle réduction conditionnée par l&amp;rsquo;achat d&amp;rsquo;un autre produit.&lt;/p&gt;
+
+&lt;p&gt;L&amp;rsquo;application d&amp;rsquo;une éventuelle réduction est réalisée sous plusieures conditions :
+* Le module &lt;code&gt;loyaltydiscount&lt;/code&gt; est activé ;
+* Le produit a acheter fait l&amp;rsquo;objet d&amp;rsquo;une réduction de fidélité (il existe au moins une
+  ligne dans la table &lt;code&gt;loyaltydiscount&lt;/code&gt; où la colonne &lt;code&gt;id_product_discounted&lt;/code&gt; est
+  égale à celle du produit à acheter) ;
+* La réduction de fidélité est activée (colonne &lt;code&gt;active&lt;/code&gt; égale à &lt;code&gt;1&lt;/code&gt;);
+* L&amp;rsquo;acheteur a une commande validée avec le produit désigné par la colonne &lt;code&gt;id_product_purchased&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;attention&#34;&gt;Attention&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Les réductions de fidélité se cumulent!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Par exemple, si l&amp;rsquo;achat du produit A donne 5% de réduction sur le produit C et que l&amp;rsquo;achat
+du produit B donne 10% de réduction sur le produit C, un acheteur peut cumuler 15% de réduction
+(s&amp;rsquo;il a des commandes valides contenant l&amp;rsquo;achat des produits A et B).&lt;/p&gt;
+
+&lt;p&gt;Ce comportement est dû à l&amp;rsquo;incrémentation dans la fonction statique &lt;code&gt;applyPossibleDiscount&lt;/code&gt;
+de la classe &lt;code&gt;LoyaltyDiscount&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;if ($res[&#39;n&#39;] &amp;gt; 0)
+	$rate += $row[&#39;rate&#39;];
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;Note: remplacer &lt;code&gt;+=&lt;/code&gt; par &lt;code&gt;=&lt;/code&gt; annule ce comportement.&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

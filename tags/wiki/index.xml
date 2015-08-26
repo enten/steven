@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wiki on enten.fr</title>
+    <link>http://enten.github.io/steven/tags/wiki/</link>
+    <description>Recent content in Wiki on enten.fr</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-FR</language>
+    <managingEditor>steven@enten.fr (Steven Enten)</managingEditor>
+    <webMaster>steven@enten.fr (Steven Enten)</webMaster>
+    <lastBuildDate>Tue, 28 Jul 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://enten.github.io/steven/tags/wiki/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>gitbook-boilerplate</title>
+      <link>http://enten.github.io/steven/gitbook-boilerplate</link>
+      <pubDate>Tue, 28 Jul 2015 00:00:00 +0000</pubDate>
+      <author>steven@enten.fr (Steven Enten)</author>
+      <guid>http://enten.github.io/steven/gitbook-boilerplate</guid>
+      <description>
+
+&lt;h2 id=&#34;demo&#34;&gt;Demo&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://enten.github.io/gitbook-boilerplate/&#34;&gt;Github Pages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/enten/gitbook-boilerplate/wiki&#34;&gt;Github Wiki&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;cd ~/code
+
+git clone https://github.com/enten/gitbook-boilerplate.git awesome-project
+
+cd awesome-project
+
+rm -fr .git
+
+vi package.json
+# edit repository.url and repository.wiki
+
+git remote add origin &amp;lt;url&amp;gt;
+
+npm run build
+# or
+# npm run generate-gitbook &amp;amp;&amp;amp; npm run generate-wiki
+
+npm run deploy
+# or
+# npm run deploy-gitbook &amp;amp;&amp;amp; npm run deploy-wiki
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Important&lt;/strong&gt;: Wiki must be created on Github&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

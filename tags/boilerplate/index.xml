@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Boilerplate on enten.fr</title>
+    <link>http://enten.github.io/steven/tags/boilerplate/</link>
+    <description>Recent content in Boilerplate on enten.fr</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-FR</language>
+    <managingEditor>steven@enten.fr (Steven Enten)</managingEditor>
+    <webMaster>steven@enten.fr (Steven Enten)</webMaster>
+    <lastBuildDate>Sat, 15 Aug 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://enten.github.io/steven/tags/boilerplate/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>hugo-boilerplate</title>
+      <link>http://enten.github.io/steven/hugo-boilerplate</link>
+      <pubDate>Sat, 15 Aug 2015 00:00:00 +0000</pubDate>
+      <author>steven@enten.fr (Steven Enten)</author>
+      <guid>http://enten.github.io/steven/hugo-boilerplate</guid>
+      <description>
+
+&lt;h2 id=&#34;demo-http-enten-github-io-hugo-boilerplate&#34;&gt;&lt;a href=&#34;http://enten.github.io/hugo-boilerplate/&#34;&gt;Demo&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;requirements&#34;&gt;Requirements&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://git-scm.com&#34;&gt;git&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gohugo.io&#34;&gt;hugo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://nodejs.org&#34;&gt;node&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.npmjs.com/about&#34;&gt;npm&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git clone https://github.com/enten/hugo-boilerplate awesome-site
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;configuration&#34;&gt;Configuration&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# change directory to your awesome site
+cd awesome-site
+
+# building configuration
+vi config.toml
+
+# ftp deployement configuration
+echo &#39;{
+  &amp;quot;host&amp;quot;: &amp;quot;ftp.example.com&amp;quot;,
+  &amp;quot;port&amp;quot;: 21,
+  &amp;quot;dest&amp;quot;: &amp;quot;/www&amp;quot;,
+  &amp;quot;username&amp;quot;: &amp;quot;*****&amp;quot;,
+  &amp;quot;password&amp;quot;: &amp;quot;*****&amp;quot;
+}&#39; &amp;gt; ./scripts/ftp-config.json
+vi scripts/ftp-config.json
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;workflow&#34;&gt;Workflow&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# change directory to your awesome site
+cd awesome-site
+
+# one script to rule them all..
+./scripts/losh
+
+NAME:
+    losh - Lord of the shell scripts (one script to rull them all)
+
+VERSION:
+    0.0.2
+
+USAGE:
+    losh [command] [arg...]
+
+COMMANDS:
+    losh build [hugo options...]
+                Build site into &amp;lt;root&amp;gt;/public
+    losh deploy [hugo options...]
+                Build site and deploy on FTP server
+    losh deploy-gh [hugo options...]
+                Build site and deploy on Github Pages
+    losh server [hugo options...]
+                Build site and run test server
+    losh update-losh
+                Update losh
+    losh [?|h|help]
+                Print this help message
+
+
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

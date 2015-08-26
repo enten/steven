@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arm64 on enten.fr</title>
+    <link>http://enten.github.io/steven/tags/arm64/</link>
+    <description>Recent content in Arm64 on enten.fr</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-FR</language>
+    <managingEditor>steven@enten.fr (Steven Enten)</managingEditor>
+    <webMaster>steven@enten.fr (Steven Enten)</webMaster>
+    <lastBuildDate>Tue, 30 Dec 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://enten.github.io/steven/tags/arm64/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>LXC et Android 5 ARM64</title>
+      <link>http://enten.github.io/steven/2014/12/30/lxc-et-android-5-arm64/</link>
+      <pubDate>Tue, 30 Dec 2014 00:00:00 +0000</pubDate>
+      <author>steven@enten.fr (Steven Enten)</author>
+      <guid>http://enten.github.io/steven/2014/12/30/lxc-et-android-5-arm64/</guid>
+      <description>
+
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://linuxcontainers.org/lxc/introduction/&#34;&gt;LXC&lt;/a&gt; (contraction de &lt;em&gt;Linux Containers&lt;/em&gt;) est un logiciel permettant de gérer des conteneurs logiciels. Conrètement, LXC peut isole l&amp;rsquo;exécution de plusieurs environnements Linux sur une même machine. L&amp;rsquo;isolation est réalisée grâce à l&amp;rsquo;exploitation des modules de gestion de namespaces du Kernel Linux.&lt;/p&gt;
+
+&lt;p&gt;Depuis la publication d&amp;rsquo;un &lt;a href=&#34;https://www.stgraber.org/2013/12/23/lxc-1-0-some-more-advanced-container-usage/&#34;&gt;article en décembre 2013 sur le blog d&amp;rsquo;un des principaux développeurs de LXC (Stéphane Graber)&lt;/a&gt;, la communauté d&amp;rsquo;utilisateurs de conteneurs logiciels est consciente de la possibilité d&amp;rsquo;utiliser LXC sur un appareil Android. Stéphane Graber en a fait la &lt;a href=&#34;https://www.youtube.com/watch?v=XZWy2g9YY30&#34;&gt;démonstration à l&amp;rsquo;occasion de l&amp;rsquo;évènement Linux Plumbers Conference de septembre 2013&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Les gestionnaires de conteneurs boulversent progressivement les domaines de l&amp;rsquo;informatique liés à la virtualisation. Le possible usage de LXC sur Android offre des perspectives nouvelles pour l&amp;rsquo;industrie et la recherche. Un développeur a d&amp;rsquo;ailleurs démontré (durant l&amp;rsquo;évènement Droidconf de décembre 2013) le potentiel de LXC en étant capable de &lt;a href=&#34;https://www.youtube.com/watch?v=UpIFByNLM5U&#34;&gt;changer à chaud la version d&amp;rsquo;Android avec une simple application&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;LXC n&amp;rsquo;étant pas une application du Google Play Store, son installation sur Android n&amp;rsquo;est pas évidente. L&amp;rsquo;utilisateur qui souhaite se lancer sur cette voie est rapidement confronté à des problèmes systèmes. &lt;strong&gt;Dans la sections suivantes, nous décrivons les principaux problèmes que nous avons rencontrés pour installer et utiliser LXC sur Android 5 Lollipop&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;contexte&#34;&gt;Contexte&lt;/h2&gt;
+
+&lt;p&gt;Avant d&amp;rsquo;aborder les problèmes d&amp;rsquo;installation de LXC sur Android que nous avons rencontrés, il est important que le lecteur ait connaissance de notre plateforme de test.&lt;/p&gt;
+
+&lt;h3 id=&#34;matériel&#34;&gt;Matériel&lt;/h3&gt;
+
+&lt;p&gt;Nous avons souhaité réaliser ces tests sur un appareil disposant d&amp;rsquo;une architecture ARM 64-bits (ARMv8). Ce type d&amp;rsquo;appareil n&amp;rsquo;étant pas encore démocratisé, nous avons fait le choix d&amp;rsquo;utiliser une machine virtuelle Qemu.&lt;/p&gt;
+
+&lt;p&gt;Pour lancer la machine virtuelle de notre appareil fictif, nous utilisons une version dérivée de Qemu. Cette version est issue de la compilation de la branche &lt;a href=&#34;https://qemu-android.googlesource.com/qemu-android/+/ranchu&#34;&gt;ranchu&lt;/a&gt; du projet &lt;a href=&#34;https://qemu-android.googlesource.com/qemu-android/&#34;&gt;qemu-android&lt;/a&gt; d&amp;rsquo;AOSP. L&amp;rsquo;avantage de cette version est son support de machines virtuelles à l&amp;rsquo;architecture ARM 64-bits.&lt;/p&gt;
+
+&lt;p&gt;Une fois lancé, notre appareil virtuel dispose d&amp;rsquo;un CPU cortex-a57 et de 4Go de mémoire vive. Il dispose également de 16Go de mémoire disque (en modifiant la taille de l&amp;rsquo;image &lt;code&gt;data.img&lt;/code&gt;, voir section suivante).&lt;/p&gt;
+
+&lt;h3 id=&#34;système-d-exploitation&#34;&gt;Système d&amp;rsquo;exploitation&lt;/h3&gt;
+
+&lt;p&gt;Notre choix d&amp;rsquo;architecture ARM 64-bits nous impose l&amp;rsquo;utilisation de la version 5 (Lollipop) d&amp;rsquo;Android car c&amp;rsquo;est la seule version supportant ce type d&amp;rsquo;architecture.&lt;/p&gt;
+
+&lt;p&gt;Pour obtenir les images des systèmes de fichiers d&amp;rsquo;Android 5 utilisées pour lancer notre appareil virtuel (&lt;code&gt;ramdisk.img&lt;/code&gt;, &lt;code&gt;system.img&lt;/code&gt;, &lt;code&gt;userdata.img&lt;/code&gt; et &lt;code&gt;cache.img&lt;/code&gt;), nous avons utilisé la configuration de compilation &lt;code&gt;ranchu&lt;/code&gt; de la branche &lt;a href=&#34;https://android.googlesource.com/platform/manifest/+/refs/heads/android-5.0.0_r7&#34;&gt;android-5.0.0_r7&lt;/a&gt; des sources du projet &lt;a href=&#34;https://source.android.com/&#34;&gt;Android Open Source Project&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Pour obtenir un espace disque important dans notre appareil virtuel, nous avons redimensionné l&amp;rsquo;image du système de fichiers utilisateur (&lt;code&gt;userdata.img&lt;/code&gt;).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Augmenter la taille de l&#39;image userdata.img d&#39;environs 16Go
+dd if=/dev/zero bs=1M count=16000 &amp;gt;&amp;gt; userdata.img
+e2fsck -f userdata.img
+resize2fs userdata.img
+e2fsck -f userdata.img
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;kernel-linux&#34;&gt;Kernel Linux&lt;/h3&gt;
+
+&lt;p&gt;Nous utilisons une version dérivée du noyau Linux. Cette version correspond à la version 3.10 du noyau officiel. Ce noyau est précompilé dans les sources d&amp;rsquo;AOSP et est disponible dans le répertoire &lt;code&gt;prebuilts/qemu-kernel/arm64&lt;/code&gt; sous le fichier &lt;code&gt;kernel-qemu&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Un projet spécifique est consacré à ce noyau dans le dépôt des sources d&amp;rsquo;AOSP : &lt;a href=&#34;https://android.googlesource.com/kernel/goldfish/&#34;&gt;kernel/goldfish&lt;/a&gt;. Pour recompiler ce noyau adapté à Qemu, nous avons utilisé la branche &lt;a href=&#34;https://android.googlesource.com/kernel/goldfish/+/android-goldfish-3.10&#34;&gt;android-goldfish-3.10&lt;/a&gt; du projet.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Note : &lt;code&gt;goldfish&lt;/code&gt; désigne les modules des périphériques virtuels nécessaires pour virtualiser Android avec Qemu. Nous vous recommandons la lecture de &lt;a href=&#34;https://android.googlesource.com/platform/external/qemu.git/+/master/docs/GOLDFISH-VIRTUAL-HARDWARE.TXT&#34;&gt;GOLDFISH-VIRTUAL-HARDWARE.TXT&lt;/a&gt; pour en savoir plus.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;configuration-réseau&#34;&gt;Configuration réseau&lt;/h3&gt;
+
+&lt;p&gt;Pour que notre appareil fictif ait sa propre adresse IP, nous avons configuré une interface réseau virtuelle connectée à la machine host (utilisée pour les tests) via une interface bridge.&lt;/p&gt;
+
+&lt;p&gt;Ainsi, lorsque l&amp;rsquo;appareil virtuel Android est démarré, il suffit de lancer la directive &lt;code&gt;dhcpcd eth0&lt;/code&gt; pour demander au DHCP du réseau l&amp;rsquo;attribution d&amp;rsquo;une adresse IP (grâce à l&amp;rsquo;interface bridge, le DHCP traite la requête de notre périphérique virtuel comme celle de n&amp;rsquo;importe quelle machine physique du réseau).&lt;/p&gt;
+
+&lt;h2 id=&#34;problèmes-fondamentaux&#34;&gt;Problèmes fondamentaux&lt;/h2&gt;
+
+&lt;h3 id=&#34;système-unix-restreint&#34;&gt;Système Unix restreint&lt;/h3&gt;
+
+&lt;h4 id=&#34;problème&#34;&gt;Problème&lt;/h4&gt;
+
+&lt;p&gt;Android est un système d&amp;rsquo;exploitation Linux destiné à piloter des systèmes embarqués. La philosophie d&amp;rsquo;Android a conduit ses développeurs à intégrer les outils systèmes uniquement nécessaire à son fonctionnement.&lt;/p&gt;
+
+&lt;p&gt;Cette optimisation du système fait d&amp;rsquo;Android une &lt;strong&gt;distribution Linux &amp;laquo;restrictive&amp;raquo; dans le sens où les utilisateurs&lt;/strong&gt;, familiarisés à l&amp;rsquo;utilisation d&amp;rsquo;une des distribution Linux majeures (Debian par exemple), &lt;strong&gt;ne retrouvent pas les outils nécessaires à leurs usages habituels&lt;/strong&gt; (comme un gestionnaire de paquets).&lt;/p&gt;
+
+&lt;h4 id=&#34;solution&#34;&gt;Solution&lt;/h4&gt;
+
+&lt;p&gt;Pour pouvoir utiliser certains utilitaires UNIX absents d&amp;rsquo;Android, il est d&amp;rsquo;usage d&amp;rsquo;&lt;strong&gt;installer une version ARM de &lt;a href=&#34;http://busybox.net/about.html&#34;&gt;busybox&lt;/a&gt;&lt;/strong&gt; (en copiant son binaire dans le répertoire &lt;code&gt;/system/bin&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;Les utilitaires fournis par &lt;code&gt;busybox&lt;/code&gt; ne suffisent pas à combler les lacunes d&amp;rsquo;Android. Néanmoins ils nous ont permis d&amp;rsquo;&lt;strong&gt;installer et de configurer un rootfs Archlinux&lt;/strong&gt;. Ainsi, nous disposons maintenant d&amp;rsquo;une distribution Archlinux embarquée dans notre appareil Android afin d&amp;rsquo;étendre son fonctionnement.&lt;/p&gt;
+
+&lt;p&gt;On peut alors installer facilement LXC grâce à &lt;code&gt;pacman&lt;/code&gt;, le gestionnaire de paquets d&amp;rsquo;Archlinux.&lt;/p&gt;
+
+&lt;h3 id=&#34;echec-des-connexions-https&#34;&gt;Echec des connexions HTTPS&lt;/h3&gt;
+
+&lt;h4 id=&#34;problème-1&#34;&gt;Problème&lt;/h4&gt;
+
+&lt;p&gt;Une fois le rootfs Archlinux installé et configuré, nous avons souhaité mettre à jour les paquets et installer le paquet LXC. Au cours de cette manipulation, nous avons constaté l&amp;rsquo;&lt;strong&gt;impossibilité d&amp;rsquo;établir une connexion via le protocole &lt;code&gt;https&lt;/code&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h4 id=&#34;solution-1&#34;&gt;Solution&lt;/h4&gt;
+
+&lt;p&gt;Ce problème est lié à la date du système. En effet, la date de notre appareil virtuel une fois lancé est assignée au 1/1/1970. Pour corriger ce problème, &lt;strong&gt;il suffit de mettre à jour la date du système&lt;/strong&gt; (avec l&amp;rsquo;utilitaire &lt;code&gt;rdate&lt;/code&gt; de &lt;code&gt;busybox&lt;/code&gt; par exemple).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;busybox rdate -s ntp.unice.fr
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;modules-du-kernel-manquants&#34;&gt;Modules du Kernel manquants&lt;/h3&gt;
+
+&lt;h4 id=&#34;problème-2&#34;&gt;Problème&lt;/h4&gt;
+
+&lt;p&gt;Après avoir installé LXC avec &lt;code&gt;pacman&lt;/code&gt;, et avant de lancer notre premier test de conteneur, nous avons utilisé le script &lt;a href=&#34;https://github.com/lxc/lxc/blob/master/src/lxc/lxc-checkconfig.in&#34;&gt;lxc-checkconfig&lt;/a&gt;. Ce script lit la configuration du kernel utilisée pour sa compilation. Il vérifit la présence de certaines constantes nécessaires à la compilation des modules requis par LXC. Avec ce script, nous avons pu constater l&amp;rsquo;&lt;strong&gt;absence de modules (du kernel précompilé) nécessaires au bon fonctionnement de LXC&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h4 id=&#34;solution-2&#34;&gt;Solution&lt;/h4&gt;
+
+&lt;p&gt;Nous avons &lt;strong&gt;recompilé le kernel&lt;/strong&gt; à partir des sources du projet &lt;code&gt;kernel/goldfish&lt;/code&gt;. Avant de recompiler le kernel, nous avons &lt;strong&gt;modifié la configuration de compilation &lt;code&gt;ranchu_defconfig&lt;/code&gt;&lt;/strong&gt; (fichier uniquement présent dans le répertoire &lt;code&gt;arch/arm64/configs/&lt;/code&gt; de la branche &lt;code&gt;android-goldfish-3.10&lt;/code&gt;) pour y ajouter les constantes suivantes :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;CONFIG_IPC_NS=y
+CONFIG_PID_NS=y
+CONFIG_PID_IN_CONTEXTIDR=y
+CONFIG_NET_NS=y
+CONFIG_DEVPTS_MULTIPLE_INSTANCES=y
+CONFIG_CGROUP_DEVICE=y
+CONFIG_CGROUP_CPUACCT=y
+CONFIG_CPUSETS=y
+CONFIG_VETH=y
+CONFIG_UTS_NS=y
+CONFIG_CGROUP_FREEZER=y
+CONFIG_CGROUP_PERF=y
+CONFIG_RESOURCE_COUNTERS=y
+CONFIG_MEMCG=y
+CONFIG_MEMCG_SWAP=y
+#CONFIG_USER_NS=y
+CONFIG_BTRFS_FS=y
+CONFIG_EXT4_FS_POSIX_ACL=y
+CONFIG_EXT4_FS_SECURITY=y
+CONFIG_MACVLAN=y
+CONFIG_NETFILTER_XT_MATCH_ADDRTYPE=y
+CONFIG_VLAN_8021Q=y
+CONFIG_BLK_CGROUP=y
+CONFIG_CFQ_GROUP_IOSCHED=y
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Important&lt;/strong&gt; : La constante &lt;code&gt;CONFIG_USER_NS&lt;/code&gt; est volontairement désactivée à cause d&amp;rsquo;un problème de compilation (lié à la version des sources de ce module).&lt;/p&gt;
+
+&lt;h3 id=&#34;impossibilité-de-lancer-des-binaires-non-pie&#34;&gt;Impossibilité de lancer des binaires non-PIE&lt;/h3&gt;
+
+&lt;h4 id=&#34;problème-3&#34;&gt;Problème&lt;/h4&gt;
+
+&lt;p&gt;Au cours de nos tests, nous avons rencontré une sécurité système propre à Android 5 (branche &lt;code&gt;android-5.0.0_r7&lt;/code&gt;). Ce test de sécurité &lt;strong&gt;bloque l&amp;rsquo;exécution de fichiers binaires non-&lt;a href=&#34;http://en.wikipedia.org/wiki/Position-independent_code&#34;&gt;PIE&lt;/a&gt;&lt;/strong&gt;. Pour qu&amp;rsquo;un exécutable soit PIE, il faut le spécifier à sa compilation.&lt;/p&gt;
+
+&lt;h4 id=&#34;solution-3&#34;&gt;Solution&lt;/h4&gt;
+
+&lt;p&gt;Pour outre passer cette sécurité, un &lt;a href=&#34;http://forum.xda-developers.com/google-nexus-5/development/fix-bypassing-pie-security-check-t2797731&#34;&gt;patch a été développé par un membre du forum XDA-Developers&lt;/a&gt;. Cette solution semble fonctionner selon certains utilisateurs. Nous avons préférés &lt;strong&gt;recompiler le code source en désactivant cette sécurité&lt;/strong&gt;. Pour cela nous avons commenter le bloc de code ci-dessous dans le fichier &lt;code&gt;bionic/linker/linker.cpp&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;2181    //if (elf_hdr-&amp;gt;e_type != ET_DYN) {
+2182    //    __libc_format_fd(2, &amp;quot;error: only position independent executables (PIE) are supported.\n&amp;quot;);
+2183    //    exit(EXIT_FAILURE);
+2184    //}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;cgroups-non-montés&#34;&gt;Cgroups non-montés&lt;/h3&gt;
+
+&lt;h4 id=&#34;problème-4&#34;&gt;Problème&lt;/h4&gt;
+
+&lt;p&gt;Lorsque non consultons le fichier &lt;code&gt;/proc/cgroups&lt;/code&gt;, nous constatons la présence plusieurs cgroups. Or lorsque nous consultons les périphériques montés (avec la commande &lt;code&gt;mount&lt;/code&gt;), nous avons constaté que seul le cgroup &lt;code&gt;memory&lt;/code&gt; était monté. &lt;strong&gt;La majorité des cgroups ne sont donc pas montés&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h4 id=&#34;solution-4&#34;&gt;Solution&lt;/h4&gt;
+
+&lt;p&gt;Il faut &lt;strong&gt;monter les cgroups manquants&lt;/strong&gt;. Pour cela nous nous sommes basés sur les &lt;a href=&#34;https://github.com/tianon/cgroupfs-mount/&#34;&gt;scripts de tianon&lt;/a&gt; à la différence que nous montons les cgroups dans la racine de notre rootfs Archlinux (étant donné que nous utilisons LXC à travers ce rootfs).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;for i in $(busybox awk &#39;!/^#/ { if ($4 == 1) print $1 }&#39; /proc/cgroups); do
+    if ! grep -q &amp;quot; $ROOTFS/$i &amp;quot; /proc/mounts; then
+        mkdir -p $ROOTFS/$i
+        /system/bin/busybox mount -n -t cgroup -o $i cgroup $ROOTFS/$i
+    fi
+done 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Important&lt;/strong&gt; : si l&amp;rsquo;arborescence des cgroups n&amp;rsquo;est pas montée dans le rootfs, il ne sera pas possible de lancer plus d&amp;rsquo;un conteneur à la fois.&lt;/p&gt;
+
+&lt;h3 id=&#34;echec-d-utilisation-des-cgroups-dans-un-rootfs&#34;&gt;Echec d&amp;rsquo;utilisation des cgroups dans un rootfs&lt;/h3&gt;
+
+&lt;h4 id=&#34;problème-5&#34;&gt;Problème&lt;/h4&gt;
+
+&lt;p&gt;Bien que les cgroups soient montés, ceux-ci sont &lt;strong&gt;inutilisables à cause d&amp;rsquo;un problème d&amp;rsquo;autorisation d&amp;rsquo;écriture&lt;/strong&gt; semble-t-il. N&amp;rsquo;ayant aucune expérience en matière d&amp;rsquo;utilisation des modules de gestion des namespaces, nous ne savions pas comment corriger ce problème. Néanmoins, nous étions persuadés que le problème était propre à Android (et probablement au fait qu&amp;rsquo;on utilise LXC à travers un rootfs).&lt;/p&gt;
+
+&lt;h4 id=&#34;solution-5&#34;&gt;Solution&lt;/h4&gt;
+
+&lt;p&gt;Pour tenter de résoudre ce problème, nous avons analysés les &lt;a href=&#34;https://web.archive.org/web/20140723085319/https://qa.linuxcontainers.org/master/current/android-armel/lxc-android.tar.gz&#34;&gt;fichiers utilisés par S. Graber&lt;/a&gt; dans sa démonstration de décembre 2013. Nous avons constaté qu&amp;rsquo;il utilisait un programme appellé &lt;code&gt;sbin&lt;/code&gt; pour remonter recursivement la racine du téléphone &lt;code&gt;/&lt;/code&gt; en mode privé.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;En remontant la racine de notre appareil virtuel en mode privé (avec le programme &lt;code&gt;sbin&lt;/code&gt;) et en démarrant le programme &lt;a href=&#34;https://linuxcontainers.org/fr/cgmanager/introduction/&#34;&gt;cgmanager&lt;/a&gt; dans notre rootfs Archlinux, nous avons pu lancer notre premier conteneur LXC sur Android.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Note : le programme &lt;code&gt;sbin&lt;/code&gt; récupérée dans l&amp;rsquo;archive de S. Graber est non-PIE. Il est inutilisable si le programme &lt;code&gt;linker&lt;/code&gt; d&amp;rsquo;Android 5 n&amp;rsquo;est pas patché (comme expliqué précédemment).&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;conteneur-sans-accès-réseau&#34;&gt;Conteneur sans accès réseau&lt;/h3&gt;
+
+&lt;h4 id=&#34;problème-6&#34;&gt;Problème&lt;/h4&gt;
+
+&lt;p&gt;Par défaut, la configuration réseau d&amp;rsquo;un conteneur est vide. Sans configuration réseau, &lt;strong&gt;le conteneur ne dispose pas d&amp;rsquo;interface pour être connecté en réseau (pas d&amp;rsquo;adresse IP)&lt;/strong&gt;. La configuration réseau &amp;laquo;vide&amp;raquo; est indiquée dans le fichier de configuration d&amp;rsquo;un conteneur par la ligne suivante :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# Network configuration
+lxc.network.type = empty
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;solution-6&#34;&gt;Solution&lt;/h4&gt;
+
+&lt;p&gt;Parmis les différents types de configuration réseau supportés par LXC, &lt;strong&gt;le type &lt;code&gt;macvlan&lt;/code&gt; et son mode &lt;code&gt;bridge&lt;/code&gt; nous ont permis d&amp;rsquo;obtenir une IP propre pour nos conteneurs&lt;/strong&gt;. Nous vous recommandons la lecture de cet &lt;a href=&#34;http://containerops.org/2013/11/19/lxc-networking/&#34;&gt;excellent article du blog containerops.org&lt;/a&gt; pour en savoir plus sur les différents types de configuration réseau de LXC.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# Network configuration
+lxc.network.type = macvlan
+lxc.network.macvlan.mode = bridge
+lxc.network.flags = up
+lxc.network.link = eth0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Attention&lt;/strong&gt; ! Souvenez-vous que l&amp;rsquo;utilisation d&amp;rsquo;un type de configuration réseau dépend des modules du kernel et du matériel sur lequel il est installé (par exemple l&amp;rsquo;option &lt;code&gt;CONFIG_MACVLAN=y&lt;/code&gt; utilisée pour recompiler le kernel est nécessaire pour utiliser le type de configuration &lt;code&gt;macvlan&lt;/code&gt; de LXC).&lt;/p&gt;
+
+&lt;h2 id=&#34;démonstration&#34;&gt;Démonstration&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Cliquer sur l&amp;rsquo;image pour voir la vidéo.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.youtube.com/watch?v=1rW_lFyVY_w&#34;&gt;&lt;img src=&#34;http://img.youtube.com/vi/1rW_lFyVY_w/0.jpg&#34; alt=&#34;LXC on Android - Test 1&#34; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;L&amp;rsquo;installation de LXC sur Android requiert différentes maniputions du système. Afin de capitaliser les bonnes pratiques pour utiliser LXC sur Android, nous avons développé le script &lt;a href=&#34;https://gist.github.com/enten/63cedaca9bf019feb71a&#34;&gt;alfred&lt;/a&gt;. Cet outil est utilisé dans notre vidéo de démonstration.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Virtualiser Android 5 Lollipop avec Qemu</title>
+      <link>http://enten.github.io/steven/2014/11/30/virtualiser-android-5-lollipop-avec-qemu/</link>
+      <pubDate>Sun, 30 Nov 2014 00:00:00 +0000</pubDate>
+      <author>steven@enten.fr (Steven Enten)</author>
+      <guid>http://enten.github.io/steven/2014/11/30/virtualiser-android-5-lollipop-avec-qemu/</guid>
+      <description>
+
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;Les dernières branches d&amp;rsquo;&lt;a href=&#34;https://source.android.com/&#34;&gt;Android Open Source Project&lt;/a&gt; (AOSP) – branches &lt;code&gt;android-5.x&lt;/code&gt; – proposent différentes configurations d&amp;rsquo;assemblages d&amp;rsquo;&lt;a href=&#34;https://www.android.com/versions/lollipop-5-0/&#34;&gt;Android 5 Lollipop&lt;/a&gt;.
+Chaque configuration d&amp;rsquo;assemblage correspond à un produit adapté à un type de plateformes d&amp;rsquo;exécutions. Pour compiler une version complète d&amp;rsquo;Android 5 pour plateformes ARM, il faut utiliser la configuration d&amp;rsquo;assemblage &lt;code&gt;aosp_arm-eng&lt;/code&gt; (pour les plateformes ARM 32-bits) ou &lt;code&gt;aosp_arm64-eng&lt;/code&gt; (pour les plateformes ARM 64-bits).&lt;/p&gt;
+
+&lt;p&gt;D&amp;rsquo;autres produits sont proposées à la compilation notamment les produits &lt;code&gt;ranchu_arm64-eng&lt;/code&gt; et &lt;code&gt;mini_emulator_arm64-userdebug&lt;/code&gt; :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;ranchu_arm64-eng&lt;/code&gt;&lt;/strong&gt; : la compilation de ce produit permet d&amp;rsquo;obtenir une version complète d&amp;rsquo;Android 5 ARM 64-bits destinée à être exécutée dans une machine virtuelle (VM) Qemu ;&lt;/li&gt;
+&lt;li&gt;__&lt;code&gt;mini_emulator_arm64-userdebug&lt;/code&gt;__ : ce produit est similaire à &lt;code&gt;ranchu_arm64-eng&lt;/code&gt; à la différence que sa compilation permet d&amp;rsquo;obtenir une version simplifiée d&amp;rsquo;Android 5 embarquant le minimum de composants nécessaires à son fonctionnement.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;La compilation d&amp;rsquo;un de ces produits créer des images de systèmes de fichiers (&lt;code&gt;ramdisk.img&lt;/code&gt;, &lt;code&gt;system.img&lt;/code&gt;, &lt;code&gt;cache.img&lt;/code&gt; et &lt;code&gt;userdata.img&lt;/code&gt;) devant être utilisées avec le &lt;a href=&#34;http://qemu.org/&#34;&gt;logiciel de virtualisation Qemu&lt;/a&gt;.
+L&amp;rsquo;initialisation d&amp;rsquo;une VM Qemu avec le produit &lt;code&gt;ranchu_arm64-eng&lt;/code&gt; permet de virtualiser Android 5 et de le contrôler via son terminal ou son interface graphique. L&amp;rsquo;initialisation d&amp;rsquo;une VM Qemu avec le produit &lt;code&gt;mini_emulator_arm64-userdebug&lt;/code&gt; est beaucoup plus rapide car les composants de l&amp;rsquo;environnement graphique ne sont pas chargés : seul le terminal permet de contrôler cette version allégée d&amp;rsquo;Android 5.&lt;/p&gt;
+
+&lt;p&gt;Les dernières versions de Qemu (&lt;code&gt;2.x&lt;/code&gt;) permettent de virtualiser des machines ARM 64-bits. Cependant, aucun programme du projet officiel Qemu ne supporte la virtualisation de machines virtuelles pouvant exécuter le système d&amp;rsquo;exploitation (OS) Android. Google s&amp;rsquo;est chargé d&amp;rsquo;enrichir le projet Qemu pour proposer des programmes capables de virtualiser l&amp;rsquo;OS Android : c&amp;rsquo;est le projet &lt;a href=&#34;https://qemu-android.googlesource.com/&#34;&gt;qemu-android&lt;/a&gt;.
+La compilation des sources du projet &lt;code&gt;qemu-android&lt;/code&gt; permet d&amp;rsquo;obtenir l&amp;rsquo;exécutable &lt;code&gt;qemu-system-aarch64&lt;/code&gt; nécessaire à la virtualisation de versions d&amp;rsquo;Android ARM 64-bits.&lt;/p&gt;
+
+&lt;p&gt;Dans les sections suivantes, nous allons voir comment compiler Android 5 (produit &lt;code&gt;ranchu_arm64-eng&lt;/code&gt; ou &lt;code&gt;mini_emulator_arm64-userdebug&lt;/code&gt;) et le virtualiser dans une VM Qemu.&lt;/p&gt;
+
+&lt;h2 id=&#34;prérequis&#34;&gt;Prérequis&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Capacités processeur et mémoire importantes (la compilation nécessite parfois jusqu’à 4 Go de RAM) ;&lt;/li&gt;
+&lt;li&gt;Une configuration du bios autorisant la virtualisation ;&lt;/li&gt;
+&lt;li&gt;Environ 100 Go d’espace disque libre (pour pouvoir compiler les deux produits) ;&lt;/li&gt;
+&lt;li&gt;Une distribution d’un système d’exploitation Linux récente.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Note : les manipulations décritent ci-dessous ont été réalisées sur un ordinateur disposant d’un processeur Intel Core i5 (2 cœurs cadencés à 1.8 Ghz supportant jusqu’à 4 threads par coeur), de 8 Go de mémoire RAM et de la distribution &lt;a href=&#34;http://releases.ubuntu.com/14.04.1&#34;&gt;Ubuntu 14.04.1 LTS&lt;/a&gt; 64-bits.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;préparer-l-environnement-d-assemblage&#34;&gt;Préparer l&amp;rsquo;environnement d&amp;rsquo;assemblage&lt;/h2&gt;
+
+&lt;p&gt;Installer la machine virtuelle Java (JVM) Open JDK 7 (nécessaire pour compiler les dernières branches d&amp;rsquo;Android)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo apt-get install openjdk-7-jdk –y
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Vérifier que Open JDK 7 est la JVM utilisée par défaut&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo update-alternatives --config java
+$ sudo update-alternatives --config javac
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Installer des packages nécessaires pour la compilation&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo apt-get install bison build-essential curl flex g++-multilib git gperf lib32z1 lib32z1-dev libglib2.0-dev libpixman-1-dev libswitch-perl libxml2-utils yasm zlib1g zlib1g-dev
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Configurer une identité utilisateur sous Git&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ git config --global user.name &amp;quot;John Doe&amp;quot;
+$ git config --global user.email &amp;quot;jd@android.com&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Récupérer l&amp;rsquo;utilitaire repo de Google et le charger dans le PATH courrant&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ mkdir ~/bin &amp;amp;&amp;amp; PATH=~/bin:$PATH
+$ curl https://storage.googleapis.com/git-repo-downloads/repo &amp;gt; ~/bin/repo
+$ chmod a+x ~/bin/repo
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;récupérer-les-sources-d-aosp&#34;&gt;Récupérer les sources d&amp;rsquo;AOSP&lt;/h2&gt;
+
+&lt;p&gt;Créer un répertoire pour le dépôt des sources d&amp;rsquo;AOSP&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ mkdir –p ~/dev/aosp &amp;amp;&amp;amp; cd ~/dev/aosp
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Initialiser le dépôt avec la branche &lt;code&gt;android-5.0.0_r7&lt;/code&gt; d&amp;rsquo;Android&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ repo init -u https://android.googlesource.com/platform/manifest -b android-5.0.0_r7
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Synchroniser le dépôt pour récupérer les sources (l&amp;rsquo;opération dure plusieurs heures à cause du volume important de données à télécharger)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ repo sync
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;corriger-les-configurations-d-assemblage&#34;&gt;Corriger les configurations d&amp;rsquo;assemblage&lt;/h2&gt;
+
+&lt;p&gt;Les premières branches d&amp;rsquo;Android 5 souffrent de petits bugs nécessitant une modification manuelle des sources pour pouvoir compiler les produits &lt;code&gt;ranchu_arm64-eng&lt;/code&gt; et &lt;code&gt;mini_emulator_arm64-userdebug&lt;/code&gt; :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;ranchu_arm64-eng&lt;/code&gt;&lt;/strong&gt; : le script permettant de proposer ce produit à la compilation n&amp;rsquo;existe pas, il faut le rajouter ;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;mini_emulator_arm64-userdebug&lt;/code&gt;&lt;/strong&gt; : le choix de la configuration d&amp;rsquo;assemblage de ce produit indique que les fichiers compilés sont destinés à des plateformes ARM 32-bits (armv7), il faut modifier cela pour que les fichiers soit compilés pour plateformes ARM 64-bits (armv8).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Merci à &lt;a href=&#34;https://www.linkedin.com/in/vitorallo&#34;&gt;Vito Rallo&lt;/a&gt; qui a identifié ces bugs et qui propose une archive à décompresser dans le répertoire &lt;code&gt;device/generic&lt;/code&gt; pour les corriger.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ cd ~/dev
+$ wget https://dl.dropboxusercontent.com/u/2930979/fixit.tar.gz
+$ tar -xvf fixit.tar.gz -C aosp/device/generic
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;compiler-les-sources-d-aosp&#34;&gt;Compiler les sources d&amp;rsquo;AOSP&lt;/h2&gt;
+
+&lt;p&gt;Se placer dans le dossier principal des sources d&amp;rsquo;AOSP&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ cd ~/dev/aosp
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Initialiser l&amp;rsquo;environnement de compilation dans le terminal&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ source build/envsetup.sh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Charger la configuration d&amp;rsquo;assemblage du produit &lt;code&gt;ranchu_arm64-eng&lt;/code&gt; ou&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;mini_emulator_arm64-userdebug&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ lunch ranchu_arm64-eng
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Lancer la compilation en fonction des capacités de l&amp;rsquo;ordinateur (pour un processeur dual core supportant 4 threads par cœur, 8 threads peuvent être utilisés pour la compilation)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ make –j8
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;A la fin de la comilation, les images des systèmes de fichiers créées sont disponibles dans un sous répertoire du dossier &amp;laquo;out&amp;raquo;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Pour &lt;code&gt;ranchu_arm64-eng&lt;/code&gt; : out/target/product/generic_arm64/&lt;/li&gt;
+&lt;li&gt;Pour &lt;code&gt;mini_emulator_arm64-userdebug&lt;/code&gt; : out/target/product/mini-emulator-arm64/&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;virtualiser-la-version-compilée-d-android-avec-qemu&#34;&gt;Virtualiser la version compilée d&amp;rsquo;Android avec Qemu&lt;/h2&gt;
+
+&lt;p&gt;Pour virtualiser une version d&amp;rsquo;Android 5 ARM 64-bits, nous avons besoin du programme &lt;code&gt;qemu-system-aarch64&lt;/code&gt; modifié par Google pour supporter l&amp;rsquo;exécution de la machine virtuelle &amp;laquo;ranchu&amp;raquo; (et du type de processeur &amp;laquo;cortex-v57&amp;raquo;).&lt;/p&gt;
+
+&lt;p&gt;Initialiser le dépôt du projet &lt;code&gt;qemu-android&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ cd ~/dev
+$ git clone https://qemu-android.googlesource.com/qemu-android
+$ cd qemu-android
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Compiler l&amp;rsquo;exécutable &lt;code&gt;qemu-system-aarch64&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ git submodule update --init dtc
+$ git checkout origin/ranchu
+$ ./configure --target-list=aarch64-softmmu
+$ make -j8
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Charger le programme compilée dans le PATH courrant (par lien symbolique)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ ln -s ~/dev/qemu-android/aarch64-softmmu/qemu-system-aarch64 ~/bin/qemu-system-aarch64
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Nous sommes maintenant prêt à virtualiser Android 5 pour plateformes ARM 64-bits dans une VM Qemu grâce à l&amp;rsquo;exécutable &lt;code&gt;qemu-system-aarch64&lt;/code&gt;, nos images compilées de systèmes de fichiers et un kernel Qemu précompilé par Google.&lt;/p&gt;
+
+&lt;p&gt;Se positionner dans le répertoire d&amp;rsquo;un des produits compilés&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ cd ~/dev/aosp/out/product/generic_arm64
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Démarrer une VM Qemu avec Android 5 Lollipop&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;qemu-system-aarch64 -machine type=ranchu -cpu cortex-a57 -m 2048 -serial mon:stdio -show-cursor -kernel ~/dev/aosp/prebuilts/qemu-kernel/arm64/kernel-qemu -initrd ramdisk.img -drive index=2,id=userdata,file=userdata.img -device virtio-blk-device,drive=userdata -device virtio-blk-device,drive=cache -drive index=1,id=cache,file=cache.img -device virtio-blk-device,drive=system -drive index=0,id=system,file=system.img -netdev user,id=mynet -device virtio-net-device,netdev=mynet
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Explication de la commande&lt;/strong&gt; :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-machine type=ranchu&lt;/code&gt; : on sélectionne le type de machine virtuelle &amp;laquo;ranchu&amp;raquo; adaptée à la virtualisation d&amp;rsquo;Android&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-cpu cortex-a57&lt;/code&gt; : on sélectionne le processeur virtuel pour plateformes ARM 64-bits&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-m 2048&lt;/code&gt; : on alloue 2048 Mo de mémoire à la VM&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-serial mon:stdio&lt;/code&gt; : pour pouvoir contrôler le terminal de la VM&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-show-cursor&lt;/code&gt; : pour afficher le pointeur de la souris dans la VM&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-kernel&lt;/code&gt; : on utilise le kernel Qemu pour plateformes ARM 64-bits précompilé par Google&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-initrd&lt;/code&gt; : on utilise le fichier compilé &amp;laquo;ramdisk.img&amp;raquo; comme disque RAM initial&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-drive et -device&lt;/code&gt; : on monte les images de systèmes de fichiers compilés&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-netdev&lt;/code&gt; : pour profiter de la connexion réseau&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Aperçu de &lt;code&gt;ranchu_arm64-eng&lt;/code&gt;&lt;/strong&gt; :&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://enten.github.io/steven/assets/images/fig/ranchu_arm64-eng.png&#34;&gt;&lt;img src=&#34;http://enten.github.io/steven/assets/images/fig/ranchu_arm64-eng-tiny.png&#34; alt=&#34;ranchu_arm64-eng preview&#34; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Aperçu de &lt;code&gt;mini_emulator_arm64-userdebug&lt;/code&gt;&lt;/strong&gt; :&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://enten.github.io/steven/assets/images/fig/mini_emulator_arm64-userdebug.png&#34;&gt;&lt;img src=&#34;http://enten.github.io/steven/assets/images/fig/mini_emulator_arm64-userdebug-tiny.png&#34; alt=&#34;mini_emulator_arm64-userdebug preview&#34; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;références&#34;&gt;Références&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://source.android.com/source/building.html&#34;&gt;AOSP documentation - Downloading and Building&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://restart-thinking.vitorallo.com/2014/11/ranchu-where-are-you-kernel-and.html&#34;&gt;Ranchu where are you, kernel and emulator aarch64 (arm64)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://android.googlesource.com/platform/external/qemu/+/android-5.0.0_r7/android/qemu-launcher/emulator-qemu.cpp#694&#34;&gt;Code source du fichier emulator-qemu.cpp&lt;/a&gt;, lignes 694-761&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

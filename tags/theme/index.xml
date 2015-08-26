@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Theme on enten.fr</title>
+    <link>http://enten.github.io/steven/tags/theme/</link>
+    <description>Recent content in Theme on enten.fr</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-FR</language>
+    <managingEditor>steven@enten.fr (Steven Enten)</managingEditor>
+    <webMaster>steven@enten.fr (Steven Enten)</webMaster>
+    <lastBuildDate>Thu, 13 Aug 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://enten.github.io/steven/tags/theme/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>hyde-y</title>
+      <link>http://enten.github.io/steven/hyde-y</link>
+      <pubDate>Thu, 13 Aug 2015 00:00:00 +0000</pubDate>
+      <author>steven@enten.fr (Steven Enten)</author>
+      <guid>http://enten.github.io/steven/hyde-y</guid>
+      <description>
+
+&lt;p&gt;&lt;small&gt;Forked from &lt;a href=&#34;https://github.com/zyro/hyde-x&#34;&gt;Hyde-X&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;Enhanced port of the Jekyll &amp;laquo;&lt;a href=&#34;https://github.com/poole/hyde&#34;&gt;Hyde&lt;/a&gt;&amp;raquo; theme to the &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt; site generator. Check below for a list of enhancements.&lt;/p&gt;
+
+&lt;p&gt;You can find a live site using this theme &lt;a href=&#34;http://andreimihu.com&#34;&gt;here&lt;/a&gt; and the corresponding source code &lt;a href=&#34;https://github.com/zyro/andreimihu.com&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#installation&#34;&gt;Installation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#usage&#34;&gt;Usage&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#configuration&#34;&gt;Configuration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#built-in-colour-themes&#34;&gt;Built-in colour themes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#tips&#34;&gt;Tips&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#changes-and-enhancements-from-the-original-theme&#34;&gt;Changes and enhancements from the original theme&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#attribution&#34;&gt;Attribution&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#questions-ideas-bugs-pull-requests&#34;&gt;Questions, ideas, bugs, pull requests?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#license&#34;&gt;License&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;installation&#34;&gt;Installation&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cd your_site_repo/
+$ mkdir themes
+$ cd themes
+$ git clone https://github.com/enten/hyde-y
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;See the &lt;a href=&#34;http://gohugo.io/themes/installing&#34;&gt;official Hugo themes documentation&lt;/a&gt; for more info.&lt;/p&gt;
+
+&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
+
+&lt;p&gt;This theme expects a relatively standard Hugo blog/personal site layout:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.
+└── content
+    ├── post
+    |   ├── post1.md
+    |   └── post2.md
+    ├── license.md        // this is used in the sidebar footer link
+    └── other_page.md
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Just run &lt;code&gt;hugo --theme=hyde-y&lt;/code&gt; to generate your site!&lt;/p&gt;
+
+&lt;h3 id=&#34;configuration&#34;&gt;Configuration&lt;/h3&gt;
+
+&lt;p&gt;An example of what your site&amp;rsquo;s &lt;code&gt;config.toml&lt;/code&gt; could look like. All theme-specific parameters are under &lt;code&gt;[params]&lt;/code&gt; and standard Hugo parameters are used where possible.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;# hostname (and path) to the root eg. http://spf13.com/
+baseurl = &amp;quot;http://www.example.com&amp;quot;
+
+# Site title
+title = &amp;quot;Your site&amp;quot;
+
+# Language
+languageCode = &amp;quot;en-EN&amp;quot;
+
+# theme to use (located in /themes/THEMENAME/)
+theme = &amp;quot;hyde-y&amp;quot;
+
+# pagination
+paginate = 5
+paginatePath = &amp;quot;page&amp;quot;
+
+[permalinks]
+    post = &amp;quot;/:year/:month/:day/:slug/&amp;quot;
+
+[taxonomies]
+    tag = &amp;quot;tags&amp;quot;
+    topic = &amp;quot;topics&amp;quot;
+
+[author]
+    name = &amp;quot;Your Name&amp;quot;
+    email = &amp;quot;yourname@example.com&amp;quot;
+    gravatarHash = &amp;quot;&amp;quot; # MD5 hash of your Gravatar email address
+    sidebarDisplay = false
+    copyrightDisplay = true
+
+[[menu.main]]
+    name = &amp;quot;Posts&amp;quot;
+    identifier = &amp;quot;posts&amp;quot;
+    url = &amp;quot;/post/&amp;quot;
+
+[[menu.main]]
+    name = &amp;quot;Tags&amp;quot;
+    identifier = &amp;quot;tags&amp;quot;
+    url = &amp;quot;/tags/&amp;quot;
+
+#
+# All parameters below here are optional and can be mixed and matched.
+#
+[params]
+    # Displays under the author name in the sidebar, keep it short.
+    # You can use markdown here.
+    tagline = &amp;quot;Short description about your site&amp;quot;
+
+    # Text for the top menu link, which goes the root URL for the site.
+    # Default (if omitted) is &amp;quot;Home&amp;quot;.
+    home = &amp;quot;Home&amp;quot;
+
+    # Changes sidebar background and link/accent colours.
+    # See below for more colour options.
+    # This also works: &amp;quot;theme-base-08 layout-reverse&amp;quot;, or just &amp;quot;layout-reverse&amp;quot;.
+    theme = &amp;quot;theme-base-00&amp;quot;
+
+    # Select a syntax highight.
+    # Check the static/css/highlight directory for options.
+    highlight = &amp;quot;sunburst&amp;quot;
+
+    # Enable Disqus integration
+    disqusShortname = &amp;quot;your_disqus_shortname&amp;quot;
+
+    # Google Analytics.
+    googleAnalytics = &amp;quot;Your Google Analytics tracking code&amp;quot;
+
+    # Sidebar social links.
+    github = &amp;quot;&amp;quot; # Your Github profile ID
+    bitbucket = &amp;quot;&amp;quot; # Your Bitbucket profile ID
+    linkedin = &amp;quot;&amp;quot; # Your LinkedIn profile ID (from public URL)
+    googleplus = &amp;quot;&amp;quot; # Your Google+ profile ID
+    facebook = &amp;quot;&amp;quot; # Your Facebook profile ID
+    twitter = &amp;quot;&amp;quot; # Your Twitter profile ID
+    youtube = &amp;quot;&amp;quot;  # Your Youtube channel ID
+    flattr = &amp;quot;&amp;quot;  # populate with your flattr uid
+    rss = true  # switch to true to enable RSS icon link
+
+[blackfriday]
+    angledQuotes = true
+    fractions = false
+    hrefTargetBlank = false
+    latexDashes = true
+    plainIdAnchors = true
+    extensions = []
+    extensionmask = []
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;menu&#34;&gt;Menu&lt;/h2&gt;
+
+&lt;p&gt;Create &lt;code&gt;data/Menu.toml&lt;/code&gt; to configure the sidebar navigation menu. Example below.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[about]
+    Name = &amp;quot;About&amp;quot;
+    URL = &amp;quot;/about&amp;quot;
+
+[posts]
+    Name = &amp;quot;Posts&amp;quot;
+    Title = &amp;quot;Show list of posts&amp;quot;
+    URL = &amp;quot;/post&amp;quot;
+
+[tags]
+    Name = &amp;quot;Tags&amp;quot;
+    Title = &amp;quot;Show list of tags&amp;quot;
+    URL = &amp;quot;/tags&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;built-in-colour-themes&#34;&gt;Built-in colour themes&lt;/h3&gt;
+
+&lt;p&gt;Hyde-Y provides 8 built-in colour themes by default, with the option to define more in your own custom CSS.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://github.com/enten/hyde-y/blob/master/images/theme-colours.png&#34; alt=&#34;Hyde-Y theme classes&#34; /&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;tips&#34;&gt;Tips&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;If you&amp;rsquo;ve added &lt;code&gt;theme = &amp;quot;hyde-y&amp;quot;&lt;/code&gt; to your &lt;code&gt;config.toml&lt;/code&gt;, you don&amp;rsquo;t need to keep using the &lt;code&gt;--theme=hyde-y&lt;/code&gt; flag!&lt;/li&gt;
+&lt;li&gt;Although all of the syntax highlight CSS files under the theme&amp;rsquo;s &lt;code&gt;static/css/highlight&lt;/code&gt; are bundled with the site, only the one you choose will be included in the page and delivered to the browser.&lt;/li&gt;
+&lt;li&gt;Change the favicon by providing your own as &lt;code&gt;static/favicon.png&lt;/code&gt; in your site directory.&lt;/li&gt;
+&lt;li&gt;Hugo makes it easy to override theme layout and behaviour, read about it &lt;a href=&#34;http://gohugo.io/themes/customizing&#34;&gt;here&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Pagination is set to 10 items by default, change it by updating &lt;code&gt;paginate = 10&lt;/code&gt; in your &lt;code&gt;config.toml&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;changes-and-enhancements-from-the-original-theme&#34;&gt;Changes and enhancements from the original theme&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Category labels and lists.&lt;/li&gt;
+&lt;li&gt;Client-side syntax highlighting through &lt;a href=&#34;https://highlightjs.org/&#34;&gt;highlight.js&lt;/a&gt;, sane fallback if disabled or no JS - infinitely more flexible than the standard Hugo highlighting.&lt;/li&gt;
+&lt;li&gt;Disqus integration: comment counts listed under blog entry names in post list, comments displayed at the bottom of each post.&lt;/li&gt;
+&lt;li&gt;Gravatar image in sidebar.&lt;/li&gt;
+&lt;li&gt;Google Analytics integration.&lt;/li&gt;
+&lt;li&gt;Google Authorship metadata.&lt;/li&gt;
+&lt;li&gt;Sidebar link layout and footer format changes.&lt;/li&gt;
+&lt;li&gt;Blog post list now contains only the post description, not the full contents.&lt;/li&gt;
+&lt;li&gt;Paginated blog listing.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://fortawesome.github.io/Font-Awesome&#34;&gt;FontAwesome&lt;/a&gt; social links.&lt;/li&gt;
+&lt;li&gt;&amp;hellip;many other small layout tweaks!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;attribution&#34;&gt;Attribution&lt;/h3&gt;
+
+&lt;p&gt;Obviously largely a port of the awesome &lt;a href=&#34;https://github.com/poole/hyde&#34;&gt;Hyde&lt;/a&gt; theme.&lt;/p&gt;
+
+&lt;h3 id=&#34;questions-ideas-bugs-pull-requests&#34;&gt;Questions, ideas, bugs, pull requests?&lt;/h3&gt;
+
+&lt;p&gt;All feedback is welcome! Head over to the &lt;a href=&#34;https://github.com/enten/hyde-y/issues&#34;&gt;issue tracker&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;license&#34;&gt;License&lt;/h3&gt;
+
+&lt;p&gt;Open sourced under the &lt;a href=&#34;https://github.com/enten/hyde-y/blob/master/LICENSE&#34;&gt;MIT license&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

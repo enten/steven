@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Config on enten.fr</title>
+    <link>http://enten.github.io/steven/tags/config/</link>
+    <description>Recent content in Config on enten.fr</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-FR</language>
+    <managingEditor>steven@enten.fr (Steven Enten)</managingEditor>
+    <webMaster>steven@enten.fr (Steven Enten)</webMaster>
+    <lastBuildDate>Mon, 01 Jun 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://enten.github.io/steven/tags/config/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>confectioner</title>
+      <link>http://enten.github.io/steven/confectioner</link>
+      <pubDate>Mon, 01 Jun 2015 00:00:00 +0000</pubDate>
+      <author>steven@enten.fr (Steven Enten)</author>
+      <guid>http://enten.github.io/steven/confectioner</guid>
+      <description>
+
+&lt;p&gt;Simpliest configuration builder which used the environment.&lt;/p&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;npm install confectioner --save
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// example.js
+
+var confectioner = require(&#39;confectioner&#39;);
+
+var config = confectioner({
+    env: { envname: &#39;NODE_ENV&#39;, defaultValue: &#39;development&#39; },
+    hostname: { envname: &#39;MY_HOST&#39;, defaultValue: &#39;localhost&#39; },
+    port: { envname: &#39;MY_PORT&#39;, defaultValue: 1337, type: &#39;int&#39; },
+    baseuri: { envname: &#39;MY_BASEURI&#39;, defaultValue: &#39;/myapp&#39; }
+});
+
+console.log(config.getValuesMap());
+
+// $ NODE_ENV=production MY_PORT=80 node --harmony example.js
+// { env: &#39;production&#39;,
+//   hostname: &#39;localhost&#39;,
+//   port: &#39;80&#39;,
+//   baseuri: &#39;/myapp&#39; }
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;api&#34;&gt;API&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://cdn.rawgit.com/enten/confectioner/master/docs/confectioner/0.1.1/index.html&#34;&gt;API documentation&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;tests&#34;&gt;Tests&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;make test
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;or&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm test
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;release-history&#34;&gt;Release History&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;0.1.0 Initial release&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;credits&#34;&gt;Credits&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://leuville.com&#34;&gt;Leuville Objects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/enten&#34;&gt;Steven Enten&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;LICENSE.md&#34;&gt;MIT&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

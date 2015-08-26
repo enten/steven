@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Prestashop on enten.fr</title>
+    <link>http://enten.github.io/steven/tags/prestashop/</link>
+    <description>Recent content in Prestashop on enten.fr</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-FR</language>
+    <managingEditor>steven@enten.fr (Steven Enten)</managingEditor>
+    <webMaster>steven@enten.fr (Steven Enten)</webMaster>
+    <lastBuildDate>Sun, 05 Jul 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://enten.github.io/steven/tags/prestashop/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>ps-loyaltydiscount</title>
+      <link>http://enten.github.io/steven/ps-loyaltydiscount</link>
+      <pubDate>Sun, 05 Jul 2015 00:00:00 +0000</pubDate>
+      <author>steven@enten.fr (Steven Enten)</author>
+      <guid>http://enten.github.io/steven/ps-loyaltydiscount</guid>
+      <description>
+
+&lt;h2 id=&#34;présentation&#34;&gt;Présentation&lt;/h2&gt;
+
+&lt;p&gt;Module &lt;a href=&#34;http://doc.prestashop.com/display/PS16/&#34;&gt;PrestaShop 1.6&lt;/a&gt; permettant de gérer
+des remises conditionnées par l&amp;rsquo;achat.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Illustration : l&amp;rsquo;achat d&amp;rsquo;un produit A par un client lui fait bénéficier d&amp;rsquo;une remise sur un produit B.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;cd &amp;lt;PRESTASHOP_HOME&amp;gt;/modules
+git clone https://github.com/enten/ps-loyaltydiscount loyaltydiscount
+chown -R www-data loyaltydiscount
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Se rendre dans le menu &lt;code&gt;Modules&lt;/code&gt; de l&amp;rsquo;interface d&amp;rsquo;administration et
+installer le nouveau module &lt;code&gt;Loyalty Discount&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;administration&#34;&gt;Administration&lt;/h2&gt;
+
+&lt;p&gt;L&amp;rsquo;installation du module ajoute le lien &lt;code&gt;Loyalty Discount&lt;/code&gt; dans le menu &lt;code&gt;Price Rules&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;L&amp;rsquo;interface proposée permet de configurer simplement de nouvelles réductions de fidélité.&lt;/p&gt;
+
+&lt;h2 id=&#34;fonctionnement&#34;&gt;Fonctionnement&lt;/h2&gt;
+
+&lt;h3 id=&#34;tables-de-données&#34;&gt;Tables de données&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;+-------------------------------+
+|        loyaltydiscount        |
++-------------------------------+
+| - id_loyaltydiscount : int    |
+| - id_product_purchased : int  |
+| - id_product_discounted : int |
+| - rate : float                |
+| - active : bit                |
+| - date_add : datetime         |
+| - date_upd : datetime         |
+|                               |
+| PK: id_loyaltydiscount        |
++-------------------------------+
+    |  |
+    |  |    +------------------------------------------+
+    |  +---&amp;gt;|           loyaltydiscount_lang           |
+    |       +------------------------------------------+
+    |       | - id_loyaldiscount : int                 |
+    |       | - id_shop : int                          |
+    |       | - id_lang : int                          |
+    |       | - name : varchar                         |
+    |       | - description : text                     |
+    |       |                                          |
+    |       | PK: id_loyaltydiscount, id_shop, id_lang |
+    |       +------------------------------------------+
+    |
+    |       +---------------------------------+
+    +------&amp;gt;|       loyaltydiscount_shop      |
+            +---------------------------------+
+            | - id_loyaldiscount : int        |
+            | - id_shop : int                 |
+            |                                 |
+            | PK: id_loyaltydiscount, id_shop |
+            +---------------------------------+
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;surcharge-de-la-classe-specificprice-https-github-com-prestashop-prestashop-blob-1-6-classes-specificprice-php&#34;&gt;Surcharge de la classe &lt;a href=&#34;https://github.com/PrestaShop/PrestaShop/blob/1.6/classes/SpecificPrice.php&#34;&gt;SpecificPrice&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;La méthode &lt;a href=&#34;https://github.com/PrestaShop/PrestaShop/blob/1.6/classes/SpecificPrice.php#L201&#34;&gt;getSpecificPrice&lt;/a&gt;
+de la classe &lt;a href=&#34;https://github.com/PrestaShop/PrestaShop/blob/1.6/classes/SpecificPrice.php&#34;&gt;SpecificPrice&lt;/a&gt; est
+surchargée pour appliquer une éventuelle réduction conditionnée par l&amp;rsquo;achat d&amp;rsquo;un autre produit.&lt;/p&gt;
+
+&lt;p&gt;L&amp;rsquo;application d&amp;rsquo;une éventuelle réduction est réalisée sous plusieures conditions :
+* Le module &lt;code&gt;loyaltydiscount&lt;/code&gt; est activé ;
+* Le produit a acheter fait l&amp;rsquo;objet d&amp;rsquo;une réduction de fidélité (il existe au moins une
+  ligne dans la table &lt;code&gt;loyaltydiscount&lt;/code&gt; où la colonne &lt;code&gt;id_product_discounted&lt;/code&gt; est
+  égale à celle du produit à acheter) ;
+* La réduction de fidélité est activée (colonne &lt;code&gt;active&lt;/code&gt; égale à &lt;code&gt;1&lt;/code&gt;);
+* L&amp;rsquo;acheteur a une commande validée avec le produit désigné par la colonne &lt;code&gt;id_product_purchased&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;attention&#34;&gt;Attention&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Les réductions de fidélité se cumulent!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Par exemple, si l&amp;rsquo;achat du produit A donne 5% de réduction sur le produit C et que l&amp;rsquo;achat
+du produit B donne 10% de réduction sur le produit C, un acheteur peut cumuler 15% de réduction
+(s&amp;rsquo;il a des commandes valides contenant l&amp;rsquo;achat des produits A et B).&lt;/p&gt;
+
+&lt;p&gt;Ce comportement est dû à l&amp;rsquo;incrémentation dans la fonction statique &lt;code&gt;applyPossibleDiscount&lt;/code&gt;
+de la classe &lt;code&gt;LoyaltyDiscount&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;if ($res[&#39;n&#39;] &amp;gt; 0)
+	$rate += $row[&#39;rate&#39;];
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;Note: remplacer &lt;code&gt;+=&lt;/code&gt; par &lt;code&gt;=&lt;/code&gt; annule ce comportement.&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Koa on enten.fr</title>
+    <link>http://enten.github.io/steven/tags/koa/</link>
+    <description>Recent content in Koa on enten.fr</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-FR</language>
+    <managingEditor>steven@enten.fr (Steven Enten)</managingEditor>
+    <webMaster>steven@enten.fr (Steven Enten)</webMaster>
+    <lastBuildDate>Sun, 14 Jun 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://enten.github.io/steven/tags/koa/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>kaio</title>
+      <link>http://enten.github.io/steven/kaio</link>
+      <pubDate>Sun, 14 Jun 2015 00:00:00 +0000</pubDate>
+      <author>steven@enten.fr (Steven Enten)</author>
+      <guid>http://enten.github.io/steven/kaio</guid>
+      <description>
+
+&lt;p&gt;A small library providing the R method to make work with paths and imports less involved.&lt;/p&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;npm install kaio --save
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// example.js
+
+var kaio = require(&#39;kaio&#39;);
+
+var ko = kaio(&#39;root&#39;, __dirname, function() {
+
+    this.setUri(&#39;/api&#39;);
+    this.setPort(8080);
+    this.setAliases({ctrl:&#39;lib&#39;,pub:&#39;views&#39;,css:&#39;pub.styles&#39;});
+
+    this.use(mw1);
+    this.bind(&#39;hello&#39;, mw2);
+});
+
+ko.listen();
+
+function mw1() {
+    return function *(next) {
+        yield next;
+
+        if (this.res.statusCode === 200)
+            return;
+
+        this.body = &#39;Styles folder: &#39;+this.kaio.R(&#39;css&#39;);
+    }
+}
+
+function *mw2(next) {
+    yield next;
+
+    this.body = &#39;Hello world! You are on &#39;+this.kaio.uri(&#39;/hello&#39;);
+}
+
+// $ PORT=1333 DEBUG=* node --harmony example.js
+//
+// $ curl http://localhost:1333/api/hello
+// Hello world! You are on /api/hello
+//
+// $ curl http://localhost:1333/api
+// Styles folder: /home/steven/w/code/kaio/views/styles
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;api&#34;&gt;API&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://cdn.rawgit.com/enten/kaio/master/docs/kaio/0.5.0/index.html&#34;&gt;API documentation&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;tests&#34;&gt;Tests&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;make test
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;or&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm test
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;release-history&#34;&gt;Release History&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;0.5.0 Use confectioner module, add tests and upgrade public API&lt;/li&gt;
+&lt;li&gt;0.3.0 Replace custom resolver by &lt;a href=&#34;https://github.com/enten/dotresolver&#34;&gt;dotresolver&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;0.1.0 Initial release&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;credits&#34;&gt;Credits&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://leuville.com&#34;&gt;Leuville Objects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/enten&#34;&gt;Steven Enten&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;LICENSE.md&#34;&gt;MIT&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

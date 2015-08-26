@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Resolving on enten.fr</title>
+    <link>http://enten.github.io/steven/tags/resolving/</link>
+    <description>Recent content in Resolving on enten.fr</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-FR</language>
+    <managingEditor>steven@enten.fr (Steven Enten)</managingEditor>
+    <webMaster>steven@enten.fr (Steven Enten)</webMaster>
+    <lastBuildDate>Mon, 13 Apr 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://enten.github.io/steven/tags/resolving/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>dotresolver</title>
+      <link>http://enten.github.io/steven/dotresolver</link>
+      <pubDate>Mon, 13 Apr 2015 00:00:00 +0000</pubDate>
+      <author>steven@enten.fr (Steven Enten)</author>
+      <guid>http://enten.github.io/steven/dotresolver</guid>
+      <description>
+
+&lt;p&gt;A small library providing the R method to make work with paths and imports less involved.&lt;/p&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;npm install dotresolver --save
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;basic-usage&#34;&gt;Basic usage&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var R = require(&#39;dotresolver&#39;)(&#39;.&#39;);
+
+// displays the root path .
+console.log(R());
+
+// displays the path ./src/controllers/hello.js
+console.log(R(&#39;src.controllers&#39;, &#39;hello.js&#39;));
+
+// imports the module hello.js
+var hello = R(&#39;src.controllers&#39;, &#39;hello.js&#39;, true);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;builder-usage&#34;&gt;Builder usage&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var Resolver = require(&#39;dotresolver&#39;);
+
+// builds resolver with some aliases
+var R = Resolver.Builder(__dirname)
+            .set(&#39;ctrl&#39;, &#39;src.controllers&#39;)
+            .set(&#39;css&#39;, &#39;public.styles&#39;)
+            .get();
+
+// displays the path /home/steven/myapp/public/src/styles/base.css
+console.log(R(&#39;css&#39;, &#39;base.css&#39;));
+
+// imports the module hello.js
+var hello = R(&#39;ctrl&#39;, &#39;hello.js&#39;, true);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;tests&#34;&gt;Tests&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;make test
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;or&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm test
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;release-history&#34;&gt;Release History&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;0.2.5 Support object of aliases with setAlias()&lt;/li&gt;
+&lt;li&gt;0.2.3 Improve the path building&lt;/li&gt;
+&lt;li&gt;0.2.0 Remove real root path features&lt;/li&gt;
+&lt;li&gt;0.1.0 Initial release&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;credits&#34;&gt;Credits&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://leuville.com&#34;&gt;Leuville Objects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/enten&#34;&gt;Steven Enten&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;LICENSE.md&#34;&gt;MIT&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
