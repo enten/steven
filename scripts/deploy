@@ -51,4 +51,4 @@ hugo --source=$ROOT --config=$ROOT/config.toml $@
 
 echo
 echo "# Deployement on $HOST:$PORT (under $DEST)"
-$PROGPATH/node_modules/ftpsync/bin/ftpsync -l $PUBLIC -r $DEST -h $HOST -p $PORT -u $USERNAME -s $PASSWORD -c 10 -v
+$PROGPATH/node_modules/ftpsync/bin/ftpsync -l $PUBLIC -r $DEST -h $HOST -p $PORT -u $USERNAME -s $PASSWORD -c 5 -v
