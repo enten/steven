@@ -62,6 +62,7 @@ aliases:
 
 ### Compétences
 
+<span class="label">appc</span>
 <span class="label">activemq</span>
 <span class="label">agile</span>
 <span class="label">ajax</span>
@@ -72,7 +73,6 @@ aliases:
 <span class="label">cakephp</span>
 <span class="label">codeigniter</span>
 <span class="label">composer</span>
-<span class="label">container</span>
 <span class="label">continuous deployment</span>
 <span class="label">css</span>
 <span class="label">debian</span>
@@ -98,11 +98,13 @@ aliases:
 <span class="label">less</span>
 <span class="label">linux</span>
 <span class="label">lxc</span>
+<span class="label">open container</span>
 <span class="label">maven</span>
 <span class="label">memcached</span>
 <span class="label">meterial design</span>
 <span class="label">mesos</span>
 <span class="label">meteor</span>
+<span class="label">modelisation</span>
 <span class="label">mongodb</span>
 <span class="label">mysql</span>
 <span class="label">node</span>
@@ -110,6 +112,7 @@ aliases:
 <span class="label">npm</span>
 <span class="label">php</span>
 <span class="label">poo</span>
+<span class="label">postgresql</span>
 <span class="label">prestashop</span>
 <span class="label">qemu</span>
 <span class="label">rkt</span>
@@ -117,11 +120,13 @@ aliases:
 <span class="label">responsive design</span>
 <span class="label">rest</span>
 <span class="label">runc</span>
-<span class="label">rom Cooking</span>
+<span class="label">rom cooking</span>
 <span class="label">sass</span>
 <span class="label">scrum</span>
-<span class="label">sprintg</span>
+<span class="label">spring</span>
+<span class="label">sql</span>
 <span class="label">travis</span>
+<span class="label">ubuntu</span>
 <span class="label">uml</span>
 <span class="label">vagrant</span>
 <span class="label">virtualisation</span>
