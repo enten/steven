@@ -23,7 +23,7 @@ aliases:
 * __Licence 3 économie et gestion parcours MIAGE__  
   <small>2011-2012 | Université Paris Est-Créteil</small>
 * __Diplôme universitaire de technologie informatique__  
-  <small>2009-2011 | Université Paris Descartes</small>  
+  <small>2009-2011 | Université Paris Descartes</small>
 * __Baccalauréat des sciences et technologies de la gestion__  
   <small>2007-2009</small>
 * __Brevet d'étude professionnelle des métiers de la comptabilité__  
@@ -32,7 +32,7 @@ aliases:
 ### Expérience
 
 * __Ingénieur de recherche et développement en informatique__  
-  <small>2015 à aujourd'hui | [Leuville Objects](http://leuville.com) (Versailles)</small>  
+  <small>2015 à aujourd'hui | [Leuville Objects](http://leuville.com) (Versailles)</small>
   * Android &middot; Bash &middot; C &middot; Cloudlet &middot; Docker
   * Go &middot; Git &middot; Java 8 &middot; Javascript &middot; Linux
   * LXC &middot; Mesos &middot; Node &middot; OpenContainer &middot; rkt
@@ -43,18 +43,18 @@ aliases:
   * [INSSET - Institut Supérieur des Sciences et Techniques](http://www.insset.u-picardie.fr/) : Android
   * [Orsys](http://www.orsys.fr) : Android, Git, Java 8
 * __Responsable d'outils de reporting__  
-  <small>2011-2014 | Direction des opérations d'[Essilor](http://essilor.com) France (Vincennes)</small>  
+  <small>2011-2014 | Direction des opérations d'[Essilor](http://essilor.com) France (Vincennes)</small>
   * Microsoft SQL Server
   * Microsoft SQL Server Reporting Services
   * SQL (Transact-SQL)
   * Reporting
 * __Assistant pédagogique__  
-  <small>2009-2011 | Lycée Jean Macé (Vitry-sur-Seine)</small>  
+  <small>2009-2011 | Lycée Jean Macé (Vitry-sur-Seine)</small>
   * Droit et économie
   * Gestion des systèmes d'information
   * Management
 * __Web développeur junior__  
-  <small>2008-2009 | [Spill.net](http://spill.net) creative agency (Paris)</small>  
+  <small>2008-2009 | [Spill.net](http://spill.net) creative agency (Paris)</small>
   * CSS
   * Javascript
   * HTML
