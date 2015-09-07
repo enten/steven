@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gitbook on enten.fr</title>
-    <link>/tags/gitbook/</link>
+    <link>http://enten.github.io/steven/tags/gitbook/</link>
     <description>Recent content in Gitbook on enten.fr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-FR</language>
     <lastBuildDate>Tue, 28 Jul 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/gitbook/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://enten.github.io/steven/tags/gitbook/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>gitbook-boilerplate</title>
-      <link>/gitbook-boilerplate/</link>
+      <link>http://enten.github.io/steven/gitbook-boilerplate/</link>
       <pubDate>Tue, 28 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>/gitbook-boilerplate/</guid>
+      <guid>http://enten.github.io/steven/gitbook-boilerplate/</guid>
       <description>
 
 &lt;h2 id=&#34;demo&#34;&gt;Demo&lt;/h2&gt;

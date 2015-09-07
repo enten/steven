@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>enten.fr</title>
-    <link>/</link>
+    <link>http://enten.github.io/steven/</link>
     <description>Recent content on enten.fr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-FR</language>
     <lastBuildDate>Sat, 15 Aug 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://enten.github.io/steven/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>hugo-boilerplate</title>
-      <link>/hugo-boilerplate/</link>
+      <link>http://enten.github.io/steven/hugo-boilerplate/</link>
       <pubDate>Sat, 15 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>/hugo-boilerplate/</guid>
+      <guid>http://enten.github.io/steven/hugo-boilerplate/</guid>
       <description>
 
 &lt;h2 id=&#34;demo-http-enten-github-io-hugo-boilerplate&#34;&gt;&lt;a href=&#34;http://enten.github.io/hugo-boilerplate/&#34;&gt;Demo&lt;/a&gt;&lt;/h2&gt;
@@ -90,10 +90,10 @@ COMMANDS:
     
     <item>
       <title>hyde-y</title>
-      <link>/hyde-y/</link>
+      <link>http://enten.github.io/steven/hyde-y/</link>
       <pubDate>Thu, 13 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>/hyde-y/</guid>
+      <guid>http://enten.github.io/steven/hyde-y/</guid>
       <description>
 
 &lt;p&gt;&lt;small&gt;Forked from &lt;a href=&#34;https://github.com/zyro/hyde-x&#34;&gt;Hyde-X&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
@@ -300,20 +300,20 @@ paginatePath = &amp;quot;page&amp;quot;
     
     <item>
       <title>test</title>
-      <link>/gallery/test/</link>
+      <link>http://enten.github.io/steven/gallery/test/</link>
       <pubDate>Sat, 01 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>/gallery/test/</guid>
+      <guid>http://enten.github.io/steven/gallery/test/</guid>
       <description>&lt;p&gt;A small library providing the R method to make work with paths and imports less involved.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>gitbook-boilerplate</title>
-      <link>/gitbook-boilerplate/</link>
+      <link>http://enten.github.io/steven/gitbook-boilerplate/</link>
       <pubDate>Tue, 28 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>/gitbook-boilerplate/</guid>
+      <guid>http://enten.github.io/steven/gitbook-boilerplate/</guid>
       <description>
 
 &lt;h2 id=&#34;demo&#34;&gt;Demo&lt;/h2&gt;
@@ -353,10 +353,10 @@ npm run deploy
     
     <item>
       <title>losh</title>
-      <link>/losh/</link>
+      <link>http://enten.github.io/steven/losh/</link>
       <pubDate>Wed, 15 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>/losh/</guid>
+      <guid>http://enten.github.io/steven/losh/</guid>
       <description>
 
 &lt;h2 id=&#34;purpose&#34;&gt;Purpose&lt;/h2&gt;
@@ -436,10 +436,10 @@ Hello world
     
     <item>
       <title>ps-loyaltydiscount</title>
-      <link>/ps-loyaltydiscount/</link>
+      <link>http://enten.github.io/steven/ps-loyaltydiscount/</link>
       <pubDate>Sun, 05 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>/ps-loyaltydiscount/</guid>
+      <guid>http://enten.github.io/steven/ps-loyaltydiscount/</guid>
       <description>
 
 &lt;h2 id=&#34;présentation&#34;&gt;Présentation&lt;/h2&gt;
@@ -541,10 +541,10 @@ de la classe &lt;code&gt;LoyaltyDiscount&lt;/code&gt;.&lt;/p&gt;
     
     <item>
       <title>kaio</title>
-      <link>/kaio/</link>
+      <link>http://enten.github.io/steven/kaio/</link>
       <pubDate>Sun, 14 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>/kaio/</guid>
+      <guid>http://enten.github.io/steven/kaio/</guid>
       <description>
 
 &lt;p&gt;A small library providing the R method to make work with paths and imports less involved.&lt;/p&gt;
@@ -636,10 +636,10 @@ function *mw2(next) {
     
     <item>
       <title>confectioner</title>
-      <link>/confectioner/</link>
+      <link>http://enten.github.io/steven/confectioner/</link>
       <pubDate>Mon, 01 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>/confectioner/</guid>
+      <guid>http://enten.github.io/steven/confectioner/</guid>
       <description>
 
 &lt;p&gt;Simpliest configuration builder which used the environment.&lt;/p&gt;
@@ -707,10 +707,10 @@ console.log(config.getValuesMap());
     
     <item>
       <title>dotresolver</title>
-      <link>/dotresolver/</link>
+      <link>http://enten.github.io/steven/dotresolver/</link>
       <pubDate>Mon, 13 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>/dotresolver/</guid>
+      <guid>http://enten.github.io/steven/dotresolver/</guid>
       <description>
 
 &lt;p&gt;A small library providing the R method to make work with paths and imports less involved.&lt;/p&gt;
@@ -785,10 +785,10 @@ var hello = R(&#39;ctrl&#39;, &#39;hello.js&#39;, true);
     
     <item>
       <title>About</title>
-      <link>/about/</link>
+      <link>http://enten.github.io/steven/about/</link>
       <pubDate>Mon, 24 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>/about/</guid>
+      <guid>http://enten.github.io/steven/about/</guid>
       <description>
 
 &lt;h2 id=&#34;ingénieur-en-recherche-et-développement-informatique&#34;&gt;Ingénieur en recherche et développement informatique&lt;/h2&gt;
@@ -1035,10 +1035,10 @@ var hello = R(&#39;ctrl&#39;, &#39;hello.js&#39;, true);
     
     <item>
       <title>Android 5.1.1 x86_64</title>
-      <link>/2015/06/15/android-5.1.1-x86_64/</link>
+      <link>http://enten.github.io/steven/2015/06/15/android-5.1.1-x86_64/</link>
       <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>/2015/06/15/android-5.1.1-x86_64/</guid>
+      <guid>http://enten.github.io/steven/2015/06/15/android-5.1.1-x86_64/</guid>
       <description>
 
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
@@ -1052,7 +1052,7 @@ En effet la compilation de ces 2 projets ne produit pas le même résultat (une 
 
 &lt;h2 id=&#34;contexte&#34;&gt;Contexte&lt;/h2&gt;
 
-&lt;p&gt;Peu de temps après notre expérience de &lt;a href=&#34;/page/virtualiser-android-5-lollipop-avec-qemu/&#34;&gt;virtualisation d&amp;rsquo;Android 5 Lollipop avec Qemu&lt;/a&gt;, nous avons constaté que des images 64-bits précompilées d&amp;rsquo;Android étaient proposées en téléchargement par le &lt;a href=&#34;http://developer.android.com/tools/help/sdk-manager.html&#34;&gt;SDK Manager&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Peu de temps après notre expérience de &lt;a href=&#34;http://enten.github.io/steven/page/virtualiser-android-5-lollipop-avec-qemu/&#34;&gt;virtualisation d&amp;rsquo;Android 5 Lollipop avec Qemu&lt;/a&gt;, nous avons constaté que des images 64-bits précompilées d&amp;rsquo;Android étaient proposées en téléchargement par le &lt;a href=&#34;http://developer.android.com/tools/help/sdk-manager.html&#34;&gt;SDK Manager&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;!TODO Screen SDK images/fig/sdk-manager-images-64bits.png&lt;/p&gt;
 
@@ -1289,10 +1289,10 @@ make -j8
     
     <item>
       <title>LXC et Android 5 ARM64</title>
-      <link>/2014/12/30/lxc-et-android-5-arm64/</link>
+      <link>http://enten.github.io/steven/2014/12/30/lxc-et-android-5-arm64/</link>
       <pubDate>Tue, 30 Dec 2014 00:00:00 +0000</pubDate>
       
-      <guid>/2014/12/30/lxc-et-android-5-arm64/</guid>
+      <guid>http://enten.github.io/steven/2014/12/30/lxc-et-android-5-arm64/</guid>
       <description>
 
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
@@ -1503,10 +1503,10 @@ lxc.network.link = eth0
     
     <item>
       <title>Virtualiser Android 5 Lollipop avec Qemu</title>
-      <link>/2014/11/30/virtualiser-android-5-lollipop-avec-qemu/</link>
+      <link>http://enten.github.io/steven/2014/11/30/virtualiser-android-5-lollipop-avec-qemu/</link>
       <pubDate>Sun, 30 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>/2014/11/30/virtualiser-android-5-lollipop-avec-qemu/</guid>
+      <guid>http://enten.github.io/steven/2014/11/30/virtualiser-android-5-lollipop-avec-qemu/</guid>
       <description>
 
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
@@ -1687,12 +1687,12 @@ $ make -j8
 
 &lt;p&gt;&lt;strong&gt;Aperçu de &lt;code&gt;ranchu_arm64-eng&lt;/code&gt;&lt;/strong&gt; :&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;/assets/images/fig/ranchu_arm64-eng.png&#34;&gt;&lt;img src=&#34;/assets/images/fig/ranchu_arm64-eng-tiny.png&#34; alt=&#34;ranchu_arm64-eng preview&#34; /&gt;
+&lt;p&gt;&lt;a href=&#34;http://enten.github.io/steven/assets/images/fig/ranchu_arm64-eng.png&#34;&gt;&lt;img src=&#34;http://enten.github.io/steven/assets/images/fig/ranchu_arm64-eng-tiny.png&#34; alt=&#34;ranchu_arm64-eng preview&#34; /&gt;
 &lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Aperçu de &lt;code&gt;mini_emulator_arm64-userdebug&lt;/code&gt;&lt;/strong&gt; :&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;/assets/images/fig/mini_emulator_arm64-userdebug.png&#34;&gt;&lt;img src=&#34;/assets/images/fig/mini_emulator_arm64-userdebug-tiny.png&#34; alt=&#34;mini_emulator_arm64-userdebug preview&#34; /&gt;
+&lt;p&gt;&lt;a href=&#34;http://enten.github.io/steven/assets/images/fig/mini_emulator_arm64-userdebug.png&#34;&gt;&lt;img src=&#34;http://enten.github.io/steven/assets/images/fig/mini_emulator_arm64-userdebug-tiny.png&#34; alt=&#34;mini_emulator_arm64-userdebug preview&#34; /&gt;
 &lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;références&#34;&gt;Références&lt;/h2&gt;
@@ -1707,10 +1707,10 @@ $ make -j8
     
     <item>
       <title>Installer Apache Mesos 0.20.1 sur Ubuntu 14.04.1.LTS</title>
-      <link>/2014/11/17/installer-apache-mesos-0.20.1-sur-ubuntu-14.04.1.lts/</link>
+      <link>http://enten.github.io/steven/2014/11/17/installer-apache-mesos-0.20.1-sur-ubuntu-14.04.1.lts/</link>
       <pubDate>Mon, 17 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>/2014/11/17/installer-apache-mesos-0.20.1-sur-ubuntu-14.04.1.lts/</guid>
+      <guid>http://enten.github.io/steven/2014/11/17/installer-apache-mesos-0.20.1-sur-ubuntu-14.04.1.lts/</guid>
       <description>
 
 &lt;h2 id=&#34;a-propos-d-apache-mesos&#34;&gt;A propos d&amp;rsquo;Apache Mesos&lt;/h2&gt;
@@ -1877,10 +1877,10 @@ Le cadre à gauche indique le nombre de noeud slaves actifs (1 si mesos-slave es
     
     <item>
       <title>Communications dans les systèmes embarqués par l’emploi d’agents mobiles</title>
-      <link>/2014/06/01/communications-dans-les-syst%C3%A8mes-embarqu%C3%A9s-par-lemploi-dagents-mobiles/</link>
+      <link>http://enten.github.io/steven/2014/06/01/communications-dans-les-syst%C3%A8mes-embarqu%C3%A9s-par-lemploi-dagents-mobiles/</link>
       <pubDate>Sun, 01 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>/2014/06/01/communications-dans-les-syst%C3%A8mes-embarqu%C3%A9s-par-lemploi-dagents-mobiles/</guid>
+      <guid>http://enten.github.io/steven/2014/06/01/communications-dans-les-syst%C3%A8mes-embarqu%C3%A9s-par-lemploi-dagents-mobiles/</guid>
       <description>
 
 &lt;h2 id=&#34;contexte&#34;&gt;Contexte&lt;/h2&gt;
