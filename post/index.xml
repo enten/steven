@@ -2,21 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on enten.fr</title>
-    <link>http://enten.github.io/steven/post/</link>
+    <link>http://http:.github.io/hub.com/post/</link>
     <description>Recent content in Posts on enten.fr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-FR</language>
-    <managingEditor>steven@enten.fr (Steven Enten)</managingEditor>
-    <webMaster>steven@enten.fr (Steven Enten)</webMaster>
     <lastBuildDate>Mon, 15 Jun 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://enten.github.io/steven/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://http:.github.io/hub.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Android 5.1.1 x86_64</title>
-      <link>http://enten.github.io/steven/2015/06/15/android-5.1.1-x86_64/</link>
+      <link>http://http:.github.io/hub.com/2015/06/15/android-5.1.1-x86_64/</link>
       <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
-      <author>steven@enten.fr (Steven Enten)</author>
-      <guid>http://enten.github.io/steven/2015/06/15/android-5.1.1-x86_64/</guid>
+      
+      <guid>http://http:.github.io/hub.com/2015/06/15/android-5.1.1-x86_64/</guid>
       <description>
 
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
@@ -30,7 +28,7 @@ En effet la compilation de ces 2 projets ne produit pas le même résultat (une 
 
 &lt;h2 id=&#34;contexte&#34;&gt;Contexte&lt;/h2&gt;
 
-&lt;p&gt;Peu de temps après notre expérience de &lt;a href=&#34;http://enten.github.io/steven/page/virtualiser-android-5-lollipop-avec-qemu/&#34;&gt;virtualisation d&amp;rsquo;Android 5 Lollipop avec Qemu&lt;/a&gt;, nous avons constaté que des images 64-bits précompilées d&amp;rsquo;Android étaient proposées en téléchargement par le &lt;a href=&#34;http://developer.android.com/tools/help/sdk-manager.html&#34;&gt;SDK Manager&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Peu de temps après notre expérience de &lt;a href=&#34;http://http:.github.io/hub.com/page/virtualiser-android-5-lollipop-avec-qemu/&#34;&gt;virtualisation d&amp;rsquo;Android 5 Lollipop avec Qemu&lt;/a&gt;, nous avons constaté que des images 64-bits précompilées d&amp;rsquo;Android étaient proposées en téléchargement par le &lt;a href=&#34;http://developer.android.com/tools/help/sdk-manager.html&#34;&gt;SDK Manager&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;!TODO Screen SDK images/fig/sdk-manager-images-64bits.png&lt;/p&gt;
 
@@ -267,10 +265,10 @@ make -j8
     
     <item>
       <title>LXC et Android 5 ARM64</title>
-      <link>http://enten.github.io/steven/2014/12/30/lxc-et-android-5-arm64/</link>
+      <link>http://http:.github.io/hub.com/2014/12/30/lxc-et-android-5-arm64/</link>
       <pubDate>Tue, 30 Dec 2014 00:00:00 +0000</pubDate>
-      <author>steven@enten.fr (Steven Enten)</author>
-      <guid>http://enten.github.io/steven/2014/12/30/lxc-et-android-5-arm64/</guid>
+      
+      <guid>http://http:.github.io/hub.com/2014/12/30/lxc-et-android-5-arm64/</guid>
       <description>
 
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
@@ -481,10 +479,10 @@ lxc.network.link = eth0
     
     <item>
       <title>Virtualiser Android 5 Lollipop avec Qemu</title>
-      <link>http://enten.github.io/steven/2014/11/30/virtualiser-android-5-lollipop-avec-qemu/</link>
+      <link>http://http:.github.io/hub.com/2014/11/30/virtualiser-android-5-lollipop-avec-qemu/</link>
       <pubDate>Sun, 30 Nov 2014 00:00:00 +0000</pubDate>
-      <author>steven@enten.fr (Steven Enten)</author>
-      <guid>http://enten.github.io/steven/2014/11/30/virtualiser-android-5-lollipop-avec-qemu/</guid>
+      
+      <guid>http://http:.github.io/hub.com/2014/11/30/virtualiser-android-5-lollipop-avec-qemu/</guid>
       <description>
 
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
@@ -665,12 +663,12 @@ $ make -j8
 
 &lt;p&gt;&lt;strong&gt;Aperçu de &lt;code&gt;ranchu_arm64-eng&lt;/code&gt;&lt;/strong&gt; :&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://enten.github.io/steven/assets/images/fig/ranchu_arm64-eng.png&#34;&gt;&lt;img src=&#34;http://enten.github.io/steven/assets/images/fig/ranchu_arm64-eng-tiny.png&#34; alt=&#34;ranchu_arm64-eng preview&#34; /&gt;
+&lt;p&gt;&lt;a href=&#34;http://http:.github.io/hub.com/assets/images/fig/ranchu_arm64-eng.png&#34;&gt;&lt;img src=&#34;http://http:.github.io/hub.com/assets/images/fig/ranchu_arm64-eng-tiny.png&#34; alt=&#34;ranchu_arm64-eng preview&#34; /&gt;
 &lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Aperçu de &lt;code&gt;mini_emulator_arm64-userdebug&lt;/code&gt;&lt;/strong&gt; :&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://enten.github.io/steven/assets/images/fig/mini_emulator_arm64-userdebug.png&#34;&gt;&lt;img src=&#34;http://enten.github.io/steven/assets/images/fig/mini_emulator_arm64-userdebug-tiny.png&#34; alt=&#34;mini_emulator_arm64-userdebug preview&#34; /&gt;
+&lt;p&gt;&lt;a href=&#34;http://http:.github.io/hub.com/assets/images/fig/mini_emulator_arm64-userdebug.png&#34;&gt;&lt;img src=&#34;http://http:.github.io/hub.com/assets/images/fig/mini_emulator_arm64-userdebug-tiny.png&#34; alt=&#34;mini_emulator_arm64-userdebug preview&#34; /&gt;
 &lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;références&#34;&gt;Références&lt;/h2&gt;
@@ -685,10 +683,10 @@ $ make -j8
     
     <item>
       <title>Installer Apache Mesos 0.20.1 sur Ubuntu 14.04.1.LTS</title>
-      <link>http://enten.github.io/steven/2014/11/17/installer-apache-mesos-0.20.1-sur-ubuntu-14.04.1.lts/</link>
+      <link>http://http:.github.io/hub.com/2014/11/17/installer-apache-mesos-0.20.1-sur-ubuntu-14.04.1.lts/</link>
       <pubDate>Mon, 17 Nov 2014 00:00:00 +0000</pubDate>
-      <author>steven@enten.fr (Steven Enten)</author>
-      <guid>http://enten.github.io/steven/2014/11/17/installer-apache-mesos-0.20.1-sur-ubuntu-14.04.1.lts/</guid>
+      
+      <guid>http://http:.github.io/hub.com/2014/11/17/installer-apache-mesos-0.20.1-sur-ubuntu-14.04.1.lts/</guid>
       <description>
 
 &lt;h2 id=&#34;a-propos-d-apache-mesos&#34;&gt;A propos d&amp;rsquo;Apache Mesos&lt;/h2&gt;
@@ -855,10 +853,10 @@ Le cadre à gauche indique le nombre de noeud slaves actifs (1 si mesos-slave es
     
     <item>
       <title>Communications dans les systèmes embarqués par l’emploi d’agents mobiles</title>
-      <link>http://enten.github.io/steven/2014/06/01/communications-dans-les-syst%C3%A8mes-embarqu%C3%A9s-par-lemploi-dagents-mobiles/</link>
+      <link>http://http:.github.io/hub.com/2014/06/01/communications-dans-les-syst%C3%A8mes-embarqu%C3%A9s-par-lemploi-dagents-mobiles/</link>
       <pubDate>Sun, 01 Jun 2014 00:00:00 +0000</pubDate>
-      <author>steven@enten.fr (Steven Enten)</author>
-      <guid>http://enten.github.io/steven/2014/06/01/communications-dans-les-syst%C3%A8mes-embarqu%C3%A9s-par-lemploi-dagents-mobiles/</guid>
+      
+      <guid>http://http:.github.io/hub.com/2014/06/01/communications-dans-les-syst%C3%A8mes-embarqu%C3%A9s-par-lemploi-dagents-mobiles/</guid>
       <description>
 
 &lt;h2 id=&#34;contexte&#34;&gt;Contexte&lt;/h2&gt;

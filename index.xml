@@ -2,21 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>enten.fr</title>
-    <link>http://enten.github.io/steven/</link>
+    <link>http://http:.github.io/hub.com/</link>
     <description>Recent content on enten.fr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-FR</language>
-    <managingEditor>steven@enten.fr (Steven Enten)</managingEditor>
-    <webMaster>steven@enten.fr (Steven Enten)</webMaster>
     <lastBuildDate>Sat, 15 Aug 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://enten.github.io/steven/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://http:.github.io/hub.com/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>hugo-boilerplate</title>
-      <link>http://enten.github.io/steven/hugo-boilerplate</link>
+      <link>http://http:.github.io/hub.com/hugo-boilerplate/</link>
       <pubDate>Sat, 15 Aug 2015 00:00:00 +0000</pubDate>
-      <author>steven@enten.fr (Steven Enten)</author>
-      <guid>http://enten.github.io/steven/hugo-boilerplate</guid>
+      
+      <guid>http://http:.github.io/hub.com/hugo-boilerplate/</guid>
       <description>
 
 &lt;h2 id=&#34;demo-http-enten-github-io-hugo-boilerplate&#34;&gt;&lt;a href=&#34;http://enten.github.io/hugo-boilerplate/&#34;&gt;Demo&lt;/a&gt;&lt;/h2&gt;
@@ -92,10 +90,10 @@ COMMANDS:
     
     <item>
       <title>hyde-y</title>
-      <link>http://enten.github.io/steven/hyde-y</link>
+      <link>http://http:.github.io/hub.com/hyde-y/</link>
       <pubDate>Thu, 13 Aug 2015 00:00:00 +0000</pubDate>
-      <author>steven@enten.fr (Steven Enten)</author>
-      <guid>http://enten.github.io/steven/hyde-y</guid>
+      
+      <guid>http://http:.github.io/hub.com/hyde-y/</guid>
       <description>
 
 &lt;p&gt;&lt;small&gt;Forked from &lt;a href=&#34;https://github.com/zyro/hyde-x&#34;&gt;Hyde-X&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
@@ -301,11 +299,21 @@ paginatePath = &amp;quot;page&amp;quot;
     </item>
     
     <item>
+      <title>test</title>
+      <link>http://http:.github.io/hub.com/gallery/test/</link>
+      <pubDate>Sat, 01 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://http:.github.io/hub.com/gallery/test/</guid>
+      <description>&lt;p&gt;A small library providing the R method to make work with paths and imports less involved.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>gitbook-boilerplate</title>
-      <link>http://enten.github.io/steven/gitbook-boilerplate</link>
+      <link>http://http:.github.io/hub.com/gitbook-boilerplate/</link>
       <pubDate>Tue, 28 Jul 2015 00:00:00 +0000</pubDate>
-      <author>steven@enten.fr (Steven Enten)</author>
-      <guid>http://enten.github.io/steven/gitbook-boilerplate</guid>
+      
+      <guid>http://http:.github.io/hub.com/gitbook-boilerplate/</guid>
       <description>
 
 &lt;h2 id=&#34;demo&#34;&gt;Demo&lt;/h2&gt;
@@ -345,10 +353,10 @@ npm run deploy
     
     <item>
       <title>losh</title>
-      <link>http://enten.github.io/steven/losh</link>
+      <link>http://http:.github.io/hub.com/losh/</link>
       <pubDate>Wed, 15 Jul 2015 00:00:00 +0000</pubDate>
-      <author>steven@enten.fr (Steven Enten)</author>
-      <guid>http://enten.github.io/steven/losh</guid>
+      
+      <guid>http://http:.github.io/hub.com/losh/</guid>
       <description>
 
 &lt;h2 id=&#34;purpose&#34;&gt;Purpose&lt;/h2&gt;
@@ -428,10 +436,10 @@ Hello world
     
     <item>
       <title>ps-loyaltydiscount</title>
-      <link>http://enten.github.io/steven/ps-loyaltydiscount</link>
+      <link>http://http:.github.io/hub.com/ps-loyaltydiscount/</link>
       <pubDate>Sun, 05 Jul 2015 00:00:00 +0000</pubDate>
-      <author>steven@enten.fr (Steven Enten)</author>
-      <guid>http://enten.github.io/steven/ps-loyaltydiscount</guid>
+      
+      <guid>http://http:.github.io/hub.com/ps-loyaltydiscount/</guid>
       <description>
 
 &lt;h2 id=&#34;présentation&#34;&gt;Présentation&lt;/h2&gt;
@@ -533,10 +541,10 @@ de la classe &lt;code&gt;LoyaltyDiscount&lt;/code&gt;.&lt;/p&gt;
     
     <item>
       <title>kaio</title>
-      <link>http://enten.github.io/steven/kaio</link>
+      <link>http://http:.github.io/hub.com/kaio/</link>
       <pubDate>Sun, 14 Jun 2015 00:00:00 +0000</pubDate>
-      <author>steven@enten.fr (Steven Enten)</author>
-      <guid>http://enten.github.io/steven/kaio</guid>
+      
+      <guid>http://http:.github.io/hub.com/kaio/</guid>
       <description>
 
 &lt;p&gt;A small library providing the R method to make work with paths and imports less involved.&lt;/p&gt;
@@ -628,10 +636,10 @@ function *mw2(next) {
     
     <item>
       <title>confectioner</title>
-      <link>http://enten.github.io/steven/confectioner</link>
+      <link>http://http:.github.io/hub.com/confectioner/</link>
       <pubDate>Mon, 01 Jun 2015 00:00:00 +0000</pubDate>
-      <author>steven@enten.fr (Steven Enten)</author>
-      <guid>http://enten.github.io/steven/confectioner</guid>
+      
+      <guid>http://http:.github.io/hub.com/confectioner/</guid>
       <description>
 
 &lt;p&gt;Simpliest configuration builder which used the environment.&lt;/p&gt;
@@ -699,10 +707,10 @@ console.log(config.getValuesMap());
     
     <item>
       <title>dotresolver</title>
-      <link>http://enten.github.io/steven/dotresolver</link>
+      <link>http://http:.github.io/hub.com/dotresolver/</link>
       <pubDate>Mon, 13 Apr 2015 00:00:00 +0000</pubDate>
-      <author>steven@enten.fr (Steven Enten)</author>
-      <guid>http://enten.github.io/steven/dotresolver</guid>
+      
+      <guid>http://http:.github.io/hub.com/dotresolver/</guid>
       <description>
 
 &lt;p&gt;A small library providing the R method to make work with paths and imports less involved.&lt;/p&gt;
@@ -777,10 +785,10 @@ var hello = R(&#39;ctrl&#39;, &#39;hello.js&#39;, true);
     
     <item>
       <title>About</title>
-      <link>http://enten.github.io/steven/about/</link>
+      <link>http://http:.github.io/hub.com/about/</link>
       <pubDate>Mon, 24 Aug 2015 00:00:00 +0000</pubDate>
-      <author>steven@enten.fr (Steven Enten)</author>
-      <guid>http://enten.github.io/steven/about/</guid>
+      
+      <guid>http://http:.github.io/hub.com/about/</guid>
       <description>
 
 &lt;h2 id=&#34;ingénieur-en-recherche-et-développement-informatique&#34;&gt;Ingénieur en recherche et développement informatique&lt;/h2&gt;
@@ -797,7 +805,7 @@ var hello = R(&#39;ctrl&#39;, &#39;hello.js&#39;, true);
 &lt;li&gt;&lt;strong&gt;Licence 3 économie et gestion parcours MIAGE&lt;/strong&gt;&lt;br /&gt;
 &lt;small&gt;2011-2012 | Université Paris Est-Créteil&lt;/small&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Diplôme universitaire de technologie informatique&lt;/strong&gt;&lt;br /&gt;
-&lt;small&gt;2009-2011 | Université Paris Descartes&lt;/small&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;small&gt;2009-2011 | Université Paris Descartes&lt;/small&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Baccalauréat des sciences et technologies de la gestion&lt;/strong&gt;&lt;br /&gt;
 &lt;small&gt;2007-2009&lt;/small&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Brevet d&amp;rsquo;étude professionnelle des métiers de la comptabilité&lt;/strong&gt;&lt;br /&gt;
@@ -808,7 +816,7 @@ var hello = R(&#39;ctrl&#39;, &#39;hello.js&#39;, true);
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Ingénieur de recherche et développement en informatique&lt;/strong&gt;&lt;br /&gt;
-&lt;small&gt;2015 à aujourd&amp;rsquo;hui | &lt;a href=&#34;http://leuville.com&#34;&gt;Leuville Objects&lt;/a&gt; (Versailles)&lt;/small&gt;&lt;br /&gt;
+&lt;small&gt;2015 à aujourd&amp;rsquo;hui | &lt;a href=&#34;http://leuville.com&#34;&gt;Leuville Objects&lt;/a&gt; (Versailles)&lt;/small&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Android &amp;middot; Bash &amp;middot; C &amp;middot; Cloudlet &amp;middot; Docker&lt;/li&gt;
@@ -825,7 +833,7 @@ var hello = R(&#39;ctrl&#39;, &#39;hello.js&#39;, true);
 &lt;li&gt;&lt;a href=&#34;http://www.orsys.fr&#34;&gt;Orsys&lt;/a&gt; : Android, Git, Java 8&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Responsable d&amp;rsquo;outils de reporting&lt;/strong&gt;&lt;br /&gt;
-&lt;small&gt;2011-2014 | Direction des opérations d&amp;rsquo;&lt;a href=&#34;http://essilor.com&#34;&gt;Essilor&lt;/a&gt; France (Vincennes)&lt;/small&gt;&lt;br /&gt;
+&lt;small&gt;2011-2014 | Direction des opérations d&amp;rsquo;&lt;a href=&#34;http://essilor.com&#34;&gt;Essilor&lt;/a&gt; France (Vincennes)&lt;/small&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Microsoft SQL Server&lt;/li&gt;
@@ -834,7 +842,7 @@ var hello = R(&#39;ctrl&#39;, &#39;hello.js&#39;, true);
 &lt;li&gt;Reporting&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Assistant pédagogique&lt;/strong&gt;&lt;br /&gt;
-&lt;small&gt;2009-2011 | Lycée Jean Macé (Vitry-sur-Seine)&lt;/small&gt;&lt;br /&gt;
+&lt;small&gt;2009-2011 | Lycée Jean Macé (Vitry-sur-Seine)&lt;/small&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Droit et économie&lt;/li&gt;
@@ -842,7 +850,7 @@ var hello = R(&#39;ctrl&#39;, &#39;hello.js&#39;, true);
 &lt;li&gt;Management&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Web développeur junior&lt;/strong&gt;&lt;br /&gt;
-&lt;small&gt;2008-2009 | &lt;a href=&#34;http://spill.net&#34;&gt;Spill.net&lt;/a&gt; creative agency (Paris)&lt;/small&gt;&lt;br /&gt;
+&lt;small&gt;2008-2009 | &lt;a href=&#34;http://spill.net&#34;&gt;Spill.net&lt;/a&gt; creative agency (Paris)&lt;/small&gt;
 
 &lt;ul&gt;
 &lt;li&gt;CSS&lt;/li&gt;
@@ -854,76 +862,165 @@ var hello = R(&#39;ctrl&#39;, &#39;hello.js&#39;, true);
 
 &lt;h3 id=&#34;compétences&#34;&gt;Compétences&lt;/h3&gt;
 
-&lt;p&gt;&lt;span class=&#34;label&#34;&gt;appc&lt;/span&gt;
+&lt;p&gt;
+&lt;span class=&#34;label&#34;&gt;appc&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;activemq&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;agile&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;ajax&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;android&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;angular&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;bootstrap&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;bower&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;cakephp&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;codeigniter&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;composer&lt;/span&gt;
-&lt;span class=&#34;label&#34;&gt;continuous deployment&lt;/span&gt;
+
+&lt;span class=&#34;label&#34;&gt;continuous&lt;/span&gt;
+
+&lt;span class=&#34;label&#34;&gt;deployment&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;css&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;debian&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;docker&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;flux&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;fuelphp&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;git&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;github&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;gohugo&lt;/span&gt;
-&lt;span class=&#34;label&#34;&gt;google maps api&lt;/span&gt;
+
+&lt;span class=&#34;label&#34;&gt;google&lt;/span&gt;
+
+&lt;span class=&#34;label&#34;&gt;maps&lt;/span&gt;
+
+&lt;span class=&#34;label&#34;&gt;api&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;grunt&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;gulp&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;html&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;iojs&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;java&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;javascript&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;jenkins&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;jeykill&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;jquery&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;json&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;junit&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;koa&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;less&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;linux&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;lxc&lt;/span&gt;
-&lt;span class=&#34;label&#34;&gt;open container&lt;/span&gt;
+
+&lt;span class=&#34;label&#34;&gt;open&lt;/span&gt;
+
+&lt;span class=&#34;label&#34;&gt;container&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;maven&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;memcached&lt;/span&gt;
-&lt;span class=&#34;label&#34;&gt;meterial design&lt;/span&gt;
+
+&lt;span class=&#34;label&#34;&gt;meterial&lt;/span&gt;
+
+&lt;span class=&#34;label&#34;&gt;design&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;mesos&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;meteor&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;modelisation&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;mongodb&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;mysql&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;node&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;nosql&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;npm&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;php&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;poo&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;postgresql&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;prestashop&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;qemu&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;rkt&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;react&lt;/span&gt;
-&lt;span class=&#34;label&#34;&gt;responsive design&lt;/span&gt;
+
+&lt;span class=&#34;label&#34;&gt;responsive&lt;/span&gt;
+
+&lt;span class=&#34;label&#34;&gt;design&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;rest&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;runc&lt;/span&gt;
-&lt;span class=&#34;label&#34;&gt;rom cooking&lt;/span&gt;
+
+&lt;span class=&#34;label&#34;&gt;rom&lt;/span&gt;
+
+&lt;span class=&#34;label&#34;&gt;cooking&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;sass&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;scrum&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;spring&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;sql&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;travis&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;ubuntu&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;uml&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;vagrant&lt;/span&gt;
+
 &lt;span class=&#34;label&#34;&gt;virtualisation&lt;/span&gt;
-&lt;span class=&#34;label&#34;&gt;web services&lt;/span&gt;
-&lt;span class=&#34;label&#34;&gt;xml&lt;/span&gt;&lt;/p&gt;
+
+&lt;span class=&#34;label&#34;&gt;web&lt;/span&gt;
+
+&lt;span class=&#34;label&#34;&gt;services&lt;/span&gt;
+
+&lt;span class=&#34;label&#34;&gt;xml&lt;/span&gt;
+
+
+&lt;/p&gt;
 
 &lt;h3 id=&#34;divers&#34;&gt;Divers&lt;/h3&gt;
 
@@ -938,10 +1035,10 @@ var hello = R(&#39;ctrl&#39;, &#39;hello.js&#39;, true);
     
     <item>
       <title>Android 5.1.1 x86_64</title>
-      <link>http://enten.github.io/steven/2015/06/15/android-5.1.1-x86_64/</link>
+      <link>http://http:.github.io/hub.com/2015/06/15/android-5.1.1-x86_64/</link>
       <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
-      <author>steven@enten.fr (Steven Enten)</author>
-      <guid>http://enten.github.io/steven/2015/06/15/android-5.1.1-x86_64/</guid>
+      
+      <guid>http://http:.github.io/hub.com/2015/06/15/android-5.1.1-x86_64/</guid>
       <description>
 
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
@@ -955,7 +1052,7 @@ En effet la compilation de ces 2 projets ne produit pas le même résultat (une 
 
 &lt;h2 id=&#34;contexte&#34;&gt;Contexte&lt;/h2&gt;
 
-&lt;p&gt;Peu de temps après notre expérience de &lt;a href=&#34;http://enten.github.io/steven/page/virtualiser-android-5-lollipop-avec-qemu/&#34;&gt;virtualisation d&amp;rsquo;Android 5 Lollipop avec Qemu&lt;/a&gt;, nous avons constaté que des images 64-bits précompilées d&amp;rsquo;Android étaient proposées en téléchargement par le &lt;a href=&#34;http://developer.android.com/tools/help/sdk-manager.html&#34;&gt;SDK Manager&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Peu de temps après notre expérience de &lt;a href=&#34;http://http:.github.io/hub.com/page/virtualiser-android-5-lollipop-avec-qemu/&#34;&gt;virtualisation d&amp;rsquo;Android 5 Lollipop avec Qemu&lt;/a&gt;, nous avons constaté que des images 64-bits précompilées d&amp;rsquo;Android étaient proposées en téléchargement par le &lt;a href=&#34;http://developer.android.com/tools/help/sdk-manager.html&#34;&gt;SDK Manager&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;!TODO Screen SDK images/fig/sdk-manager-images-64bits.png&lt;/p&gt;
 
@@ -1192,10 +1289,10 @@ make -j8
     
     <item>
       <title>LXC et Android 5 ARM64</title>
-      <link>http://enten.github.io/steven/2014/12/30/lxc-et-android-5-arm64/</link>
+      <link>http://http:.github.io/hub.com/2014/12/30/lxc-et-android-5-arm64/</link>
       <pubDate>Tue, 30 Dec 2014 00:00:00 +0000</pubDate>
-      <author>steven@enten.fr (Steven Enten)</author>
-      <guid>http://enten.github.io/steven/2014/12/30/lxc-et-android-5-arm64/</guid>
+      
+      <guid>http://http:.github.io/hub.com/2014/12/30/lxc-et-android-5-arm64/</guid>
       <description>
 
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
@@ -1406,10 +1503,10 @@ lxc.network.link = eth0
     
     <item>
       <title>Virtualiser Android 5 Lollipop avec Qemu</title>
-      <link>http://enten.github.io/steven/2014/11/30/virtualiser-android-5-lollipop-avec-qemu/</link>
+      <link>http://http:.github.io/hub.com/2014/11/30/virtualiser-android-5-lollipop-avec-qemu/</link>
       <pubDate>Sun, 30 Nov 2014 00:00:00 +0000</pubDate>
-      <author>steven@enten.fr (Steven Enten)</author>
-      <guid>http://enten.github.io/steven/2014/11/30/virtualiser-android-5-lollipop-avec-qemu/</guid>
+      
+      <guid>http://http:.github.io/hub.com/2014/11/30/virtualiser-android-5-lollipop-avec-qemu/</guid>
       <description>
 
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
@@ -1590,12 +1687,12 @@ $ make -j8
 
 &lt;p&gt;&lt;strong&gt;Aperçu de &lt;code&gt;ranchu_arm64-eng&lt;/code&gt;&lt;/strong&gt; :&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://enten.github.io/steven/assets/images/fig/ranchu_arm64-eng.png&#34;&gt;&lt;img src=&#34;http://enten.github.io/steven/assets/images/fig/ranchu_arm64-eng-tiny.png&#34; alt=&#34;ranchu_arm64-eng preview&#34; /&gt;
+&lt;p&gt;&lt;a href=&#34;http://http:.github.io/hub.com/assets/images/fig/ranchu_arm64-eng.png&#34;&gt;&lt;img src=&#34;http://http:.github.io/hub.com/assets/images/fig/ranchu_arm64-eng-tiny.png&#34; alt=&#34;ranchu_arm64-eng preview&#34; /&gt;
 &lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Aperçu de &lt;code&gt;mini_emulator_arm64-userdebug&lt;/code&gt;&lt;/strong&gt; :&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://enten.github.io/steven/assets/images/fig/mini_emulator_arm64-userdebug.png&#34;&gt;&lt;img src=&#34;http://enten.github.io/steven/assets/images/fig/mini_emulator_arm64-userdebug-tiny.png&#34; alt=&#34;mini_emulator_arm64-userdebug preview&#34; /&gt;
+&lt;p&gt;&lt;a href=&#34;http://http:.github.io/hub.com/assets/images/fig/mini_emulator_arm64-userdebug.png&#34;&gt;&lt;img src=&#34;http://http:.github.io/hub.com/assets/images/fig/mini_emulator_arm64-userdebug-tiny.png&#34; alt=&#34;mini_emulator_arm64-userdebug preview&#34; /&gt;
 &lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;références&#34;&gt;Références&lt;/h2&gt;
@@ -1610,10 +1707,10 @@ $ make -j8
     
     <item>
       <title>Installer Apache Mesos 0.20.1 sur Ubuntu 14.04.1.LTS</title>
-      <link>http://enten.github.io/steven/2014/11/17/installer-apache-mesos-0.20.1-sur-ubuntu-14.04.1.lts/</link>
+      <link>http://http:.github.io/hub.com/2014/11/17/installer-apache-mesos-0.20.1-sur-ubuntu-14.04.1.lts/</link>
       <pubDate>Mon, 17 Nov 2014 00:00:00 +0000</pubDate>
-      <author>steven@enten.fr (Steven Enten)</author>
-      <guid>http://enten.github.io/steven/2014/11/17/installer-apache-mesos-0.20.1-sur-ubuntu-14.04.1.lts/</guid>
+      
+      <guid>http://http:.github.io/hub.com/2014/11/17/installer-apache-mesos-0.20.1-sur-ubuntu-14.04.1.lts/</guid>
       <description>
 
 &lt;h2 id=&#34;a-propos-d-apache-mesos&#34;&gt;A propos d&amp;rsquo;Apache Mesos&lt;/h2&gt;
@@ -1780,10 +1877,10 @@ Le cadre à gauche indique le nombre de noeud slaves actifs (1 si mesos-slave es
     
     <item>
       <title>Communications dans les systèmes embarqués par l’emploi d’agents mobiles</title>
-      <link>http://enten.github.io/steven/2014/06/01/communications-dans-les-syst%C3%A8mes-embarqu%C3%A9s-par-lemploi-dagents-mobiles/</link>
+      <link>http://http:.github.io/hub.com/2014/06/01/communications-dans-les-syst%C3%A8mes-embarqu%C3%A9s-par-lemploi-dagents-mobiles/</link>
       <pubDate>Sun, 01 Jun 2014 00:00:00 +0000</pubDate>
-      <author>steven@enten.fr (Steven Enten)</author>
-      <guid>http://enten.github.io/steven/2014/06/01/communications-dans-les-syst%C3%A8mes-embarqu%C3%A9s-par-lemploi-dagents-mobiles/</guid>
+      
+      <guid>http://http:.github.io/hub.com/2014/06/01/communications-dans-les-syst%C3%A8mes-embarqu%C3%A9s-par-lemploi-dagents-mobiles/</guid>
       <description>
 
 &lt;h2 id=&#34;contexte&#34;&gt;Contexte&lt;/h2&gt;

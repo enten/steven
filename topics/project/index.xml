@@ -2,21 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Project on enten.fr</title>
-    <link>http://enten.github.io/steven/topics/project/</link>
+    <link>http://http:.github.io/hub.com/topics/project/</link>
     <description>Recent content in Project on enten.fr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-FR</language>
-    <managingEditor>steven@enten.fr (Steven Enten)</managingEditor>
-    <webMaster>steven@enten.fr (Steven Enten)</webMaster>
     <lastBuildDate>Sat, 15 Aug 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://enten.github.io/steven/topics/project/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://http:.github.io/hub.com/topics/project/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>hugo-boilerplate</title>
-      <link>http://enten.github.io/steven/hugo-boilerplate</link>
+      <link>http://http:.github.io/hub.com/hugo-boilerplate/</link>
       <pubDate>Sat, 15 Aug 2015 00:00:00 +0000</pubDate>
-      <author>steven@enten.fr (Steven Enten)</author>
-      <guid>http://enten.github.io/steven/hugo-boilerplate</guid>
+      
+      <guid>http://http:.github.io/hub.com/hugo-boilerplate/</guid>
       <description>
 
 &lt;h2 id=&#34;demo-http-enten-github-io-hugo-boilerplate&#34;&gt;&lt;a href=&#34;http://enten.github.io/hugo-boilerplate/&#34;&gt;Demo&lt;/a&gt;&lt;/h2&gt;
@@ -92,10 +90,10 @@ COMMANDS:
     
     <item>
       <title>hyde-y</title>
-      <link>http://enten.github.io/steven/hyde-y</link>
+      <link>http://http:.github.io/hub.com/hyde-y/</link>
       <pubDate>Thu, 13 Aug 2015 00:00:00 +0000</pubDate>
-      <author>steven@enten.fr (Steven Enten)</author>
-      <guid>http://enten.github.io/steven/hyde-y</guid>
+      
+      <guid>http://http:.github.io/hub.com/hyde-y/</guid>
       <description>
 
 &lt;p&gt;&lt;small&gt;Forked from &lt;a href=&#34;https://github.com/zyro/hyde-x&#34;&gt;Hyde-X&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
@@ -302,10 +300,10 @@ paginatePath = &amp;quot;page&amp;quot;
     
     <item>
       <title>gitbook-boilerplate</title>
-      <link>http://enten.github.io/steven/gitbook-boilerplate</link>
+      <link>http://http:.github.io/hub.com/gitbook-boilerplate/</link>
       <pubDate>Tue, 28 Jul 2015 00:00:00 +0000</pubDate>
-      <author>steven@enten.fr (Steven Enten)</author>
-      <guid>http://enten.github.io/steven/gitbook-boilerplate</guid>
+      
+      <guid>http://http:.github.io/hub.com/gitbook-boilerplate/</guid>
       <description>
 
 &lt;h2 id=&#34;demo&#34;&gt;Demo&lt;/h2&gt;
@@ -345,10 +343,10 @@ npm run deploy
     
     <item>
       <title>losh</title>
-      <link>http://enten.github.io/steven/losh</link>
+      <link>http://http:.github.io/hub.com/losh/</link>
       <pubDate>Wed, 15 Jul 2015 00:00:00 +0000</pubDate>
-      <author>steven@enten.fr (Steven Enten)</author>
-      <guid>http://enten.github.io/steven/losh</guid>
+      
+      <guid>http://http:.github.io/hub.com/losh/</guid>
       <description>
 
 &lt;h2 id=&#34;purpose&#34;&gt;Purpose&lt;/h2&gt;
@@ -428,10 +426,10 @@ Hello world
     
     <item>
       <title>ps-loyaltydiscount</title>
-      <link>http://enten.github.io/steven/ps-loyaltydiscount</link>
+      <link>http://http:.github.io/hub.com/ps-loyaltydiscount/</link>
       <pubDate>Sun, 05 Jul 2015 00:00:00 +0000</pubDate>
-      <author>steven@enten.fr (Steven Enten)</author>
-      <guid>http://enten.github.io/steven/ps-loyaltydiscount</guid>
+      
+      <guid>http://http:.github.io/hub.com/ps-loyaltydiscount/</guid>
       <description>
 
 &lt;h2 id=&#34;présentation&#34;&gt;Présentation&lt;/h2&gt;
@@ -533,10 +531,10 @@ de la classe &lt;code&gt;LoyaltyDiscount&lt;/code&gt;.&lt;/p&gt;
     
     <item>
       <title>kaio</title>
-      <link>http://enten.github.io/steven/kaio</link>
+      <link>http://http:.github.io/hub.com/kaio/</link>
       <pubDate>Sun, 14 Jun 2015 00:00:00 +0000</pubDate>
-      <author>steven@enten.fr (Steven Enten)</author>
-      <guid>http://enten.github.io/steven/kaio</guid>
+      
+      <guid>http://http:.github.io/hub.com/kaio/</guid>
       <description>
 
 &lt;p&gt;A small library providing the R method to make work with paths and imports less involved.&lt;/p&gt;
@@ -628,10 +626,10 @@ function *mw2(next) {
     
     <item>
       <title>confectioner</title>
-      <link>http://enten.github.io/steven/confectioner</link>
+      <link>http://http:.github.io/hub.com/confectioner/</link>
       <pubDate>Mon, 01 Jun 2015 00:00:00 +0000</pubDate>
-      <author>steven@enten.fr (Steven Enten)</author>
-      <guid>http://enten.github.io/steven/confectioner</guid>
+      
+      <guid>http://http:.github.io/hub.com/confectioner/</guid>
       <description>
 
 &lt;p&gt;Simpliest configuration builder which used the environment.&lt;/p&gt;
@@ -699,10 +697,10 @@ console.log(config.getValuesMap());
     
     <item>
       <title>dotresolver</title>
-      <link>http://enten.github.io/steven/dotresolver</link>
+      <link>http://http:.github.io/hub.com/dotresolver/</link>
       <pubDate>Mon, 13 Apr 2015 00:00:00 +0000</pubDate>
-      <author>steven@enten.fr (Steven Enten)</author>
-      <guid>http://enten.github.io/steven/dotresolver</guid>
+      
+      <guid>http://http:.github.io/hub.com/dotresolver/</guid>
       <description>
 
 &lt;p&gt;A small library providing the R method to make work with paths and imports less involved.&lt;/p&gt;

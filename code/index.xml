@@ -2,213 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Codes on enten.fr</title>
-    <link>http://enten.github.io/steven/code/</link>
+    <link>http://http:.github.io/hub.com/code/</link>
     <description>Recent content in Codes on enten.fr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-FR</language>
-    <managingEditor>steven@enten.fr (Steven Enten)</managingEditor>
-    <webMaster>steven@enten.fr (Steven Enten)</webMaster>
     <lastBuildDate>Sat, 15 Aug 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://enten.github.io/steven/code/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>confectioner</title>
-      <link>http://enten.github.io/steven/confectioner</link>
-      <pubDate>Mon, 01 Jun 2015 00:00:00 +0000</pubDate>
-      <author>steven@enten.fr (Steven Enten)</author>
-      <guid>http://enten.github.io/steven/confectioner</guid>
-      <description>
-
-&lt;p&gt;Simpliest configuration builder which used the environment.&lt;/p&gt;
-
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;npm install confectioner --save
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// example.js
-
-var confectioner = require(&#39;confectioner&#39;);
-
-var config = confectioner({
-    env: { envname: &#39;NODE_ENV&#39;, defaultValue: &#39;development&#39; },
-    hostname: { envname: &#39;MY_HOST&#39;, defaultValue: &#39;localhost&#39; },
-    port: { envname: &#39;MY_PORT&#39;, defaultValue: 1337, type: &#39;int&#39; },
-    baseuri: { envname: &#39;MY_BASEURI&#39;, defaultValue: &#39;/myapp&#39; }
-});
-
-console.log(config.getValuesMap());
-
-// $ NODE_ENV=production MY_PORT=80 node --harmony example.js
-// { env: &#39;production&#39;,
-//   hostname: &#39;localhost&#39;,
-//   port: &#39;80&#39;,
-//   baseuri: &#39;/myapp&#39; }
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;api&#34;&gt;API&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://cdn.rawgit.com/enten/confectioner/master/docs/confectioner/0.1.1/index.html&#34;&gt;API documentation&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;tests&#34;&gt;Tests&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;make test
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;or&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;npm test
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;release-history&#34;&gt;Release History&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;0.1.0 Initial release&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;credits&#34;&gt;Credits&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://leuville.com&#34;&gt;Leuville Objects&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/enten&#34;&gt;Steven Enten&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;LICENSE.md&#34;&gt;MIT&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>dotresolver</title>
-      <link>http://enten.github.io/steven/dotresolver</link>
-      <pubDate>Mon, 13 Apr 2015 00:00:00 +0000</pubDate>
-      <author>steven@enten.fr (Steven Enten)</author>
-      <guid>http://enten.github.io/steven/dotresolver</guid>
-      <description>
-
-&lt;p&gt;A small library providing the R method to make work with paths and imports less involved.&lt;/p&gt;
-
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;npm install dotresolver --save
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;basic-usage&#34;&gt;Basic usage&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var R = require(&#39;dotresolver&#39;)(&#39;.&#39;);
-
-// displays the root path .
-console.log(R());
-
-// displays the path ./src/controllers/hello.js
-console.log(R(&#39;src.controllers&#39;, &#39;hello.js&#39;));
-
-// imports the module hello.js
-var hello = R(&#39;src.controllers&#39;, &#39;hello.js&#39;, true);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;builder-usage&#34;&gt;Builder usage&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var Resolver = require(&#39;dotresolver&#39;);
-
-// builds resolver with some aliases
-var R = Resolver.Builder(__dirname)
-            .set(&#39;ctrl&#39;, &#39;src.controllers&#39;)
-            .set(&#39;css&#39;, &#39;public.styles&#39;)
-            .get();
-
-// displays the path /home/steven/myapp/public/src/styles/base.css
-console.log(R(&#39;css&#39;, &#39;base.css&#39;));
-
-// imports the module hello.js
-var hello = R(&#39;ctrl&#39;, &#39;hello.js&#39;, true);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;tests&#34;&gt;Tests&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;make test
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;or&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;npm test
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;release-history&#34;&gt;Release History&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;0.2.5 Support object of aliases with setAlias()&lt;/li&gt;
-&lt;li&gt;0.2.3 Improve the path building&lt;/li&gt;
-&lt;li&gt;0.2.0 Remove real root path features&lt;/li&gt;
-&lt;li&gt;0.1.0 Initial release&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;credits&#34;&gt;Credits&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://leuville.com&#34;&gt;Leuville Objects&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/enten&#34;&gt;Steven Enten&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;LICENSE.md&#34;&gt;MIT&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>gitbook-boilerplate</title>
-      <link>http://enten.github.io/steven/gitbook-boilerplate</link>
-      <pubDate>Tue, 28 Jul 2015 00:00:00 +0000</pubDate>
-      <author>steven@enten.fr (Steven Enten)</author>
-      <guid>http://enten.github.io/steven/gitbook-boilerplate</guid>
-      <description>
-
-&lt;h2 id=&#34;demo&#34;&gt;Demo&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://enten.github.io/gitbook-boilerplate/&#34;&gt;Github Pages&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/enten/gitbook-boilerplate/wiki&#34;&gt;Github Wiki&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;cd ~/code
-
-git clone https://github.com/enten/gitbook-boilerplate.git awesome-project
-
-cd awesome-project
-
-rm -fr .git
-
-vi package.json
-# edit repository.url and repository.wiki
-
-git remote add origin &amp;lt;url&amp;gt;
-
-npm run build
-# or
-# npm run generate-gitbook &amp;amp;&amp;amp; npm run generate-wiki
-
-npm run deploy
-# or
-# npm run deploy-gitbook &amp;amp;&amp;amp; npm run deploy-wiki
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Important&lt;/strong&gt;: Wiki must be created on Github&lt;/p&gt;
-</description>
-    </item>
+    <atom:link href="http://http:.github.io/hub.com/code/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>hugo-boilerplate</title>
-      <link>http://enten.github.io/steven/hugo-boilerplate</link>
+      <link>http://http:.github.io/hub.com/hugo-boilerplate/</link>
       <pubDate>Sat, 15 Aug 2015 00:00:00 +0000</pubDate>
-      <author>steven@enten.fr (Steven Enten)</author>
-      <guid>http://enten.github.io/steven/hugo-boilerplate</guid>
+      
+      <guid>http://http:.github.io/hub.com/hugo-boilerplate/</guid>
       <description>
 
 &lt;h2 id=&#34;demo-http-enten-github-io-hugo-boilerplate&#34;&gt;&lt;a href=&#34;http://enten.github.io/hugo-boilerplate/&#34;&gt;Demo&lt;/a&gt;&lt;/h2&gt;
@@ -284,10 +90,10 @@ COMMANDS:
     
     <item>
       <title>hyde-y</title>
-      <link>http://enten.github.io/steven/hyde-y</link>
+      <link>http://http:.github.io/hub.com/hyde-y/</link>
       <pubDate>Thu, 13 Aug 2015 00:00:00 +0000</pubDate>
-      <author>steven@enten.fr (Steven Enten)</author>
-      <guid>http://enten.github.io/steven/hyde-y</guid>
+      
+      <guid>http://http:.github.io/hub.com/hyde-y/</guid>
       <description>
 
 &lt;p&gt;&lt;small&gt;Forked from &lt;a href=&#34;https://github.com/zyro/hyde-x&#34;&gt;Hyde-X&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
@@ -493,106 +299,54 @@ paginatePath = &amp;quot;page&amp;quot;
     </item>
     
     <item>
-      <title>kaio</title>
-      <link>http://enten.github.io/steven/kaio</link>
-      <pubDate>Sun, 14 Jun 2015 00:00:00 +0000</pubDate>
-      <author>steven@enten.fr (Steven Enten)</author>
-      <guid>http://enten.github.io/steven/kaio</guid>
+      <title>gitbook-boilerplate</title>
+      <link>http://http:.github.io/hub.com/gitbook-boilerplate/</link>
+      <pubDate>Tue, 28 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://http:.github.io/hub.com/gitbook-boilerplate/</guid>
       <description>
 
-&lt;p&gt;A small library providing the R method to make work with paths and imports less involved.&lt;/p&gt;
+&lt;h2 id=&#34;demo&#34;&gt;Demo&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://enten.github.io/gitbook-boilerplate/&#34;&gt;Github Pages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/enten/gitbook-boilerplate/wiki&#34;&gt;Github Wiki&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;npm install kaio --save
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;cd ~/code
+
+git clone https://github.com/enten/gitbook-boilerplate.git awesome-project
+
+cd awesome-project
+
+rm -fr .git
+
+vi package.json
+# edit repository.url and repository.wiki
+
+git remote add origin &amp;lt;url&amp;gt;
+
+npm run build
+# or
+# npm run generate-gitbook &amp;amp;&amp;amp; npm run generate-wiki
+
+npm run deploy
+# or
+# npm run deploy-gitbook &amp;amp;&amp;amp; npm run deploy-wiki
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// example.js
-
-var kaio = require(&#39;kaio&#39;);
-
-var ko = kaio(&#39;root&#39;, __dirname, function() {
-
-    this.setUri(&#39;/api&#39;);
-    this.setPort(8080);
-    this.setAliases({ctrl:&#39;lib&#39;,pub:&#39;views&#39;,css:&#39;pub.styles&#39;});
-
-    this.use(mw1);
-    this.bind(&#39;hello&#39;, mw2);
-});
-
-ko.listen();
-
-function mw1() {
-    return function *(next) {
-        yield next;
-
-        if (this.res.statusCode === 200)
-            return;
-
-        this.body = &#39;Styles folder: &#39;+this.kaio.R(&#39;css&#39;);
-    }
-}
-
-function *mw2(next) {
-    yield next;
-
-    this.body = &#39;Hello world! You are on &#39;+this.kaio.uri(&#39;/hello&#39;);
-}
-
-// $ PORT=1333 DEBUG=* node --harmony example.js
-//
-// $ curl http://localhost:1333/api/hello
-// Hello world! You are on /api/hello
-//
-// $ curl http://localhost:1333/api
-// Styles folder: /home/steven/w/code/kaio/views/styles
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;api&#34;&gt;API&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://cdn.rawgit.com/enten/kaio/master/docs/kaio/0.5.0/index.html&#34;&gt;API documentation&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;tests&#34;&gt;Tests&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;make test
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;or&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;npm test
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;release-history&#34;&gt;Release History&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;0.5.0 Use confectioner module, add tests and upgrade public API&lt;/li&gt;
-&lt;li&gt;0.3.0 Replace custom resolver by &lt;a href=&#34;https://github.com/enten/dotresolver&#34;&gt;dotresolver&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;0.1.0 Initial release&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;credits&#34;&gt;Credits&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://leuville.com&#34;&gt;Leuville Objects&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/enten&#34;&gt;Steven Enten&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;LICENSE.md&#34;&gt;MIT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Important&lt;/strong&gt;: Wiki must be created on Github&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>losh</title>
-      <link>http://enten.github.io/steven/losh</link>
+      <link>http://http:.github.io/hub.com/losh/</link>
       <pubDate>Wed, 15 Jul 2015 00:00:00 +0000</pubDate>
-      <author>steven@enten.fr (Steven Enten)</author>
-      <guid>http://enten.github.io/steven/losh</guid>
+      
+      <guid>http://http:.github.io/hub.com/losh/</guid>
       <description>
 
 &lt;h2 id=&#34;purpose&#34;&gt;Purpose&lt;/h2&gt;
@@ -672,10 +426,10 @@ Hello world
     
     <item>
       <title>ps-loyaltydiscount</title>
-      <link>http://enten.github.io/steven/ps-loyaltydiscount</link>
+      <link>http://http:.github.io/hub.com/ps-loyaltydiscount/</link>
       <pubDate>Sun, 05 Jul 2015 00:00:00 +0000</pubDate>
-      <author>steven@enten.fr (Steven Enten)</author>
-      <guid>http://enten.github.io/steven/ps-loyaltydiscount</guid>
+      
+      <guid>http://http:.github.io/hub.com/ps-loyaltydiscount/</guid>
       <description>
 
 &lt;h2 id=&#34;présentation&#34;&gt;Présentation&lt;/h2&gt;
@@ -772,6 +526,250 @@ de la classe &lt;code&gt;LoyaltyDiscount&lt;/code&gt;.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;em&gt;Note: remplacer &lt;code&gt;+=&lt;/code&gt; par &lt;code&gt;=&lt;/code&gt; annule ce comportement.&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>kaio</title>
+      <link>http://http:.github.io/hub.com/kaio/</link>
+      <pubDate>Sun, 14 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://http:.github.io/hub.com/kaio/</guid>
+      <description>
+
+&lt;p&gt;A small library providing the R method to make work with paths and imports less involved.&lt;/p&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;npm install kaio --save
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// example.js
+
+var kaio = require(&#39;kaio&#39;);
+
+var ko = kaio(&#39;root&#39;, __dirname, function() {
+
+    this.setUri(&#39;/api&#39;);
+    this.setPort(8080);
+    this.setAliases({ctrl:&#39;lib&#39;,pub:&#39;views&#39;,css:&#39;pub.styles&#39;});
+
+    this.use(mw1);
+    this.bind(&#39;hello&#39;, mw2);
+});
+
+ko.listen();
+
+function mw1() {
+    return function *(next) {
+        yield next;
+
+        if (this.res.statusCode === 200)
+            return;
+
+        this.body = &#39;Styles folder: &#39;+this.kaio.R(&#39;css&#39;);
+    }
+}
+
+function *mw2(next) {
+    yield next;
+
+    this.body = &#39;Hello world! You are on &#39;+this.kaio.uri(&#39;/hello&#39;);
+}
+
+// $ PORT=1333 DEBUG=* node --harmony example.js
+//
+// $ curl http://localhost:1333/api/hello
+// Hello world! You are on /api/hello
+//
+// $ curl http://localhost:1333/api
+// Styles folder: /home/steven/w/code/kaio/views/styles
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;api&#34;&gt;API&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://cdn.rawgit.com/enten/kaio/master/docs/kaio/0.5.0/index.html&#34;&gt;API documentation&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;tests&#34;&gt;Tests&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;make test
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;or&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm test
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;release-history&#34;&gt;Release History&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;0.5.0 Use confectioner module, add tests and upgrade public API&lt;/li&gt;
+&lt;li&gt;0.3.0 Replace custom resolver by &lt;a href=&#34;https://github.com/enten/dotresolver&#34;&gt;dotresolver&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;0.1.0 Initial release&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;credits&#34;&gt;Credits&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://leuville.com&#34;&gt;Leuville Objects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/enten&#34;&gt;Steven Enten&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;LICENSE.md&#34;&gt;MIT&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>confectioner</title>
+      <link>http://http:.github.io/hub.com/confectioner/</link>
+      <pubDate>Mon, 01 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://http:.github.io/hub.com/confectioner/</guid>
+      <description>
+
+&lt;p&gt;Simpliest configuration builder which used the environment.&lt;/p&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;npm install confectioner --save
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// example.js
+
+var confectioner = require(&#39;confectioner&#39;);
+
+var config = confectioner({
+    env: { envname: &#39;NODE_ENV&#39;, defaultValue: &#39;development&#39; },
+    hostname: { envname: &#39;MY_HOST&#39;, defaultValue: &#39;localhost&#39; },
+    port: { envname: &#39;MY_PORT&#39;, defaultValue: 1337, type: &#39;int&#39; },
+    baseuri: { envname: &#39;MY_BASEURI&#39;, defaultValue: &#39;/myapp&#39; }
+});
+
+console.log(config.getValuesMap());
+
+// $ NODE_ENV=production MY_PORT=80 node --harmony example.js
+// { env: &#39;production&#39;,
+//   hostname: &#39;localhost&#39;,
+//   port: &#39;80&#39;,
+//   baseuri: &#39;/myapp&#39; }
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;api&#34;&gt;API&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://cdn.rawgit.com/enten/confectioner/master/docs/confectioner/0.1.1/index.html&#34;&gt;API documentation&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;tests&#34;&gt;Tests&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;make test
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;or&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm test
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;release-history&#34;&gt;Release History&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;0.1.0 Initial release&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;credits&#34;&gt;Credits&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://leuville.com&#34;&gt;Leuville Objects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/enten&#34;&gt;Steven Enten&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;LICENSE.md&#34;&gt;MIT&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>dotresolver</title>
+      <link>http://http:.github.io/hub.com/dotresolver/</link>
+      <pubDate>Mon, 13 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://http:.github.io/hub.com/dotresolver/</guid>
+      <description>
+
+&lt;p&gt;A small library providing the R method to make work with paths and imports less involved.&lt;/p&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;npm install dotresolver --save
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;basic-usage&#34;&gt;Basic usage&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var R = require(&#39;dotresolver&#39;)(&#39;.&#39;);
+
+// displays the root path .
+console.log(R());
+
+// displays the path ./src/controllers/hello.js
+console.log(R(&#39;src.controllers&#39;, &#39;hello.js&#39;));
+
+// imports the module hello.js
+var hello = R(&#39;src.controllers&#39;, &#39;hello.js&#39;, true);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;builder-usage&#34;&gt;Builder usage&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var Resolver = require(&#39;dotresolver&#39;);
+
+// builds resolver with some aliases
+var R = Resolver.Builder(__dirname)
+            .set(&#39;ctrl&#39;, &#39;src.controllers&#39;)
+            .set(&#39;css&#39;, &#39;public.styles&#39;)
+            .get();
+
+// displays the path /home/steven/myapp/public/src/styles/base.css
+console.log(R(&#39;css&#39;, &#39;base.css&#39;));
+
+// imports the module hello.js
+var hello = R(&#39;ctrl&#39;, &#39;hello.js&#39;, true);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;tests&#34;&gt;Tests&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;make test
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;or&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm test
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;release-history&#34;&gt;Release History&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;0.2.5 Support object of aliases with setAlias()&lt;/li&gt;
+&lt;li&gt;0.2.3 Improve the path building&lt;/li&gt;
+&lt;li&gt;0.2.0 Remove real root path features&lt;/li&gt;
+&lt;li&gt;0.1.0 Initial release&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;credits&#34;&gt;Credits&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://leuville.com&#34;&gt;Leuville Objects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/enten&#34;&gt;Steven Enten&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;LICENSE.md&#34;&gt;MIT&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

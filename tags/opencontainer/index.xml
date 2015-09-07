@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Opencontainer on enten.fr</title>
+    <link>http://localhost:1313/steven/tags/opencontainer/</link>
+    <description>Recent content in Opencontainer on enten.fr</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-FR</language>
+    <managingEditor>steven@enten.fr (Steven Enten)</managingEditor>
+    <webMaster>steven@enten.fr (Steven Enten)</webMaster>
+    <lastBuildDate>Tue, 01 Sep 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/steven/tags/opencontainer/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Conteneurs applicatifs sur Android</title>
+      <link>http://localhost:1313/steven/2015/09/01/conteneurs-applicatifs-sur-android/</link>
+      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
+      <author>steven@enten.fr (Steven Enten)</author>
+      <guid>http://localhost:1313/steven/2015/09/01/conteneurs-applicatifs-sur-android/</guid>
+      <description>
+
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;L&amp;rsquo;économie d&amp;rsquo;énergie est un objectif inhérents aux systèmes embarqués mobiles comme les smartphones et autres objets connectés (montres, bracelets, lunettes, réfrigérateur, &amp;hellip;).
+En proposant des solutions matérielles et logicielles, la recherche et l&amp;rsquo;industrie participent à la poursuite de cet objectif.&lt;/p&gt;
+
+&lt;p&gt;Certains acteurs s&amp;rsquo;orientent vers le développement de technologies capables de générer de l&amp;rsquo;énergie pour recharger des objets connectés (recharger une montre à l&amp;rsquo;aide de la chaleur corporelle par exemple)
+quand d&amp;rsquo;autres privilégient des technologies capables de sauvegarder de l&amp;rsquo;énergie (diminuer la consommation d&amp;rsquo;énergie).&lt;/p&gt;
+
+&lt;p&gt;arger des objets connectés](&lt;a href=&#34;http://www.my-smartwatch.fr/2014/04/17/recharger-montre-connectee-chaleur-corporelle/&#34;&gt;http://www.my-smartwatch.fr/2014/04/17/recharger-montre-connectee-chaleur-corporelle/&lt;/a&gt;),
+d&amp;rsquo;autres travaux de la recherche par&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -2,21 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Arm64 on enten.fr</title>
-    <link>http://enten.github.io/steven/tags/arm64/</link>
+    <link>http://http:.github.io/hub.com/tags/arm64/</link>
     <description>Recent content in Arm64 on enten.fr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-FR</language>
-    <managingEditor>steven@enten.fr (Steven Enten)</managingEditor>
-    <webMaster>steven@enten.fr (Steven Enten)</webMaster>
     <lastBuildDate>Tue, 30 Dec 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://enten.github.io/steven/tags/arm64/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://http:.github.io/hub.com/tags/arm64/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>LXC et Android 5 ARM64</title>
-      <link>http://enten.github.io/steven/2014/12/30/lxc-et-android-5-arm64/</link>
+      <link>http://http:.github.io/hub.com/2014/12/30/lxc-et-android-5-arm64/</link>
       <pubDate>Tue, 30 Dec 2014 00:00:00 +0000</pubDate>
-      <author>steven@enten.fr (Steven Enten)</author>
-      <guid>http://enten.github.io/steven/2014/12/30/lxc-et-android-5-arm64/</guid>
+      
+      <guid>http://http:.github.io/hub.com/2014/12/30/lxc-et-android-5-arm64/</guid>
       <description>
 
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
@@ -227,10 +225,10 @@ lxc.network.link = eth0
     
     <item>
       <title>Virtualiser Android 5 Lollipop avec Qemu</title>
-      <link>http://enten.github.io/steven/2014/11/30/virtualiser-android-5-lollipop-avec-qemu/</link>
+      <link>http://http:.github.io/hub.com/2014/11/30/virtualiser-android-5-lollipop-avec-qemu/</link>
       <pubDate>Sun, 30 Nov 2014 00:00:00 +0000</pubDate>
-      <author>steven@enten.fr (Steven Enten)</author>
-      <guid>http://enten.github.io/steven/2014/11/30/virtualiser-android-5-lollipop-avec-qemu/</guid>
+      
+      <guid>http://http:.github.io/hub.com/2014/11/30/virtualiser-android-5-lollipop-avec-qemu/</guid>
       <description>
 
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
@@ -411,12 +409,12 @@ $ make -j8
 
 &lt;p&gt;&lt;strong&gt;Aperçu de &lt;code&gt;ranchu_arm64-eng&lt;/code&gt;&lt;/strong&gt; :&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://enten.github.io/steven/assets/images/fig/ranchu_arm64-eng.png&#34;&gt;&lt;img src=&#34;http://enten.github.io/steven/assets/images/fig/ranchu_arm64-eng-tiny.png&#34; alt=&#34;ranchu_arm64-eng preview&#34; /&gt;
+&lt;p&gt;&lt;a href=&#34;http://http:.github.io/hub.com/assets/images/fig/ranchu_arm64-eng.png&#34;&gt;&lt;img src=&#34;http://http:.github.io/hub.com/assets/images/fig/ranchu_arm64-eng-tiny.png&#34; alt=&#34;ranchu_arm64-eng preview&#34; /&gt;
 &lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Aperçu de &lt;code&gt;mini_emulator_arm64-userdebug&lt;/code&gt;&lt;/strong&gt; :&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://enten.github.io/steven/assets/images/fig/mini_emulator_arm64-userdebug.png&#34;&gt;&lt;img src=&#34;http://enten.github.io/steven/assets/images/fig/mini_emulator_arm64-userdebug-tiny.png&#34; alt=&#34;mini_emulator_arm64-userdebug preview&#34; /&gt;
+&lt;p&gt;&lt;a href=&#34;http://http:.github.io/hub.com/assets/images/fig/mini_emulator_arm64-userdebug.png&#34;&gt;&lt;img src=&#34;http://http:.github.io/hub.com/assets/images/fig/mini_emulator_arm64-userdebug-tiny.png&#34; alt=&#34;mini_emulator_arm64-userdebug preview&#34; /&gt;
 &lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;références&#34;&gt;Références&lt;/h2&gt;
