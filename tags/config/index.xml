@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Config on enten.fr</title>
-    <link>http://http:.github.io/hub.com/tags/config/</link>
+    <link>/tags/config/</link>
     <description>Recent content in Config on enten.fr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-FR</language>
     <lastBuildDate>Mon, 01 Jun 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://http:.github.io/hub.com/tags/config/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/config/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>confectioner</title>
-      <link>http://http:.github.io/hub.com/confectioner/</link>
+      <link>/confectioner/</link>
       <pubDate>Mon, 01 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://http:.github.io/hub.com/confectioner/</guid>
+      <guid>/confectioner/</guid>
       <description>
 
 &lt;p&gt;Simpliest configuration builder which used the environment.&lt;/p&gt;

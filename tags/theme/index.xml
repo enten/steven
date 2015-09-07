@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Theme on enten.fr</title>
-    <link>http://http:.github.io/hub.com/tags/theme/</link>
+    <link>/tags/theme/</link>
     <description>Recent content in Theme on enten.fr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-FR</language>
     <lastBuildDate>Thu, 13 Aug 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://http:.github.io/hub.com/tags/theme/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/theme/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>hyde-y</title>
-      <link>http://http:.github.io/hub.com/hyde-y/</link>
+      <link>/hyde-y/</link>
       <pubDate>Thu, 13 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://http:.github.io/hub.com/hyde-y/</guid>
+      <guid>/hyde-y/</guid>
       <description>
 
 &lt;p&gt;&lt;small&gt;Forked from &lt;a href=&#34;https://github.com/zyro/hyde-x&#34;&gt;Hyde-X&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;

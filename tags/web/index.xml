@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Web on enten.fr</title>
-    <link>http://http:.github.io/hub.com/tags/web/</link>
+    <link>/tags/web/</link>
     <description>Recent content in Web on enten.fr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-FR</language>
     <lastBuildDate>Sat, 15 Aug 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://http:.github.io/hub.com/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/web/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>hugo-boilerplate</title>
-      <link>http://http:.github.io/hub.com/hugo-boilerplate/</link>
+      <link>/hugo-boilerplate/</link>
       <pubDate>Sat, 15 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://http:.github.io/hub.com/hugo-boilerplate/</guid>
+      <guid>/hugo-boilerplate/</guid>
       <description>
 
 &lt;h2 id=&#34;demo-http-enten-github-io-hugo-boilerplate&#34;&gt;&lt;a href=&#34;http://enten.github.io/hugo-boilerplate/&#34;&gt;Demo&lt;/a&gt;&lt;/h2&gt;
@@ -90,10 +90,10 @@ COMMANDS:
     
     <item>
       <title>hyde-y</title>
-      <link>http://http:.github.io/hub.com/hyde-y/</link>
+      <link>/hyde-y/</link>
       <pubDate>Thu, 13 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://http:.github.io/hub.com/hyde-y/</guid>
+      <guid>/hyde-y/</guid>
       <description>
 
 &lt;p&gt;&lt;small&gt;Forked from &lt;a href=&#34;https://github.com/zyro/hyde-x&#34;&gt;Hyde-X&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;

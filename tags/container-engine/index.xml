@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Container Engine on enten.fr</title>
-    <link>http://http:.github.io/hub.com/tags/container-engine/</link>
+    <link>/tags/container-engine/</link>
     <description>Recent content in Container Engine on enten.fr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-FR</language>
     <lastBuildDate>Tue, 30 Dec 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://http:.github.io/hub.com/tags/container-engine/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/container-engine/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>LXC et Android 5 ARM64</title>
-      <link>http://http:.github.io/hub.com/2014/12/30/lxc-et-android-5-arm64/</link>
+      <link>/2014/12/30/lxc-et-android-5-arm64/</link>
       <pubDate>Tue, 30 Dec 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://http:.github.io/hub.com/2014/12/30/lxc-et-android-5-arm64/</guid>
+      <guid>/2014/12/30/lxc-et-android-5-arm64/</guid>
       <description>
 
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
