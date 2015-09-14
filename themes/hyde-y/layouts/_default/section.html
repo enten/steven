@@ -1,11 +1,11 @@
-{{ partial "header.html" . }}
-<section class="content container">
-  <h1>{{ .Title }}</h1>
-  <ul class="posts">
-  {{ range $index, $page := .Paginator.Pages }}
-  {{ .Render "li" }}
+{{ partial "head" . }}
+<section id="main-content" class="container main_content section">
+  <header class="container">
+    {{ partial "bloc/content/h1-title" . }}
+  </header>
+  {{ range $index, .Paginator.Pages }}
+    {{ .Render "section.li" }}
   {{ end }}
-  </ul>
-  {{ partial "pagination.html" . }}
+  {{ partial "bloc/content/pagination" . }}
 </section>
-{{ partial "footer.html" . }}
+{{ partial "foot" . }}

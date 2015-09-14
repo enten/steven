@@ -4,6 +4,8 @@ baseurl = "http://www.enten.fr/steven/"
 # Site title
 title = "enten.fr"
 
+copyright = "(c) 2015 Steven Enten"
+
 # Language
 languageCode = "fr-FR"
 
@@ -14,23 +16,20 @@ metaDataFormat = "yaml"
 theme = "hyde-y"
 
 # pagination
-paginate = 5
+paginate = 10
 paginatePath = "page"
+
+# Enable Disqus integration
+disqusShortname = "enten"
 
 [permalinks]
     post = "/:year/:month/:day/:slug/"
-    code = "/:slug"
+    code = "/:slug/"
 
 [taxonomies]
     tag = "tags"
     topic = "topics"
 
-[author]
-    name = "Steven Enten"
-    email = "steven@enten.fr"
-    gravatarHash = "" # MD5 hash of your Gravatar email address
-    sidebarDisplay = false
-    copyrightDisplay = true
 
 #
 # All parameters below here are optional and can be mixed and matched.
@@ -38,23 +37,18 @@ paginatePath = "page"
 [params]
     # Displays under the author name in the sidebar, keep it short.
     # You can use markdown here.
-    tagline = "code by Steven Enten"
+    brand = "steven.paris"
+    topline = "code by Steven Enten"
+    sidebar = "left"
 
     # Text for the top menu link, which goes the root URL for the site.
     # Default (if omitted) is "Home".
-    home = "Home"
-
-    # Changes sidebar background and link/accent colours.
-    # See below for more colour options.
-    # This also works: "theme-base-08 layout-reverse", or just "layout-reverse".
-    theme = "theme-base-00"
+    home = "home"
 
     # Select a syntax highight.
     # Check the static/css/highlight directory for options.
-    highlight = "sunburst"
+    highlight = "default"
 
-    # Enable Disqus integration
-    disqusShortname = "enten"
 
     # Google Analytics.
     googleAnalytics = "Your Google Analytics tracking code"
