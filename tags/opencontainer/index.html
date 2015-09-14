@@ -42,27 +42,33 @@
 <![endif]-->
 
 <link href='https://fonts.googleapis.com/css?family=Merriweather:300%7CRaleway%7COpen+Sans' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
+<link rel="stylesheet" href="http://localhost:1313/steven/css/font-awesome.min.css">
 <link rel="stylesheet" href="http://localhost:1313/steven/css/style.css">
 <link rel="stylesheet" href="http://localhost:1313/steven/css/highlight/default.css">
 
   
 </head>
-<body class="theme-base-00">
+<body>
   <main id="main-wrapper" class="container main_wrapper has-sidebar">
     <header id="main-header" class="container main_header">
   <div class="container brand">
-  <div class="pod title h1-like">
-    <a class="baselink" href="http://localhost:1313/steven/">steven.paris</a>
+  <div class="container title h1-like">
+  <a class="baselink" href="http://localhost:1313/steven/">
+  steven.paris
 
-  </div>
-  <div class="pod topline">
-    
-code by Steven Enten
+</a>
+
+</div>
+
+  
+<div class="container topline">
+  
+  code by Steven Enten
 
 
-  </div>
+</div>
+
+
 </div>
 
   <nav class="container nav primary no-print">
@@ -83,11 +89,8 @@ code by Steven Enten
 
 </nav>
 
-  <div class="container nav secondary no-print">
+<div class="container nav secondary no-print">
   
-<a id="contact-link-email" class="contact_link" href="mailto:steven@enten.fr">
-  <span class="fa fa-envelope-square"></span><span>email</span></a>
-
 
 
 <a id="contact-link-github" class="contact_link" href="https://github.com/enten">
@@ -114,84 +117,74 @@ code by Steven Enten
 
 </div>
 
+
   
 
 </header>
 
 
 <article id="main-content" class="container main_content list">
-  <div class="container">
+  <header class="container">
     <h1>Opencontainer
 </h1>
 
-  </div>
+  </header>
   <ul class="container content">
     
-      <li><a href="http://localhost:1313/steven/2015/09/01/conteneurs-applicatifs-sur-android/">Conteneurs applicatifs sur Android
+      <li><a href="http://localhost:1313/steven/2015/09/01/conteneurs-applicatifs-sur-android/">DRAFT :: Conteneurs applicatifs sur Android
 </a>
 
 </li>
 
     
   </ul>
-  <div class="container pagination no-print">
   
-
-
-
-</div>
 
 </article>
       <footer id="main-footer" class="container main_footer">
-  <div id="main-footer-extra" class="container extra">
-  <span class="version hugo">built by <a href="https://github.com/spf13/hugo/tree/v0.14">Hugo</a></span>
-
-</div>
-
-  <div class="container nav foot no-print">
-  <a class="toplink" href="#">
-
-  back to top
-
-</a>
-
   
+  <div class="container nav foot no-print">
+  
+
+  <a class="toplink" href="#">back to top</a>
 
 </div>
 
   <div class="container credits">
-  <div class="pod footline">
-    
-
-  </div>
-  <div class="pod copyright">
-    
-  &copy; 2015
   
-  Steven Enten
+<div class="container footline">
   
 
+</div>
 
-  </div>
+
+  
+<div class="container copyright">
+  
+  &copy; 2015 Steven Enten
+
+
+</div>
+
+
 </div>
 
 </footer>
 
     </main>
-    <script>
-(function() {
-  var cards = 	document.getElementsByClassName("github-card");
+    
+<script type="text/javascript">
+  (function() {
+    
+    
+    if (window.location.hostname == "localhost")
+      return;
 
-  if (cards.length === 0)
-    return;
-
-  var ghcards = document.createElement('script'); ghcards.async = true; ghcards.type = 'text/javascript';
-  ghcards.src = '//cdn.jsdelivr.net/github-cards/latest/widget.js';
-  alert(ghcards);
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ghcards);
-})();
+    var dsq = document.createElement('script'); dsq.async = true; dsq.type = 'text/javascript';
+    dsq.src = '//enten.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
 </script>
-
 
 
 

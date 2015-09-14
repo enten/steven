@@ -6,8 +6,7 @@
     <description>Recent content in Runc on enten.fr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-FR</language>
-    <managingEditor>steven@enten.fr (Steven Enten)</managingEditor>
-    <webMaster>steven@enten.fr (Steven Enten)</webMaster>
+    <copyright>(c) 2015 Steven Enten</copyright>
     <lastBuildDate>Tue, 01 Sep 2015 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/steven/tags/runc/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +14,7 @@
       <title>Conteneurs applicatifs sur Android</title>
       <link>http://localhost:1313/steven/2015/09/01/conteneurs-applicatifs-sur-android/</link>
       <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
-      <author>steven@enten.fr (Steven Enten)</author>
+      
       <guid>http://localhost:1313/steven/2015/09/01/conteneurs-applicatifs-sur-android/</guid>
       <description>
 
