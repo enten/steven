@@ -31,7 +31,7 @@ badges:
     url: LICENSE.md
 ---
 
-A small library providing the R method to make work with paths and imports less involved.
+A minimalist middleware to get started faster with Koa.
 
 ## Installation
 
@@ -41,60 +41,99 @@ npm install kaio --save
 
 ## Example
 
+### Requirements
+
+```bash
+mkdir kaio-app
+cd kaio-app
+npm install kaio koa-router
+touch app.js
+```
+
 ```javascript
-// example.js
+// app.js
 
 var kaio = require('kaio');
+var router = require('koa-router');
 
-var ko = kaio('root', __dirname, function() {
+kaio()
+    .setRoot(__dirname)
+    .setHost('127.0.0.1')
+    .setPort(3000)
+    .setUri('/api')
+    .bind('/', BaseController)
+    .bind('/books', BookController)
+    .listen();
 
-    this.setUri('/api');
-    this.setPort(8080);
-    this.setAliases({ctrl:'lib',pub:'views',css:'pub.styles'});
-
-    this.use(mw1);
-    this.bind('hello', mw2);
-});
-
-ko.listen();
-
-function mw1() {
-    return function *(next) {
-        yield next;
-
-        if (this.res.statusCode === 200)
-            return;
-
-        this.body = 'Styles folder: '+this.kaio.R('css');
-    }
-}
-
-function *mw2(next) {
+function *BaseController(next) {
     yield next;
 
-    this.body = 'Hello world! You are on '+this.kaio.uri('/hello');
+    if (this.res.statusCode === 200)
+        return;
+
+    this.body = 'Hello world!';
 }
 
-// $ PORT=1333 DEBUG=* node --harmony example.js
-//
-// $ curl http://localhost:1333/api/hello
-// Hello world! You are on /api/hello
-//
-// $ curl http://localhost:1333/api
-// Styles folder: /home/steven/w/code/kaio/views/styles
+function BookController() {
+    var dataset = [
+        { title: "The Fellowship of the Ring", author: "J. R. R. Tolkien", publication: "1954-07-29" },
+        { title: "The Two Towers", author: "J. R. R. Tolkien", publication: "1954-11-11" },
+        { title: "The Return of the King", author: "J. R. R. Tolkien", publication: "1955-10-20" }
+    ];
 
+    var list = function *(next) {
+        var res = dataset;
+
+        yield next;
+        this.body = res;
+    };
+
+    var show = function *(next) {
+        var title = decodeURI(this.params.title);
+        var res = dataset.filter(function(x) {
+            return title === x.title;
+        }).shift();
+
+        yield next;
+        this.body = res;
+    };
+
+    return router()
+        .get('/', list)
+        .get('/:title', show)
+        .middleware();
+}
+```
+
+### Run the application
+
+```bash
+$ KO_PORT=1333 DEBUG=* node --harmony app.js
+```
+
+### Test it
+
+```bash
+# 3000 is the default port but it is overriden by KO_PORT (1333)
+
+$ curl http://localhost:1333/api/
+Not found
+
+$ curl http://localhost:1333/api/
+Hello world!
+
+$ curl http://localhost:1333/api/books
+[{"title":"The Fellowship of the Ring","author":"J. R. R. Tolkien","publication":"1954-07-29"},{"title":"The Two Towers","author":"J. R. R. Tolkien","publication":"1954-11-11"},{"title":"The Return of the King","author":"J. R. R. Tolkien","publication":"1955-10-20"}]
+
+$ curl http://localhost:1333/api/books/The%2520Two%2520Towers
+{"title":"The Two Towers","author":"J. R. R. Tolkien","publication":"1954-11-11"}
 ```
 
 ## API
 
-[API documentation](https://cdn.rawgit.com/enten/kaio/master/docs/kaio/0.5.0/index.html)
+[API documentation](https://cdn.rawgit.com/enten/kaio/master/docs/kaio/0.5.4/index.html)
 
 ## Tests
-
-```
-make test
-```
-or
 
 ```
 npm test
@@ -108,9 +147,8 @@ npm test
 
 ## Credits
 
-* [Leuville Objects](http://leuville.com)
 * [Steven Enten](https://github.com/enten)
 
 ## License
 
-[MIT](LICENSE.md)
+[MIT](https://github.com/enten/kaio/blob/master/LICENSE.md)

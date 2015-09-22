@@ -31,6 +31,7 @@ badges:
     url: LICENSE.md
 ---
 
+
 Simpliest configuration builder which used the environment.
 
 ## Installation
@@ -65,14 +66,10 @@ console.log(config.getValuesMap());
 
 ## API
 
-[API documentation](https://cdn.rawgit.com/enten/confectioner/master/docs/confectioner/0.1.1/index.html)
+[API documentation](https://cdn.rawgit.com/enten/confectioner/master/docs/confectioner/0.1.2/index.html)
 
 ## Tests
 
-```
-make test
-```
-or
 ```
 npm test
 ```
@@ -83,9 +80,8 @@ npm test
 
 ## Credits
 
-* [Leuville Objects](http://leuville.com)
 * [Steven Enten](https://github.com/enten)
 
 ## License
 
-[MIT](LICENSE.md)
+[MIT](https://github.com/enten/confectioner/blob/master/LICENSE)

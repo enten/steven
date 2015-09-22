@@ -31,11 +31,9 @@ badges:
     url: LICENSE.md
 ---
 
-A small library providing the R method to make work with paths and imports less involved.
-
 ## Installation
 
-```bash
+```shell
 npm install dotresolver --save
 ```
 
@@ -72,12 +70,11 @@ console.log(R('css', 'base.css'));
 var hello = R('ctrl', 'hello.js', true);
 ```
 
-## Tests
+## API
 
-```
-make test
-```
-or
+[API documentation](https://cdn.rawgit.com/enten/dotresolver/master/docs/dotresolver/0.3.0/index.html)
+
+## Tests
 
 ```
 npm test
@@ -85,6 +82,9 @@ npm test
 
 ## Release History
 
+* 0.2.8 Fix issue [#3](https://github.com/enten/dotresolver/issues/3)
+* 0.2.7 Add helper to create URI resolver
+* 0.2.6 Fix issue [#2](https://github.com/enten/dotresolver/issues/2)
 * 0.2.5 Support object of aliases with setAlias()
 * 0.2.3 Improve the path building
 * 0.2.0 Remove real root path features
@@ -92,9 +92,8 @@ npm test
 
 ## Credits
 
-* [Leuville Objects](http://leuville.com)
 * [Steven Enten](https://github.com/enten)
 
 ## License
 
-[MIT](LICENSE.md)
+[MIT](https://github.com/enten/dotresolver/blob/master/LICENSE)
