@@ -51,7 +51,7 @@
     },
     "datePublished": "2015-08-15",
     "description": "Hugo Boilerplate.",
-    "wordCount":  136 
+    "wordCount":  180 
   }
 </script>
 
@@ -188,7 +188,14 @@
   <div class="container content">
   
 
+<p>Boilerplate to start fast with <a href="http://gohugo.io/">Hugo</a>.</p>
+
 <h2 id="demo-http-enten-github-io-hugo-boilerplate"><a href="http://enten.github.io/hugo-boilerplate/">Demo</a></h2>
+
+<h2 id="screenshot">Screenshot</h2>
+
+<p><img src="https://raw.githubusercontent.com/enten/hugo-boilerplate/master/themes/hyde-y/images/screenshot.png" alt="preview" />
+</p>
 
 <h2 id="requirements">Requirements</h2>
 
@@ -201,61 +208,79 @@
 
 <h2 id="installation">Installation</h2>
 
-<pre><code class="language-bash">git clone https://github.com/enten/hugo-boilerplate awesome-site
+<pre><code class="language-bash"># clone hugo-boilerplate into new project folder
+git clone https://github.com/enten/hugo-boilerplate awesome-site
+
+# remove origin repository (enten/hugo-boilerplate)
+cd awesome-site
+git remote remove origin
+
+# start hugo development server
+npm run server
+
+Watching for changes in /home/steven/code/hugo-boilerplate/{data,content,layouts,static,themes/hyde-y}
+Serving pages from /home/steven/code/hugo-boilerplate/public
+Web Server is available at http://127.0.0.1:1313/hugo-boilerplate/
+Press Ctrl+C to stop
+
 </code></pre>
 
-<h2 id="configuration">Configuration</h2>
+<h2 id="deployment">Deployment</h2>
 
-<pre><code class="language-bash"># change directory to your awesome site
-cd awesome-site
+<h3 id="github-pages-https-pages-github-com"><a href="https://pages.github.com/">GitHub Pages</a></h3>
 
-# building configuration
+<pre><code class="language-bash">cd awesome-site
+
+# check hugo configuration
 vi config.toml
 
-# ftp deployement configuration
+# configure origin repository
+git remote add origin https://github.com/&lt;USERNAME&gt;/&lt;REPONAME&gt;
+
+# run deployment task
+npm run deploy:gh
+</code></pre>
+
+<p><strong>Warnings</strong> :</p>
+
+<ul>
+<li><code>baseurl</code> in <code>config.toml</code> will be replace by the correct URL (<a href="http://username.github.io/reponame">http://username.github.io/reponame</a>)</li>
+<li>static site is rebuilt in <code>public/</code> folder when <code>deploy:gh</code> is fired</li>
+</ul>
+
+<h3 id="ftp">FTP</h3>
+
+<pre><code class="language-bash">cd awesome-site
+
+# check hugo configuration
+vi config.toml
+
+# create ftp configuration
 echo '{
   &quot;host&quot;: &quot;ftp.example.com&quot;,
   &quot;port&quot;: 21,
-  &quot;dest&quot;: &quot;/www&quot;,
-  &quot;username&quot;: &quot;*****&quot;,
-  &quot;password&quot;: &quot;*****&quot;
-}' &gt; ./scripts/ftp-config.json
-vi scripts/ftp-config.json
+  &quot;remote&quot;: &quot;/www&quot;,
+  &quot;user&quot;: &quot;*****&quot;,
+  &quot;pass&quot;: &quot;*****&quot;
+}' &gt; ftp-config.json
+
+# edit ftp configuration
+vi ftp-config.json
+
+# run deployment task
+npm run deploy
 </code></pre>
 
-<h2 id="workflow">Workflow</h2>
+<p><strong>Warnings</strong> :</p>
 
-<pre><code class="language-bash"># change directory to your awesome site
-cd awesome-site
+<ul>
+<li><code>remote</code> folder must exists on the host</li>
+<li><strong>BUG</strong>: several attempts are needed to deploy all files</li>
+</ul>
 
-# one script to rule them all..
-./scripts/losh
+<h2 id="license">License</h2>
 
-NAME:
-    losh - Lord of the shell scripts (one script to rull them all)
-
-VERSION:
-    0.0.2
-
-USAGE:
-    losh [command] [arg...]
-
-COMMANDS:
-    losh build [hugo options...]
-                Build site into &lt;root&gt;/public
-    losh deploy [hugo options...]
-                Build site and deploy on FTP server
-    losh deploy-gh [hugo options...]
-                Build site and deploy on Github Pages
-    losh server [hugo options...]
-                Build site and run test server
-    losh update-losh
-                Update losh
-    losh [?|h|help]
-                Print this help message
-
-
-</code></pre>
+<p>Open sourced under the <a href="https://github.com/enten/hugo-boilerplate/blob/master/LICENSE">MIT license</a>.</p>
 
 </div>
 
@@ -264,6 +289,7 @@ COMMANDS:
 </article>
       <footer id="main-footer" class="container main_footer">
   
+
   <div class="container nav foot no-print">
   
 

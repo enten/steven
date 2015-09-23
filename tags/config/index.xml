@@ -50,14 +50,9 @@ console.log(config.getValuesMap());
 
 &lt;h2 id=&#34;api&#34;&gt;API&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://cdn.rawgit.com/enten/confectioner/master/docs/confectioner/0.1.1/index.html&#34;&gt;API documentation&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://cdn.rawgit.com/enten/confectioner/master/docs/confectioner/0.1.2/index.html&#34;&gt;API documentation&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;tests&#34;&gt;Tests&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;make test
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;or&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;npm test
 &lt;/code&gt;&lt;/pre&gt;
@@ -71,13 +66,12 @@ console.log(config.getValuesMap());
 &lt;h2 id=&#34;credits&#34;&gt;Credits&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://leuville.com&#34;&gt;Leuville Objects&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/enten&#34;&gt;Steven Enten&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;LICENSE.md&#34;&gt;MIT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/enten/confectioner/blob/master/LICENSE&#34;&gt;MIT&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

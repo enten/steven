@@ -18,7 +18,14 @@
       <guid>http://enten.github.io/steven/hugo-boilerplate/</guid>
       <description>
 
+&lt;p&gt;Boilerplate to start fast with &lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;.&lt;/p&gt;
+
 &lt;h2 id=&#34;demo-http-enten-github-io-hugo-boilerplate&#34;&gt;&lt;a href=&#34;http://enten.github.io/hugo-boilerplate/&#34;&gt;Demo&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;screenshot&#34;&gt;Screenshot&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/enten/hugo-boilerplate/master/themes/hyde-y/images/screenshot.png&#34; alt=&#34;preview&#34; /&gt;
+&lt;/p&gt;
 
 &lt;h2 id=&#34;requirements&#34;&gt;Requirements&lt;/h2&gt;
 
@@ -31,61 +38,79 @@
 
 &lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git clone https://github.com/enten/hugo-boilerplate awesome-site
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# clone hugo-boilerplate into new project folder
+git clone https://github.com/enten/hugo-boilerplate awesome-site
+
+# remove origin repository (enten/hugo-boilerplate)
+cd awesome-site
+git remote remove origin
+
+# start hugo development server
+npm run server
+
+Watching for changes in /home/steven/code/hugo-boilerplate/{data,content,layouts,static,themes/hyde-y}
+Serving pages from /home/steven/code/hugo-boilerplate/public
+Web Server is available at http://127.0.0.1:1313/hugo-boilerplate/
+Press Ctrl+C to stop
+
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;configuration&#34;&gt;Configuration&lt;/h2&gt;
+&lt;h2 id=&#34;deployment&#34;&gt;Deployment&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# change directory to your awesome site
-cd awesome-site
+&lt;h3 id=&#34;github-pages-https-pages-github-com&#34;&gt;&lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt;&lt;/h3&gt;
 
-# building configuration
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd awesome-site
+
+# check hugo configuration
 vi config.toml
 
-# ftp deployement configuration
+# configure origin repository
+git remote add origin https://github.com/&amp;lt;USERNAME&amp;gt;/&amp;lt;REPONAME&amp;gt;
+
+# run deployment task
+npm run deploy:gh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Warnings&lt;/strong&gt; :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;baseurl&lt;/code&gt; in &lt;code&gt;config.toml&lt;/code&gt; will be replace by the correct URL (&lt;a href=&#34;http://username.github.io/reponame&#34;&gt;http://username.github.io/reponame&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;static site is rebuilt in &lt;code&gt;public/&lt;/code&gt; folder when &lt;code&gt;deploy:gh&lt;/code&gt; is fired&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;ftp&#34;&gt;FTP&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd awesome-site
+
+# check hugo configuration
+vi config.toml
+
+# create ftp configuration
 echo &#39;{
   &amp;quot;host&amp;quot;: &amp;quot;ftp.example.com&amp;quot;,
   &amp;quot;port&amp;quot;: 21,
-  &amp;quot;dest&amp;quot;: &amp;quot;/www&amp;quot;,
-  &amp;quot;username&amp;quot;: &amp;quot;*****&amp;quot;,
-  &amp;quot;password&amp;quot;: &amp;quot;*****&amp;quot;
-}&#39; &amp;gt; ./scripts/ftp-config.json
-vi scripts/ftp-config.json
+  &amp;quot;remote&amp;quot;: &amp;quot;/www&amp;quot;,
+  &amp;quot;user&amp;quot;: &amp;quot;*****&amp;quot;,
+  &amp;quot;pass&amp;quot;: &amp;quot;*****&amp;quot;
+}&#39; &amp;gt; ftp-config.json
+
+# edit ftp configuration
+vi ftp-config.json
+
+# run deployment task
+npm run deploy
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;workflow&#34;&gt;Workflow&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Warnings&lt;/strong&gt; :&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# change directory to your awesome site
-cd awesome-site
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;remote&lt;/code&gt; folder must exists on the host&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;BUG&lt;/strong&gt;: several attempts are needed to deploy all files&lt;/li&gt;
+&lt;/ul&gt;
 
-# one script to rule them all..
-./scripts/losh
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
 
-NAME:
-    losh - Lord of the shell scripts (one script to rull them all)
-
-VERSION:
-    0.0.2
-
-USAGE:
-    losh [command] [arg...]
-
-COMMANDS:
-    losh build [hugo options...]
-                Build site into &amp;lt;root&amp;gt;/public
-    losh deploy [hugo options...]
-                Build site and deploy on FTP server
-    losh deploy-gh [hugo options...]
-                Build site and deploy on Github Pages
-    losh server [hugo options...]
-                Build site and run test server
-    losh update-losh
-                Update losh
-    losh [?|h|help]
-                Print this help message
-
-
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Open sourced under the &lt;a href=&#34;https://github.com/enten/hugo-boilerplate/blob/master/LICENSE&#34;&gt;MIT license&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -99,23 +124,14 @@ COMMANDS:
 
 &lt;p&gt;&lt;small&gt;Forked from &lt;a href=&#34;https://github.com/zyro/hyde-x&#34;&gt;Hyde-X&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
 
-&lt;p&gt;Enhanced port of the Jekyll &amp;laquo;&lt;a href=&#34;https://github.com/poole/hyde&#34;&gt;Hyde&lt;/a&gt;&amp;raquo; theme to the &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt; site generator. Check below for a list of enhancements.&lt;/p&gt;
+&lt;p&gt;You can find a live site using this theme &lt;a href=&#34;http://enten.github.io/hugo-boilerplate/&#34;&gt;here&lt;/a&gt;
+and the corresponding source code &lt;a href=&#34;https://github.com/enten/hugo-boilerplate&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;You can find a live site using this theme &lt;a href=&#34;http://andreimihu.com&#34;&gt;here&lt;/a&gt; and the corresponding source code &lt;a href=&#34;https://github.com/zyro/andreimihu.com&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;screenshot&#34;&gt;Screenshot&lt;/h2&gt;
 
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#installation&#34;&gt;Installation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#usage&#34;&gt;Usage&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#configuration&#34;&gt;Configuration&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#built-in-colour-themes&#34;&gt;Built-in colour themes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#tips&#34;&gt;Tips&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#changes-and-enhancements-from-the-original-theme&#34;&gt;Changes and enhancements from the original theme&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#attribution&#34;&gt;Attribution&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#questions-ideas-bugs-pull-requests&#34;&gt;Questions, ideas, bugs, pull requests?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#license&#34;&gt;License&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;http://enten.fr/hugo-boilerplate&#34;&gt;Preview&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;installation&#34;&gt;Installation&lt;/h3&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;$ cd your_site_repo/
 $ mkdir themes
@@ -125,7 +141,7 @@ $ git clone https://github.com/enten/hyde-y
 
 &lt;p&gt;See the &lt;a href=&#34;http://gohugo.io/themes/installing&#34;&gt;official Hugo themes documentation&lt;/a&gt; for more info.&lt;/p&gt;
 
-&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
+&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
 
 &lt;p&gt;This theme expects a relatively standard Hugo blog/personal site layout:&lt;/p&gt;
 
@@ -134,13 +150,18 @@ $ git clone https://github.com/enten/hyde-y
     ├── post
     |   ├── post1.md
     |   └── post2.md
+    ├── code
+    |   ├── project1.md
+    |   ├── project2.md
     ├── license.md        // this is used in the sidebar footer link
     └── other_page.md
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Just run &lt;code&gt;hugo --theme=hyde-y&lt;/code&gt; to generate your site!&lt;/p&gt;
 
-&lt;h3 id=&#34;configuration&#34;&gt;Configuration&lt;/h3&gt;
+&lt;h2 id=&#34;configuration&#34;&gt;Configuration&lt;/h2&gt;
+
+&lt;h3 id=&#34;hugo&#34;&gt;Hugo&lt;/h3&gt;
 
 &lt;p&gt;An example of what your site&amp;rsquo;s &lt;code&gt;config.toml&lt;/code&gt; could look like. All theme-specific parameters are under &lt;code&gt;[params]&lt;/code&gt; and standard Hugo parameters are used where possible.&lt;/p&gt;
 
@@ -148,71 +169,66 @@ $ git clone https://github.com/enten/hyde-y
 baseurl = &amp;quot;http://www.example.com&amp;quot;
 
 # Site title
-title = &amp;quot;Your site&amp;quot;
+title = &amp;quot;sitename&amp;quot;
+
+# Copyright
+copyright = &amp;quot;(c) 2015 yourname.&amp;quot;
 
 # Language
 languageCode = &amp;quot;en-EN&amp;quot;
 
-# theme to use (located in /themes/THEMENAME/)
+# Metadata format
+# &amp;quot;yaml&amp;quot;, &amp;quot;toml&amp;quot;, &amp;quot;json&amp;quot;
+metaDataFormat = &amp;quot;yaml&amp;quot;
+
+# Theme to use (located in /themes/THEMENAME/)
 theme = &amp;quot;hyde-y&amp;quot;
 
-# pagination
-paginate = 5
+# Pagination
+paginate = 10
 paginatePath = &amp;quot;page&amp;quot;
+
+# Enable Disqus integration
+disqusShortname = &amp;quot;your_disqus_shortname&amp;quot;
 
 [permalinks]
     post = &amp;quot;/:year/:month/:day/:slug/&amp;quot;
+    code = &amp;quot;/:slug/&amp;quot;
 
 [taxonomies]
     tag = &amp;quot;tags&amp;quot;
     topic = &amp;quot;topics&amp;quot;
 
 [author]
-    name = &amp;quot;Your Name&amp;quot;
+    name = &amp;quot;yourname&amp;quot;
     email = &amp;quot;yourname@example.com&amp;quot;
-    gravatarHash = &amp;quot;&amp;quot; # MD5 hash of your Gravatar email address
-    sidebarDisplay = false
-    copyrightDisplay = true
-
-[[menu.main]]
-    name = &amp;quot;Posts&amp;quot;
-    identifier = &amp;quot;posts&amp;quot;
-    url = &amp;quot;/post/&amp;quot;
-
-[[menu.main]]
-    name = &amp;quot;Tags&amp;quot;
-    identifier = &amp;quot;tags&amp;quot;
-    url = &amp;quot;/tags/&amp;quot;
 
 #
 # All parameters below here are optional and can be mixed and matched.
 #
 [params]
-    # Displays under the author name in the sidebar, keep it short.
     # You can use markdown here.
-    tagline = &amp;quot;Short description about your site&amp;quot;
+    brand = &amp;quot;foobar&amp;quot;
+    topline = &amp;quot;few words about your site&amp;quot;
+    footline = &amp;quot;code with &amp;lt;i class=&#39;fa fa-heart&#39;&amp;gt;&amp;lt;/i&amp;gt;&amp;quot;
+
+    # Sidebar position
+    # false, true, &amp;quot;left&amp;quot;, &amp;quot;right&amp;quot;
+    sidebar = &amp;quot;left&amp;quot;
 
     # Text for the top menu link, which goes the root URL for the site.
     # Default (if omitted) is &amp;quot;Home&amp;quot;.
-    home = &amp;quot;Home&amp;quot;
-
-    # Changes sidebar background and link/accent colours.
-    # See below for more colour options.
-    # This also works: &amp;quot;theme-base-08 layout-reverse&amp;quot;, or just &amp;quot;layout-reverse&amp;quot;.
-    theme = &amp;quot;theme-base-00&amp;quot;
+    home = &amp;quot;home&amp;quot;
 
     # Select a syntax highight.
     # Check the static/css/highlight directory for options.
-    highlight = &amp;quot;sunburst&amp;quot;
-
-    # Enable Disqus integration
-    disqusShortname = &amp;quot;your_disqus_shortname&amp;quot;
+    highlight = &amp;quot;default&amp;quot;
 
     # Google Analytics.
     googleAnalytics = &amp;quot;Your Google Analytics tracking code&amp;quot;
 
     # Sidebar social links.
-    github = &amp;quot;&amp;quot; # Your Github profile ID
+    github = &amp;quot;enten/hugo-boilerplate&amp;quot; # Your Github profile ID
     bitbucket = &amp;quot;&amp;quot; # Your Bitbucket profile ID
     linkedin = &amp;quot;&amp;quot; # Your LinkedIn profile ID (from public URL)
     googleplus = &amp;quot;&amp;quot; # Your Google+ profile ID
@@ -220,7 +236,6 @@ paginatePath = &amp;quot;page&amp;quot;
     twitter = &amp;quot;&amp;quot; # Your Twitter profile ID
     youtube = &amp;quot;&amp;quot;  # Your Youtube channel ID
     flattr = &amp;quot;&amp;quot;  # populate with your flattr uid
-    rss = true  # switch to true to enable RSS icon link
 
 [blackfriday]
     angledQuotes = true
@@ -233,9 +248,9 @@ paginatePath = &amp;quot;page&amp;quot;
 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;menu&#34;&gt;Menu&lt;/h2&gt;
+&lt;h3 id=&#34;menu&#34;&gt;Menu&lt;/h3&gt;
 
-&lt;p&gt;Create &lt;code&gt;data/Menu.toml&lt;/code&gt; to configure the sidebar navigation menu. Example below.&lt;/p&gt;
+&lt;p&gt;Create &lt;code&gt;data/Menu.toml&lt;/code&gt; to configure the sidebar navigation links. Example below.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[about]
     Name = &amp;quot;About&amp;quot;
@@ -252,48 +267,75 @@ paginatePath = &amp;quot;page&amp;quot;
     URL = &amp;quot;/tags&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;built-in-colour-themes&#34;&gt;Built-in colour themes&lt;/h3&gt;
+&lt;h3 id=&#34;foot-menu&#34;&gt;Foot menu&lt;/h3&gt;
 
-&lt;p&gt;Hyde-Y provides 8 built-in colour themes by default, with the option to define more in your own custom CSS.&lt;/p&gt;
+&lt;p&gt;Create &lt;code&gt;data/FootMenu.toml&lt;/code&gt; to configure the footer navigation links. Example below.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://github.com/enten/hyde-y/blob/master/images/theme-colours.png&#34; alt=&#34;Hyde-Y theme classes&#34; /&gt;
-&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[license]
+    Name = &amp;quot;license&amp;quot;
+    URL = &amp;quot;/license&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;tips&#34;&gt;Tips&lt;/h3&gt;
+&lt;h2 id=&#34;built-in-colour-themes&#34;&gt;Built-in colour themes&lt;/h2&gt;
+
+&lt;p&gt;You can rebuild the stylesheet. To do it you need &lt;a href=&#34;http://npmjs.com/&#34;&gt;npm&lt;/a&gt; and run the task &lt;code&gt;build:css&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ vi scss/_00-config.less
+# edit configuration
+
+$ npm install
+$ npm run build:css
+
+&amp;gt; hyde-y@0.0.4 build:css /home/steven/code/hyde-y
+&amp;gt; grunt build:css
+
+Running &amp;quot;less:development&amp;quot; (less) task
+File static/css/style.css created
+
+Running &amp;quot;cssmin:target&amp;quot; (cssmin) task
+&amp;gt;&amp;gt; 1 file created. 27.04 kB → 14.38 kB
+
+Done, without errors.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The task &lt;code&gt;watch&lt;/code&gt; allows to rebuild the stylesheet when a change is spotted on &lt;code&gt;scss/*.less&lt;/code&gt; files.&lt;/p&gt;
+
+&lt;h2 id=&#34;tips&#34;&gt;Tips&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;If you&amp;rsquo;ve added &lt;code&gt;theme = &amp;quot;hyde-y&amp;quot;&lt;/code&gt; to your &lt;code&gt;config.toml&lt;/code&gt;, you don&amp;rsquo;t need to keep using the &lt;code&gt;--theme=hyde-y&lt;/code&gt; flag!&lt;/li&gt;
 &lt;li&gt;Although all of the syntax highlight CSS files under the theme&amp;rsquo;s &lt;code&gt;static/css/highlight&lt;/code&gt; are bundled with the site, only the one you choose will be included in the page and delivered to the browser.&lt;/li&gt;
-&lt;li&gt;Change the favicon by providing your own as &lt;code&gt;static/favicon.png&lt;/code&gt; in your site directory.&lt;/li&gt;
+&lt;li&gt;Change the favicon by providing your own as &lt;code&gt;static/favicon.png&lt;/code&gt; (and &lt;code&gt;static/touch-icon-144-precomposed.png&lt;/code&gt; for Apple devices) in your site directory.&lt;/li&gt;
 &lt;li&gt;Hugo makes it easy to override theme layout and behaviour, read about it &lt;a href=&#34;http://gohugo.io/themes/customizing&#34;&gt;here&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Pagination is set to 10 items by default, change it by updating &lt;code&gt;paginate = 10&lt;/code&gt; in your &lt;code&gt;config.toml&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;changes-and-enhancements-from-the-original-theme&#34;&gt;Changes and enhancements from the original theme&lt;/h3&gt;
+&lt;h2 id=&#34;changes-and-enhancements-from-the-original-theme&#34;&gt;Changes and enhancements from the original theme&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Category labels and lists.&lt;/li&gt;
+&lt;li&gt;Highly customizable: every layout blocks are pieces of HTML code individually stored.&lt;/li&gt;
+&lt;li&gt;Consistent hierarchy for the partials and templates files to assist the overrides of any layout block.&lt;/li&gt;
+&lt;li&gt;Adjustable sidebar in config file.&lt;/li&gt;
+&lt;li&gt;Project layout (badges, github ribbon) for posts stored in &lt;code&gt;content/code/&lt;/code&gt; folder.&lt;/li&gt;
+&lt;li&gt;CSS built with &lt;a href=&#34;http://knacss.com/&#34;&gt;KNACSS&lt;/a&gt; micro-framework.&lt;/li&gt;
 &lt;li&gt;Client-side syntax highlighting through &lt;a href=&#34;https://highlightjs.org/&#34;&gt;highlight.js&lt;/a&gt;, sane fallback if disabled or no JS - infinitely more flexible than the standard Hugo highlighting.&lt;/li&gt;
 &lt;li&gt;Disqus integration: comment counts listed under blog entry names in post list, comments displayed at the bottom of each post.&lt;/li&gt;
-&lt;li&gt;Gravatar image in sidebar.&lt;/li&gt;
 &lt;li&gt;Google Analytics integration.&lt;/li&gt;
 &lt;li&gt;Google Authorship metadata.&lt;/li&gt;
-&lt;li&gt;Sidebar link layout and footer format changes.&lt;/li&gt;
-&lt;li&gt;Blog post list now contains only the post description, not the full contents.&lt;/li&gt;
 &lt;li&gt;Paginated blog listing.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://fortawesome.github.io/Font-Awesome&#34;&gt;FontAwesome&lt;/a&gt; social links.&lt;/li&gt;
 &lt;li&gt;&amp;hellip;many other small layout tweaks!&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;attribution&#34;&gt;Attribution&lt;/h3&gt;
+&lt;h2 id=&#34;attribution&#34;&gt;Attribution&lt;/h2&gt;
 
-&lt;p&gt;Obviously largely a port of the awesome &lt;a href=&#34;https://github.com/poole/hyde&#34;&gt;Hyde&lt;/a&gt; theme.&lt;/p&gt;
+&lt;p&gt;Obviously largely a port of the awesome &lt;a href=&#34;https://github.com/poole/hyde&#34;&gt;Hyde&lt;/a&gt; and &lt;a href=&#34;https://github.com/zyro/hyde-x&#34;&gt;Hyde-X&lt;/a&gt; themes.&lt;/p&gt;
 
-&lt;h3 id=&#34;questions-ideas-bugs-pull-requests&#34;&gt;Questions, ideas, bugs, pull requests?&lt;/h3&gt;
+&lt;h2 id=&#34;questions-ideas-bugs-pull-requests&#34;&gt;Questions, ideas, bugs, pull requests?&lt;/h2&gt;
 
 &lt;p&gt;All feedback is welcome! Head over to the &lt;a href=&#34;https://github.com/enten/hyde-y/issues&#34;&gt;issue tracker&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h3 id=&#34;license&#34;&gt;License&lt;/h3&gt;
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
 
 &lt;p&gt;Open sourced under the &lt;a href=&#34;https://github.com/enten/hyde-y/blob/master/LICENSE&#34;&gt;MIT license&lt;/a&gt;.&lt;/p&gt;
 </description>

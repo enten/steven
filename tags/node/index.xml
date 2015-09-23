@@ -18,7 +18,7 @@
       <guid>http://enten.github.io/steven/kaio/</guid>
       <description>
 
-&lt;p&gt;A small library providing the R method to make work with paths and imports less involved.&lt;/p&gt;
+&lt;p&gt;A minimalist middleware to get started faster with Koa.&lt;/p&gt;
 
 &lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
 
@@ -27,59 +27,95 @@
 
 &lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// example.js
+&lt;h3 id=&#34;requirements&#34;&gt;Requirements&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mkdir kaio-app
+cd kaio-app
+npm install kaio koa-router
+touch app.js
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// app.js
 
 var kaio = require(&#39;kaio&#39;);
+var router = require(&#39;koa-router&#39;);
 
-var ko = kaio(&#39;root&#39;, __dirname, function() {
+kaio()
+    .setRoot(__dirname)
+    .setHost(&#39;127.0.0.1&#39;)
+    .setPort(3000)
+    .setUri(&#39;/api&#39;)
+    .bind(&#39;/&#39;, BaseController)
+    .bind(&#39;/books&#39;, BookController)
+    .listen();
 
-    this.setUri(&#39;/api&#39;);
-    this.setPort(8080);
-    this.setAliases({ctrl:&#39;lib&#39;,pub:&#39;views&#39;,css:&#39;pub.styles&#39;});
-
-    this.use(mw1);
-    this.bind(&#39;hello&#39;, mw2);
-});
-
-ko.listen();
-
-function mw1() {
-    return function *(next) {
-        yield next;
-
-        if (this.res.statusCode === 200)
-            return;
-
-        this.body = &#39;Styles folder: &#39;+this.kaio.R(&#39;css&#39;);
-    }
-}
-
-function *mw2(next) {
+function *BaseController(next) {
     yield next;
 
-    this.body = &#39;Hello world! You are on &#39;+this.kaio.uri(&#39;/hello&#39;);
+    if (this.res.statusCode === 200)
+        return;
+
+    this.body = &#39;Hello world!&#39;;
 }
 
-// $ PORT=1333 DEBUG=* node --harmony example.js
-//
-// $ curl http://localhost:1333/api/hello
-// Hello world! You are on /api/hello
-//
-// $ curl http://localhost:1333/api
-// Styles folder: /home/steven/w/code/kaio/views/styles
+function BookController() {
+    var dataset = [
+        { title: &amp;quot;The Fellowship of the Ring&amp;quot;, author: &amp;quot;J. R. R. Tolkien&amp;quot;, publication: &amp;quot;1954-07-29&amp;quot; },
+        { title: &amp;quot;The Two Towers&amp;quot;, author: &amp;quot;J. R. R. Tolkien&amp;quot;, publication: &amp;quot;1954-11-11&amp;quot; },
+        { title: &amp;quot;The Return of the King&amp;quot;, author: &amp;quot;J. R. R. Tolkien&amp;quot;, publication: &amp;quot;1955-10-20&amp;quot; }
+    ];
 
+    var list = function *(next) {
+        var res = dataset;
+
+        yield next;
+        this.body = res;
+    };
+
+    var show = function *(next) {
+        var title = decodeURI(this.params.title);
+        var res = dataset.filter(function(x) {
+            return title === x.title;
+        }).shift();
+
+        yield next;
+        this.body = res;
+    };
+
+    return router()
+        .get(&#39;/&#39;, list)
+        .get(&#39;/:title&#39;, show)
+        .middleware();
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;run-the-application&#34;&gt;Run the application&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ KO_PORT=1333 DEBUG=* node --harmony app.js
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;test-it&#34;&gt;Test it&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# 3000 is the default port but it is overriden by KO_PORT (1333)
+
+$ curl http://localhost:1333/api/
+Not found
+
+$ curl http://localhost:1333/api/
+Hello world!
+
+$ curl http://localhost:1333/api/books
+[{&amp;quot;title&amp;quot;:&amp;quot;The Fellowship of the Ring&amp;quot;,&amp;quot;author&amp;quot;:&amp;quot;J. R. R. Tolkien&amp;quot;,&amp;quot;publication&amp;quot;:&amp;quot;1954-07-29&amp;quot;},{&amp;quot;title&amp;quot;:&amp;quot;The Two Towers&amp;quot;,&amp;quot;author&amp;quot;:&amp;quot;J. R. R. Tolkien&amp;quot;,&amp;quot;publication&amp;quot;:&amp;quot;1954-11-11&amp;quot;},{&amp;quot;title&amp;quot;:&amp;quot;The Return of the King&amp;quot;,&amp;quot;author&amp;quot;:&amp;quot;J. R. R. Tolkien&amp;quot;,&amp;quot;publication&amp;quot;:&amp;quot;1955-10-20&amp;quot;}]
+
+$ curl http://localhost:1333/api/books/The%2520Two%2520Towers
+{&amp;quot;title&amp;quot;:&amp;quot;The Two Towers&amp;quot;,&amp;quot;author&amp;quot;:&amp;quot;J. R. R. Tolkien&amp;quot;,&amp;quot;publication&amp;quot;:&amp;quot;1954-11-11&amp;quot;}
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;api&#34;&gt;API&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://cdn.rawgit.com/enten/kaio/master/docs/kaio/0.5.0/index.html&#34;&gt;API documentation&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://cdn.rawgit.com/enten/kaio/master/docs/kaio/0.5.4/index.html&#34;&gt;API documentation&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;tests&#34;&gt;Tests&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;make test
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;or&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;npm test
 &lt;/code&gt;&lt;/pre&gt;
@@ -95,13 +131,12 @@ function *mw2(next) {
 &lt;h2 id=&#34;credits&#34;&gt;Credits&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://leuville.com&#34;&gt;Leuville Objects&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/enten&#34;&gt;Steven Enten&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;LICENSE.md&#34;&gt;MIT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/enten/kaio/blob/master/LICENSE.md&#34;&gt;MIT&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -145,14 +180,9 @@ console.log(config.getValuesMap());
 
 &lt;h2 id=&#34;api&#34;&gt;API&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://cdn.rawgit.com/enten/confectioner/master/docs/confectioner/0.1.1/index.html&#34;&gt;API documentation&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://cdn.rawgit.com/enten/confectioner/master/docs/confectioner/0.1.2/index.html&#34;&gt;API documentation&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;tests&#34;&gt;Tests&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;make test
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;or&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;npm test
 &lt;/code&gt;&lt;/pre&gt;
@@ -166,13 +196,12 @@ console.log(config.getValuesMap());
 &lt;h2 id=&#34;credits&#34;&gt;Credits&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://leuville.com&#34;&gt;Leuville Objects&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/enten&#34;&gt;Steven Enten&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;LICENSE.md&#34;&gt;MIT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/enten/confectioner/blob/master/LICENSE&#34;&gt;MIT&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -184,11 +213,9 @@ console.log(config.getValuesMap());
       <guid>http://enten.github.io/steven/dotresolver/</guid>
       <description>
 
-&lt;p&gt;A small library providing the R method to make work with paths and imports less involved.&lt;/p&gt;
-
 &lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;npm install dotresolver --save
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;npm install dotresolver --save
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;basic-usage&#34;&gt;Basic usage&lt;/h2&gt;
@@ -222,12 +249,11 @@ console.log(R(&#39;css&#39;, &#39;base.css&#39;));
 var hello = R(&#39;ctrl&#39;, &#39;hello.js&#39;, true);
 &lt;/code&gt;&lt;/pre&gt;
 
+&lt;h2 id=&#34;api&#34;&gt;API&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://cdn.rawgit.com/enten/dotresolver/master/docs/dotresolver/0.3.0/index.html&#34;&gt;API documentation&lt;/a&gt;&lt;/p&gt;
+
 &lt;h2 id=&#34;tests&#34;&gt;Tests&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;make test
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;or&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;npm test
 &lt;/code&gt;&lt;/pre&gt;
@@ -235,6 +261,9 @@ var hello = R(&#39;ctrl&#39;, &#39;hello.js&#39;, true);
 &lt;h2 id=&#34;release-history&#34;&gt;Release History&lt;/h2&gt;
 
 &lt;ul&gt;
+&lt;li&gt;0.2.8 Fix issue &lt;a href=&#34;https://github.com/enten/dotresolver/issues/3&#34;&gt;#3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;0.2.7 Add helper to create URI resolver&lt;/li&gt;
+&lt;li&gt;0.2.6 Fix issue &lt;a href=&#34;https://github.com/enten/dotresolver/issues/2&#34;&gt;#2&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;0.2.5 Support object of aliases with setAlias()&lt;/li&gt;
 &lt;li&gt;0.2.3 Improve the path building&lt;/li&gt;
 &lt;li&gt;0.2.0 Remove real root path features&lt;/li&gt;
@@ -244,13 +273,12 @@ var hello = R(&#39;ctrl&#39;, &#39;hello.js&#39;, true);
 &lt;h2 id=&#34;credits&#34;&gt;Credits&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://leuville.com&#34;&gt;Leuville Objects&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/enten&#34;&gt;Steven Enten&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;LICENSE.md&#34;&gt;MIT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/enten/dotresolver/blob/master/LICENSE&#34;&gt;MIT&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

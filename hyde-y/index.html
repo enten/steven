@@ -51,7 +51,7 @@
     },
     "datePublished": "2015-08-13",
     "description": "Enhanced port of the Jekyll \x22Hyde\x22 theme to Hugo.",
-    "wordCount":  765 
+    "wordCount":  791 
   }
 </script>
 
@@ -190,23 +190,14 @@
 
 <p><small>Forked from <a href="https://github.com/zyro/hyde-x">Hyde-X</a></small></p>
 
-<p>Enhanced port of the Jekyll &laquo;<a href="https://github.com/poole/hyde">Hyde</a>&raquo; theme to the <a href="http://gohugo.io">Hugo</a> site generator. Check below for a list of enhancements.</p>
+<p>You can find a live site using this theme <a href="http://enten.github.io/hugo-boilerplate/">here</a>
+and the corresponding source code <a href="https://github.com/enten/hugo-boilerplate">here</a>.</p>
 
-<p>You can find a live site using this theme <a href="http://andreimihu.com">here</a> and the corresponding source code <a href="https://github.com/zyro/andreimihu.com">here</a>.</p>
+<h2 id="screenshot">Screenshot</h2>
 
-<ul>
-<li><a href="#installation">Installation</a></li>
-<li><a href="#usage">Usage</a></li>
-<li><a href="#configuration">Configuration</a></li>
-<li><a href="#built-in-colour-themes">Built-in colour themes</a></li>
-<li><a href="#tips">Tips</a></li>
-<li><a href="#changes-and-enhancements-from-the-original-theme">Changes and enhancements from the original theme</a></li>
-<li><a href="#attribution">Attribution</a></li>
-<li><a href="#questions-ideas-bugs-pull-requests">Questions, ideas, bugs, pull requests?</a></li>
-<li><a href="#license">License</a></li>
-</ul>
+<p><a href="http://enten.fr/hugo-boilerplate">Preview</a></p>
 
-<h3 id="installation">Installation</h3>
+<h2 id="installation">Installation</h2>
 
 <pre><code>$ cd your_site_repo/
 $ mkdir themes
@@ -216,7 +207,7 @@ $ git clone https://github.com/enten/hyde-y
 
 <p>See the <a href="http://gohugo.io/themes/installing">official Hugo themes documentation</a> for more info.</p>
 
-<h3 id="usage">Usage</h3>
+<h2 id="usage">Usage</h2>
 
 <p>This theme expects a relatively standard Hugo blog/personal site layout:</p>
 
@@ -225,13 +216,18 @@ $ git clone https://github.com/enten/hyde-y
     ├── post
     |   ├── post1.md
     |   └── post2.md
+    ├── code
+    |   ├── project1.md
+    |   ├── project2.md
     ├── license.md        // this is used in the sidebar footer link
     └── other_page.md
 </code></pre>
 
 <p>Just run <code>hugo --theme=hyde-y</code> to generate your site!</p>
 
-<h3 id="configuration">Configuration</h3>
+<h2 id="configuration">Configuration</h2>
+
+<h3 id="hugo">Hugo</h3>
 
 <p>An example of what your site&rsquo;s <code>config.toml</code> could look like. All theme-specific parameters are under <code>[params]</code> and standard Hugo parameters are used where possible.</p>
 
@@ -239,71 +235,66 @@ $ git clone https://github.com/enten/hyde-y
 baseurl = &quot;http://www.example.com&quot;
 
 # Site title
-title = &quot;Your site&quot;
+title = &quot;sitename&quot;
+
+# Copyright
+copyright = &quot;(c) 2015 yourname.&quot;
 
 # Language
 languageCode = &quot;en-EN&quot;
 
-# theme to use (located in /themes/THEMENAME/)
+# Metadata format
+# &quot;yaml&quot;, &quot;toml&quot;, &quot;json&quot;
+metaDataFormat = &quot;yaml&quot;
+
+# Theme to use (located in /themes/THEMENAME/)
 theme = &quot;hyde-y&quot;
 
-# pagination
-paginate = 5
+# Pagination
+paginate = 10
 paginatePath = &quot;page&quot;
+
+# Enable Disqus integration
+disqusShortname = &quot;your_disqus_shortname&quot;
 
 [permalinks]
     post = &quot;/:year/:month/:day/:slug/&quot;
+    code = &quot;/:slug/&quot;
 
 [taxonomies]
     tag = &quot;tags&quot;
     topic = &quot;topics&quot;
 
 [author]
-    name = &quot;Your Name&quot;
+    name = &quot;yourname&quot;
     email = &quot;yourname@example.com&quot;
-    gravatarHash = &quot;&quot; # MD5 hash of your Gravatar email address
-    sidebarDisplay = false
-    copyrightDisplay = true
-
-[[menu.main]]
-    name = &quot;Posts&quot;
-    identifier = &quot;posts&quot;
-    url = &quot;/post/&quot;
-
-[[menu.main]]
-    name = &quot;Tags&quot;
-    identifier = &quot;tags&quot;
-    url = &quot;/tags/&quot;
 
 #
 # All parameters below here are optional and can be mixed and matched.
 #
 [params]
-    # Displays under the author name in the sidebar, keep it short.
     # You can use markdown here.
-    tagline = &quot;Short description about your site&quot;
+    brand = &quot;foobar&quot;
+    topline = &quot;few words about your site&quot;
+    footline = &quot;code with &lt;i class='fa fa-heart'&gt;&lt;/i&gt;&quot;
+
+    # Sidebar position
+    # false, true, &quot;left&quot;, &quot;right&quot;
+    sidebar = &quot;left&quot;
 
     # Text for the top menu link, which goes the root URL for the site.
     # Default (if omitted) is &quot;Home&quot;.
-    home = &quot;Home&quot;
-
-    # Changes sidebar background and link/accent colours.
-    # See below for more colour options.
-    # This also works: &quot;theme-base-08 layout-reverse&quot;, or just &quot;layout-reverse&quot;.
-    theme = &quot;theme-base-00&quot;
+    home = &quot;home&quot;
 
     # Select a syntax highight.
     # Check the static/css/highlight directory for options.
-    highlight = &quot;sunburst&quot;
-
-    # Enable Disqus integration
-    disqusShortname = &quot;your_disqus_shortname&quot;
+    highlight = &quot;default&quot;
 
     # Google Analytics.
     googleAnalytics = &quot;Your Google Analytics tracking code&quot;
 
     # Sidebar social links.
-    github = &quot;&quot; # Your Github profile ID
+    github = &quot;enten/hugo-boilerplate&quot; # Your Github profile ID
     bitbucket = &quot;&quot; # Your Bitbucket profile ID
     linkedin = &quot;&quot; # Your LinkedIn profile ID (from public URL)
     googleplus = &quot;&quot; # Your Google+ profile ID
@@ -311,7 +302,6 @@ paginatePath = &quot;page&quot;
     twitter = &quot;&quot; # Your Twitter profile ID
     youtube = &quot;&quot;  # Your Youtube channel ID
     flattr = &quot;&quot;  # populate with your flattr uid
-    rss = true  # switch to true to enable RSS icon link
 
 [blackfriday]
     angledQuotes = true
@@ -324,9 +314,9 @@ paginatePath = &quot;page&quot;
 
 </code></pre>
 
-<h2 id="menu">Menu</h2>
+<h3 id="menu">Menu</h3>
 
-<p>Create <code>data/Menu.toml</code> to configure the sidebar navigation menu. Example below.</p>
+<p>Create <code>data/Menu.toml</code> to configure the sidebar navigation links. Example below.</p>
 
 <pre><code class="language-toml">[about]
     Name = &quot;About&quot;
@@ -343,48 +333,75 @@ paginatePath = &quot;page&quot;
     URL = &quot;/tags&quot;
 </code></pre>
 
-<h3 id="built-in-colour-themes">Built-in colour themes</h3>
+<h3 id="foot-menu">Foot menu</h3>
 
-<p>Hyde-Y provides 8 built-in colour themes by default, with the option to define more in your own custom CSS.</p>
+<p>Create <code>data/FootMenu.toml</code> to configure the footer navigation links. Example below.</p>
 
-<p><img src="https://github.com/enten/hyde-y/blob/master/images/theme-colours.png" alt="Hyde-Y theme classes" />
-</p>
+<pre><code class="language-toml">[license]
+    Name = &quot;license&quot;
+    URL = &quot;/license&quot;
+</code></pre>
 
-<h3 id="tips">Tips</h3>
+<h2 id="built-in-colour-themes">Built-in colour themes</h2>
+
+<p>You can rebuild the stylesheet. To do it you need <a href="http://npmjs.com/">npm</a> and run the task <code>build:css</code>.</p>
+
+<pre><code class="language-bash">$ vi scss/_00-config.less
+# edit configuration
+
+$ npm install
+$ npm run build:css
+
+&gt; hyde-y@0.0.4 build:css /home/steven/code/hyde-y
+&gt; grunt build:css
+
+Running &quot;less:development&quot; (less) task
+File static/css/style.css created
+
+Running &quot;cssmin:target&quot; (cssmin) task
+&gt;&gt; 1 file created. 27.04 kB → 14.38 kB
+
+Done, without errors.
+</code></pre>
+
+<p>The task <code>watch</code> allows to rebuild the stylesheet when a change is spotted on <code>scss/*.less</code> files.</p>
+
+<h2 id="tips">Tips</h2>
 
 <ul>
 <li>If you&rsquo;ve added <code>theme = &quot;hyde-y&quot;</code> to your <code>config.toml</code>, you don&rsquo;t need to keep using the <code>--theme=hyde-y</code> flag!</li>
 <li>Although all of the syntax highlight CSS files under the theme&rsquo;s <code>static/css/highlight</code> are bundled with the site, only the one you choose will be included in the page and delivered to the browser.</li>
-<li>Change the favicon by providing your own as <code>static/favicon.png</code> in your site directory.</li>
+<li>Change the favicon by providing your own as <code>static/favicon.png</code> (and <code>static/touch-icon-144-precomposed.png</code> for Apple devices) in your site directory.</li>
 <li>Hugo makes it easy to override theme layout and behaviour, read about it <a href="http://gohugo.io/themes/customizing">here</a>.</li>
 <li>Pagination is set to 10 items by default, change it by updating <code>paginate = 10</code> in your <code>config.toml</code>.</li>
 </ul>
 
-<h3 id="changes-and-enhancements-from-the-original-theme">Changes and enhancements from the original theme</h3>
+<h2 id="changes-and-enhancements-from-the-original-theme">Changes and enhancements from the original theme</h2>
 
 <ul>
-<li>Category labels and lists.</li>
+<li>Highly customizable: every layout blocks are pieces of HTML code individually stored.</li>
+<li>Consistent hierarchy for the partials and templates files to assist the overrides of any layout block.</li>
+<li>Adjustable sidebar in config file.</li>
+<li>Project layout (badges, github ribbon) for posts stored in <code>content/code/</code> folder.</li>
+<li>CSS built with <a href="http://knacss.com/">KNACSS</a> micro-framework.</li>
 <li>Client-side syntax highlighting through <a href="https://highlightjs.org/">highlight.js</a>, sane fallback if disabled or no JS - infinitely more flexible than the standard Hugo highlighting.</li>
 <li>Disqus integration: comment counts listed under blog entry names in post list, comments displayed at the bottom of each post.</li>
-<li>Gravatar image in sidebar.</li>
 <li>Google Analytics integration.</li>
 <li>Google Authorship metadata.</li>
-<li>Sidebar link layout and footer format changes.</li>
-<li>Blog post list now contains only the post description, not the full contents.</li>
 <li>Paginated blog listing.</li>
 <li><a href="http://fortawesome.github.io/Font-Awesome">FontAwesome</a> social links.</li>
 <li>&hellip;many other small layout tweaks!</li>
 </ul>
 
-<h3 id="attribution">Attribution</h3>
+<h2 id="attribution">Attribution</h2>
 
-<p>Obviously largely a port of the awesome <a href="https://github.com/poole/hyde">Hyde</a> theme.</p>
+<p>Obviously largely a port of the awesome <a href="https://github.com/poole/hyde">Hyde</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a> themes.</p>
 
-<h3 id="questions-ideas-bugs-pull-requests">Questions, ideas, bugs, pull requests?</h3>
+<h2 id="questions-ideas-bugs-pull-requests">Questions, ideas, bugs, pull requests?</h2>
 
 <p>All feedback is welcome! Head over to the <a href="https://github.com/enten/hyde-y/issues">issue tracker</a>.</p>
 
-<h3 id="license">License</h3>
+<h2 id="license">License</h2>
 
 <p>Open sourced under the <a href="https://github.com/enten/hyde-y/blob/master/LICENSE">MIT license</a>.</p>
 
@@ -395,6 +412,7 @@ paginatePath = &quot;page&quot;
 </article>
       <footer id="main-footer" class="container main_footer">
   
+
   <div class="container nav foot no-print">
   
 

@@ -51,7 +51,7 @@
     },
     "datePublished": "2015-04-13",
     "description": "A small library providing the R method to make work with paths and imports less involved.",
-    "wordCount":  127 
+    "wordCount":  124 
   }
 </script>
 
@@ -158,20 +158,20 @@
 
   <div class="badges">
   
-<a class="badge" href="https://travis-ci.org/enten/dotresolver">
-  <img title="build status" alt="build status" src="https://travis-ci.org/enten/dotresolver.svg?branch=master">
-</a>
-
-<a class="badge" href="https://david-dm.org/enten/dotresolver">
-  <img title="dependency" alt="dependency" src="https://david-dm.org/enten/dotresolver/dev-status.svg">
-</a>
-
 <a class="badge" href="https://david-dm.org/enten/dotresolver#info=devDependencies">
   <img title="dev dependency" alt="dev dependency" src="https://david-dm.org/enten/dotresolver.svg">
 </a>
 
 <a class="badge" href="LICENSE.md">
   <img title="license" alt="license" src="http://img.shields.io/npm/l/dotresolver.svg">
+</a>
+
+<a class="badge" href="https://travis-ci.org/enten/dotresolver">
+  <img title="build status" alt="build status" src="https://travis-ci.org/enten/dotresolver.svg?branch=master">
+</a>
+
+<a class="badge" href="https://david-dm.org/enten/dotresolver">
+  <img title="dependency" alt="dependency" src="https://david-dm.org/enten/dotresolver/dev-status.svg">
 </a>
 
 
@@ -204,11 +204,9 @@
   <div class="container content">
   
 
-<p>A small library providing the R method to make work with paths and imports less involved.</p>
-
 <h2 id="installation">Installation</h2>
 
-<pre><code class="language-bash">npm install dotresolver --save
+<pre><code class="language-shell">npm install dotresolver --save
 </code></pre>
 
 <h2 id="basic-usage">Basic usage</h2>
@@ -242,12 +240,11 @@ console.log(R('css', 'base.css'));
 var hello = R('ctrl', 'hello.js', true);
 </code></pre>
 
+<h2 id="api">API</h2>
+
+<p><a href="https://cdn.rawgit.com/enten/dotresolver/master/docs/dotresolver/0.3.0/index.html">API documentation</a></p>
+
 <h2 id="tests">Tests</h2>
-
-<pre><code>make test
-</code></pre>
-
-<p>or</p>
 
 <pre><code>npm test
 </code></pre>
@@ -255,6 +252,9 @@ var hello = R('ctrl', 'hello.js', true);
 <h2 id="release-history">Release History</h2>
 
 <ul>
+<li>0.2.8 Fix issue <a href="https://github.com/enten/dotresolver/issues/3">#3</a></li>
+<li>0.2.7 Add helper to create URI resolver</li>
+<li>0.2.6 Fix issue <a href="https://github.com/enten/dotresolver/issues/2">#2</a></li>
 <li>0.2.5 Support object of aliases with setAlias()</li>
 <li>0.2.3 Improve the path building</li>
 <li>0.2.0 Remove real root path features</li>
@@ -264,13 +264,12 @@ var hello = R('ctrl', 'hello.js', true);
 <h2 id="credits">Credits</h2>
 
 <ul>
-<li><a href="http://leuville.com">Leuville Objects</a></li>
 <li><a href="https://github.com/enten">Steven Enten</a></li>
 </ul>
 
 <h2 id="license">License</h2>
 
-<p><a href="LICENSE.md">MIT</a></p>
+<p><a href="https://github.com/enten/dotresolver/blob/master/LICENSE">MIT</a></p>
 
 </div>
 
@@ -279,6 +278,7 @@ var hello = R('ctrl', 'hello.js', true);
 </article>
       <footer id="main-footer" class="container main_footer">
   
+
   <div class="container nav foot no-print">
   
 
