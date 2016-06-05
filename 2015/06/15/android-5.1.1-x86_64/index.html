@@ -194,7 +194,7 @@
   <div class="container content">
   
 
-<h2 id="introduction:eb32e07afaade8725df5826d2da1209e">Introduction</h2>
+<h2 id="introduction">Introduction</h2>
 
 <p>Le projet <a href="http://www.android-x86.org/">android-x86</a> est un fork d&rsquo;Android Open Source Project (<a href="http://source.android.com/">AOSP</a>) permettant d&rsquo;installer Android sur PC (la compilation de ses sources produit une image CD bootable). Ce fork fût longtemps la seule solution pour compiler simplement Android pour plateforme x86.</p>
 
@@ -203,7 +203,7 @@ En effet la compilation de ces 2 projets ne produit pas le même résultat (une 
 
 <p><strong>Nous discuterons dans cette article uniquement d&rsquo;AOSP et de la manière de compiler ses sources pour des architectures 64-bits.</strong></p>
 
-<h2 id="contexte:eb32e07afaade8725df5826d2da1209e">Contexte</h2>
+<h2 id="contexte">Contexte</h2>
 
 <p>Peu de temps après notre expérience de <a href="/page/virtualiser-android-5-lollipop-avec-qemu/">virtualisation d&rsquo;Android 5 Lollipop avec Qemu</a>, nous avons constaté que des images 64-bits précompilées d&rsquo;Android étaient proposées en téléchargement par le <a href="http://developer.android.com/tools/help/sdk-manager.html">SDK Manager</a>.</p>
 
@@ -270,13 +270,13 @@ En effet la compilation de ces 2 projets ne produit pas le même résultat (une 
 
 <p>Nous sommes maintenant certains qu&rsquo;il est possible de compiler AOSP pour des architectures x86_64, et ce depuis la version 5.0.1 d&rsquo;Android.</p>
 
-<h2 id="expérience:eb32e07afaade8725df5826d2da1209e">Expérience</h2>
+<h2 id="expérience">Expérience</h2>
 
 <p><strong>Dans cette section, nous allons compiler Android pour architecture x86_64 à partir des sources du projet officiel (AOSP).</strong> Les images résultantes de la compilation pourront être utilisées directement avec Qemu ou l&rsquo;outil <a href="http://developer.android.com/tools/help/emulator.html">emulator</a> du SDK. <strong>Nous souhaitons également recompiler un kernel  Linux compatible</strong>.</p>
 
 <p>L&rsquo;expérience semble simple. Toute fois, des problèmes de compatibilité de versions peuvent rendrent l&rsquo;expérience moins évidente.</p>
 
-<h3 id="prérequis-matériel:eb32e07afaade8725df5826d2da1209e">Prérequis matériel</h3>
+<h3 id="prérequis-matériel">Prérequis matériel</h3>
 
 <ul>
 <li>Processeur amd64</li>
@@ -285,7 +285,7 @@ En effet la compilation de ces 2 projets ne produit pas le même résultat (une 
 <li>Système d&rsquo;exploitation GNU/Linux récent</li>
 </ul>
 
-<h3 id="versions:eb32e07afaade8725df5826d2da1209e">Versions</h3>
+<h3 id="versions">Versions</h3>
 
 <p>Voici les différentes versions des composants utilisés pour compiler AOSP x86_64.</p>
 
@@ -300,9 +300,9 @@ En effet la compilation de ces 2 projets ne produit pas le même résultat (une 
 <p><strong>WARNING</strong>
 Pour pouvoir compiler un kernel Linux compatible avec les images résultantes de la compilation d&rsquo;AOSP branche <code>android-5.1.1_r4</code>, il est important d&rsquo;utiliser la branche <code>android-goldfish-3.10</code> du projet <code>kernel/goldfish</code> à son état du 16 sept. 2014 (commit 43dbfdb838).</p>
 
-<h3 id="préparer-l-environnement-d-assemblage:eb32e07afaade8725df5826d2da1209e">Préparer l&rsquo;environnement d&rsquo;assemblage</h3>
+<h3 id="préparer-l-environnement-d-assemblage">Préparer l&rsquo;environnement d&rsquo;assemblage</h3>
 
-<h4 id="jdk-7:eb32e07afaade8725df5826d2da1209e">JDK 7</h4>
+<h4 id="jdk-7">JDK 7</h4>
 
 <p>Installer un JDK 7 (Java Open JDK 7 par exemple).</p>
 
@@ -315,7 +315,7 @@ Pour pouvoir compiler un kernel Linux compatible avec les images résultantes de
 $ sudo update-alternatives --config javac
 </code></pre>
 
-<h4 id="packages-requis:eb32e07afaade8725df5826d2da1209e">Packages requis</h4>
+<h4 id="packages-requis">Packages requis</h4>
 
 <p>Installer les packages nécessaires pour compiler AOSP.</p>
 
@@ -339,7 +339,7 @@ $ PATH=~/bin:$PATH
 
 <p><small>Référence : <a href="http://source.android.com/source/initializing.html#setting-up-a-linux-build-environment">Setting up a Linux build environment</a></small></p>
 
-<h3 id="sources-d-aosp:eb32e07afaade8725df5826d2da1209e">Sources d&rsquo;AOSP</h3>
+<h3 id="sources-d-aosp">Sources d&rsquo;AOSP</h3>
 
 <p>Nous allons maintenant récupérer les sources officielles d&rsquo;Android.</p>
 
@@ -353,7 +353,7 @@ $ repo sync
 
 <p><strong>Attention</strong> La synchronisation des sources d&rsquo;AOSP dure plusieurs heures (à la faveur d&rsquo;une connexion Internet grand public).</p>
 
-<h3 id="compiler-aosp:eb32e07afaade8725df5826d2da1209e">Compiler AOSP</h3>
+<h3 id="compiler-aosp">Compiler AOSP</h3>
 
 <p>Une fois les sources d&rsquo;AOSP récupérées, quelques lignes de commandes suffisent à charger la configuration d&rsquo;assemblage <code>aosp_x86_64-eng</code> pour produire des images x86_64 d&rsquo;Android.</p>
 
@@ -385,7 +385,7 @@ $ lunch aosp_x86_64-eng
 
 <p><strong>A la fin de la comilation, les images des systèmes de fichiers créées sont disponibles dans le répertoire <code>&lt;aosp&gt;/out/target/production/generic_x86_64</code>.</strong></p>
 
-<h3 id="compiler-goldfish:eb32e07afaade8725df5826d2da1209e">Compiler Goldfish</h3>
+<h3 id="compiler-goldfish">Compiler Goldfish</h3>
 
 <p><a href="https://android.googlesource.com/kernel/goldfish">Goldfish</a> est une version du kernel Linux adaptée pour Android. Lorsque l&rsquo;on utilise l&rsquo;<a href="http://developer.android.com/tools/help/avd-manager.html">AVD Manager</a> pour créer des émulateurs, des images pré-compilées du kernel Goldfish sont utilisées.</p>
 
@@ -417,7 +417,7 @@ make -j8
 
 <p><strong>A la fin de la comilation, le kernel compilé est disponible dans le répertoire <code>&lt;goldfish&gt;/arch/x86/boot</code> sous le nom <code>bzImage</code>.</strong></p>
 
-<h3 id="tester:eb32e07afaade8725df5826d2da1209e">Tester</h3>
+<h3 id="tester">Tester</h3>
 
 <p>Nous disposons maintenant de tous les fichiers nécessaires pour lancer un émulateur Android x86_64 100% custom (recompilé par nos soins).</p>
 

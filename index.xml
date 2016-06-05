@@ -20,13 +20,13 @@
 
 &lt;p&gt;Boilerplate to start fast with &lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;demo-http-enten-github-io-hugo-boilerplate:0306c62339fddd9fdbd4e96f726ada1f&#34;&gt;&lt;a href=&#34;http://enten.github.io/hugo-boilerplate/&#34;&gt;Demo&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;demo-http-enten-github-io-hugo-boilerplate&#34;&gt;&lt;a href=&#34;http://enten.github.io/hugo-boilerplate/&#34;&gt;Demo&lt;/a&gt;&lt;/h2&gt;
 
-&lt;h2 id=&#34;screenshot:0306c62339fddd9fdbd4e96f726ada1f&#34;&gt;Screenshot&lt;/h2&gt;
+&lt;h2 id=&#34;screenshot&#34;&gt;Screenshot&lt;/h2&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/enten/hugo-boilerplate/master/themes/hyde-y/images/screenshot.png&#34; alt=&#34;preview&#34; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;requirements:0306c62339fddd9fdbd4e96f726ada1f&#34;&gt;Requirements&lt;/h2&gt;
+&lt;h2 id=&#34;requirements&#34;&gt;Requirements&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://git-scm.com&#34;&gt;git&lt;/a&gt;&lt;/li&gt;
@@ -35,7 +35,7 @@
 &lt;li&gt;&lt;a href=&#34;https://www.npmjs.com/about&#34;&gt;npm&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;installation:0306c62339fddd9fdbd4e96f726ada1f&#34;&gt;Installation&lt;/h2&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# clone hugo-boilerplate into new project folder
 git clone https://github.com/enten/hugo-boilerplate awesome-site
@@ -54,9 +54,9 @@ Press Ctrl+C to stop
 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;deployment:0306c62339fddd9fdbd4e96f726ada1f&#34;&gt;Deployment&lt;/h2&gt;
+&lt;h2 id=&#34;deployment&#34;&gt;Deployment&lt;/h2&gt;
 
-&lt;h3 id=&#34;github-pages-https-pages-github-com:0306c62339fddd9fdbd4e96f726ada1f&#34;&gt;&lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;github-pages-https-pages-github-com&#34;&gt;&lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt;&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd awesome-site
 
@@ -77,7 +77,7 @@ npm run deploy:gh
 &lt;li&gt;static site is rebuilt in &lt;code&gt;public/&lt;/code&gt; folder when &lt;code&gt;deploy:gh&lt;/code&gt; is fired&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;ftp:0306c62339fddd9fdbd4e96f726ada1f&#34;&gt;FTP&lt;/h3&gt;
+&lt;h3 id=&#34;ftp&#34;&gt;FTP&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd awesome-site
 
@@ -107,7 +107,7 @@ npm run deploy
 &lt;li&gt;&lt;strong&gt;BUG&lt;/strong&gt;: several attempts are needed to deploy all files&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;license:0306c62339fddd9fdbd4e96f726ada1f&#34;&gt;License&lt;/h2&gt;
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
 
 &lt;p&gt;Open sourced under the &lt;a href=&#34;https://github.com/enten/hugo-boilerplate/blob/master/LICENSE&#34;&gt;MIT license&lt;/a&gt;.&lt;/p&gt;
 </description>
@@ -126,11 +126,11 @@ npm run deploy
 &lt;p&gt;You can find a live site using this theme &lt;a href=&#34;http://enten.github.io/hugo-boilerplate/&#34;&gt;here&lt;/a&gt;
 and the corresponding source code &lt;a href=&#34;https://github.com/enten/hugo-boilerplate&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;screenshot&#34;&gt;Screenshot&lt;/h2&gt;
+&lt;h2 id=&#34;screenshot:52a9d38876c6a2e91364a4dafc994456&#34;&gt;Screenshot&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://enten.fr/hugo-boilerplate&#34;&gt;Preview&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;h2 id=&#34;installation:52a9d38876c6a2e91364a4dafc994456&#34;&gt;Installation&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;$ cd your_site_repo/
 $ mkdir themes
@@ -140,7 +140,7 @@ $ git clone https://github.com/enten/hyde-y
 
 &lt;p&gt;See the &lt;a href=&#34;http://gohugo.io/themes/installing&#34;&gt;official Hugo themes documentation&lt;/a&gt; for more info.&lt;/p&gt;
 
-&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+&lt;h2 id=&#34;usage:52a9d38876c6a2e91364a4dafc994456&#34;&gt;Usage&lt;/h2&gt;
 
 &lt;p&gt;This theme expects a relatively standard Hugo blog/personal site layout:&lt;/p&gt;
 
@@ -158,9 +158,9 @@ $ git clone https://github.com/enten/hyde-y
 
 &lt;p&gt;Just run &lt;code&gt;hugo --theme=hyde-y&lt;/code&gt; to generate your site!&lt;/p&gt;
 
-&lt;h2 id=&#34;configuration&#34;&gt;Configuration&lt;/h2&gt;
+&lt;h2 id=&#34;configuration:52a9d38876c6a2e91364a4dafc994456&#34;&gt;Configuration&lt;/h2&gt;
 
-&lt;h3 id=&#34;hugo&#34;&gt;Hugo&lt;/h3&gt;
+&lt;h3 id=&#34;hugo:52a9d38876c6a2e91364a4dafc994456&#34;&gt;Hugo&lt;/h3&gt;
 
 &lt;p&gt;An example of what your site&amp;rsquo;s &lt;code&gt;config.toml&lt;/code&gt; could look like. All theme-specific parameters are under &lt;code&gt;[params]&lt;/code&gt; and standard Hugo parameters are used where possible.&lt;/p&gt;
 
@@ -247,7 +247,7 @@ disqusShortname = &amp;quot;your_disqus_shortname&amp;quot;
 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;menu&#34;&gt;Menu&lt;/h3&gt;
+&lt;h3 id=&#34;menu:52a9d38876c6a2e91364a4dafc994456&#34;&gt;Menu&lt;/h3&gt;
 
 &lt;p&gt;Create &lt;code&gt;data/Menu.toml&lt;/code&gt; to configure the sidebar navigation links. Example below.&lt;/p&gt;
 
@@ -266,7 +266,7 @@ disqusShortname = &amp;quot;your_disqus_shortname&amp;quot;
     URL = &amp;quot;/tags&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;foot-menu&#34;&gt;Foot menu&lt;/h3&gt;
+&lt;h3 id=&#34;foot-menu:52a9d38876c6a2e91364a4dafc994456&#34;&gt;Foot menu&lt;/h3&gt;
 
 &lt;p&gt;Create &lt;code&gt;data/FootMenu.toml&lt;/code&gt; to configure the footer navigation links. Example below.&lt;/p&gt;
 
@@ -275,7 +275,7 @@ disqusShortname = &amp;quot;your_disqus_shortname&amp;quot;
     URL = &amp;quot;/license&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;built-in-colour-themes&#34;&gt;Built-in colour themes&lt;/h2&gt;
+&lt;h2 id=&#34;built-in-colour-themes:52a9d38876c6a2e91364a4dafc994456&#34;&gt;Built-in colour themes&lt;/h2&gt;
 
 &lt;p&gt;You can rebuild the stylesheet. To do it you need &lt;a href=&#34;http://npmjs.com/&#34;&gt;npm&lt;/a&gt; and run the task &lt;code&gt;build:css&lt;/code&gt;.&lt;/p&gt;
 
@@ -299,7 +299,7 @@ Done, without errors.
 
 &lt;p&gt;The task &lt;code&gt;watch&lt;/code&gt; allows to rebuild the stylesheet when a change is spotted on &lt;code&gt;scss/*.less&lt;/code&gt; files.&lt;/p&gt;
 
-&lt;h2 id=&#34;tips&#34;&gt;Tips&lt;/h2&gt;
+&lt;h2 id=&#34;tips:52a9d38876c6a2e91364a4dafc994456&#34;&gt;Tips&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;If you&amp;rsquo;ve added &lt;code&gt;theme = &amp;quot;hyde-y&amp;quot;&lt;/code&gt; to your &lt;code&gt;config.toml&lt;/code&gt;, you don&amp;rsquo;t need to keep using the &lt;code&gt;--theme=hyde-y&lt;/code&gt; flag!&lt;/li&gt;
@@ -309,7 +309,7 @@ Done, without errors.
 &lt;li&gt;Pagination is set to 10 items by default, change it by updating &lt;code&gt;paginate = 10&lt;/code&gt; in your &lt;code&gt;config.toml&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;changes-and-enhancements-from-the-original-theme&#34;&gt;Changes and enhancements from the original theme&lt;/h2&gt;
+&lt;h2 id=&#34;changes-and-enhancements-from-the-original-theme:52a9d38876c6a2e91364a4dafc994456&#34;&gt;Changes and enhancements from the original theme&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Highly customizable: every layout blocks are pieces of HTML code individually stored.&lt;/li&gt;
@@ -326,15 +326,15 @@ Done, without errors.
 &lt;li&gt;&amp;hellip;many other small layout tweaks!&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;attribution&#34;&gt;Attribution&lt;/h2&gt;
+&lt;h2 id=&#34;attribution:52a9d38876c6a2e91364a4dafc994456&#34;&gt;Attribution&lt;/h2&gt;
 
 &lt;p&gt;Obviously largely a port of the awesome &lt;a href=&#34;https://github.com/poole/hyde&#34;&gt;Hyde&lt;/a&gt; and &lt;a href=&#34;https://github.com/zyro/hyde-x&#34;&gt;Hyde-X&lt;/a&gt; themes.&lt;/p&gt;
 
-&lt;h2 id=&#34;questions-ideas-bugs-pull-requests&#34;&gt;Questions, ideas, bugs, pull requests?&lt;/h2&gt;
+&lt;h2 id=&#34;questions-ideas-bugs-pull-requests:52a9d38876c6a2e91364a4dafc994456&#34;&gt;Questions, ideas, bugs, pull requests?&lt;/h2&gt;
 
 &lt;p&gt;All feedback is welcome! Head over to the &lt;a href=&#34;https://github.com/enten/hyde-y/issues&#34;&gt;issue tracker&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+&lt;h2 id=&#34;license:52a9d38876c6a2e91364a4dafc994456&#34;&gt;License&lt;/h2&gt;
 
 &lt;p&gt;Open sourced under the &lt;a href=&#34;https://github.com/enten/hyde-y/blob/master/LICENSE&#34;&gt;MIT license&lt;/a&gt;.&lt;/p&gt;
 </description>
@@ -391,11 +391,11 @@ npm run deploy
       <guid>http://enten.github.io/steven/losh/</guid>
       <description>
 
-&lt;h2 id=&#34;purpose:32f3f166d09bd9089c5f0bac3d828b66&#34;&gt;Purpose&lt;/h2&gt;
+&lt;h2 id=&#34;purpose&#34;&gt;Purpose&lt;/h2&gt;
 
 &lt;p&gt;Used one script to rule the others. The losh script wraps the usage of the others. Technically, losh looks for &lt;code&gt;CMDUSAGE&lt;/code&gt; and &lt;code&gt;CMDDESC&lt;/code&gt; variables into the others scripts. That variables allow losh to print the usage of every scripts.&lt;/p&gt;
 
-&lt;h2 id=&#34;installation:32f3f166d09bd9089c5f0bac3d828b66&#34;&gt;Installation&lt;/h2&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Change directory into your awesome project
 $ cd ~/code/awesome-project
@@ -430,7 +430,7 @@ COMMANDS:
 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;test:32f3f166d09bd9089c5f0bac3d828b66&#34;&gt;Test&lt;/h2&gt;
+&lt;h2 id=&#34;test&#34;&gt;Test&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Change directory into the scripts directory
 $ cd ~/awesome-project/scripts
@@ -774,12 +774,12 @@ console.log(config.getValuesMap());
       <guid>http://enten.github.io/steven/dotresolver/</guid>
       <description>
 
-&lt;h2 id=&#34;installation:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;Installation&lt;/h2&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;npm install dotresolver --save
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;basic-usage:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;Basic usage&lt;/h2&gt;
+&lt;h2 id=&#34;basic-usage&#34;&gt;Basic usage&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var R = require(&#39;dotresolver&#39;)(&#39;.&#39;);
 
@@ -793,7 +793,7 @@ console.log(R(&#39;src.controllers&#39;, &#39;hello.js&#39;));
 var hello = R(&#39;src.controllers&#39;, &#39;hello.js&#39;, true);
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;builder-usage:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;Builder usage&lt;/h2&gt;
+&lt;h2 id=&#34;builder-usage&#34;&gt;Builder usage&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var Resolver = require(&#39;dotresolver&#39;);
 
@@ -810,16 +810,16 @@ console.log(R(&#39;css&#39;, &#39;base.css&#39;));
 var hello = R(&#39;ctrl&#39;, &#39;hello.js&#39;, true);
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;api:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;API&lt;/h2&gt;
+&lt;h2 id=&#34;api&#34;&gt;API&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://cdn.rawgit.com/enten/dotresolver/master/docs/dotresolver/0.3.0/index.html&#34;&gt;API documentation&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;tests:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;Tests&lt;/h2&gt;
+&lt;h2 id=&#34;tests&#34;&gt;Tests&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;npm test
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;release-history:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;Release History&lt;/h2&gt;
+&lt;h2 id=&#34;release-history&#34;&gt;Release History&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;0.2.8 Fix issue &lt;a href=&#34;https://github.com/enten/dotresolver/issues/3&#34;&gt;#3&lt;/a&gt;&lt;/li&gt;
@@ -831,13 +831,13 @@ var hello = R(&#39;ctrl&#39;, &#39;hello.js&#39;, true);
 &lt;li&gt;0.1.0 Initial release&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;credits:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;Credits&lt;/h2&gt;
+&lt;h2 id=&#34;credits&#34;&gt;Credits&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/enten&#34;&gt;Steven Enten&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;license:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;License&lt;/h2&gt;
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/enten/dotresolver/blob/master/LICENSE&#34;&gt;MIT&lt;/a&gt;&lt;/p&gt;
 </description>
@@ -851,13 +851,13 @@ var hello = R(&#39;ctrl&#39;, &#39;hello.js&#39;, true);
       <guid>http://enten.github.io/steven/2016/06/04/les-pr%C3%A9mices-dun-nouveau-framework-orient%C3%A9-micro-services/</guid>
       <description>
 
-&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;h2 id=&#34;introduction:e018ed27352cf2d0ec6862c43c22ff92&#34;&gt;Introduction&lt;/h2&gt;
 
 &lt;p&gt;Chaque année, les étudiants de nombreux cursus informatiques se préparent à intégrer des deux pieds le monde de l&amp;rsquo;entreprise. Jeune ingénieur en poste depuis quelques mois, je souhaite partager mon expérience d&amp;rsquo;insertion professionnelle.&lt;/p&gt;
 
 &lt;p&gt;A travers une série d&amp;rsquo;articles, je tenterai de présenter le contexte de travail qui m&amp;rsquo;a conduit à concevoir et à implémenter un framework pour encadrer et optimiser le développement logiciel.&lt;/p&gt;
 
-&lt;h2 id=&#34;pourquoi-un-nouveau-framework&#34;&gt;Pourquoi un nouveau framework ?&lt;/h2&gt;
+&lt;h2 id=&#34;pourquoi-un-nouveau-framework:e018ed27352cf2d0ec6862c43c22ff92&#34;&gt;Pourquoi un nouveau framework ?&lt;/h2&gt;
 
 &lt;p&gt;Je pense que pour chaque besoin il existe une ou plusieurs solutions. Je ne suis pas de ceux qui aiment ré-inventer la roue. Au contraire. Seulement, mon contexte de travail actuel m&amp;rsquo;a amené à penser que parfois il n&amp;rsquo;existe pas de solution qui répond parfaitement à nos besoins.&lt;/p&gt;
 
@@ -887,7 +887,7 @@ var hello = R(&#39;ctrl&#39;, &#39;hello.js&#39;, true);
 
 &lt;p&gt;C&amp;rsquo;est là où se sont présentés différents problèmes. Des problèmes qui m&amp;rsquo;ont poussés à changer de framework. Mais les problèmes étaient toujours là.&lt;/p&gt;
 
-&lt;h2 id=&#34;un-problème-de-conception&#34;&gt;Un problème de conception&lt;/h2&gt;
+&lt;h2 id=&#34;un-problème-de-conception:e018ed27352cf2d0ec6862c43c22ff92&#34;&gt;Un problème de conception&lt;/h2&gt;
 
 &lt;p&gt;A ce stade, nous avons déjà 2 composants implémentés : &lt;code&gt;Services A&lt;/code&gt; (gestion des utilisateurs) et &lt;code&gt;Service B&lt;/code&gt; (gestion de documents).&lt;/p&gt;
 
@@ -949,7 +949,7 @@ User                     |                     |-----------------------&amp;gt;|
 
 &lt;p&gt;&lt;strong&gt;Et c&amp;rsquo;est là où la majorité des frameworks montrent leurs limites : ils sont orientés serveur et n&amp;rsquo;apportent aucune aide pour s&amp;rsquo;interfacer avec les services écris.&lt;/strong&gt; Faire évoluer un service devient alors pénible puisqu&amp;rsquo;il faut faire évoluer ses dépendances.&lt;/p&gt;
 
-&lt;h2 id=&#34;la-solution-idéale&#34;&gt;La solution idéale&lt;/h2&gt;
+&lt;h2 id=&#34;la-solution-idéale:e018ed27352cf2d0ec6862c43c22ff92&#34;&gt;La solution idéale&lt;/h2&gt;
 
 &lt;p&gt;Nous avons constaté que les frameworks de micro-services sont orientés serveur : ils permettent d&amp;rsquo;écrire des services mais ne proposent pas de solution rapide pour s&amp;rsquo;interfacer avec ces derniers.&lt;/p&gt;
 
@@ -1044,7 +1044,7 @@ appB.listen(1338);
 
 &lt;p&gt;Une requête adressée à la route &lt;code&gt;GET http://localhost:1338/hello/sayHello&lt;/code&gt; est relayée via le client vers la route &lt;code&gt;GET http://localhost:1337/hello/sayHello&lt;/code&gt; et la réponse retransmise à l&amp;rsquo;utilisateur à l&amp;rsquo;origine de la requête.&lt;/p&gt;
 
-&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;h2 id=&#34;conclusion:e018ed27352cf2d0ec6862c43c22ff92&#34;&gt;Conclusion&lt;/h2&gt;
 
 &lt;p&gt;N&amp;rsquo;ayant pas trouvé de framework permettant d&amp;rsquo;écrire et d&amp;rsquo;interfacer simplement des micro-services, je vais tenter de développer une idée de framework de micro-services universels (pouvant être utiliser dans différents modes dynamiquement).&lt;/p&gt;
 
@@ -1269,9 +1269,9 @@ appB.listen(1338);
       <guid>http://enten.github.io/steven/about/</guid>
       <description>
 
-&lt;h2 id=&#34;ingénieur-en-conception-et-développement-de-systèmes-d-information&#34;&gt;Ingénieur en conception et développement de systèmes d&amp;rsquo;information&lt;/h2&gt;
+&lt;h2 id=&#34;ingénieur-en-conception-et-développement-de-systèmes-d-information:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;Ingénieur en conception et développement de systèmes d&amp;rsquo;information&lt;/h2&gt;
 
-&lt;h3 id=&#34;formation&#34;&gt;Formation&lt;/h3&gt;
+&lt;h3 id=&#34;formation:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;Formation&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;div style=&#34;color:#999&#34;&gt;&lt;strong&gt;Doctorat Informatique&lt;/strong&gt; (interrompu)&lt;br /&gt;
@@ -1290,7 +1290,7 @@ appB.listen(1338);
 &lt;small&gt;2005-2007&lt;/small&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;expérience&#34;&gt;Expérience&lt;/h3&gt;
+&lt;h3 id=&#34;expérience:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;Expérience&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Ingénieur en conception et développement fullstack Javascript&lt;/strong&gt;&lt;br /&gt;
@@ -1317,7 +1317,7 @@ appB.listen(1338);
 &lt;small&gt;2008-2009 | &lt;a href=&#34;http://spill.net&#34;&gt;Spill.net&lt;/a&gt; creative agency (Paris)&lt;/small&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;divers&#34;&gt;Divers&lt;/h3&gt;
+&lt;h3 id=&#34;divers:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;Divers&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Permis A (2011) et B (2009)&lt;/li&gt;
@@ -1336,7 +1336,7 @@ appB.listen(1338);
       <guid>http://enten.github.io/steven/2015/06/15/android-5.1.1-x86_64/</guid>
       <description>
 
-&lt;h2 id=&#34;introduction:eb32e07afaade8725df5826d2da1209e&#34;&gt;Introduction&lt;/h2&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 
 &lt;p&gt;Le projet &lt;a href=&#34;http://www.android-x86.org/&#34;&gt;android-x86&lt;/a&gt; est un fork d&amp;rsquo;Android Open Source Project (&lt;a href=&#34;http://source.android.com/&#34;&gt;AOSP&lt;/a&gt;) permettant d&amp;rsquo;installer Android sur PC (la compilation de ses sources produit une image CD bootable). Ce fork fût longtemps la seule solution pour compiler simplement Android pour plateforme x86.&lt;/p&gt;
 
@@ -1345,7 +1345,7 @@ En effet la compilation de ces 2 projets ne produit pas le même résultat (une 
 
 &lt;p&gt;&lt;strong&gt;Nous discuterons dans cette article uniquement d&amp;rsquo;AOSP et de la manière de compiler ses sources pour des architectures 64-bits.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;contexte:eb32e07afaade8725df5826d2da1209e&#34;&gt;Contexte&lt;/h2&gt;
+&lt;h2 id=&#34;contexte&#34;&gt;Contexte&lt;/h2&gt;
 
 &lt;p&gt;Peu de temps après notre expérience de &lt;a href=&#34;http://enten.github.io/steven/page/virtualiser-android-5-lollipop-avec-qemu/&#34;&gt;virtualisation d&amp;rsquo;Android 5 Lollipop avec Qemu&lt;/a&gt;, nous avons constaté que des images 64-bits précompilées d&amp;rsquo;Android étaient proposées en téléchargement par le &lt;a href=&#34;http://developer.android.com/tools/help/sdk-manager.html&#34;&gt;SDK Manager&lt;/a&gt;.&lt;/p&gt;
 
@@ -1412,13 +1412,13 @@ En effet la compilation de ces 2 projets ne produit pas le même résultat (une 
 
 &lt;p&gt;Nous sommes maintenant certains qu&amp;rsquo;il est possible de compiler AOSP pour des architectures x86_64, et ce depuis la version 5.0.1 d&amp;rsquo;Android.&lt;/p&gt;
 
-&lt;h2 id=&#34;expérience:eb32e07afaade8725df5826d2da1209e&#34;&gt;Expérience&lt;/h2&gt;
+&lt;h2 id=&#34;expérience&#34;&gt;Expérience&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;Dans cette section, nous allons compiler Android pour architecture x86_64 à partir des sources du projet officiel (AOSP).&lt;/strong&gt; Les images résultantes de la compilation pourront être utilisées directement avec Qemu ou l&amp;rsquo;outil &lt;a href=&#34;http://developer.android.com/tools/help/emulator.html&#34;&gt;emulator&lt;/a&gt; du SDK. &lt;strong&gt;Nous souhaitons également recompiler un kernel  Linux compatible&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;L&amp;rsquo;expérience semble simple. Toute fois, des problèmes de compatibilité de versions peuvent rendrent l&amp;rsquo;expérience moins évidente.&lt;/p&gt;
 
-&lt;h3 id=&#34;prérequis-matériel:eb32e07afaade8725df5826d2da1209e&#34;&gt;Prérequis matériel&lt;/h3&gt;
+&lt;h3 id=&#34;prérequis-matériel&#34;&gt;Prérequis matériel&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Processeur amd64&lt;/li&gt;
@@ -1427,7 +1427,7 @@ En effet la compilation de ces 2 projets ne produit pas le même résultat (une 
 &lt;li&gt;Système d&amp;rsquo;exploitation GNU/Linux récent&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;versions:eb32e07afaade8725df5826d2da1209e&#34;&gt;Versions&lt;/h3&gt;
+&lt;h3 id=&#34;versions&#34;&gt;Versions&lt;/h3&gt;
 
 &lt;p&gt;Voici les différentes versions des composants utilisés pour compiler AOSP x86_64.&lt;/p&gt;
 
@@ -1442,9 +1442,9 @@ En effet la compilation de ces 2 projets ne produit pas le même résultat (une 
 &lt;p&gt;&lt;strong&gt;WARNING&lt;/strong&gt;
 Pour pouvoir compiler un kernel Linux compatible avec les images résultantes de la compilation d&amp;rsquo;AOSP branche &lt;code&gt;android-5.1.1_r4&lt;/code&gt;, il est important d&amp;rsquo;utiliser la branche &lt;code&gt;android-goldfish-3.10&lt;/code&gt; du projet &lt;code&gt;kernel/goldfish&lt;/code&gt; à son état du 16 sept. 2014 (commit 43dbfdb838).&lt;/p&gt;
 
-&lt;h3 id=&#34;préparer-l-environnement-d-assemblage:eb32e07afaade8725df5826d2da1209e&#34;&gt;Préparer l&amp;rsquo;environnement d&amp;rsquo;assemblage&lt;/h3&gt;
+&lt;h3 id=&#34;préparer-l-environnement-d-assemblage&#34;&gt;Préparer l&amp;rsquo;environnement d&amp;rsquo;assemblage&lt;/h3&gt;
 
-&lt;h4 id=&#34;jdk-7:eb32e07afaade8725df5826d2da1209e&#34;&gt;JDK 7&lt;/h4&gt;
+&lt;h4 id=&#34;jdk-7&#34;&gt;JDK 7&lt;/h4&gt;
 
 &lt;p&gt;Installer un JDK 7 (Java Open JDK 7 par exemple).&lt;/p&gt;
 
@@ -1457,7 +1457,7 @@ Pour pouvoir compiler un kernel Linux compatible avec les images résultantes de
 $ sudo update-alternatives --config javac
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;packages-requis:eb32e07afaade8725df5826d2da1209e&#34;&gt;Packages requis&lt;/h4&gt;
+&lt;h4 id=&#34;packages-requis&#34;&gt;Packages requis&lt;/h4&gt;
 
 &lt;p&gt;Installer les packages nécessaires pour compiler AOSP.&lt;/p&gt;
 
@@ -1481,7 +1481,7 @@ $ PATH=~/bin:$PATH
 
 &lt;p&gt;&lt;small&gt;Référence : &lt;a href=&#34;http://source.android.com/source/initializing.html#setting-up-a-linux-build-environment&#34;&gt;Setting up a Linux build environment&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;sources-d-aosp:eb32e07afaade8725df5826d2da1209e&#34;&gt;Sources d&amp;rsquo;AOSP&lt;/h3&gt;
+&lt;h3 id=&#34;sources-d-aosp&#34;&gt;Sources d&amp;rsquo;AOSP&lt;/h3&gt;
 
 &lt;p&gt;Nous allons maintenant récupérer les sources officielles d&amp;rsquo;Android.&lt;/p&gt;
 
@@ -1495,7 +1495,7 @@ $ repo sync
 
 &lt;p&gt;&lt;strong&gt;Attention&lt;/strong&gt; La synchronisation des sources d&amp;rsquo;AOSP dure plusieurs heures (à la faveur d&amp;rsquo;une connexion Internet grand public).&lt;/p&gt;
 
-&lt;h3 id=&#34;compiler-aosp:eb32e07afaade8725df5826d2da1209e&#34;&gt;Compiler AOSP&lt;/h3&gt;
+&lt;h3 id=&#34;compiler-aosp&#34;&gt;Compiler AOSP&lt;/h3&gt;
 
 &lt;p&gt;Une fois les sources d&amp;rsquo;AOSP récupérées, quelques lignes de commandes suffisent à charger la configuration d&amp;rsquo;assemblage &lt;code&gt;aosp_x86_64-eng&lt;/code&gt; pour produire des images x86_64 d&amp;rsquo;Android.&lt;/p&gt;
 
@@ -1527,7 +1527,7 @@ $ lunch aosp_x86_64-eng
 
 &lt;p&gt;&lt;strong&gt;A la fin de la comilation, les images des systèmes de fichiers créées sont disponibles dans le répertoire &lt;code&gt;&amp;lt;aosp&amp;gt;/out/target/production/generic_x86_64&lt;/code&gt;.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;compiler-goldfish:eb32e07afaade8725df5826d2da1209e&#34;&gt;Compiler Goldfish&lt;/h3&gt;
+&lt;h3 id=&#34;compiler-goldfish&#34;&gt;Compiler Goldfish&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://android.googlesource.com/kernel/goldfish&#34;&gt;Goldfish&lt;/a&gt; est une version du kernel Linux adaptée pour Android. Lorsque l&amp;rsquo;on utilise l&amp;rsquo;&lt;a href=&#34;http://developer.android.com/tools/help/avd-manager.html&#34;&gt;AVD Manager&lt;/a&gt; pour créer des émulateurs, des images pré-compilées du kernel Goldfish sont utilisées.&lt;/p&gt;
 
@@ -1559,7 +1559,7 @@ make -j8
 
 &lt;p&gt;&lt;strong&gt;A la fin de la comilation, le kernel compilé est disponible dans le répertoire &lt;code&gt;&amp;lt;goldfish&amp;gt;/arch/x86/boot&lt;/code&gt; sous le nom &lt;code&gt;bzImage&lt;/code&gt;.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;tester:eb32e07afaade8725df5826d2da1209e&#34;&gt;Tester&lt;/h3&gt;
+&lt;h3 id=&#34;tester&#34;&gt;Tester&lt;/h3&gt;
 
 &lt;p&gt;Nous disposons maintenant de tous les fichiers nécessaires pour lancer un émulateur Android x86_64 100% custom (recompilé par nos soins).&lt;/p&gt;
 
@@ -1803,7 +1803,7 @@ lxc.network.link = eth0
       <guid>http://enten.github.io/steven/2014/11/30/virtualiser-android-5-lollipop-avec-qemu/</guid>
       <description>
 
-&lt;h2 id=&#34;introduction:305cc891b1c6a1a1f424f416b465955e&#34;&gt;Introduction&lt;/h2&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 
 &lt;p&gt;Les dernières branches d&amp;rsquo;&lt;a href=&#34;https://source.android.com/&#34;&gt;Android Open Source Project&lt;/a&gt; (AOSP) – branches &lt;code&gt;android-5.x&lt;/code&gt; – proposent différentes configurations d&amp;rsquo;assemblages d&amp;rsquo;&lt;a href=&#34;https://www.android.com/versions/lollipop-5-0/&#34;&gt;Android 5 Lollipop&lt;/a&gt;.
 Chaque configuration d&amp;rsquo;assemblage correspond à un produit adapté à un type de plateformes d&amp;rsquo;exécutions. Pour compiler une version complète d&amp;rsquo;Android 5 pour plateformes ARM, il faut utiliser la configuration d&amp;rsquo;assemblage &lt;code&gt;aosp_arm-eng&lt;/code&gt; (pour les plateformes ARM 32-bits) ou &lt;code&gt;aosp_arm64-eng&lt;/code&gt; (pour les plateformes ARM 64-bits).&lt;/p&gt;
@@ -1823,7 +1823,7 @@ La compilation des sources du projet &lt;code&gt;qemu-android&lt;/code&gt; perme
 
 &lt;p&gt;Dans les sections suivantes, nous allons voir comment compiler Android 5 (produit &lt;code&gt;ranchu_arm64-eng&lt;/code&gt; ou &lt;code&gt;mini_emulator_arm64-userdebug&lt;/code&gt;) et le virtualiser dans une VM Qemu.&lt;/p&gt;
 
-&lt;h2 id=&#34;prérequis:305cc891b1c6a1a1f424f416b465955e&#34;&gt;Prérequis&lt;/h2&gt;
+&lt;h2 id=&#34;prérequis&#34;&gt;Prérequis&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Capacités processeur et mémoire importantes (la compilation nécessite parfois jusqu’à 4 Go de RAM) ;&lt;/li&gt;
@@ -1834,7 +1834,7 @@ La compilation des sources du projet &lt;code&gt;qemu-android&lt;/code&gt; perme
 
 &lt;p&gt;&lt;em&gt;Note : les manipulations décritent ci-dessous ont été réalisées sur un ordinateur disposant d’un processeur Intel Core i5 (2 cœurs cadencés à 1.8 Ghz supportant jusqu’à 4 threads par coeur), de 8 Go de mémoire RAM et de la distribution &lt;a href=&#34;http://releases.ubuntu.com/14.04.1&#34;&gt;Ubuntu 14.04.1 LTS&lt;/a&gt; 64-bits.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;préparer-l-environnement-d-assemblage:305cc891b1c6a1a1f424f416b465955e&#34;&gt;Préparer l&amp;rsquo;environnement d&amp;rsquo;assemblage&lt;/h2&gt;
+&lt;h2 id=&#34;préparer-l-environnement-d-assemblage&#34;&gt;Préparer l&amp;rsquo;environnement d&amp;rsquo;assemblage&lt;/h2&gt;
 
 &lt;p&gt;Installer la machine virtuelle Java (JVM) Open JDK 7 (nécessaire pour compiler les dernières branches d&amp;rsquo;Android)&lt;/p&gt;
 
@@ -1865,7 +1865,7 @@ $ curl https://storage.googleapis.com/git-repo-downloads/repo &amp;gt; ~/bin/rep
 $ chmod a+x ~/bin/repo
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;récupérer-les-sources-d-aosp:305cc891b1c6a1a1f424f416b465955e&#34;&gt;Récupérer les sources d&amp;rsquo;AOSP&lt;/h2&gt;
+&lt;h2 id=&#34;récupérer-les-sources-d-aosp&#34;&gt;Récupérer les sources d&amp;rsquo;AOSP&lt;/h2&gt;
 
 &lt;p&gt;Créer un répertoire pour le dépôt des sources d&amp;rsquo;AOSP&lt;/p&gt;
 
@@ -1882,7 +1882,7 @@ $ chmod a+x ~/bin/repo
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ repo sync
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;corriger-les-configurations-d-assemblage:305cc891b1c6a1a1f424f416b465955e&#34;&gt;Corriger les configurations d&amp;rsquo;assemblage&lt;/h2&gt;
+&lt;h2 id=&#34;corriger-les-configurations-d-assemblage&#34;&gt;Corriger les configurations d&amp;rsquo;assemblage&lt;/h2&gt;
 
 &lt;p&gt;Les premières branches d&amp;rsquo;Android 5 souffrent de petits bugs nécessitant une modification manuelle des sources pour pouvoir compiler les produits &lt;code&gt;ranchu_arm64-eng&lt;/code&gt; et &lt;code&gt;mini_emulator_arm64-userdebug&lt;/code&gt; :&lt;/p&gt;
 
@@ -1898,7 +1898,7 @@ $ wget https://dl.dropboxusercontent.com/u/2930979/fixit.tar.gz
 $ tar -xvf fixit.tar.gz -C aosp/device/generic
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;compiler-les-sources-d-aosp:305cc891b1c6a1a1f424f416b465955e&#34;&gt;Compiler les sources d&amp;rsquo;AOSP&lt;/h2&gt;
+&lt;h2 id=&#34;compiler-les-sources-d-aosp&#34;&gt;Compiler les sources d&amp;rsquo;AOSP&lt;/h2&gt;
 
 &lt;p&gt;Se placer dans le dossier principal des sources d&amp;rsquo;AOSP&lt;/p&gt;
 
@@ -1929,7 +1929,7 @@ $ tar -xvf fixit.tar.gz -C aosp/device/generic
 &lt;li&gt;Pour &lt;code&gt;mini_emulator_arm64-userdebug&lt;/code&gt; : out/target/product/mini-emulator-arm64/&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;virtualiser-la-version-compilée-d-android-avec-qemu:305cc891b1c6a1a1f424f416b465955e&#34;&gt;Virtualiser la version compilée d&amp;rsquo;Android avec Qemu&lt;/h2&gt;
+&lt;h2 id=&#34;virtualiser-la-version-compilée-d-android-avec-qemu&#34;&gt;Virtualiser la version compilée d&amp;rsquo;Android avec Qemu&lt;/h2&gt;
 
 &lt;p&gt;Pour virtualiser une version d&amp;rsquo;Android 5 ARM 64-bits, nous avons besoin du programme &lt;code&gt;qemu-system-aarch64&lt;/code&gt; modifié par Google pour supporter l&amp;rsquo;exécution de la machine virtuelle &amp;laquo;ranchu&amp;raquo; (et du type de processeur &amp;laquo;cortex-v57&amp;raquo;).&lt;/p&gt;
 
@@ -1987,7 +1987,7 @@ $ make -j8
 
 &lt;p&gt;&lt;a href=&#34;http://enten.github.io/steven/assets/images/fig/mini_emulator_arm64-userdebug.png&#34;&gt;&lt;img src=&#34;http://enten.github.io/steven/assets/images/fig/mini_emulator_arm64-userdebug-tiny.png&#34; alt=&#34;mini_emulator_arm64-userdebug preview&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;références:305cc891b1c6a1a1f424f416b465955e&#34;&gt;Références&lt;/h2&gt;
+&lt;h2 id=&#34;références&#34;&gt;Références&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://source.android.com/source/building.html&#34;&gt;AOSP documentation - Downloading and Building&lt;/a&gt;&lt;/li&gt;
@@ -2005,7 +2005,7 @@ $ make -j8
       <guid>http://enten.github.io/steven/2014/11/17/installer-apache-mesos-0.20.1-sur-ubuntu-14.04.1.lts/</guid>
       <description>
 
-&lt;h2 id=&#34;a-propos-d-apache-mesos:b7befab35a9838149f8022b9c038a630&#34;&gt;A propos d&amp;rsquo;Apache Mesos&lt;/h2&gt;
+&lt;h2 id=&#34;a-propos-d-apache-mesos&#34;&gt;A propos d&amp;rsquo;Apache Mesos&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://mesos.apache.org/&#34;&gt;Mesos&lt;/a&gt; est un projet de la fondation Apache présenté comme un noyau de systèmes distribués. Il permet d&amp;rsquo;exploiter les ressources de plusieurs machines comme un seul système. Il assure l&amp;rsquo;isolation et la haute disponibilité d&amp;rsquo;exécutions de programmes. Mesos fournit deux composants logiciels :&lt;/p&gt;
 
@@ -2016,9 +2016,9 @@ $ make -j8
 
 &lt;p&gt;&lt;em&gt;En environnement de production, il est recommandé de configurer plusieurs noeuds mesos-master et d&amp;rsquo;utiliser &lt;a href=&#34;http://zookeeper.apache.org&#34;&gt;Apache Zookeeper&lt;/a&gt; pour l&amp;rsquo;élection du noeud master actif. Ainsi, quand le noeud master actif rencontre un problème, Zookeeper se charge d&amp;rsquo;élire un nouveau noeud master.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;exemple-d-utilisation-d-apache-mesos:b7befab35a9838149f8022b9c038a630&#34;&gt;Exemple d&amp;rsquo;utilisation d&amp;rsquo;Apache Mesos&lt;/h2&gt;
+&lt;h2 id=&#34;exemple-d-utilisation-d-apache-mesos&#34;&gt;Exemple d&amp;rsquo;utilisation d&amp;rsquo;Apache Mesos&lt;/h2&gt;
 
-&lt;h3 id=&#34;plateforme-cible:b7befab35a9838149f8022b9c038a630&#34;&gt;Plateforme cible&lt;/h3&gt;
+&lt;h3 id=&#34;plateforme-cible&#34;&gt;Plateforme cible&lt;/h3&gt;
 
 &lt;p&gt;L&amp;rsquo;objectif de nos manipulations est de configurer un système distribué avec Mesos. Nous allons configurer Mesos sur deux noeuds Ubuntu 14.04.1 LTS :&lt;/p&gt;
 
@@ -2029,7 +2029,7 @@ $ make -j8
 
 &lt;p&gt;&lt;em&gt;En environnement de production, il est recommandé d&amp;rsquo;installer Zookeeper sur un noeud différent du noeud mesos-master car s&amp;rsquo;il rencontre un problème, Zookeeper ne sera plus disponible pour élire un nouveau noeud mesos-master et rediriger les noeuds mesos-slave.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;diagramme-de-déploiement:b7befab35a9838149f8022b9c038a630&#34;&gt;Diagramme de déploiement&lt;/h3&gt;
+&lt;h3 id=&#34;diagramme-de-déploiement&#34;&gt;Diagramme de déploiement&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;          192.168.1.101
 +---------------------------------+
@@ -2046,9 +2046,9 @@ $ make -j8
 +---------------------------------+
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;installer-apache-mesos-sur-plusieurs-noeuds-ubuntu:b7befab35a9838149f8022b9c038a630&#34;&gt;Installer Apache Mesos sur plusieurs noeuds Ubuntu&lt;/h2&gt;
+&lt;h2 id=&#34;installer-apache-mesos-sur-plusieurs-noeuds-ubuntu&#34;&gt;Installer Apache Mesos sur plusieurs noeuds Ubuntu&lt;/h2&gt;
 
-&lt;h3 id=&#34;prérequis:b7befab35a9838149f8022b9c038a630&#34;&gt;Prérequis&lt;/h3&gt;
+&lt;h3 id=&#34;prérequis&#34;&gt;Prérequis&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://releases.ubuntu.com/14.04.1&#34;&gt;Ubuntu 14.04.1 LTS&lt;/a&gt; 64-bit est installé sur les noeuds master et slave&lt;/li&gt;
@@ -2061,7 +2061,7 @@ $ echo &amp;quot;deb http://repos.mesosphere.io/ubuntu trusty main&amp;quot; | s
 $ sudo apt-get update -y
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;configuration-du-noeud-master:b7befab35a9838149f8022b9c038a630&#34;&gt;Configuration du noeud master&lt;/h3&gt;
+&lt;h3 id=&#34;configuration-du-noeud-master&#34;&gt;Configuration du noeud master&lt;/h3&gt;
 
 &lt;p&gt;Installation du paquet &lt;strong&gt;mesos&lt;/strong&gt; et du paquet &lt;strong&gt;zookeeper&lt;/strong&gt; (par dépendance) :&lt;/p&gt;
 
@@ -2094,7 +2094,7 @@ $ sudo apt-get update -y
 $ sudo service mesos-master restart
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;configuration-du-noeud-slave:b7befab35a9838149f8022b9c038a630&#34;&gt;Configuration du noeud slave&lt;/h3&gt;
+&lt;h3 id=&#34;configuration-du-noeud-slave&#34;&gt;Configuration du noeud slave&lt;/h3&gt;
 
 &lt;p&gt;Installation du paquet &lt;strong&gt;mesos&lt;/strong&gt; sans le paquet &lt;strong&gt;zookeeper&lt;/strong&gt; :&lt;/p&gt;
 
@@ -2118,7 +2118,7 @@ $ echo 192.168.1.102 | sudo tee /etc/mesos-slave/hostname
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo service mesos-slave start
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;configuration-additionnelle:b7befab35a9838149f8022b9c038a630&#34;&gt;Configuration additionnelle&lt;/h2&gt;
+&lt;h2 id=&#34;configuration-additionnelle&#34;&gt;Configuration additionnelle&lt;/h2&gt;
 
 &lt;p&gt;Pour notre test, il est intéressant de configurer le noeud master pour pouvoir intégrer ses ressources au système distribué en démarrant le service mesos-slave. &lt;strong&gt;Attention!&lt;/strong&gt; Cette pratique est déconseillée en environnement de production.&lt;/p&gt;
 
@@ -2130,7 +2130,7 @@ $ echo 192.168.1.101 | sudo tee /etc/mesos-slave/hostname
 
 &lt;p&gt;La commande &lt;code&gt;sudo service mesos-slave start&lt;/code&gt; intégère les ressources du noeud master au système distribué (les ressources du noeud master peuvent alors être utilisées pour réaliser des traitements).&lt;/p&gt;
 
-&lt;h2 id=&#34;tester-l-installation-d-apache-mesos:b7befab35a9838149f8022b9c038a630&#34;&gt;Tester l&amp;rsquo;installation d&amp;rsquo;Apache Mesos&lt;/h2&gt;
+&lt;h2 id=&#34;tester-l-installation-d-apache-mesos&#34;&gt;Tester l&amp;rsquo;installation d&amp;rsquo;Apache Mesos&lt;/h2&gt;
 
 &lt;p&gt;Rendez-vous sur l&amp;rsquo;interface web de mesos-master en consultant l&amp;rsquo;URL &lt;a href=&#34;http://192.168.1.101:5050&#34;&gt;http://192.168.1.101:5050&lt;/a&gt;.
 Le cadre à gauche indique le nombre de noeud slaves actifs (1 si mesos-slave est démarré sur le noeud slave, 2 si mesos-slave est également démarré sur le noeud master ou 0 si mesos-slave est arrêté sur les deux noeuds).&lt;/p&gt;
@@ -2156,7 +2156,7 @@ Le cadre à gauche indique le nombre de noeud slaves actifs (1 si mesos-slave es
 
 &lt;p&gt;Marathon négocie avec Mesos l&amp;rsquo;exécution d&amp;rsquo;applications et assure quelles soient toujours actives : lorsqu&amp;rsquo;une application se termine, Marathon se charge de la relancer. Marathon fournit une &lt;a href=&#34;https://mesosphere.github.io/marathon/docs/rest-api.html&#34;&gt;API Rest&lt;/a&gt; pour réaliser des opérations par requêtes http.&lt;/p&gt;
 
-&lt;h2 id=&#34;références:b7befab35a9838149f8022b9c038a630&#34;&gt;Références&lt;/h2&gt;
+&lt;h2 id=&#34;références&#34;&gt;Références&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Apache Mesos : &lt;a href=&#34;http://mesos.apache.org&#34;&gt;http://mesos.apache.org&lt;/a&gt;&lt;/li&gt;

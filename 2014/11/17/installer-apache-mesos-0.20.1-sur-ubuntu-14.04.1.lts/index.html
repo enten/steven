@@ -182,7 +182,7 @@
   <div class="container content">
   
 
-<h2 id="a-propos-d-apache-mesos:b7befab35a9838149f8022b9c038a630">A propos d&rsquo;Apache Mesos</h2>
+<h2 id="a-propos-d-apache-mesos">A propos d&rsquo;Apache Mesos</h2>
 
 <p><a href="http://mesos.apache.org/">Mesos</a> est un projet de la fondation Apache présenté comme un noyau de systèmes distribués. Il permet d&rsquo;exploiter les ressources de plusieurs machines comme un seul système. Il assure l&rsquo;isolation et la haute disponibilité d&rsquo;exécutions de programmes. Mesos fournit deux composants logiciels :</p>
 
@@ -193,9 +193,9 @@
 
 <p><em>En environnement de production, il est recommandé de configurer plusieurs noeuds mesos-master et d&rsquo;utiliser <a href="http://zookeeper.apache.org">Apache Zookeeper</a> pour l&rsquo;élection du noeud master actif. Ainsi, quand le noeud master actif rencontre un problème, Zookeeper se charge d&rsquo;élire un nouveau noeud master.</em></p>
 
-<h2 id="exemple-d-utilisation-d-apache-mesos:b7befab35a9838149f8022b9c038a630">Exemple d&rsquo;utilisation d&rsquo;Apache Mesos</h2>
+<h2 id="exemple-d-utilisation-d-apache-mesos">Exemple d&rsquo;utilisation d&rsquo;Apache Mesos</h2>
 
-<h3 id="plateforme-cible:b7befab35a9838149f8022b9c038a630">Plateforme cible</h3>
+<h3 id="plateforme-cible">Plateforme cible</h3>
 
 <p>L&rsquo;objectif de nos manipulations est de configurer un système distribué avec Mesos. Nous allons configurer Mesos sur deux noeuds Ubuntu 14.04.1 LTS :</p>
 
@@ -206,7 +206,7 @@
 
 <p><em>En environnement de production, il est recommandé d&rsquo;installer Zookeeper sur un noeud différent du noeud mesos-master car s&rsquo;il rencontre un problème, Zookeeper ne sera plus disponible pour élire un nouveau noeud mesos-master et rediriger les noeuds mesos-slave.</em></p>
 
-<h3 id="diagramme-de-déploiement:b7befab35a9838149f8022b9c038a630">Diagramme de déploiement</h3>
+<h3 id="diagramme-de-déploiement">Diagramme de déploiement</h3>
 
 <pre><code>          192.168.1.101
 +---------------------------------+
@@ -223,9 +223,9 @@
 +---------------------------------+
 </code></pre>
 
-<h2 id="installer-apache-mesos-sur-plusieurs-noeuds-ubuntu:b7befab35a9838149f8022b9c038a630">Installer Apache Mesos sur plusieurs noeuds Ubuntu</h2>
+<h2 id="installer-apache-mesos-sur-plusieurs-noeuds-ubuntu">Installer Apache Mesos sur plusieurs noeuds Ubuntu</h2>
 
-<h3 id="prérequis:b7befab35a9838149f8022b9c038a630">Prérequis</h3>
+<h3 id="prérequis">Prérequis</h3>
 
 <ul>
 <li><a href="http://releases.ubuntu.com/14.04.1">Ubuntu 14.04.1 LTS</a> 64-bit est installé sur les noeuds master et slave</li>
@@ -238,7 +238,7 @@ $ echo &quot;deb http://repos.mesosphere.io/ubuntu trusty main&quot; | sudo tee 
 $ sudo apt-get update -y
 </code></pre>
 
-<h3 id="configuration-du-noeud-master:b7befab35a9838149f8022b9c038a630">Configuration du noeud master</h3>
+<h3 id="configuration-du-noeud-master">Configuration du noeud master</h3>
 
 <p>Installation du paquet <strong>mesos</strong> et du paquet <strong>zookeeper</strong> (par dépendance) :</p>
 
@@ -271,7 +271,7 @@ $ sudo apt-get update -y
 $ sudo service mesos-master restart
 </code></pre>
 
-<h3 id="configuration-du-noeud-slave:b7befab35a9838149f8022b9c038a630">Configuration du noeud slave</h3>
+<h3 id="configuration-du-noeud-slave">Configuration du noeud slave</h3>
 
 <p>Installation du paquet <strong>mesos</strong> sans le paquet <strong>zookeeper</strong> :</p>
 
@@ -295,7 +295,7 @@ $ echo 192.168.1.102 | sudo tee /etc/mesos-slave/hostname
 <pre><code class="language-bash">$ sudo service mesos-slave start
 </code></pre>
 
-<h2 id="configuration-additionnelle:b7befab35a9838149f8022b9c038a630">Configuration additionnelle</h2>
+<h2 id="configuration-additionnelle">Configuration additionnelle</h2>
 
 <p>Pour notre test, il est intéressant de configurer le noeud master pour pouvoir intégrer ses ressources au système distribué en démarrant le service mesos-slave. <strong>Attention!</strong> Cette pratique est déconseillée en environnement de production.</p>
 
@@ -307,7 +307,7 @@ $ echo 192.168.1.101 | sudo tee /etc/mesos-slave/hostname
 
 <p>La commande <code>sudo service mesos-slave start</code> intégère les ressources du noeud master au système distribué (les ressources du noeud master peuvent alors être utilisées pour réaliser des traitements).</p>
 
-<h2 id="tester-l-installation-d-apache-mesos:b7befab35a9838149f8022b9c038a630">Tester l&rsquo;installation d&rsquo;Apache Mesos</h2>
+<h2 id="tester-l-installation-d-apache-mesos">Tester l&rsquo;installation d&rsquo;Apache Mesos</h2>
 
 <p>Rendez-vous sur l&rsquo;interface web de mesos-master en consultant l&rsquo;URL <a href="http://192.168.1.101:5050">http://192.168.1.101:5050</a>.
 Le cadre à gauche indique le nombre de noeud slaves actifs (1 si mesos-slave est démarré sur le noeud slave, 2 si mesos-slave est également démarré sur le noeud master ou 0 si mesos-slave est arrêté sur les deux noeuds).</p>
@@ -333,7 +333,7 @@ Le cadre à gauche indique le nombre de noeud slaves actifs (1 si mesos-slave es
 
 <p>Marathon négocie avec Mesos l&rsquo;exécution d&rsquo;applications et assure quelles soient toujours actives : lorsqu&rsquo;une application se termine, Marathon se charge de la relancer. Marathon fournit une <a href="https://mesosphere.github.io/marathon/docs/rest-api.html">API Rest</a> pour réaliser des opérations par requêtes http.</p>
 
-<h2 id="références:b7befab35a9838149f8022b9c038a630">Références</h2>
+<h2 id="références">Références</h2>
 
 <ul>
 <li>Apache Mesos : <a href="http://mesos.apache.org">http://mesos.apache.org</a></li>

@@ -213,12 +213,12 @@ console.log(config.getValuesMap());
       <guid>http://enten.github.io/steven/dotresolver/</guid>
       <description>
 
-&lt;h2 id=&#34;installation:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;Installation&lt;/h2&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;npm install dotresolver --save
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;basic-usage:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;Basic usage&lt;/h2&gt;
+&lt;h2 id=&#34;basic-usage&#34;&gt;Basic usage&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var R = require(&#39;dotresolver&#39;)(&#39;.&#39;);
 
@@ -232,7 +232,7 @@ console.log(R(&#39;src.controllers&#39;, &#39;hello.js&#39;));
 var hello = R(&#39;src.controllers&#39;, &#39;hello.js&#39;, true);
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;builder-usage:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;Builder usage&lt;/h2&gt;
+&lt;h2 id=&#34;builder-usage&#34;&gt;Builder usage&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var Resolver = require(&#39;dotresolver&#39;);
 
@@ -249,16 +249,16 @@ console.log(R(&#39;css&#39;, &#39;base.css&#39;));
 var hello = R(&#39;ctrl&#39;, &#39;hello.js&#39;, true);
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;api:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;API&lt;/h2&gt;
+&lt;h2 id=&#34;api&#34;&gt;API&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://cdn.rawgit.com/enten/dotresolver/master/docs/dotresolver/0.3.0/index.html&#34;&gt;API documentation&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;tests:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;Tests&lt;/h2&gt;
+&lt;h2 id=&#34;tests&#34;&gt;Tests&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;npm test
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;release-history:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;Release History&lt;/h2&gt;
+&lt;h2 id=&#34;release-history&#34;&gt;Release History&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;0.2.8 Fix issue &lt;a href=&#34;https://github.com/enten/dotresolver/issues/3&#34;&gt;#3&lt;/a&gt;&lt;/li&gt;
@@ -270,13 +270,13 @@ var hello = R(&#39;ctrl&#39;, &#39;hello.js&#39;, true);
 &lt;li&gt;0.1.0 Initial release&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;credits:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;Credits&lt;/h2&gt;
+&lt;h2 id=&#34;credits&#34;&gt;Credits&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/enten&#34;&gt;Steven Enten&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;license:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;License&lt;/h2&gt;
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/enten/dotresolver/blob/master/LICENSE&#34;&gt;MIT&lt;/a&gt;&lt;/p&gt;
 </description>
@@ -290,13 +290,13 @@ var hello = R(&#39;ctrl&#39;, &#39;hello.js&#39;, true);
       <guid>http://enten.github.io/steven/2016/06/04/les-pr%C3%A9mices-dun-nouveau-framework-orient%C3%A9-micro-services/</guid>
       <description>
 
-&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;h2 id=&#34;introduction:e018ed27352cf2d0ec6862c43c22ff92&#34;&gt;Introduction&lt;/h2&gt;
 
 &lt;p&gt;Chaque année, les étudiants de nombreux cursus informatiques se préparent à intégrer des deux pieds le monde de l&amp;rsquo;entreprise. Jeune ingénieur en poste depuis quelques mois, je souhaite partager mon expérience d&amp;rsquo;insertion professionnelle.&lt;/p&gt;
 
 &lt;p&gt;A travers une série d&amp;rsquo;articles, je tenterai de présenter le contexte de travail qui m&amp;rsquo;a conduit à concevoir et à implémenter un framework pour encadrer et optimiser le développement logiciel.&lt;/p&gt;
 
-&lt;h2 id=&#34;pourquoi-un-nouveau-framework&#34;&gt;Pourquoi un nouveau framework ?&lt;/h2&gt;
+&lt;h2 id=&#34;pourquoi-un-nouveau-framework:e018ed27352cf2d0ec6862c43c22ff92&#34;&gt;Pourquoi un nouveau framework ?&lt;/h2&gt;
 
 &lt;p&gt;Je pense que pour chaque besoin il existe une ou plusieurs solutions. Je ne suis pas de ceux qui aiment ré-inventer la roue. Au contraire. Seulement, mon contexte de travail actuel m&amp;rsquo;a amené à penser que parfois il n&amp;rsquo;existe pas de solution qui répond parfaitement à nos besoins.&lt;/p&gt;
 
@@ -326,7 +326,7 @@ var hello = R(&#39;ctrl&#39;, &#39;hello.js&#39;, true);
 
 &lt;p&gt;C&amp;rsquo;est là où se sont présentés différents problèmes. Des problèmes qui m&amp;rsquo;ont poussés à changer de framework. Mais les problèmes étaient toujours là.&lt;/p&gt;
 
-&lt;h2 id=&#34;un-problème-de-conception&#34;&gt;Un problème de conception&lt;/h2&gt;
+&lt;h2 id=&#34;un-problème-de-conception:e018ed27352cf2d0ec6862c43c22ff92&#34;&gt;Un problème de conception&lt;/h2&gt;
 
 &lt;p&gt;A ce stade, nous avons déjà 2 composants implémentés : &lt;code&gt;Services A&lt;/code&gt; (gestion des utilisateurs) et &lt;code&gt;Service B&lt;/code&gt; (gestion de documents).&lt;/p&gt;
 
@@ -388,7 +388,7 @@ User                     |                     |-----------------------&amp;gt;|
 
 &lt;p&gt;&lt;strong&gt;Et c&amp;rsquo;est là où la majorité des frameworks montrent leurs limites : ils sont orientés serveur et n&amp;rsquo;apportent aucune aide pour s&amp;rsquo;interfacer avec les services écris.&lt;/strong&gt; Faire évoluer un service devient alors pénible puisqu&amp;rsquo;il faut faire évoluer ses dépendances.&lt;/p&gt;
 
-&lt;h2 id=&#34;la-solution-idéale&#34;&gt;La solution idéale&lt;/h2&gt;
+&lt;h2 id=&#34;la-solution-idéale:e018ed27352cf2d0ec6862c43c22ff92&#34;&gt;La solution idéale&lt;/h2&gt;
 
 &lt;p&gt;Nous avons constaté que les frameworks de micro-services sont orientés serveur : ils permettent d&amp;rsquo;écrire des services mais ne proposent pas de solution rapide pour s&amp;rsquo;interfacer avec ces derniers.&lt;/p&gt;
 
@@ -483,7 +483,7 @@ appB.listen(1338);
 
 &lt;p&gt;Une requête adressée à la route &lt;code&gt;GET http://localhost:1338/hello/sayHello&lt;/code&gt; est relayée via le client vers la route &lt;code&gt;GET http://localhost:1337/hello/sayHello&lt;/code&gt; et la réponse retransmise à l&amp;rsquo;utilisateur à l&amp;rsquo;origine de la requête.&lt;/p&gt;
 
-&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;h2 id=&#34;conclusion:e018ed27352cf2d0ec6862c43c22ff92&#34;&gt;Conclusion&lt;/h2&gt;
 
 &lt;p&gt;N&amp;rsquo;ayant pas trouvé de framework permettant d&amp;rsquo;écrire et d&amp;rsquo;interfacer simplement des micro-services, je vais tenter de développer une idée de framework de micro-services universels (pouvant être utiliser dans différents modes dynamiquement).&lt;/p&gt;
 

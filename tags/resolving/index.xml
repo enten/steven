@@ -18,12 +18,12 @@
       <guid>http://enten.github.io/steven/dotresolver/</guid>
       <description>
 
-&lt;h2 id=&#34;installation:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;Installation&lt;/h2&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;npm install dotresolver --save
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;basic-usage:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;Basic usage&lt;/h2&gt;
+&lt;h2 id=&#34;basic-usage&#34;&gt;Basic usage&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var R = require(&#39;dotresolver&#39;)(&#39;.&#39;);
 
@@ -37,7 +37,7 @@ console.log(R(&#39;src.controllers&#39;, &#39;hello.js&#39;));
 var hello = R(&#39;src.controllers&#39;, &#39;hello.js&#39;, true);
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;builder-usage:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;Builder usage&lt;/h2&gt;
+&lt;h2 id=&#34;builder-usage&#34;&gt;Builder usage&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var Resolver = require(&#39;dotresolver&#39;);
 
@@ -54,16 +54,16 @@ console.log(R(&#39;css&#39;, &#39;base.css&#39;));
 var hello = R(&#39;ctrl&#39;, &#39;hello.js&#39;, true);
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;api:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;API&lt;/h2&gt;
+&lt;h2 id=&#34;api&#34;&gt;API&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://cdn.rawgit.com/enten/dotresolver/master/docs/dotresolver/0.3.0/index.html&#34;&gt;API documentation&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;tests:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;Tests&lt;/h2&gt;
+&lt;h2 id=&#34;tests&#34;&gt;Tests&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;npm test
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;release-history:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;Release History&lt;/h2&gt;
+&lt;h2 id=&#34;release-history&#34;&gt;Release History&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;0.2.8 Fix issue &lt;a href=&#34;https://github.com/enten/dotresolver/issues/3&#34;&gt;#3&lt;/a&gt;&lt;/li&gt;
@@ -75,13 +75,13 @@ var hello = R(&#39;ctrl&#39;, &#39;hello.js&#39;, true);
 &lt;li&gt;0.1.0 Initial release&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;credits:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;Credits&lt;/h2&gt;
+&lt;h2 id=&#34;credits&#34;&gt;Credits&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/enten&#34;&gt;Steven Enten&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;license:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;License&lt;/h2&gt;
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/enten/dotresolver/blob/master/LICENSE&#34;&gt;MIT&lt;/a&gt;&lt;/p&gt;
 </description>
