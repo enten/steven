@@ -20,14 +20,14 @@
 
 &lt;p&gt;A minimalist middleware to get started faster with Koa.&lt;/p&gt;
 
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;h2 id=&#34;installation:c74451672c8917cbdd8a31298d7c991f&#34;&gt;Installation&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;npm install kaio --save
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
+&lt;h2 id=&#34;example:c74451672c8917cbdd8a31298d7c991f&#34;&gt;Example&lt;/h2&gt;
 
-&lt;h3 id=&#34;requirements&#34;&gt;Requirements&lt;/h3&gt;
+&lt;h3 id=&#34;requirements:c74451672c8917cbdd8a31298d7c991f&#34;&gt;Requirements&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mkdir kaio-app
 cd kaio-app
@@ -89,12 +89,12 @@ function BookController() {
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;run-the-application&#34;&gt;Run the application&lt;/h3&gt;
+&lt;h3 id=&#34;run-the-application:c74451672c8917cbdd8a31298d7c991f&#34;&gt;Run the application&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ KO_PORT=1333 DEBUG=* node --harmony app.js
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;test-it&#34;&gt;Test it&lt;/h3&gt;
+&lt;h3 id=&#34;test-it:c74451672c8917cbdd8a31298d7c991f&#34;&gt;Test it&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# 3000 is the default port but it is overriden by KO_PORT (1333)
 
@@ -111,16 +111,16 @@ $ curl http://localhost:1333/api/books/The%2520Two%2520Towers
 {&amp;quot;title&amp;quot;:&amp;quot;The Two Towers&amp;quot;,&amp;quot;author&amp;quot;:&amp;quot;J. R. R. Tolkien&amp;quot;,&amp;quot;publication&amp;quot;:&amp;quot;1954-11-11&amp;quot;}
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;api&#34;&gt;API&lt;/h2&gt;
+&lt;h2 id=&#34;api:c74451672c8917cbdd8a31298d7c991f&#34;&gt;API&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://cdn.rawgit.com/enten/kaio/master/docs/kaio/0.5.4/index.html&#34;&gt;API documentation&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;tests&#34;&gt;Tests&lt;/h2&gt;
+&lt;h2 id=&#34;tests:c74451672c8917cbdd8a31298d7c991f&#34;&gt;Tests&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;npm test
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;release-history&#34;&gt;Release History&lt;/h2&gt;
+&lt;h2 id=&#34;release-history:c74451672c8917cbdd8a31298d7c991f&#34;&gt;Release History&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;0.5.0 Use confectioner module, add tests and upgrade public API&lt;/li&gt;
@@ -128,13 +128,13 @@ $ curl http://localhost:1333/api/books/The%2520Two%2520Towers
 &lt;li&gt;0.1.0 Initial release&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;credits&#34;&gt;Credits&lt;/h2&gt;
+&lt;h2 id=&#34;credits:c74451672c8917cbdd8a31298d7c991f&#34;&gt;Credits&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/enten&#34;&gt;Steven Enten&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+&lt;h2 id=&#34;license:c74451672c8917cbdd8a31298d7c991f&#34;&gt;License&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/enten/kaio/blob/master/LICENSE.md&#34;&gt;MIT&lt;/a&gt;&lt;/p&gt;
 </description>
@@ -150,12 +150,12 @@ $ curl http://localhost:1333/api/books/The%2520Two%2520Towers
 
 &lt;p&gt;Simpliest configuration builder which used the environment.&lt;/p&gt;
 
-&lt;h2 id=&#34;installation:3a969c21e86aabc01d4c4213a8e45604&#34;&gt;Installation&lt;/h2&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;npm install confectioner --save
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;example:3a969c21e86aabc01d4c4213a8e45604&#34;&gt;Example&lt;/h2&gt;
+&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// example.js
 
@@ -178,28 +178,28 @@ console.log(config.getValuesMap());
 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;api:3a969c21e86aabc01d4c4213a8e45604&#34;&gt;API&lt;/h2&gt;
+&lt;h2 id=&#34;api&#34;&gt;API&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://cdn.rawgit.com/enten/confectioner/master/docs/confectioner/0.1.2/index.html&#34;&gt;API documentation&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;tests:3a969c21e86aabc01d4c4213a8e45604&#34;&gt;Tests&lt;/h2&gt;
+&lt;h2 id=&#34;tests&#34;&gt;Tests&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;npm test
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;release-history:3a969c21e86aabc01d4c4213a8e45604&#34;&gt;Release History&lt;/h2&gt;
+&lt;h2 id=&#34;release-history&#34;&gt;Release History&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;0.1.0 Initial release&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;credits:3a969c21e86aabc01d4c4213a8e45604&#34;&gt;Credits&lt;/h2&gt;
+&lt;h2 id=&#34;credits&#34;&gt;Credits&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/enten&#34;&gt;Steven Enten&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;license:3a969c21e86aabc01d4c4213a8e45604&#34;&gt;License&lt;/h2&gt;
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/enten/confectioner/blob/master/LICENSE&#34;&gt;MIT&lt;/a&gt;&lt;/p&gt;
 </description>
@@ -213,12 +213,12 @@ console.log(config.getValuesMap());
       <guid>http://enten.github.io/steven/dotresolver/</guid>
       <description>
 
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;h2 id=&#34;installation:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;Installation&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;npm install dotresolver --save
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;basic-usage&#34;&gt;Basic usage&lt;/h2&gt;
+&lt;h2 id=&#34;basic-usage:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;Basic usage&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var R = require(&#39;dotresolver&#39;)(&#39;.&#39;);
 
@@ -232,7 +232,7 @@ console.log(R(&#39;src.controllers&#39;, &#39;hello.js&#39;));
 var hello = R(&#39;src.controllers&#39;, &#39;hello.js&#39;, true);
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;builder-usage&#34;&gt;Builder usage&lt;/h2&gt;
+&lt;h2 id=&#34;builder-usage:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;Builder usage&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var Resolver = require(&#39;dotresolver&#39;);
 
@@ -249,16 +249,16 @@ console.log(R(&#39;css&#39;, &#39;base.css&#39;));
 var hello = R(&#39;ctrl&#39;, &#39;hello.js&#39;, true);
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;api&#34;&gt;API&lt;/h2&gt;
+&lt;h2 id=&#34;api:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;API&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://cdn.rawgit.com/enten/dotresolver/master/docs/dotresolver/0.3.0/index.html&#34;&gt;API documentation&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;tests&#34;&gt;Tests&lt;/h2&gt;
+&lt;h2 id=&#34;tests:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;Tests&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;npm test
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;release-history&#34;&gt;Release History&lt;/h2&gt;
+&lt;h2 id=&#34;release-history:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;Release History&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;0.2.8 Fix issue &lt;a href=&#34;https://github.com/enten/dotresolver/issues/3&#34;&gt;#3&lt;/a&gt;&lt;/li&gt;
@@ -270,13 +270,13 @@ var hello = R(&#39;ctrl&#39;, &#39;hello.js&#39;, true);
 &lt;li&gt;0.1.0 Initial release&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;credits&#34;&gt;Credits&lt;/h2&gt;
+&lt;h2 id=&#34;credits:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;Credits&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/enten&#34;&gt;Steven Enten&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+&lt;h2 id=&#34;license:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;License&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/enten/dotresolver/blob/master/LICENSE&#34;&gt;MIT&lt;/a&gt;&lt;/p&gt;
 </description>

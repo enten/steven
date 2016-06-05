@@ -18,11 +18,11 @@
       <guid>http://enten.github.io/steven/losh/</guid>
       <description>
 
-&lt;h2 id=&#34;purpose&#34;&gt;Purpose&lt;/h2&gt;
+&lt;h2 id=&#34;purpose:32f3f166d09bd9089c5f0bac3d828b66&#34;&gt;Purpose&lt;/h2&gt;
 
 &lt;p&gt;Used one script to rule the others. The losh script wraps the usage of the others. Technically, losh looks for &lt;code&gt;CMDUSAGE&lt;/code&gt; and &lt;code&gt;CMDDESC&lt;/code&gt; variables into the others scripts. That variables allow losh to print the usage of every scripts.&lt;/p&gt;
 
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;h2 id=&#34;installation:32f3f166d09bd9089c5f0bac3d828b66&#34;&gt;Installation&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Change directory into your awesome project
 $ cd ~/code/awesome-project
@@ -57,7 +57,7 @@ COMMANDS:
 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;test&#34;&gt;Test&lt;/h2&gt;
+&lt;h2 id=&#34;test:32f3f166d09bd9089c5f0bac3d828b66&#34;&gt;Test&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Change directory into the scripts directory
 $ cd ~/awesome-project/scripts

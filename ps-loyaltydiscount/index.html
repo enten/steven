@@ -186,14 +186,14 @@
   <div class="container content">
   
 
-<h2 id="présentation:f2eb191022e0f993832328245abd281b">Présentation</h2>
+<h2 id="présentation">Présentation</h2>
 
 <p>Module <a href="http://doc.prestashop.com/display/PS16/">PrestaShop 1.6</a> permettant de gérer
 des remises conditionnées par l&rsquo;achat.</p>
 
 <p><em>Illustration : l&rsquo;achat d&rsquo;un produit A par un client lui fait bénéficier d&rsquo;une remise sur un produit B.</em></p>
 
-<h2 id="installation:f2eb191022e0f993832328245abd281b">Installation</h2>
+<h2 id="installation">Installation</h2>
 
 <pre><code class="language-shell">cd &lt;PRESTASHOP_HOME&gt;/modules
 git clone https://github.com/enten/ps-loyaltydiscount loyaltydiscount
@@ -203,15 +203,15 @@ chown -R www-data loyaltydiscount
 <p>Se rendre dans le menu <code>Modules</code> de l&rsquo;interface d&rsquo;administration et
 installer le nouveau module <code>Loyalty Discount</code>.</p>
 
-<h2 id="administration:f2eb191022e0f993832328245abd281b">Administration</h2>
+<h2 id="administration">Administration</h2>
 
 <p>L&rsquo;installation du module ajoute le lien <code>Loyalty Discount</code> dans le menu <code>Price Rules</code>.</p>
 
 <p>L&rsquo;interface proposée permet de configurer simplement de nouvelles réductions de fidélité.</p>
 
-<h2 id="fonctionnement:f2eb191022e0f993832328245abd281b">Fonctionnement</h2>
+<h2 id="fonctionnement">Fonctionnement</h2>
 
-<h3 id="tables-de-données:f2eb191022e0f993832328245abd281b">Tables de données</h3>
+<h3 id="tables-de-données">Tables de données</h3>
 
 <pre><code class="language-bash">+-------------------------------+
 |        loyaltydiscount        |
@@ -250,7 +250,7 @@ installer le nouveau module <code>Loyalty Discount</code>.</p>
 
 </code></pre>
 
-<h3 id="surcharge-de-la-classe-specificprice-https-github-com-prestashop-prestashop-blob-1-6-classes-specificprice-php:f2eb191022e0f993832328245abd281b">Surcharge de la classe <a href="https://github.com/PrestaShop/PrestaShop/blob/1.6/classes/SpecificPrice.php">SpecificPrice</a></h3>
+<h3 id="surcharge-de-la-classe-specificprice-https-github-com-prestashop-prestashop-blob-1-6-classes-specificprice-php">Surcharge de la classe <a href="https://github.com/PrestaShop/PrestaShop/blob/1.6/classes/SpecificPrice.php">SpecificPrice</a></h3>
 
 <p>La méthode <a href="https://github.com/PrestaShop/PrestaShop/blob/1.6/classes/SpecificPrice.php#L201">getSpecificPrice</a>
 de la classe <a href="https://github.com/PrestaShop/PrestaShop/blob/1.6/classes/SpecificPrice.php">SpecificPrice</a> est
@@ -264,7 +264,7 @@ surchargée pour appliquer une éventuelle réduction conditionnée par l&rsquo;
 * La réduction de fidélité est activée (colonne <code>active</code> égale à <code>1</code>);
 * L&rsquo;acheteur a une commande validée avec le produit désigné par la colonne <code>id_product_purchased</code>.</p>
 
-<h3 id="attention:f2eb191022e0f993832328245abd281b">Attention</h3>
+<h3 id="attention">Attention</h3>
 
 <p><strong>Les réductions de fidélité se cumulent!</strong></p>
 
