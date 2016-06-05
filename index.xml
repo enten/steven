@@ -20,14 +20,13 @@
 
 &lt;p&gt;Boilerplate to start fast with &lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;demo-http-enten-github-io-hugo-boilerplate&#34;&gt;&lt;a href=&#34;http://enten.github.io/hugo-boilerplate/&#34;&gt;Demo&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;demo-http-enten-github-io-hugo-boilerplate:0306c62339fddd9fdbd4e96f726ada1f&#34;&gt;&lt;a href=&#34;http://enten.github.io/hugo-boilerplate/&#34;&gt;Demo&lt;/a&gt;&lt;/h2&gt;
 
-&lt;h2 id=&#34;screenshot&#34;&gt;Screenshot&lt;/h2&gt;
+&lt;h2 id=&#34;screenshot:0306c62339fddd9fdbd4e96f726ada1f&#34;&gt;Screenshot&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/enten/hugo-boilerplate/master/themes/hyde-y/images/screenshot.png&#34; alt=&#34;preview&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/enten/hugo-boilerplate/master/themes/hyde-y/images/screenshot.png&#34; alt=&#34;preview&#34; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;requirements&#34;&gt;Requirements&lt;/h2&gt;
+&lt;h2 id=&#34;requirements:0306c62339fddd9fdbd4e96f726ada1f&#34;&gt;Requirements&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://git-scm.com&#34;&gt;git&lt;/a&gt;&lt;/li&gt;
@@ -36,7 +35,7 @@
 &lt;li&gt;&lt;a href=&#34;https://www.npmjs.com/about&#34;&gt;npm&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;h2 id=&#34;installation:0306c62339fddd9fdbd4e96f726ada1f&#34;&gt;Installation&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# clone hugo-boilerplate into new project folder
 git clone https://github.com/enten/hugo-boilerplate awesome-site
@@ -55,9 +54,9 @@ Press Ctrl+C to stop
 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;deployment&#34;&gt;Deployment&lt;/h2&gt;
+&lt;h2 id=&#34;deployment:0306c62339fddd9fdbd4e96f726ada1f&#34;&gt;Deployment&lt;/h2&gt;
 
-&lt;h3 id=&#34;github-pages-https-pages-github-com&#34;&gt;&lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;github-pages-https-pages-github-com:0306c62339fddd9fdbd4e96f726ada1f&#34;&gt;&lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt;&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd awesome-site
 
@@ -78,7 +77,7 @@ npm run deploy:gh
 &lt;li&gt;static site is rebuilt in &lt;code&gt;public/&lt;/code&gt; folder when &lt;code&gt;deploy:gh&lt;/code&gt; is fired&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;ftp&#34;&gt;FTP&lt;/h3&gt;
+&lt;h3 id=&#34;ftp:0306c62339fddd9fdbd4e96f726ada1f&#34;&gt;FTP&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd awesome-site
 
@@ -108,7 +107,7 @@ npm run deploy
 &lt;li&gt;&lt;strong&gt;BUG&lt;/strong&gt;: several attempts are needed to deploy all files&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+&lt;h2 id=&#34;license:0306c62339fddd9fdbd4e96f726ada1f&#34;&gt;License&lt;/h2&gt;
 
 &lt;p&gt;Open sourced under the &lt;a href=&#34;https://github.com/enten/hugo-boilerplate/blob/master/LICENSE&#34;&gt;MIT license&lt;/a&gt;.&lt;/p&gt;
 </description>
@@ -342,16 +341,6 @@ Done, without errors.
     </item>
     
     <item>
-      <title>test</title>
-      <link>http://enten.github.io/steven/gallery/test/</link>
-      <pubDate>Sat, 01 Aug 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://enten.github.io/steven/gallery/test/</guid>
-      <description>&lt;p&gt;A small library providing the R method to make work with paths and imports less involved.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>gitbook-boilerplate</title>
       <link>http://enten.github.io/steven/gitbook-boilerplate/</link>
       <pubDate>Tue, 28 Jul 2015 00:00:00 +0000</pubDate>
@@ -359,14 +348,14 @@ Done, without errors.
       <guid>http://enten.github.io/steven/gitbook-boilerplate/</guid>
       <description>
 
-&lt;h2 id=&#34;demo&#34;&gt;Demo&lt;/h2&gt;
+&lt;h2 id=&#34;demo:72f3bc852abfc2d1affdf6374f76f28e&#34;&gt;Demo&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://enten.github.io/gitbook-boilerplate/&#34;&gt;Github Pages&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/enten/gitbook-boilerplate/wiki&#34;&gt;Github Wiki&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;h2 id=&#34;installation:72f3bc852abfc2d1affdf6374f76f28e&#34;&gt;Installation&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;cd ~/code
 
@@ -402,11 +391,11 @@ npm run deploy
       <guid>http://enten.github.io/steven/losh/</guid>
       <description>
 
-&lt;h2 id=&#34;purpose&#34;&gt;Purpose&lt;/h2&gt;
+&lt;h2 id=&#34;purpose:32f3f166d09bd9089c5f0bac3d828b66&#34;&gt;Purpose&lt;/h2&gt;
 
 &lt;p&gt;Used one script to rule the others. The losh script wraps the usage of the others. Technically, losh looks for &lt;code&gt;CMDUSAGE&lt;/code&gt; and &lt;code&gt;CMDDESC&lt;/code&gt; variables into the others scripts. That variables allow losh to print the usage of every scripts.&lt;/p&gt;
 
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;h2 id=&#34;installation:32f3f166d09bd9089c5f0bac3d828b66&#34;&gt;Installation&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Change directory into your awesome project
 $ cd ~/code/awesome-project
@@ -441,7 +430,7 @@ COMMANDS:
 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;test&#34;&gt;Test&lt;/h2&gt;
+&lt;h2 id=&#34;test:32f3f166d09bd9089c5f0bac3d828b66&#34;&gt;Test&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Change directory into the scripts directory
 $ cd ~/awesome-project/scripts
@@ -485,14 +474,14 @@ Hello world
       <guid>http://enten.github.io/steven/ps-loyaltydiscount/</guid>
       <description>
 
-&lt;h2 id=&#34;présentation&#34;&gt;Présentation&lt;/h2&gt;
+&lt;h2 id=&#34;présentation:f2eb191022e0f993832328245abd281b&#34;&gt;Présentation&lt;/h2&gt;
 
 &lt;p&gt;Module &lt;a href=&#34;http://doc.prestashop.com/display/PS16/&#34;&gt;PrestaShop 1.6&lt;/a&gt; permettant de gérer
 des remises conditionnées par l&amp;rsquo;achat.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Illustration : l&amp;rsquo;achat d&amp;rsquo;un produit A par un client lui fait bénéficier d&amp;rsquo;une remise sur un produit B.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;h2 id=&#34;installation:f2eb191022e0f993832328245abd281b&#34;&gt;Installation&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;cd &amp;lt;PRESTASHOP_HOME&amp;gt;/modules
 git clone https://github.com/enten/ps-loyaltydiscount loyaltydiscount
@@ -502,15 +491,15 @@ chown -R www-data loyaltydiscount
 &lt;p&gt;Se rendre dans le menu &lt;code&gt;Modules&lt;/code&gt; de l&amp;rsquo;interface d&amp;rsquo;administration et
 installer le nouveau module &lt;code&gt;Loyalty Discount&lt;/code&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;administration&#34;&gt;Administration&lt;/h2&gt;
+&lt;h2 id=&#34;administration:f2eb191022e0f993832328245abd281b&#34;&gt;Administration&lt;/h2&gt;
 
 &lt;p&gt;L&amp;rsquo;installation du module ajoute le lien &lt;code&gt;Loyalty Discount&lt;/code&gt; dans le menu &lt;code&gt;Price Rules&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;L&amp;rsquo;interface proposée permet de configurer simplement de nouvelles réductions de fidélité.&lt;/p&gt;
 
-&lt;h2 id=&#34;fonctionnement&#34;&gt;Fonctionnement&lt;/h2&gt;
+&lt;h2 id=&#34;fonctionnement:f2eb191022e0f993832328245abd281b&#34;&gt;Fonctionnement&lt;/h2&gt;
 
-&lt;h3 id=&#34;tables-de-données&#34;&gt;Tables de données&lt;/h3&gt;
+&lt;h3 id=&#34;tables-de-données:f2eb191022e0f993832328245abd281b&#34;&gt;Tables de données&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;+-------------------------------+
 |        loyaltydiscount        |
@@ -549,7 +538,7 @@ installer le nouveau module &lt;code&gt;Loyalty Discount&lt;/code&gt;.&lt;/p&gt;
 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;surcharge-de-la-classe-specificprice-https-github-com-prestashop-prestashop-blob-1-6-classes-specificprice-php&#34;&gt;Surcharge de la classe &lt;a href=&#34;https://github.com/PrestaShop/PrestaShop/blob/1.6/classes/SpecificPrice.php&#34;&gt;SpecificPrice&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;surcharge-de-la-classe-specificprice-https-github-com-prestashop-prestashop-blob-1-6-classes-specificprice-php:f2eb191022e0f993832328245abd281b&#34;&gt;Surcharge de la classe &lt;a href=&#34;https://github.com/PrestaShop/PrestaShop/blob/1.6/classes/SpecificPrice.php&#34;&gt;SpecificPrice&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;La méthode &lt;a href=&#34;https://github.com/PrestaShop/PrestaShop/blob/1.6/classes/SpecificPrice.php#L201&#34;&gt;getSpecificPrice&lt;/a&gt;
 de la classe &lt;a href=&#34;https://github.com/PrestaShop/PrestaShop/blob/1.6/classes/SpecificPrice.php&#34;&gt;SpecificPrice&lt;/a&gt; est
@@ -563,7 +552,7 @@ surchargée pour appliquer une éventuelle réduction conditionnée par l&amp;rs
 * La réduction de fidélité est activée (colonne &lt;code&gt;active&lt;/code&gt; égale à &lt;code&gt;1&lt;/code&gt;);
 * L&amp;rsquo;acheteur a une commande validée avec le produit désigné par la colonne &lt;code&gt;id_product_purchased&lt;/code&gt;.&lt;/p&gt;
 
-&lt;h3 id=&#34;attention&#34;&gt;Attention&lt;/h3&gt;
+&lt;h3 id=&#34;attention:f2eb191022e0f993832328245abd281b&#34;&gt;Attention&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;Les réductions de fidélité se cumulent!&lt;/strong&gt;&lt;/p&gt;
 
@@ -722,12 +711,12 @@ $ curl http://localhost:1333/api/books/The%2520Two%2520Towers
 
 &lt;p&gt;Simpliest configuration builder which used the environment.&lt;/p&gt;
 
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;h2 id=&#34;installation:3a969c21e86aabc01d4c4213a8e45604&#34;&gt;Installation&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;npm install confectioner --save
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
+&lt;h2 id=&#34;example:3a969c21e86aabc01d4c4213a8e45604&#34;&gt;Example&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// example.js
 
@@ -750,28 +739,28 @@ console.log(config.getValuesMap());
 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;api&#34;&gt;API&lt;/h2&gt;
+&lt;h2 id=&#34;api:3a969c21e86aabc01d4c4213a8e45604&#34;&gt;API&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://cdn.rawgit.com/enten/confectioner/master/docs/confectioner/0.1.2/index.html&#34;&gt;API documentation&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;tests&#34;&gt;Tests&lt;/h2&gt;
+&lt;h2 id=&#34;tests:3a969c21e86aabc01d4c4213a8e45604&#34;&gt;Tests&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;npm test
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;release-history&#34;&gt;Release History&lt;/h2&gt;
+&lt;h2 id=&#34;release-history:3a969c21e86aabc01d4c4213a8e45604&#34;&gt;Release History&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;0.1.0 Initial release&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;credits&#34;&gt;Credits&lt;/h2&gt;
+&lt;h2 id=&#34;credits:3a969c21e86aabc01d4c4213a8e45604&#34;&gt;Credits&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/enten&#34;&gt;Steven Enten&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+&lt;h2 id=&#34;license:3a969c21e86aabc01d4c4213a8e45604&#34;&gt;License&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/enten/confectioner/blob/master/LICENSE&#34;&gt;MIT&lt;/a&gt;&lt;/p&gt;
 </description>
@@ -785,12 +774,12 @@ console.log(config.getValuesMap());
       <guid>http://enten.github.io/steven/dotresolver/</guid>
       <description>
 
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;h2 id=&#34;installation:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;Installation&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;npm install dotresolver --save
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;basic-usage&#34;&gt;Basic usage&lt;/h2&gt;
+&lt;h2 id=&#34;basic-usage:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;Basic usage&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var R = require(&#39;dotresolver&#39;)(&#39;.&#39;);
 
@@ -804,7 +793,7 @@ console.log(R(&#39;src.controllers&#39;, &#39;hello.js&#39;));
 var hello = R(&#39;src.controllers&#39;, &#39;hello.js&#39;, true);
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;builder-usage&#34;&gt;Builder usage&lt;/h2&gt;
+&lt;h2 id=&#34;builder-usage:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;Builder usage&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var Resolver = require(&#39;dotresolver&#39;);
 
@@ -821,16 +810,16 @@ console.log(R(&#39;css&#39;, &#39;base.css&#39;));
 var hello = R(&#39;ctrl&#39;, &#39;hello.js&#39;, true);
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;api&#34;&gt;API&lt;/h2&gt;
+&lt;h2 id=&#34;api:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;API&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://cdn.rawgit.com/enten/dotresolver/master/docs/dotresolver/0.3.0/index.html&#34;&gt;API documentation&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;tests&#34;&gt;Tests&lt;/h2&gt;
+&lt;h2 id=&#34;tests:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;Tests&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;npm test
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;release-history&#34;&gt;Release History&lt;/h2&gt;
+&lt;h2 id=&#34;release-history:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;Release History&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;0.2.8 Fix issue &lt;a href=&#34;https://github.com/enten/dotresolver/issues/3&#34;&gt;#3&lt;/a&gt;&lt;/li&gt;
@@ -842,15 +831,433 @@ var hello = R(&#39;ctrl&#39;, &#39;hello.js&#39;, true);
 &lt;li&gt;0.1.0 Initial release&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;credits&#34;&gt;Credits&lt;/h2&gt;
+&lt;h2 id=&#34;credits:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;Credits&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/enten&#34;&gt;Steven Enten&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+&lt;h2 id=&#34;license:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;License&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/enten/dotresolver/blob/master/LICENSE&#34;&gt;MIT&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Les prémices d&#39;un nouveau framework orienté micro-services</title>
+      <link>http://enten.github.io/steven/2016/06/04/les-pr%C3%A9mices-dun-nouveau-framework-orient%C3%A9-micro-services/</link>
+      <pubDate>Sat, 04 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://enten.github.io/steven/2016/06/04/les-pr%C3%A9mices-dun-nouveau-framework-orient%C3%A9-micro-services/</guid>
+      <description>
+
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;Chaque année, les étudiants de nombreux cursus informatiques se préparent à intégrer des deux pieds le monde de l&amp;rsquo;entreprise. Jeune ingénieur en poste depuis quelques mois, je souhaite partager mon expérience d&amp;rsquo;insertion professionnelle.&lt;/p&gt;
+
+&lt;p&gt;A travers une série d&amp;rsquo;articles, je tenterai de présenter le contexte de travail qui m&amp;rsquo;a conduit à concevoir et à implémenter un framework pour encadrer et optimiser le développement logiciel.&lt;/p&gt;
+
+&lt;h2 id=&#34;pourquoi-un-nouveau-framework&#34;&gt;Pourquoi un nouveau framework ?&lt;/h2&gt;
+
+&lt;p&gt;Je pense que pour chaque besoin il existe une ou plusieurs solutions. Je ne suis pas de ceux qui aiment ré-inventer la roue. Au contraire. Seulement, mon contexte de travail actuel m&amp;rsquo;a amené à penser que parfois il n&amp;rsquo;existe pas de solution qui répond parfaitement à nos besoins.&lt;/p&gt;
+
+&lt;p&gt;J&amp;rsquo;évolue dans une PME où le service informatique est composé d&amp;rsquo;un responsable matériel (the sysadmin) et de deux développeurs (dont votre serviteur).&lt;/p&gt;
+
+&lt;p&gt;Aujourd&amp;rsquo;hui l&amp;rsquo;entreprise à besoin de concevoir ses systèmes en micro-services ré-utilisables. De nombreuses solutions dans différents languages existent et permettent de mettre rapidement en place ce type de plateformes.&lt;/p&gt;
+
+&lt;p&gt;J&amp;rsquo;ai commencé mon travail en m&amp;rsquo;appuyant sur un framework existant. J&amp;rsquo;ai pu rapidement mettre en place deux services :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Service A&lt;/strong&gt; : gestion d&amp;rsquo;utilisateurs (création de nouveaux comptes et de jetons d&amp;rsquo;authentification)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Service B&lt;/strong&gt; : gestion de documents (création, lecture et modification)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;[Server A]                             :  [Server B]                
+                                       :                            
+                 Service A             :                   Service B
+                     |                 :                       |    
+    GET /profile/123 |                 :      GET /doc/321     |    
+    ----------------&amp;gt;|                 :      ----------------&amp;gt;|    
+    &amp;lt; - - - - - - - -|                 :      &amp;lt; - - - - - - - -|    
+      profile(json)  |                 :        doc(json)      |    
+                     |                 :                       |    
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ainsi, ces services peuvent être ré-utilisés à travers différents projets. Le backend était presque complet. Il ne manquait qu&amp;rsquo;à écrire un troisième service : le &lt;strong&gt;service C&lt;/strong&gt; qui conjugue et enrichi les services A et B pour proposer un service permettant de gérer des utilisateurs ayant des documents privés (sans lien direct entre un utilisateur et ses documents).&lt;/p&gt;
+
+&lt;p&gt;C&amp;rsquo;est là où se sont présentés différents problèmes. Des problèmes qui m&amp;rsquo;ont poussés à changer de framework. Mais les problèmes étaient toujours là.&lt;/p&gt;
+
+&lt;h2 id=&#34;un-problème-de-conception&#34;&gt;Un problème de conception&lt;/h2&gt;
+
+&lt;p&gt;A ce stade, nous avons déjà 2 composants implémentés : &lt;code&gt;Services A&lt;/code&gt; (gestion des utilisateurs) et &lt;code&gt;Service B&lt;/code&gt; (gestion de documents).&lt;/p&gt;
+
+&lt;p&gt;Le composant &lt;code&gt;Service C&lt;/code&gt; doit utiliser les services A et B. Il nous faut écrire 2 autres composants qui sont les clients permettant d&amp;rsquo;utiliser les services A et B : ce sont eux qui savent comment dialoguer avec les services (appeler les bonnes routes avec les bons paramètres).&lt;/p&gt;
+
+&lt;p&gt;Nous appelerons ces composants &lt;code&gt;Service A Client&lt;/code&gt; et &lt;code&gt;Service B Client&lt;/code&gt;. Ils pourront être réutilisés par d&amp;rsquo;autres composants qui souhaiteraient s&amp;rsquo;interfacer avec un de ces services (A ou B).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[Server C]                               :  [Server A]               
+                                         :                           
+                 Service A Client        :         Service A         
+                         |               :             |             
+                         |               :             |             
+    cltA.getProfile(123) |               :             |             
+    --------------------&amp;gt;|      GET /profile/123       |             
+                         |----------------------------&amp;gt;|             
+                         |&amp;lt; - - - - - - - - - - - - - -|             
+    &amp;lt; - - - - - - - - - -|       profile(json)         |             
+        profile(json)    |               :             |             
+                         |               :             |             
+                                         :                           
+                                         :...........................
+                                         :                           
+                                         : [Server B]                
+                                         :                           
+                 Service B Client        :         Service B         
+                         |               :             |             
+                         |               :             |             
+    cltB.getDoc(321)     |               :             |             
+    --------------------&amp;gt;|        GET /doc/321         |             
+                         |----------------------------&amp;gt;|             
+                         |&amp;lt; - - - - - - - - - - - - - -|             
+    &amp;lt; - - - - - - - - - -|         doc(json)           |             
+          doc(json)      |               :             |             
+                         |               :             |             
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Nous pouvons maintenant écrire le service C. Et c&amp;rsquo;est là où émerge la principale problématique.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Si les services A et B évoluent, il faut mettre à jour les composants clients respectifs.&lt;/strong&gt; Il en va de même pour un éventuel futur composant &lt;code&gt;Service C Client&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Dans le cas du service C, lorsqu&amp;rsquo;un utilisateur souhaite récupérer son profil, le service C utilise le composant client du service utilisateur (&lt;code&gt;Service A Client&lt;/code&gt;) pour contacter le service distant (&lt;code&gt;Service A&lt;/code&gt;) et retransmet la réponse à l&amp;rsquo;utilisateur.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[Server C]                                                     : [Server A]    
+                                                               :               
+                     Service C          Service A Client       :    Service A
+                         |                     |               :        |      
+ ( )    GET /profile/123 |                     |               :        |      
+--|--   ----------------&amp;gt;| clt.getProfile(123) |               :        |      
+ / \                     |--------------------&amp;gt;|    GET /profile/123    |      
+User                     |                     |-----------------------&amp;gt;|      
+                         |                     |&amp;lt; - - - - - - - - - - - |      
+                         |&amp;lt; - - - - - - - - - -|     profile(json)      |      
+        &amp;lt;- - - - - - - - |    profile(json)    |               :        |      
+          profile(json)  |                     |               :        |      
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Si la route du service A pour afficher le profile change, il faudra modifier le client (et éventuellement le service C si on veut être cohérent avec les routes du service A) pour pointer vers la nouvelle route.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Et c&amp;rsquo;est là où la majorité des frameworks montrent leurs limites : ils sont orientés serveur et n&amp;rsquo;apportent aucune aide pour s&amp;rsquo;interfacer avec les services écris.&lt;/strong&gt; Faire évoluer un service devient alors pénible puisqu&amp;rsquo;il faut faire évoluer ses dépendances.&lt;/p&gt;
+
+&lt;h2 id=&#34;la-solution-idéale&#34;&gt;La solution idéale&lt;/h2&gt;
+
+&lt;p&gt;Nous avons constaté que les frameworks de micro-services sont orientés serveur : ils permettent d&amp;rsquo;écrire des services mais ne proposent pas de solution rapide pour s&amp;rsquo;interfacer avec ces derniers.&lt;/p&gt;
+
+&lt;p&gt;La solution idéale doit permettre aux développeurs :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;de se concentrer sur le code métier des services ;&lt;/li&gt;
+&lt;li&gt;et de fournir des moyens simples pour les utiliser aussi bien du côté serveur que du côté client.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Nous devrions pouvoir écrire un service de la manière suivante :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// HelloService.js
+
+class HelloService {
+  sayHello(inputs) {
+    return &#39;hello &#39; + (inputs.who || &#39;world&#39;);
+  }
+}
+
+module.exports = HelloService;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ce service ne propose qu&amp;rsquo;une seule route &lt;code&gt;GET /sayHello&lt;/code&gt; qui retourne un message selon les paramètres d&amp;rsquo;appels :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;L&amp;rsquo;appel &lt;code&gt;GET /sayHello&lt;/code&gt; affiche &lt;em&gt;Hello world&lt;/em&gt; ;&lt;/li&gt;
+&lt;li&gt;L&amp;rsquo;appel &lt;code&gt;GET /sayHello?who=jd&lt;/code&gt; affiche &lt;em&gt;Hello jd&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Notre framework doit être capable de charger des services et de proposer de les exécuter en mode serveur ou en mode client.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// app.js
+var NotreSuperFramework = require(&#39;notre-super-framework&#39;);
+var HelloService = require(&#39;./HelloService&#39;);
+
+var app = new NotreSuperFramework();
+
+// charge le service HelloService sur la route /hello
+app.use(&#39;/hello&#39;, HelloService);
+
+module.exports = app;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// server.js
+var app = require(&#39;./app&#39;);
+
+// lance le serveur de services http://localhost:1337
+app.listen(1337);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// test.js
+var app = require(&#39;./app&#39;);
+
+// créer un client vers le serveur de services http://localhost:1337
+var api = app.client(1337);
+
+// appel la route GET http://localhost:1337/hello/sayHello?who=jd
+api.HelloService.sayHello({ who: &#39;jd&#39; }, function (err, res) {
+  if (err) {
+    console.error(err);
+    return;
+  }
+
+  // affiche &amp;quot;Hello jd&amp;quot;
+  console.log(res.body);
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Nul besoin d&amp;rsquo;être un développeur NodeJS confirmé pour comprendre la simplicité d&amp;rsquo;utilisation recherchée : c&amp;rsquo;est le framework qui s&amp;rsquo;occupe de générer le serveur ou le client.&lt;/p&gt;
+
+&lt;p&gt;On peut même imaginer un troisième mode qui permettrait de monter automatiquement les routes de services distants.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// app-b.js
+var NotreSuperFramework = require(&#39;notre-super-framework&#39;);
+var appA = require(&#39;./app&#39;);
+
+var appB = new NotreSuperFramework();
+
+// monte les services du serveur distant http://localhost:1337
+appB.use(&#39;/&#39;, appA.remote(1337));
+
+module.exports = appB;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// server.js
+var appB = require(&#39;./app-b&#39;);
+
+// lance le serveur http://localhost:1338
+appB.listen(1338);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Une requête adressée à la route &lt;code&gt;GET http://localhost:1338/hello/sayHello&lt;/code&gt; est relayée via le client vers la route &lt;code&gt;GET http://localhost:1337/hello/sayHello&lt;/code&gt; et la réponse retransmise à l&amp;rsquo;utilisateur à l&amp;rsquo;origine de la requête.&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;N&amp;rsquo;ayant pas trouvé de framework permettant d&amp;rsquo;écrire et d&amp;rsquo;interfacer simplement des micro-services, je vais tenter de développer une idée de framework de micro-services universels (pouvant être utiliser dans différents modes dynamiquement).&lt;/p&gt;
+
+&lt;p&gt;Dans les prochains articles, nous allons développer les spécifications de notre solution idéale.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Les prémices d&#39;un nouveau framework orienté micro-services</title>
+      <link>http://enten.github.io/steven/2016/06/04/les-pr%C3%A9mices-dun-nouveau-framework-orient%C3%A9-micro-services/</link>
+      <pubDate>Sat, 04 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://enten.github.io/steven/2016/06/04/les-pr%C3%A9mices-dun-nouveau-framework-orient%C3%A9-micro-services/</guid>
+      <description>
+
+&lt;h2 id=&#34;introduction:783f16718fbcc4ca301dabebe6e38d41&#34;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;Chaque année, les étudiants de nombreux cursus informatiques se préparent à intégrer des deux pieds le monde de l&amp;rsquo;entreprise. Jeune ingénieur en poste depuis quelques mois, je souhaite partager mon expérience d&amp;rsquo;insertion professionnelle.&lt;/p&gt;
+
+&lt;p&gt;A travers une série d&amp;rsquo;articles, je tenterai de présenter le contexte de travail qui m&amp;rsquo;a conduit à concevoir et à implémenter un framework pour encadrer et optimiser le développement logiciel.&lt;/p&gt;
+
+&lt;h2 id=&#34;pourquoi-un-nouveau-framework:783f16718fbcc4ca301dabebe6e38d41&#34;&gt;Pourquoi un nouveau framework ?&lt;/h2&gt;
+
+&lt;p&gt;Je pense que pour chaque besoin il existe une ou plusieurs solutions. Je ne suis pas de ceux qui aiment ré-inventer la roue. Au contraire. Seulement, mon contexte de travail actuel m&amp;rsquo;a amené à penser que parfois il n&amp;rsquo;existe pas de solution qui répond parfaitement à nos besoins.&lt;/p&gt;
+
+&lt;p&gt;J&amp;rsquo;évolue dans une PME où le service informatique est composé d&amp;rsquo;un responsable matériel (the sysadmin) et de deux développeurs (dont votre serviteur).&lt;/p&gt;
+
+&lt;p&gt;Aujourd&amp;rsquo;hui l&amp;rsquo;entreprise à besoin de concevoir ses systèmes en micro-services ré-utilisables. De nombreuses solutions dans différents languages existent et permettent de mettre rapidement en place ce type de plateformes.&lt;/p&gt;
+
+&lt;p&gt;J&amp;rsquo;ai commencé mon travail en m&amp;rsquo;appuyant sur un framework existant. J&amp;rsquo;ai pu rapidement mettre en place deux services :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Service A&lt;/strong&gt; : gestion d&amp;rsquo;utilisateurs (création de nouveaux comptes et de jetons d&amp;rsquo;authentification)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Service B&lt;/strong&gt; : gestion de documents (création, lecture et modification)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;[Server A]                             :  [Server B]                
+                                       :                            
+                 Service A             :                   Service B
+                     |                 :                       |    
+    GET /profile/123 |                 :      GET /doc/321     |    
+    ----------------&amp;gt;|                 :      ----------------&amp;gt;|    
+    &amp;lt; - - - - - - - -|                 :      &amp;lt; - - - - - - - -|    
+      profile(json)  |                 :        doc(json)      |    
+                     |                 :                       |    
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ainsi, ces services peuvent être ré-utilisés à travers différents projets. Le backend était presque complet. Il ne manquait qu&amp;rsquo;à écrire un troisième service : le &lt;strong&gt;service C&lt;/strong&gt; qui conjugue et enrichi les services A et B pour proposer un service permettant de gérer des utilisateurs ayant des documents privés (sans lien direct entre un utilisateur et ses documents).&lt;/p&gt;
+
+&lt;p&gt;C&amp;rsquo;est là où se sont présentés différents problèmes. Des problèmes qui m&amp;rsquo;ont poussés à changer de framework. Mais les problèmes étaient toujours là.&lt;/p&gt;
+
+&lt;h2 id=&#34;un-problème-de-conception:783f16718fbcc4ca301dabebe6e38d41&#34;&gt;Un problème de conception&lt;/h2&gt;
+
+&lt;p&gt;A ce stade, nous avons déjà 2 composants implémentés : &lt;code&gt;Services A&lt;/code&gt; (gestion des utilisateurs) et &lt;code&gt;Service B&lt;/code&gt; (gestion de documents).&lt;/p&gt;
+
+&lt;p&gt;Le composant &lt;code&gt;Service C&lt;/code&gt; doit utiliser les services A et B. Il nous faut écrire 2 autres composants qui sont les clients permettant d&amp;rsquo;utiliser les services A et B : ce sont eux qui savent comment dialoguer avec les services (appeler les bonnes routes avec les bons paramètres).&lt;/p&gt;
+
+&lt;p&gt;Nous appelerons ces composants &lt;code&gt;Service A Client&lt;/code&gt; et &lt;code&gt;Service B Client&lt;/code&gt;. Ils pourront être réutilisés par d&amp;rsquo;autres composants qui souhaiteraient s&amp;rsquo;interfacer avec un de ces services (A ou B).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[Server C]                               :  [Server A]               
+                                         :                           
+                 Service A Client        :         Service A         
+                         |               :             |             
+                         |               :             |             
+    cltA.getProfile(123) |               :             |             
+    --------------------&amp;gt;|      GET /profile/123       |             
+                         |----------------------------&amp;gt;|             
+                         |&amp;lt; - - - - - - - - - - - - - -|             
+    &amp;lt; - - - - - - - - - -|       profile(json)         |             
+        profile(json)    |               :             |             
+                         |               :             |             
+                                         :                           
+                                         :...........................
+                                         :                           
+                                         : [Server B]                
+                                         :                           
+                 Service B Client        :         Service B         
+                         |               :             |             
+                         |               :             |             
+    cltB.getDoc(321)     |               :             |             
+    --------------------&amp;gt;|        GET /doc/321         |             
+                         |----------------------------&amp;gt;|             
+                         |&amp;lt; - - - - - - - - - - - - - -|             
+    &amp;lt; - - - - - - - - - -|         doc(json)           |             
+          doc(json)      |               :             |             
+                         |               :             |             
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Nous pouvons maintenant écrire le service C. Et c&amp;rsquo;est là où émerge la principale problématique.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Si les services A et B évoluent, il faut mettre à jour les composants clients respectifs.&lt;/strong&gt; Il en va de même pour un éventuel futur composant &lt;code&gt;Service C Client&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Dans le cas du service C, lorsqu&amp;rsquo;un utilisateur souhaite récupérer son profil, le service C utilise le composant client du service utilisateur (&lt;code&gt;Service A Client&lt;/code&gt;) pour contacter le service distant (&lt;code&gt;Service A&lt;/code&gt;) et retransmet la réponse à l&amp;rsquo;utilisateur.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[Server C]                                                     : [Server A]    
+                                                               :               
+                     Service C          Service A Client       :    Service A
+                         |                     |               :        |      
+ ( )    GET /profile/123 |                     |               :        |      
+--|--   ----------------&amp;gt;| clt.getProfile(123) |               :        |      
+ / \                     |--------------------&amp;gt;|    GET /profile/123    |      
+User                     |                     |-----------------------&amp;gt;|      
+                         |                     |&amp;lt; - - - - - - - - - - - |      
+                         |&amp;lt; - - - - - - - - - -|     profile(json)      |      
+        &amp;lt;- - - - - - - - |    profile(json)    |               :        |      
+          profile(json)  |                     |               :        |      
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Si la route du service A pour afficher le profile change, il faudra modifier le client (et éventuellement le service C si on veut être cohérent avec les routes du service A) pour pointer vers la nouvelle route.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Et c&amp;rsquo;est là où la majorité des frameworks montrent leurs limites : ils sont orientés serveur et n&amp;rsquo;apportent aucune aide pour s&amp;rsquo;interfacer avec les services écris.&lt;/strong&gt; Faire évoluer un service devient alors pénible puisqu&amp;rsquo;il faut faire évoluer ses dépendances.&lt;/p&gt;
+
+&lt;h2 id=&#34;la-solution-idéale:783f16718fbcc4ca301dabebe6e38d41&#34;&gt;La solution idéale&lt;/h2&gt;
+
+&lt;p&gt;Nous avons constaté que les frameworks de micro-services sont orientés serveur : ils permettent d&amp;rsquo;écrire des services mais ne proposent pas de solution rapide pour s&amp;rsquo;interfacer avec ces derniers.&lt;/p&gt;
+
+&lt;p&gt;La solution idéale doit permettre aux développeurs :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;de se concentrer sur le code métier des services ;&lt;/li&gt;
+&lt;li&gt;et de fournir des moyens simples pour les utiliser aussi bien du côté serveur que du côté client.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Nous devrions pouvoir écrire un service de la manière suivante :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// HelloService.js
+
+class HelloService {
+  sayHello(inputs) {
+    return &#39;hello &#39; + (inputs.who || &#39;world&#39;);
+  }
+}
+
+module.exports = HelloService;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ce service ne propose qu&amp;rsquo;une seule route &lt;code&gt;GET /sayHello&lt;/code&gt; qui retourne un message selon les paramètres d&amp;rsquo;appels :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;L&amp;rsquo;appel &lt;code&gt;GET /sayHello&lt;/code&gt; affiche &lt;em&gt;Hello world&lt;/em&gt; ;&lt;/li&gt;
+&lt;li&gt;L&amp;rsquo;appel &lt;code&gt;GET /sayHello?who=jd&lt;/code&gt; affiche &lt;em&gt;Hello jd&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Notre framework doit être capable de charger des services et de proposer de les exécuter en mode serveur ou en mode client.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// app.js
+var NotreSuperFramework = require(&#39;notre-super-framework&#39;);
+var HelloService = require(&#39;./HelloService&#39;);
+
+var app = new NotreSuperFramework();
+
+// charge le service HelloService sur la route /hello
+app.use(&#39;/hello&#39;, HelloService);
+
+module.exports = app;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// server.js
+var app = require(&#39;./app&#39;);
+
+// lance le serveur de services http://localhost:1337
+app.listen(1337);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// test.js
+var app = require(&#39;./app&#39;);
+
+// créer un client vers le serveur de services http://localhost:1337
+var api = app.client(1337);
+
+// appel la route GET http://localhost:1337/hello/sayHello?who=jd
+api.HelloService.sayHello({ who: &#39;jd&#39; }, function (err, res) {
+  if (err) {
+    console.error(err);
+    return;
+  }
+
+  // affiche &amp;quot;Hello jd&amp;quot;
+  console.log(res.body);
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Nul besoin d&amp;rsquo;être un développeur NodeJS confirmé pour comprendre la simplicité d&amp;rsquo;utilisation recherchée : c&amp;rsquo;est le framework qui s&amp;rsquo;occupe de générer le serveur ou le client.&lt;/p&gt;
+
+&lt;p&gt;On peut même imaginer un troisième mode qui permettrait de monter automatiquement les routes de services distants.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// app-b.js
+var NotreSuperFramework = require(&#39;notre-super-framework&#39;);
+var appA = require(&#39;./app&#39;);
+
+var appB = new NotreSuperFramework();
+
+// monte les services du serveur distant http://localhost:1337
+appB.use(&#39;/&#39;, appA.remote(1337));
+
+module.exports = appB;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// server.js
+var appB = require(&#39;./app-b&#39;);
+
+// lance le serveur http://localhost:1338
+appB.listen(1338);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Une requête adressée à la route &lt;code&gt;GET http://localhost:1338/hello/sayHello&lt;/code&gt; est relayée via le client vers la route &lt;code&gt;GET http://localhost:1337/hello/sayHello&lt;/code&gt; et la réponse retransmise à l&amp;rsquo;utilisateur à l&amp;rsquo;origine de la requête.&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusion:783f16718fbcc4ca301dabebe6e38d41&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;N&amp;rsquo;ayant pas trouvé de framework permettant d&amp;rsquo;écrire et d&amp;rsquo;interfacer simplement des micro-services, je vais tenter de développer une idée de framework de micro-services universels (pouvant être utiliser dans différents modes dynamiquement).&lt;/p&gt;
+
+&lt;p&gt;Dans les prochains articles, nous allons développer les spécifications de notre solution idéale.&lt;/p&gt;
 </description>
     </item>
     
@@ -862,13 +1269,13 @@ var hello = R(&#39;ctrl&#39;, &#39;hello.js&#39;, true);
       <guid>http://enten.github.io/steven/about/</guid>
       <description>
 
-&lt;h2 id=&#34;ingénieur-en-recherche-et-développement-informatique&#34;&gt;Ingénieur en recherche et développement informatique&lt;/h2&gt;
+&lt;h2 id=&#34;ingénieur-en-conception-et-développement-de-systèmes-d-information&#34;&gt;Ingénieur en conception et développement de systèmes d&amp;rsquo;information&lt;/h2&gt;
 
 &lt;h3 id=&#34;formation&#34;&gt;Formation&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Doctorat Informatique&lt;/strong&gt;&lt;br /&gt;
-&lt;small&gt;2014-2015 | Ecole doctorale Paris Est&lt;/small&gt;&lt;/li&gt;
+&lt;li&gt;&lt;div style=&#34;color:#999&#34;&gt;&lt;strong&gt;Doctorat Informatique&lt;/strong&gt; (interrompu)&lt;br /&gt;
+&lt;small&gt;2014-2015 | Ecole doctorale Paris Est&lt;/small&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Master 2 Ingénierie des systèmes d&amp;rsquo;information distribués&lt;/strong&gt;&lt;br /&gt;
 &lt;small&gt;2013-2014 | Université Paris Est-Créteil&lt;/small&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Master 1 Méthodes informatiques appliquées à la gestion des entreprises&lt;/strong&gt;&lt;br /&gt;
@@ -886,212 +1293,29 @@ var hello = R(&#39;ctrl&#39;, &#39;hello.js&#39;, true);
 &lt;h3 id=&#34;expérience&#34;&gt;Expérience&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Ingénieur de recherche et développement en informatique&lt;/strong&gt;&lt;br /&gt;
-&lt;small&gt;2015 à aujourd&amp;rsquo;hui | &lt;a href=&#34;http://leuville.com&#34;&gt;Leuville Objects&lt;/a&gt; (Versailles)&lt;/small&gt;
+&lt;li&gt;&lt;strong&gt;Ingénieur en conception et développement fullstack Javascript&lt;/strong&gt;&lt;br /&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Android &amp;middot; Bash &amp;middot; C &amp;middot; Cloudlet &amp;middot; Docker&lt;/li&gt;
-&lt;li&gt;Go &amp;middot; Git &amp;middot; Java 8 &amp;middot; Javascript &amp;middot; Linux&lt;/li&gt;
-&lt;li&gt;LXC &amp;middot; Mesos &amp;middot; Node &amp;middot; OpenContainer &amp;middot; rkt&lt;/li&gt;
-&lt;li&gt;runc &amp;middot; Rom cooking &amp;middot; Shell &amp;middot; Vagrant &amp;middot; Virtualisation&lt;/li&gt;
+&lt;li&gt;&lt;small&gt;2016 à aujourd&amp;rsquo;hui | B3TSI (Cachan)&lt;/small&gt;&lt;/li&gt;
+&lt;li&gt;&lt;small&gt;Sept. - Nov. 2015 | Groupe l&amp;rsquo;Argus (Paris)&lt;/small&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ingénieur de recherche et développement en informatique&lt;/strong&gt;&lt;br /&gt;
+&lt;small&gt;2015 | &lt;a href=&#34;http://leuville.com&#34;&gt;Leuville Objects&lt;/a&gt; (Versailles)&lt;/small&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Enseignant/Formateur&lt;/strong&gt;&lt;br /&gt;
 &lt;small&gt;2014-2015&lt;/small&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.epf.fr/fr&#34;&gt;EPF - École d&amp;rsquo;ingénieur-e-s&lt;/a&gt; : Android&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.insset.u-picardie.fr/&#34;&gt;INSSET - Institut Supérieur des Sciences et Techniques&lt;/a&gt; : Android&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.orsys.fr&#34;&gt;Orsys&lt;/a&gt; : Android, Git, Java 8&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.epf.fr/fr&#34;&gt;École d&amp;rsquo;ingénieur-e-s (EPF)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.insset.u-picardie.fr/&#34;&gt;Institut Supérieur des Sciences et Techniques (INSSET)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.orsys.fr&#34;&gt;Orsys Formation&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Responsable d&amp;rsquo;outils de reporting&lt;/strong&gt;&lt;br /&gt;
-&lt;small&gt;2011-2014 | Direction des opérations d&amp;rsquo;&lt;a href=&#34;http://essilor.com&#34;&gt;Essilor&lt;/a&gt; France (Vincennes)&lt;/small&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Microsoft SQL Server&lt;/li&gt;
-&lt;li&gt;Microsoft SQL Server Reporting Services&lt;/li&gt;
-&lt;li&gt;SQL (Transact-SQL)&lt;/li&gt;
-&lt;li&gt;Reporting&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Responsable de systèmes de reporting&lt;/strong&gt;&lt;br /&gt;
+&lt;small&gt;2011-2014 | Direction des opérations d&amp;rsquo;&lt;a href=&#34;http://essilor.com&#34;&gt;Essilor&lt;/a&gt; France (Vincennes)&lt;/small&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Assistant pédagogique&lt;/strong&gt;&lt;br /&gt;
-&lt;small&gt;2009-2011 | Lycée Jean Macé (Vitry-sur-Seine)&lt;/small&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Droit et économie&lt;/li&gt;
-&lt;li&gt;Gestion des systèmes d&amp;rsquo;information&lt;/li&gt;
-&lt;li&gt;Management&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;small&gt;2009-2011 | Lycée Jean Macé (Vitry-sur-Seine)&lt;/small&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Web développeur junior&lt;/strong&gt;&lt;br /&gt;
-&lt;small&gt;2008-2009 | &lt;a href=&#34;http://spill.net&#34;&gt;Spill.net&lt;/a&gt; creative agency (Paris)&lt;/small&gt;
-
-&lt;ul&gt;
-&lt;li&gt;CSS&lt;/li&gt;
-&lt;li&gt;Javascript&lt;/li&gt;
-&lt;li&gt;HTML&lt;/li&gt;
-&lt;li&gt;PHP&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;small&gt;2008-2009 | &lt;a href=&#34;http://spill.net&#34;&gt;Spill.net&lt;/a&gt; creative agency (Paris)&lt;/small&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h3 id=&#34;compétences&#34;&gt;Compétences&lt;/h3&gt;
-
-&lt;p&gt;
-&lt;span class=&#34;label&#34;&gt;appc&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;activemq&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;agile&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;ajax&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;android&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;angular&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;bootstrap&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;bower&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;cakephp&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;codeigniter&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;composer&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;continuous&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;deployment&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;css&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;debian&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;docker&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;flux&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;fuelphp&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;git&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;github&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;gohugo&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;google&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;maps&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;api&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;grunt&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;gulp&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;html&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;iojs&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;java&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;javascript&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;jenkins&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;jeykill&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;jquery&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;json&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;junit&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;koa&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;less&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;linux&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;lxc&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;open&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;container&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;maven&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;memcached&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;meterial&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;design&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;mesos&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;meteor&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;modelisation&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;mongodb&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;mysql&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;node&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;nosql&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;npm&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;php&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;poo&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;postgresql&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;prestashop&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;qemu&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;rkt&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;react&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;responsive&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;design&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;rest&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;runc&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;rom&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;cooking&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;sass&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;scrum&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;spring&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;sql&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;travis&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;ubuntu&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;uml&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;vagrant&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;virtualisation&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;web&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;services&lt;/span&gt;
-
-&lt;span class=&#34;label&#34;&gt;xml&lt;/span&gt;
-
-
-&lt;/p&gt;
 
 &lt;h3 id=&#34;divers&#34;&gt;Divers&lt;/h3&gt;
 
@@ -1112,7 +1336,7 @@ var hello = R(&#39;ctrl&#39;, &#39;hello.js&#39;, true);
       <guid>http://enten.github.io/steven/2015/06/15/android-5.1.1-x86_64/</guid>
       <description>
 
-&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;h2 id=&#34;introduction:eb32e07afaade8725df5826d2da1209e&#34;&gt;Introduction&lt;/h2&gt;
 
 &lt;p&gt;Le projet &lt;a href=&#34;http://www.android-x86.org/&#34;&gt;android-x86&lt;/a&gt; est un fork d&amp;rsquo;Android Open Source Project (&lt;a href=&#34;http://source.android.com/&#34;&gt;AOSP&lt;/a&gt;) permettant d&amp;rsquo;installer Android sur PC (la compilation de ses sources produit une image CD bootable). Ce fork fût longtemps la seule solution pour compiler simplement Android pour plateforme x86.&lt;/p&gt;
 
@@ -1121,7 +1345,7 @@ En effet la compilation de ces 2 projets ne produit pas le même résultat (une 
 
 &lt;p&gt;&lt;strong&gt;Nous discuterons dans cette article uniquement d&amp;rsquo;AOSP et de la manière de compiler ses sources pour des architectures 64-bits.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;contexte&#34;&gt;Contexte&lt;/h2&gt;
+&lt;h2 id=&#34;contexte:eb32e07afaade8725df5826d2da1209e&#34;&gt;Contexte&lt;/h2&gt;
 
 &lt;p&gt;Peu de temps après notre expérience de &lt;a href=&#34;http://enten.github.io/steven/page/virtualiser-android-5-lollipop-avec-qemu/&#34;&gt;virtualisation d&amp;rsquo;Android 5 Lollipop avec Qemu&lt;/a&gt;, nous avons constaté que des images 64-bits précompilées d&amp;rsquo;Android étaient proposées en téléchargement par le &lt;a href=&#34;http://developer.android.com/tools/help/sdk-manager.html&#34;&gt;SDK Manager&lt;/a&gt;.&lt;/p&gt;
 
@@ -1188,13 +1412,13 @@ En effet la compilation de ces 2 projets ne produit pas le même résultat (une 
 
 &lt;p&gt;Nous sommes maintenant certains qu&amp;rsquo;il est possible de compiler AOSP pour des architectures x86_64, et ce depuis la version 5.0.1 d&amp;rsquo;Android.&lt;/p&gt;
 
-&lt;h2 id=&#34;expérience&#34;&gt;Expérience&lt;/h2&gt;
+&lt;h2 id=&#34;expérience:eb32e07afaade8725df5826d2da1209e&#34;&gt;Expérience&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;Dans cette section, nous allons compiler Android pour architecture x86_64 à partir des sources du projet officiel (AOSP).&lt;/strong&gt; Les images résultantes de la compilation pourront être utilisées directement avec Qemu ou l&amp;rsquo;outil &lt;a href=&#34;http://developer.android.com/tools/help/emulator.html&#34;&gt;emulator&lt;/a&gt; du SDK. &lt;strong&gt;Nous souhaitons également recompiler un kernel  Linux compatible&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;L&amp;rsquo;expérience semble simple. Toute fois, des problèmes de compatibilité de versions peuvent rendrent l&amp;rsquo;expérience moins évidente.&lt;/p&gt;
 
-&lt;h3 id=&#34;prérequis-matériel&#34;&gt;Prérequis matériel&lt;/h3&gt;
+&lt;h3 id=&#34;prérequis-matériel:eb32e07afaade8725df5826d2da1209e&#34;&gt;Prérequis matériel&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Processeur amd64&lt;/li&gt;
@@ -1203,7 +1427,7 @@ En effet la compilation de ces 2 projets ne produit pas le même résultat (une 
 &lt;li&gt;Système d&amp;rsquo;exploitation GNU/Linux récent&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;versions&#34;&gt;Versions&lt;/h3&gt;
+&lt;h3 id=&#34;versions:eb32e07afaade8725df5826d2da1209e&#34;&gt;Versions&lt;/h3&gt;
 
 &lt;p&gt;Voici les différentes versions des composants utilisés pour compiler AOSP x86_64.&lt;/p&gt;
 
@@ -1218,9 +1442,9 @@ En effet la compilation de ces 2 projets ne produit pas le même résultat (une 
 &lt;p&gt;&lt;strong&gt;WARNING&lt;/strong&gt;
 Pour pouvoir compiler un kernel Linux compatible avec les images résultantes de la compilation d&amp;rsquo;AOSP branche &lt;code&gt;android-5.1.1_r4&lt;/code&gt;, il est important d&amp;rsquo;utiliser la branche &lt;code&gt;android-goldfish-3.10&lt;/code&gt; du projet &lt;code&gt;kernel/goldfish&lt;/code&gt; à son état du 16 sept. 2014 (commit 43dbfdb838).&lt;/p&gt;
 
-&lt;h3 id=&#34;préparer-l-environnement-d-assemblage&#34;&gt;Préparer l&amp;rsquo;environnement d&amp;rsquo;assemblage&lt;/h3&gt;
+&lt;h3 id=&#34;préparer-l-environnement-d-assemblage:eb32e07afaade8725df5826d2da1209e&#34;&gt;Préparer l&amp;rsquo;environnement d&amp;rsquo;assemblage&lt;/h3&gt;
 
-&lt;h4 id=&#34;jdk-7&#34;&gt;JDK 7&lt;/h4&gt;
+&lt;h4 id=&#34;jdk-7:eb32e07afaade8725df5826d2da1209e&#34;&gt;JDK 7&lt;/h4&gt;
 
 &lt;p&gt;Installer un JDK 7 (Java Open JDK 7 par exemple).&lt;/p&gt;
 
@@ -1233,7 +1457,7 @@ Pour pouvoir compiler un kernel Linux compatible avec les images résultantes de
 $ sudo update-alternatives --config javac
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;packages-requis&#34;&gt;Packages requis&lt;/h4&gt;
+&lt;h4 id=&#34;packages-requis:eb32e07afaade8725df5826d2da1209e&#34;&gt;Packages requis&lt;/h4&gt;
 
 &lt;p&gt;Installer les packages nécessaires pour compiler AOSP.&lt;/p&gt;
 
@@ -1257,7 +1481,7 @@ $ PATH=~/bin:$PATH
 
 &lt;p&gt;&lt;small&gt;Référence : &lt;a href=&#34;http://source.android.com/source/initializing.html#setting-up-a-linux-build-environment&#34;&gt;Setting up a Linux build environment&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;sources-d-aosp&#34;&gt;Sources d&amp;rsquo;AOSP&lt;/h3&gt;
+&lt;h3 id=&#34;sources-d-aosp:eb32e07afaade8725df5826d2da1209e&#34;&gt;Sources d&amp;rsquo;AOSP&lt;/h3&gt;
 
 &lt;p&gt;Nous allons maintenant récupérer les sources officielles d&amp;rsquo;Android.&lt;/p&gt;
 
@@ -1271,7 +1495,7 @@ $ repo sync
 
 &lt;p&gt;&lt;strong&gt;Attention&lt;/strong&gt; La synchronisation des sources d&amp;rsquo;AOSP dure plusieurs heures (à la faveur d&amp;rsquo;une connexion Internet grand public).&lt;/p&gt;
 
-&lt;h3 id=&#34;compiler-aosp&#34;&gt;Compiler AOSP&lt;/h3&gt;
+&lt;h3 id=&#34;compiler-aosp:eb32e07afaade8725df5826d2da1209e&#34;&gt;Compiler AOSP&lt;/h3&gt;
 
 &lt;p&gt;Une fois les sources d&amp;rsquo;AOSP récupérées, quelques lignes de commandes suffisent à charger la configuration d&amp;rsquo;assemblage &lt;code&gt;aosp_x86_64-eng&lt;/code&gt; pour produire des images x86_64 d&amp;rsquo;Android.&lt;/p&gt;
 
@@ -1303,7 +1527,7 @@ $ lunch aosp_x86_64-eng
 
 &lt;p&gt;&lt;strong&gt;A la fin de la comilation, les images des systèmes de fichiers créées sont disponibles dans le répertoire &lt;code&gt;&amp;lt;aosp&amp;gt;/out/target/production/generic_x86_64&lt;/code&gt;.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;compiler-goldfish&#34;&gt;Compiler Goldfish&lt;/h3&gt;
+&lt;h3 id=&#34;compiler-goldfish:eb32e07afaade8725df5826d2da1209e&#34;&gt;Compiler Goldfish&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://android.googlesource.com/kernel/goldfish&#34;&gt;Goldfish&lt;/a&gt; est une version du kernel Linux adaptée pour Android. Lorsque l&amp;rsquo;on utilise l&amp;rsquo;&lt;a href=&#34;http://developer.android.com/tools/help/avd-manager.html&#34;&gt;AVD Manager&lt;/a&gt; pour créer des émulateurs, des images pré-compilées du kernel Goldfish sont utilisées.&lt;/p&gt;
 
@@ -1335,7 +1559,7 @@ make -j8
 
 &lt;p&gt;&lt;strong&gt;A la fin de la comilation, le kernel compilé est disponible dans le répertoire &lt;code&gt;&amp;lt;goldfish&amp;gt;/arch/x86/boot&lt;/code&gt; sous le nom &lt;code&gt;bzImage&lt;/code&gt;.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;tester&#34;&gt;Tester&lt;/h3&gt;
+&lt;h3 id=&#34;tester:eb32e07afaade8725df5826d2da1209e&#34;&gt;Tester&lt;/h3&gt;
 
 &lt;p&gt;Nous disposons maintenant de tous les fichiers nécessaires pour lancer un émulateur Android x86_64 100% custom (recompilé par nos soins).&lt;/p&gt;
 
@@ -1366,7 +1590,7 @@ make -j8
       <guid>http://enten.github.io/steven/2014/12/30/lxc-et-android-5-arm64/</guid>
       <description>
 
-&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;h2 id=&#34;introduction:73f568a5d974ee5ceff045d666741606&#34;&gt;Introduction&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://linuxcontainers.org/lxc/introduction/&#34;&gt;LXC&lt;/a&gt; (contraction de &lt;em&gt;Linux Containers&lt;/em&gt;) est un logiciel permettant de gérer des conteneurs logiciels. Conrètement, LXC peut isole l&amp;rsquo;exécution de plusieurs environnements Linux sur une même machine. L&amp;rsquo;isolation est réalisée grâce à l&amp;rsquo;exploitation des modules de gestion de namespaces du Kernel Linux.&lt;/p&gt;
 
@@ -1376,11 +1600,11 @@ make -j8
 
 &lt;p&gt;LXC n&amp;rsquo;étant pas une application du Google Play Store, son installation sur Android n&amp;rsquo;est pas évidente. L&amp;rsquo;utilisateur qui souhaite se lancer sur cette voie est rapidement confronté à des problèmes systèmes. &lt;strong&gt;Dans la sections suivantes, nous décrivons les principaux problèmes que nous avons rencontrés pour installer et utiliser LXC sur Android 5 Lollipop&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;contexte&#34;&gt;Contexte&lt;/h2&gt;
+&lt;h2 id=&#34;contexte:73f568a5d974ee5ceff045d666741606&#34;&gt;Contexte&lt;/h2&gt;
 
 &lt;p&gt;Avant d&amp;rsquo;aborder les problèmes d&amp;rsquo;installation de LXC sur Android que nous avons rencontrés, il est important que le lecteur ait connaissance de notre plateforme de test.&lt;/p&gt;
 
-&lt;h3 id=&#34;matériel&#34;&gt;Matériel&lt;/h3&gt;
+&lt;h3 id=&#34;matériel:73f568a5d974ee5ceff045d666741606&#34;&gt;Matériel&lt;/h3&gt;
 
 &lt;p&gt;Nous avons souhaité réaliser ces tests sur un appareil disposant d&amp;rsquo;une architecture ARM 64-bits (ARMv8). Ce type d&amp;rsquo;appareil n&amp;rsquo;étant pas encore démocratisé, nous avons fait le choix d&amp;rsquo;utiliser une machine virtuelle Qemu.&lt;/p&gt;
 
@@ -1388,7 +1612,7 @@ make -j8
 
 &lt;p&gt;Une fois lancé, notre appareil virtuel dispose d&amp;rsquo;un CPU cortex-a57 et de 4Go de mémoire vive. Il dispose également de 16Go de mémoire disque (en modifiant la taille de l&amp;rsquo;image &lt;code&gt;data.img&lt;/code&gt;, voir section suivante).&lt;/p&gt;
 
-&lt;h3 id=&#34;système-d-exploitation&#34;&gt;Système d&amp;rsquo;exploitation&lt;/h3&gt;
+&lt;h3 id=&#34;système-d-exploitation:73f568a5d974ee5ceff045d666741606&#34;&gt;Système d&amp;rsquo;exploitation&lt;/h3&gt;
 
 &lt;p&gt;Notre choix d&amp;rsquo;architecture ARM 64-bits nous impose l&amp;rsquo;utilisation de la version 5 (Lollipop) d&amp;rsquo;Android car c&amp;rsquo;est la seule version supportant ce type d&amp;rsquo;architecture.&lt;/p&gt;
 
@@ -1403,7 +1627,7 @@ resize2fs userdata.img
 e2fsck -f userdata.img
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;kernel-linux&#34;&gt;Kernel Linux&lt;/h3&gt;
+&lt;h3 id=&#34;kernel-linux:73f568a5d974ee5ceff045d666741606&#34;&gt;Kernel Linux&lt;/h3&gt;
 
 &lt;p&gt;Nous utilisons une version dérivée du noyau Linux. Cette version correspond à la version 3.10 du noyau officiel. Ce noyau est précompilé dans les sources d&amp;rsquo;AOSP et est disponible dans le répertoire &lt;code&gt;prebuilts/qemu-kernel/arm64&lt;/code&gt; sous le fichier &lt;code&gt;kernel-qemu&lt;/code&gt;.&lt;/p&gt;
 
@@ -1411,23 +1635,23 @@ e2fsck -f userdata.img
 
 &lt;p&gt;&lt;em&gt;Note : &lt;code&gt;goldfish&lt;/code&gt; désigne les modules des périphériques virtuels nécessaires pour virtualiser Android avec Qemu. Nous vous recommandons la lecture de &lt;a href=&#34;https://android.googlesource.com/platform/external/qemu.git/+/master/docs/GOLDFISH-VIRTUAL-HARDWARE.TXT&#34;&gt;GOLDFISH-VIRTUAL-HARDWARE.TXT&lt;/a&gt; pour en savoir plus.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;configuration-réseau&#34;&gt;Configuration réseau&lt;/h3&gt;
+&lt;h3 id=&#34;configuration-réseau:73f568a5d974ee5ceff045d666741606&#34;&gt;Configuration réseau&lt;/h3&gt;
 
 &lt;p&gt;Pour que notre appareil fictif ait sa propre adresse IP, nous avons configuré une interface réseau virtuelle connectée à la machine host (utilisée pour les tests) via une interface bridge.&lt;/p&gt;
 
 &lt;p&gt;Ainsi, lorsque l&amp;rsquo;appareil virtuel Android est démarré, il suffit de lancer la directive &lt;code&gt;dhcpcd eth0&lt;/code&gt; pour demander au DHCP du réseau l&amp;rsquo;attribution d&amp;rsquo;une adresse IP (grâce à l&amp;rsquo;interface bridge, le DHCP traite la requête de notre périphérique virtuel comme celle de n&amp;rsquo;importe quelle machine physique du réseau).&lt;/p&gt;
 
-&lt;h2 id=&#34;problèmes-fondamentaux&#34;&gt;Problèmes fondamentaux&lt;/h2&gt;
+&lt;h2 id=&#34;problèmes-fondamentaux:73f568a5d974ee5ceff045d666741606&#34;&gt;Problèmes fondamentaux&lt;/h2&gt;
 
-&lt;h3 id=&#34;système-unix-restreint&#34;&gt;Système Unix restreint&lt;/h3&gt;
+&lt;h3 id=&#34;système-unix-restreint:73f568a5d974ee5ceff045d666741606&#34;&gt;Système Unix restreint&lt;/h3&gt;
 
-&lt;h4 id=&#34;problème&#34;&gt;Problème&lt;/h4&gt;
+&lt;h4 id=&#34;problème:73f568a5d974ee5ceff045d666741606&#34;&gt;Problème&lt;/h4&gt;
 
 &lt;p&gt;Android est un système d&amp;rsquo;exploitation Linux destiné à piloter des systèmes embarqués. La philosophie d&amp;rsquo;Android a conduit ses développeurs à intégrer les outils systèmes uniquement nécessaire à son fonctionnement.&lt;/p&gt;
 
 &lt;p&gt;Cette optimisation du système fait d&amp;rsquo;Android une &lt;strong&gt;distribution Linux &amp;laquo;restrictive&amp;raquo; dans le sens où les utilisateurs&lt;/strong&gt;, familiarisés à l&amp;rsquo;utilisation d&amp;rsquo;une des distribution Linux majeures (Debian par exemple), &lt;strong&gt;ne retrouvent pas les outils nécessaires à leurs usages habituels&lt;/strong&gt; (comme un gestionnaire de paquets).&lt;/p&gt;
 
-&lt;h4 id=&#34;solution&#34;&gt;Solution&lt;/h4&gt;
+&lt;h4 id=&#34;solution:73f568a5d974ee5ceff045d666741606&#34;&gt;Solution&lt;/h4&gt;
 
 &lt;p&gt;Pour pouvoir utiliser certains utilitaires UNIX absents d&amp;rsquo;Android, il est d&amp;rsquo;usage d&amp;rsquo;&lt;strong&gt;installer une version ARM de &lt;a href=&#34;http://busybox.net/about.html&#34;&gt;busybox&lt;/a&gt;&lt;/strong&gt; (en copiant son binaire dans le répertoire &lt;code&gt;/system/bin&lt;/code&gt;).&lt;/p&gt;
 
@@ -1435,26 +1659,26 @@ e2fsck -f userdata.img
 
 &lt;p&gt;On peut alors installer facilement LXC grâce à &lt;code&gt;pacman&lt;/code&gt;, le gestionnaire de paquets d&amp;rsquo;Archlinux.&lt;/p&gt;
 
-&lt;h3 id=&#34;echec-des-connexions-https&#34;&gt;Echec des connexions HTTPS&lt;/h3&gt;
+&lt;h3 id=&#34;echec-des-connexions-https:73f568a5d974ee5ceff045d666741606&#34;&gt;Echec des connexions HTTPS&lt;/h3&gt;
 
-&lt;h4 id=&#34;problème-1&#34;&gt;Problème&lt;/h4&gt;
+&lt;h4 id=&#34;problème-1:73f568a5d974ee5ceff045d666741606&#34;&gt;Problème&lt;/h4&gt;
 
 &lt;p&gt;Une fois le rootfs Archlinux installé et configuré, nous avons souhaité mettre à jour les paquets et installer le paquet LXC. Au cours de cette manipulation, nous avons constaté l&amp;rsquo;&lt;strong&gt;impossibilité d&amp;rsquo;établir une connexion via le protocole &lt;code&gt;https&lt;/code&gt;&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;h4 id=&#34;solution-1&#34;&gt;Solution&lt;/h4&gt;
+&lt;h4 id=&#34;solution-1:73f568a5d974ee5ceff045d666741606&#34;&gt;Solution&lt;/h4&gt;
 
 &lt;p&gt;Ce problème est lié à la date du système. En effet, la date de notre appareil virtuel une fois lancé est assignée au 1/1/1970. Pour corriger ce problème, &lt;strong&gt;il suffit de mettre à jour la date du système&lt;/strong&gt; (avec l&amp;rsquo;utilitaire &lt;code&gt;rdate&lt;/code&gt; de &lt;code&gt;busybox&lt;/code&gt; par exemple).&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;busybox rdate -s ntp.unice.fr
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;modules-du-kernel-manquants&#34;&gt;Modules du Kernel manquants&lt;/h3&gt;
+&lt;h3 id=&#34;modules-du-kernel-manquants:73f568a5d974ee5ceff045d666741606&#34;&gt;Modules du Kernel manquants&lt;/h3&gt;
 
-&lt;h4 id=&#34;problème-2&#34;&gt;Problème&lt;/h4&gt;
+&lt;h4 id=&#34;problème-2:73f568a5d974ee5ceff045d666741606&#34;&gt;Problème&lt;/h4&gt;
 
 &lt;p&gt;Après avoir installé LXC avec &lt;code&gt;pacman&lt;/code&gt;, et avant de lancer notre premier test de conteneur, nous avons utilisé le script &lt;a href=&#34;https://github.com/lxc/lxc/blob/master/src/lxc/lxc-checkconfig.in&#34;&gt;lxc-checkconfig&lt;/a&gt;. Ce script lit la configuration du kernel utilisée pour sa compilation. Il vérifit la présence de certaines constantes nécessaires à la compilation des modules requis par LXC. Avec ce script, nous avons pu constater l&amp;rsquo;&lt;strong&gt;absence de modules (du kernel précompilé) nécessaires au bon fonctionnement de LXC&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;h4 id=&#34;solution-2&#34;&gt;Solution&lt;/h4&gt;
+&lt;h4 id=&#34;solution-2:73f568a5d974ee5ceff045d666741606&#34;&gt;Solution&lt;/h4&gt;
 
 &lt;p&gt;Nous avons &lt;strong&gt;recompilé le kernel&lt;/strong&gt; à partir des sources du projet &lt;code&gt;kernel/goldfish&lt;/code&gt;. Avant de recompiler le kernel, nous avons &lt;strong&gt;modifié la configuration de compilation &lt;code&gt;ranchu_defconfig&lt;/code&gt;&lt;/strong&gt; (fichier uniquement présent dans le répertoire &lt;code&gt;arch/arm64/configs/&lt;/code&gt; de la branche &lt;code&gt;android-goldfish-3.10&lt;/code&gt;) pour y ajouter les constantes suivantes :&lt;/p&gt;
 
@@ -1486,13 +1710,13 @@ CONFIG_CFQ_GROUP_IOSCHED=y
 
 &lt;p&gt;&lt;strong&gt;Important&lt;/strong&gt; : La constante &lt;code&gt;CONFIG_USER_NS&lt;/code&gt; est volontairement désactivée à cause d&amp;rsquo;un problème de compilation (lié à la version des sources de ce module).&lt;/p&gt;
 
-&lt;h3 id=&#34;impossibilité-de-lancer-des-binaires-non-pie&#34;&gt;Impossibilité de lancer des binaires non-PIE&lt;/h3&gt;
+&lt;h3 id=&#34;impossibilité-de-lancer-des-binaires-non-pie:73f568a5d974ee5ceff045d666741606&#34;&gt;Impossibilité de lancer des binaires non-PIE&lt;/h3&gt;
 
-&lt;h4 id=&#34;problème-3&#34;&gt;Problème&lt;/h4&gt;
+&lt;h4 id=&#34;problème-3:73f568a5d974ee5ceff045d666741606&#34;&gt;Problème&lt;/h4&gt;
 
 &lt;p&gt;Au cours de nos tests, nous avons rencontré une sécurité système propre à Android 5 (branche &lt;code&gt;android-5.0.0_r7&lt;/code&gt;). Ce test de sécurité &lt;strong&gt;bloque l&amp;rsquo;exécution de fichiers binaires non-&lt;a href=&#34;http://en.wikipedia.org/wiki/Position-independent_code&#34;&gt;PIE&lt;/a&gt;&lt;/strong&gt;. Pour qu&amp;rsquo;un exécutable soit PIE, il faut le spécifier à sa compilation.&lt;/p&gt;
 
-&lt;h4 id=&#34;solution-3&#34;&gt;Solution&lt;/h4&gt;
+&lt;h4 id=&#34;solution-3:73f568a5d974ee5ceff045d666741606&#34;&gt;Solution&lt;/h4&gt;
 
 &lt;p&gt;Pour outre passer cette sécurité, un &lt;a href=&#34;http://forum.xda-developers.com/google-nexus-5/development/fix-bypassing-pie-security-check-t2797731&#34;&gt;patch a été développé par un membre du forum XDA-Developers&lt;/a&gt;. Cette solution semble fonctionner selon certains utilisateurs. Nous avons préférés &lt;strong&gt;recompiler le code source en désactivant cette sécurité&lt;/strong&gt;. Pour cela nous avons commenter le bloc de code ci-dessous dans le fichier &lt;code&gt;bionic/linker/linker.cpp&lt;/code&gt;&lt;/p&gt;
 
@@ -1502,13 +1726,13 @@ CONFIG_CFQ_GROUP_IOSCHED=y
 2184    //}
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;cgroups-non-montés&#34;&gt;Cgroups non-montés&lt;/h3&gt;
+&lt;h3 id=&#34;cgroups-non-montés:73f568a5d974ee5ceff045d666741606&#34;&gt;Cgroups non-montés&lt;/h3&gt;
 
-&lt;h4 id=&#34;problème-4&#34;&gt;Problème&lt;/h4&gt;
+&lt;h4 id=&#34;problème-4:73f568a5d974ee5ceff045d666741606&#34;&gt;Problème&lt;/h4&gt;
 
 &lt;p&gt;Lorsque non consultons le fichier &lt;code&gt;/proc/cgroups&lt;/code&gt;, nous constatons la présence plusieurs cgroups. Or lorsque nous consultons les périphériques montés (avec la commande &lt;code&gt;mount&lt;/code&gt;), nous avons constaté que seul le cgroup &lt;code&gt;memory&lt;/code&gt; était monté. &lt;strong&gt;La majorité des cgroups ne sont donc pas montés&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;h4 id=&#34;solution-4&#34;&gt;Solution&lt;/h4&gt;
+&lt;h4 id=&#34;solution-4:73f568a5d974ee5ceff045d666741606&#34;&gt;Solution&lt;/h4&gt;
 
 &lt;p&gt;Il faut &lt;strong&gt;monter les cgroups manquants&lt;/strong&gt;. Pour cela nous nous sommes basés sur les &lt;a href=&#34;https://github.com/tianon/cgroupfs-mount/&#34;&gt;scripts de tianon&lt;/a&gt; à la différence que nous montons les cgroups dans la racine de notre rootfs Archlinux (étant donné que nous utilisons LXC à travers ce rootfs).&lt;/p&gt;
 
@@ -1522,13 +1746,13 @@ done
 
 &lt;p&gt;&lt;strong&gt;Important&lt;/strong&gt; : si l&amp;rsquo;arborescence des cgroups n&amp;rsquo;est pas montée dans le rootfs, il ne sera pas possible de lancer plus d&amp;rsquo;un conteneur à la fois.&lt;/p&gt;
 
-&lt;h3 id=&#34;echec-d-utilisation-des-cgroups-dans-un-rootfs&#34;&gt;Echec d&amp;rsquo;utilisation des cgroups dans un rootfs&lt;/h3&gt;
+&lt;h3 id=&#34;echec-d-utilisation-des-cgroups-dans-un-rootfs:73f568a5d974ee5ceff045d666741606&#34;&gt;Echec d&amp;rsquo;utilisation des cgroups dans un rootfs&lt;/h3&gt;
 
-&lt;h4 id=&#34;problème-5&#34;&gt;Problème&lt;/h4&gt;
+&lt;h4 id=&#34;problème-5:73f568a5d974ee5ceff045d666741606&#34;&gt;Problème&lt;/h4&gt;
 
 &lt;p&gt;Bien que les cgroups soient montés, ceux-ci sont &lt;strong&gt;inutilisables à cause d&amp;rsquo;un problème d&amp;rsquo;autorisation d&amp;rsquo;écriture&lt;/strong&gt; semble-t-il. N&amp;rsquo;ayant aucune expérience en matière d&amp;rsquo;utilisation des modules de gestion des namespaces, nous ne savions pas comment corriger ce problème. Néanmoins, nous étions persuadés que le problème était propre à Android (et probablement au fait qu&amp;rsquo;on utilise LXC à travers un rootfs).&lt;/p&gt;
 
-&lt;h4 id=&#34;solution-5&#34;&gt;Solution&lt;/h4&gt;
+&lt;h4 id=&#34;solution-5:73f568a5d974ee5ceff045d666741606&#34;&gt;Solution&lt;/h4&gt;
 
 &lt;p&gt;Pour tenter de résoudre ce problème, nous avons analysés les &lt;a href=&#34;https://web.archive.org/web/20140723085319/https://qa.linuxcontainers.org/master/current/android-armel/lxc-android.tar.gz&#34;&gt;fichiers utilisés par S. Graber&lt;/a&gt; dans sa démonstration de décembre 2013. Nous avons constaté qu&amp;rsquo;il utilisait un programme appellé &lt;code&gt;sbin&lt;/code&gt; pour remonter recursivement la racine du téléphone &lt;code&gt;/&lt;/code&gt; en mode privé.&lt;/p&gt;
 
@@ -1536,9 +1760,9 @@ done
 
 &lt;p&gt;&lt;em&gt;Note : le programme &lt;code&gt;sbin&lt;/code&gt; récupérée dans l&amp;rsquo;archive de S. Graber est non-PIE. Il est inutilisable si le programme &lt;code&gt;linker&lt;/code&gt; d&amp;rsquo;Android 5 n&amp;rsquo;est pas patché (comme expliqué précédemment).&lt;/em&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;conteneur-sans-accès-réseau&#34;&gt;Conteneur sans accès réseau&lt;/h3&gt;
+&lt;h3 id=&#34;conteneur-sans-accès-réseau:73f568a5d974ee5ceff045d666741606&#34;&gt;Conteneur sans accès réseau&lt;/h3&gt;
 
-&lt;h4 id=&#34;problème-6&#34;&gt;Problème&lt;/h4&gt;
+&lt;h4 id=&#34;problème-6:73f568a5d974ee5ceff045d666741606&#34;&gt;Problème&lt;/h4&gt;
 
 &lt;p&gt;Par défaut, la configuration réseau d&amp;rsquo;un conteneur est vide. Sans configuration réseau, &lt;strong&gt;le conteneur ne dispose pas d&amp;rsquo;interface pour être connecté en réseau (pas d&amp;rsquo;adresse IP)&lt;/strong&gt;. La configuration réseau &amp;laquo;vide&amp;raquo; est indiquée dans le fichier de configuration d&amp;rsquo;un conteneur par la ligne suivante :&lt;/p&gt;
 
@@ -1546,7 +1770,7 @@ done
 lxc.network.type = empty
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;solution-6&#34;&gt;Solution&lt;/h4&gt;
+&lt;h4 id=&#34;solution-6:73f568a5d974ee5ceff045d666741606&#34;&gt;Solution&lt;/h4&gt;
 
 &lt;p&gt;Parmis les différents types de configuration réseau supportés par LXC, &lt;strong&gt;le type &lt;code&gt;macvlan&lt;/code&gt; et son mode &lt;code&gt;bridge&lt;/code&gt; nous ont permis d&amp;rsquo;obtenir une IP propre pour nos conteneurs&lt;/strong&gt;. Nous vous recommandons la lecture de cet &lt;a href=&#34;http://containerops.org/2013/11/19/lxc-networking/&#34;&gt;excellent article du blog containerops.org&lt;/a&gt; pour en savoir plus sur les différents types de configuration réseau de LXC.&lt;/p&gt;
 
@@ -1559,14 +1783,13 @@ lxc.network.link = eth0
 
 &lt;p&gt;&lt;strong&gt;Attention&lt;/strong&gt; ! Souvenez-vous que l&amp;rsquo;utilisation d&amp;rsquo;un type de configuration réseau dépend des modules du kernel et du matériel sur lequel il est installé (par exemple l&amp;rsquo;option &lt;code&gt;CONFIG_MACVLAN=y&lt;/code&gt; utilisée pour recompiler le kernel est nécessaire pour utiliser le type de configuration &lt;code&gt;macvlan&lt;/code&gt; de LXC).&lt;/p&gt;
 
-&lt;h2 id=&#34;démonstration&#34;&gt;Démonstration&lt;/h2&gt;
+&lt;h2 id=&#34;démonstration:73f568a5d974ee5ceff045d666741606&#34;&gt;Démonstration&lt;/h2&gt;
 
 &lt;p&gt;&lt;em&gt;Cliquer sur l&amp;rsquo;image pour voir la vidéo.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.youtube.com/watch?v=1rW_lFyVY_w&#34;&gt;&lt;img src=&#34;http://img.youtube.com/vi/1rW_lFyVY_w/0.jpg&#34; alt=&#34;LXC on Android - Test 1&#34; /&gt;
-&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.youtube.com/watch?v=1rW_lFyVY_w&#34;&gt;&lt;img src=&#34;http://img.youtube.com/vi/1rW_lFyVY_w/0.jpg&#34; alt=&#34;LXC on Android - Test 1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;h2 id=&#34;conclusion:73f568a5d974ee5ceff045d666741606&#34;&gt;Conclusion&lt;/h2&gt;
 
 &lt;p&gt;L&amp;rsquo;installation de LXC sur Android requiert différentes maniputions du système. Afin de capitaliser les bonnes pratiques pour utiliser LXC sur Android, nous avons développé le script &lt;a href=&#34;https://gist.github.com/enten/63cedaca9bf019feb71a&#34;&gt;alfred&lt;/a&gt;. Cet outil est utilisé dans notre vidéo de démonstration.&lt;/p&gt;
 </description>
@@ -1580,7 +1803,7 @@ lxc.network.link = eth0
       <guid>http://enten.github.io/steven/2014/11/30/virtualiser-android-5-lollipop-avec-qemu/</guid>
       <description>
 
-&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;h2 id=&#34;introduction:305cc891b1c6a1a1f424f416b465955e&#34;&gt;Introduction&lt;/h2&gt;
 
 &lt;p&gt;Les dernières branches d&amp;rsquo;&lt;a href=&#34;https://source.android.com/&#34;&gt;Android Open Source Project&lt;/a&gt; (AOSP) – branches &lt;code&gt;android-5.x&lt;/code&gt; – proposent différentes configurations d&amp;rsquo;assemblages d&amp;rsquo;&lt;a href=&#34;https://www.android.com/versions/lollipop-5-0/&#34;&gt;Android 5 Lollipop&lt;/a&gt;.
 Chaque configuration d&amp;rsquo;assemblage correspond à un produit adapté à un type de plateformes d&amp;rsquo;exécutions. Pour compiler une version complète d&amp;rsquo;Android 5 pour plateformes ARM, il faut utiliser la configuration d&amp;rsquo;assemblage &lt;code&gt;aosp_arm-eng&lt;/code&gt; (pour les plateformes ARM 32-bits) ou &lt;code&gt;aosp_arm64-eng&lt;/code&gt; (pour les plateformes ARM 64-bits).&lt;/p&gt;
@@ -1589,7 +1812,7 @@ Chaque configuration d&amp;rsquo;assemblage correspond à un produit adapté à 
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;&lt;code&gt;ranchu_arm64-eng&lt;/code&gt;&lt;/strong&gt; : la compilation de ce produit permet d&amp;rsquo;obtenir une version complète d&amp;rsquo;Android 5 ARM 64-bits destinée à être exécutée dans une machine virtuelle (VM) Qemu ;&lt;/li&gt;
-&lt;li&gt;__&lt;code&gt;mini_emulator_arm64-userdebug&lt;/code&gt;__ : ce produit est similaire à &lt;code&gt;ranchu_arm64-eng&lt;/code&gt; à la différence que sa compilation permet d&amp;rsquo;obtenir une version simplifiée d&amp;rsquo;Android 5 embarquant le minimum de composants nécessaires à son fonctionnement.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;mini_emulator_arm64-userdebug&lt;/code&gt;&lt;/strong&gt; : ce produit est similaire à &lt;code&gt;ranchu_arm64-eng&lt;/code&gt; à la différence que sa compilation permet d&amp;rsquo;obtenir une version simplifiée d&amp;rsquo;Android 5 embarquant le minimum de composants nécessaires à son fonctionnement.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;La compilation d&amp;rsquo;un de ces produits créer des images de systèmes de fichiers (&lt;code&gt;ramdisk.img&lt;/code&gt;, &lt;code&gt;system.img&lt;/code&gt;, &lt;code&gt;cache.img&lt;/code&gt; et &lt;code&gt;userdata.img&lt;/code&gt;) devant être utilisées avec le &lt;a href=&#34;http://qemu.org/&#34;&gt;logiciel de virtualisation Qemu&lt;/a&gt;.
@@ -1600,7 +1823,7 @@ La compilation des sources du projet &lt;code&gt;qemu-android&lt;/code&gt; perme
 
 &lt;p&gt;Dans les sections suivantes, nous allons voir comment compiler Android 5 (produit &lt;code&gt;ranchu_arm64-eng&lt;/code&gt; ou &lt;code&gt;mini_emulator_arm64-userdebug&lt;/code&gt;) et le virtualiser dans une VM Qemu.&lt;/p&gt;
 
-&lt;h2 id=&#34;prérequis&#34;&gt;Prérequis&lt;/h2&gt;
+&lt;h2 id=&#34;prérequis:305cc891b1c6a1a1f424f416b465955e&#34;&gt;Prérequis&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Capacités processeur et mémoire importantes (la compilation nécessite parfois jusqu’à 4 Go de RAM) ;&lt;/li&gt;
@@ -1611,7 +1834,7 @@ La compilation des sources du projet &lt;code&gt;qemu-android&lt;/code&gt; perme
 
 &lt;p&gt;&lt;em&gt;Note : les manipulations décritent ci-dessous ont été réalisées sur un ordinateur disposant d’un processeur Intel Core i5 (2 cœurs cadencés à 1.8 Ghz supportant jusqu’à 4 threads par coeur), de 8 Go de mémoire RAM et de la distribution &lt;a href=&#34;http://releases.ubuntu.com/14.04.1&#34;&gt;Ubuntu 14.04.1 LTS&lt;/a&gt; 64-bits.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;préparer-l-environnement-d-assemblage&#34;&gt;Préparer l&amp;rsquo;environnement d&amp;rsquo;assemblage&lt;/h2&gt;
+&lt;h2 id=&#34;préparer-l-environnement-d-assemblage:305cc891b1c6a1a1f424f416b465955e&#34;&gt;Préparer l&amp;rsquo;environnement d&amp;rsquo;assemblage&lt;/h2&gt;
 
 &lt;p&gt;Installer la machine virtuelle Java (JVM) Open JDK 7 (nécessaire pour compiler les dernières branches d&amp;rsquo;Android)&lt;/p&gt;
 
@@ -1642,7 +1865,7 @@ $ curl https://storage.googleapis.com/git-repo-downloads/repo &amp;gt; ~/bin/rep
 $ chmod a+x ~/bin/repo
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;récupérer-les-sources-d-aosp&#34;&gt;Récupérer les sources d&amp;rsquo;AOSP&lt;/h2&gt;
+&lt;h2 id=&#34;récupérer-les-sources-d-aosp:305cc891b1c6a1a1f424f416b465955e&#34;&gt;Récupérer les sources d&amp;rsquo;AOSP&lt;/h2&gt;
 
 &lt;p&gt;Créer un répertoire pour le dépôt des sources d&amp;rsquo;AOSP&lt;/p&gt;
 
@@ -1659,7 +1882,7 @@ $ chmod a+x ~/bin/repo
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ repo sync
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;corriger-les-configurations-d-assemblage&#34;&gt;Corriger les configurations d&amp;rsquo;assemblage&lt;/h2&gt;
+&lt;h2 id=&#34;corriger-les-configurations-d-assemblage:305cc891b1c6a1a1f424f416b465955e&#34;&gt;Corriger les configurations d&amp;rsquo;assemblage&lt;/h2&gt;
 
 &lt;p&gt;Les premières branches d&amp;rsquo;Android 5 souffrent de petits bugs nécessitant une modification manuelle des sources pour pouvoir compiler les produits &lt;code&gt;ranchu_arm64-eng&lt;/code&gt; et &lt;code&gt;mini_emulator_arm64-userdebug&lt;/code&gt; :&lt;/p&gt;
 
@@ -1675,7 +1898,7 @@ $ wget https://dl.dropboxusercontent.com/u/2930979/fixit.tar.gz
 $ tar -xvf fixit.tar.gz -C aosp/device/generic
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;compiler-les-sources-d-aosp&#34;&gt;Compiler les sources d&amp;rsquo;AOSP&lt;/h2&gt;
+&lt;h2 id=&#34;compiler-les-sources-d-aosp:305cc891b1c6a1a1f424f416b465955e&#34;&gt;Compiler les sources d&amp;rsquo;AOSP&lt;/h2&gt;
 
 &lt;p&gt;Se placer dans le dossier principal des sources d&amp;rsquo;AOSP&lt;/p&gt;
 
@@ -1706,7 +1929,7 @@ $ tar -xvf fixit.tar.gz -C aosp/device/generic
 &lt;li&gt;Pour &lt;code&gt;mini_emulator_arm64-userdebug&lt;/code&gt; : out/target/product/mini-emulator-arm64/&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;virtualiser-la-version-compilée-d-android-avec-qemu&#34;&gt;Virtualiser la version compilée d&amp;rsquo;Android avec Qemu&lt;/h2&gt;
+&lt;h2 id=&#34;virtualiser-la-version-compilée-d-android-avec-qemu:305cc891b1c6a1a1f424f416b465955e&#34;&gt;Virtualiser la version compilée d&amp;rsquo;Android avec Qemu&lt;/h2&gt;
 
 &lt;p&gt;Pour virtualiser une version d&amp;rsquo;Android 5 ARM 64-bits, nous avons besoin du programme &lt;code&gt;qemu-system-aarch64&lt;/code&gt; modifié par Google pour supporter l&amp;rsquo;exécution de la machine virtuelle &amp;laquo;ranchu&amp;raquo; (et du type de processeur &amp;laquo;cortex-v57&amp;raquo;).&lt;/p&gt;
 
@@ -1758,15 +1981,13 @@ $ make -j8
 
 &lt;p&gt;&lt;strong&gt;Aperçu de &lt;code&gt;ranchu_arm64-eng&lt;/code&gt;&lt;/strong&gt; :&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://enten.github.io/steven/assets/images/fig/ranchu_arm64-eng.png&#34;&gt;&lt;img src=&#34;http://enten.github.io/steven/assets/images/fig/ranchu_arm64-eng-tiny.png&#34; alt=&#34;ranchu_arm64-eng preview&#34; /&gt;
-&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://enten.github.io/steven/assets/images/fig/ranchu_arm64-eng.png&#34;&gt;&lt;img src=&#34;http://enten.github.io/steven/assets/images/fig/ranchu_arm64-eng-tiny.png&#34; alt=&#34;ranchu_arm64-eng preview&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Aperçu de &lt;code&gt;mini_emulator_arm64-userdebug&lt;/code&gt;&lt;/strong&gt; :&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://enten.github.io/steven/assets/images/fig/mini_emulator_arm64-userdebug.png&#34;&gt;&lt;img src=&#34;http://enten.github.io/steven/assets/images/fig/mini_emulator_arm64-userdebug-tiny.png&#34; alt=&#34;mini_emulator_arm64-userdebug preview&#34; /&gt;
-&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://enten.github.io/steven/assets/images/fig/mini_emulator_arm64-userdebug.png&#34;&gt;&lt;img src=&#34;http://enten.github.io/steven/assets/images/fig/mini_emulator_arm64-userdebug-tiny.png&#34; alt=&#34;mini_emulator_arm64-userdebug preview&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;références&#34;&gt;Références&lt;/h2&gt;
+&lt;h2 id=&#34;références:305cc891b1c6a1a1f424f416b465955e&#34;&gt;Références&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://source.android.com/source/building.html&#34;&gt;AOSP documentation - Downloading and Building&lt;/a&gt;&lt;/li&gt;
@@ -1784,7 +2005,7 @@ $ make -j8
       <guid>http://enten.github.io/steven/2014/11/17/installer-apache-mesos-0.20.1-sur-ubuntu-14.04.1.lts/</guid>
       <description>
 
-&lt;h2 id=&#34;a-propos-d-apache-mesos&#34;&gt;A propos d&amp;rsquo;Apache Mesos&lt;/h2&gt;
+&lt;h2 id=&#34;a-propos-d-apache-mesos:b7befab35a9838149f8022b9c038a630&#34;&gt;A propos d&amp;rsquo;Apache Mesos&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://mesos.apache.org/&#34;&gt;Mesos&lt;/a&gt; est un projet de la fondation Apache présenté comme un noyau de systèmes distribués. Il permet d&amp;rsquo;exploiter les ressources de plusieurs machines comme un seul système. Il assure l&amp;rsquo;isolation et la haute disponibilité d&amp;rsquo;exécutions de programmes. Mesos fournit deux composants logiciels :&lt;/p&gt;
 
@@ -1795,9 +2016,9 @@ $ make -j8
 
 &lt;p&gt;&lt;em&gt;En environnement de production, il est recommandé de configurer plusieurs noeuds mesos-master et d&amp;rsquo;utiliser &lt;a href=&#34;http://zookeeper.apache.org&#34;&gt;Apache Zookeeper&lt;/a&gt; pour l&amp;rsquo;élection du noeud master actif. Ainsi, quand le noeud master actif rencontre un problème, Zookeeper se charge d&amp;rsquo;élire un nouveau noeud master.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;exemple-d-utilisation-d-apache-mesos&#34;&gt;Exemple d&amp;rsquo;utilisation d&amp;rsquo;Apache Mesos&lt;/h2&gt;
+&lt;h2 id=&#34;exemple-d-utilisation-d-apache-mesos:b7befab35a9838149f8022b9c038a630&#34;&gt;Exemple d&amp;rsquo;utilisation d&amp;rsquo;Apache Mesos&lt;/h2&gt;
 
-&lt;h3 id=&#34;plateforme-cible&#34;&gt;Plateforme cible&lt;/h3&gt;
+&lt;h3 id=&#34;plateforme-cible:b7befab35a9838149f8022b9c038a630&#34;&gt;Plateforme cible&lt;/h3&gt;
 
 &lt;p&gt;L&amp;rsquo;objectif de nos manipulations est de configurer un système distribué avec Mesos. Nous allons configurer Mesos sur deux noeuds Ubuntu 14.04.1 LTS :&lt;/p&gt;
 
@@ -1808,7 +2029,7 @@ $ make -j8
 
 &lt;p&gt;&lt;em&gt;En environnement de production, il est recommandé d&amp;rsquo;installer Zookeeper sur un noeud différent du noeud mesos-master car s&amp;rsquo;il rencontre un problème, Zookeeper ne sera plus disponible pour élire un nouveau noeud mesos-master et rediriger les noeuds mesos-slave.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;diagramme-de-déploiement&#34;&gt;Diagramme de déploiement&lt;/h3&gt;
+&lt;h3 id=&#34;diagramme-de-déploiement:b7befab35a9838149f8022b9c038a630&#34;&gt;Diagramme de déploiement&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;          192.168.1.101
 +---------------------------------+
@@ -1825,9 +2046,9 @@ $ make -j8
 +---------------------------------+
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;installer-apache-mesos-sur-plusieurs-noeuds-ubuntu&#34;&gt;Installer Apache Mesos sur plusieurs noeuds Ubuntu&lt;/h2&gt;
+&lt;h2 id=&#34;installer-apache-mesos-sur-plusieurs-noeuds-ubuntu:b7befab35a9838149f8022b9c038a630&#34;&gt;Installer Apache Mesos sur plusieurs noeuds Ubuntu&lt;/h2&gt;
 
-&lt;h3 id=&#34;prérequis&#34;&gt;Prérequis&lt;/h3&gt;
+&lt;h3 id=&#34;prérequis:b7befab35a9838149f8022b9c038a630&#34;&gt;Prérequis&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://releases.ubuntu.com/14.04.1&#34;&gt;Ubuntu 14.04.1 LTS&lt;/a&gt; 64-bit est installé sur les noeuds master et slave&lt;/li&gt;
@@ -1840,7 +2061,7 @@ $ echo &amp;quot;deb http://repos.mesosphere.io/ubuntu trusty main&amp;quot; | s
 $ sudo apt-get update -y
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;configuration-du-noeud-master&#34;&gt;Configuration du noeud master&lt;/h3&gt;
+&lt;h3 id=&#34;configuration-du-noeud-master:b7befab35a9838149f8022b9c038a630&#34;&gt;Configuration du noeud master&lt;/h3&gt;
 
 &lt;p&gt;Installation du paquet &lt;strong&gt;mesos&lt;/strong&gt; et du paquet &lt;strong&gt;zookeeper&lt;/strong&gt; (par dépendance) :&lt;/p&gt;
 
@@ -1873,7 +2094,7 @@ $ sudo apt-get update -y
 $ sudo service mesos-master restart
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;configuration-du-noeud-slave&#34;&gt;Configuration du noeud slave&lt;/h3&gt;
+&lt;h3 id=&#34;configuration-du-noeud-slave:b7befab35a9838149f8022b9c038a630&#34;&gt;Configuration du noeud slave&lt;/h3&gt;
 
 &lt;p&gt;Installation du paquet &lt;strong&gt;mesos&lt;/strong&gt; sans le paquet &lt;strong&gt;zookeeper&lt;/strong&gt; :&lt;/p&gt;
 
@@ -1897,7 +2118,7 @@ $ echo 192.168.1.102 | sudo tee /etc/mesos-slave/hostname
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo service mesos-slave start
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;configuration-additionnelle&#34;&gt;Configuration additionnelle&lt;/h2&gt;
+&lt;h2 id=&#34;configuration-additionnelle:b7befab35a9838149f8022b9c038a630&#34;&gt;Configuration additionnelle&lt;/h2&gt;
 
 &lt;p&gt;Pour notre test, il est intéressant de configurer le noeud master pour pouvoir intégrer ses ressources au système distribué en démarrant le service mesos-slave. &lt;strong&gt;Attention!&lt;/strong&gt; Cette pratique est déconseillée en environnement de production.&lt;/p&gt;
 
@@ -1909,7 +2130,7 @@ $ echo 192.168.1.101 | sudo tee /etc/mesos-slave/hostname
 
 &lt;p&gt;La commande &lt;code&gt;sudo service mesos-slave start&lt;/code&gt; intégère les ressources du noeud master au système distribué (les ressources du noeud master peuvent alors être utilisées pour réaliser des traitements).&lt;/p&gt;
 
-&lt;h2 id=&#34;tester-l-installation-d-apache-mesos&#34;&gt;Tester l&amp;rsquo;installation d&amp;rsquo;Apache Mesos&lt;/h2&gt;
+&lt;h2 id=&#34;tester-l-installation-d-apache-mesos:b7befab35a9838149f8022b9c038a630&#34;&gt;Tester l&amp;rsquo;installation d&amp;rsquo;Apache Mesos&lt;/h2&gt;
 
 &lt;p&gt;Rendez-vous sur l&amp;rsquo;interface web de mesos-master en consultant l&amp;rsquo;URL &lt;a href=&#34;http://192.168.1.101:5050&#34;&gt;http://192.168.1.101:5050&lt;/a&gt;.
 Le cadre à gauche indique le nombre de noeud slaves actifs (1 si mesos-slave est démarré sur le noeud slave, 2 si mesos-slave est également démarré sur le noeud master ou 0 si mesos-slave est arrêté sur les deux noeuds).&lt;/p&gt;
@@ -1935,7 +2156,7 @@ Le cadre à gauche indique le nombre de noeud slaves actifs (1 si mesos-slave es
 
 &lt;p&gt;Marathon négocie avec Mesos l&amp;rsquo;exécution d&amp;rsquo;applications et assure quelles soient toujours actives : lorsqu&amp;rsquo;une application se termine, Marathon se charge de la relancer. Marathon fournit une &lt;a href=&#34;https://mesosphere.github.io/marathon/docs/rest-api.html&#34;&gt;API Rest&lt;/a&gt; pour réaliser des opérations par requêtes http.&lt;/p&gt;
 
-&lt;h2 id=&#34;références&#34;&gt;Références&lt;/h2&gt;
+&lt;h2 id=&#34;références:b7befab35a9838149f8022b9c038a630&#34;&gt;Références&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Apache Mesos : &lt;a href=&#34;http://mesos.apache.org&#34;&gt;http://mesos.apache.org&lt;/a&gt;&lt;/li&gt;
@@ -1943,106 +2164,6 @@ Le cadre à gauche indique le nombre de noeud slaves actifs (1 si mesos-slave es
 &lt;li&gt;Marathon : &lt;a href=&#34;https://mesosphere.github.io/marathon&#34;&gt;https://mesosphere.github.io/marathon&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Installing Mesosphere Packages on Ubuntu / Debian : &lt;a href=&#34;https://mesosphere.com/docs/tutorials/install_ubuntu_debian&#34;&gt;https://mesosphere.com/docs/tutorials/install_ubuntu_debian&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Communications dans les systèmes embarqués par l’emploi d’agents mobiles</title>
-      <link>http://enten.github.io/steven/2014/06/01/communications-dans-les-syst%C3%A8mes-embarqu%C3%A9s-par-lemploi-dagents-mobiles/</link>
-      <pubDate>Sun, 01 Jun 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://enten.github.io/steven/2014/06/01/communications-dans-les-syst%C3%A8mes-embarqu%C3%A9s-par-lemploi-dagents-mobiles/</guid>
-      <description>
-
-&lt;h2 id=&#34;contexte&#34;&gt;Contexte&lt;/h2&gt;
-
-&lt;p&gt;Les systèmes embarqués sont le support des périphériques mobiles qui ont envahi notre quotidien : ordinateurs portables, terminaux de poche (« smartphones »), tablettes tactiles, … ont profondément modifiés notre comportement. Les puissances de calculs (de plus en plus grandes) et les moyens de communications (e.g. Wifi, Bluetooth) dont ils disposent leur permettent d&amp;rsquo;interagir entre eux et avec le monde environnant.  Il est possible d’échanger avec l’un de ces systèmes lorsque le périphérique destinataire est joignable par un réseau informatique. Les périodes d’indisponibilités de ces périphériques sont fréquentes au cours de leur cycle d’utilisation (par exemple la perte d’une connexion à un réseau Wifi ou téléphonique mobile lors d’un déplacement).&lt;/p&gt;
-
-&lt;p&gt;Le sujet de ce projet de recherche porte sur l’emploi de la mobilité logicielle dans le but de proposer un modèle de communication nouveau pouvant garantir l’aboutissement des échanges entre systèmes embarqués. La conduite des travaux de ce projet doit permettre : à la société Leuville Objects d’initier une cellule de recherche et développement destinée à améliorer et optimiser ses prestations d’ingénieries informatiques ; de former et d’intégrer progressivement un étudiant – Steven ENTEN, arrivant au terme d’un second cycle universitaire et souhaitant devenir Docteur en informatique spécialisé dans les technologies mobiles – au monde de la recherche et de l’entreprise ; de contribuer aux recherches du groupe « Mobilité », dirigé par Fabrice MOURLIN, du Laboratoire d’Algorithmique,  Complexité et Logique (LACL).&lt;/p&gt;
-
-&lt;p&gt;La société Leuville Objects (LO) a depuis sa création en 1996, eu pour thème d&amp;rsquo;activité les architectures logicielles, leur création, leur gestion mais aussi leur mise en œuvre via l&amp;rsquo;emploi de cadres de développement (« frameworks ») novateurs pour leur époque. Ainsi, dès les premières versions de Java 2 Enterprise Edition (J2EE), des projets ont été montés dans des sociétés clientes par des ingénieurs de LO. De même, lors de l&amp;rsquo;apparition des premiers bus logiciels d&amp;rsquo;entreprise (ESB), LO a fait des choix audacieux autour de produits Open Source tels qu&amp;rsquo;Apache ServiceMix pour offrir à ses clients des solutions nouvelles à base de clusters d&amp;rsquo;ESBs.&lt;/p&gt;
-
-&lt;p&gt;Au cours des années passées, le thème de la virtualisation s&amp;rsquo;est développé dans toutes les sociétés, allant de la virtualisation de serveurs, jusqu&amp;rsquo;au poste client en passant par les réseaux eux même. La société LO souhaite être reconnue auprès de ses partenaires pour son expérience dans ce domaine et plus particulièrement sur le thème de la virtualisation de périphériques mobiles. Ce sujet est lié de manière très étroite à l&amp;rsquo;économie d&amp;rsquo;énergie et l&amp;rsquo;accroissement de la durée d&amp;rsquo;usage des périphériques mobiles tels que les téléphones, tablettes et autres navigateurs [1]. Le sujet de thèse proposé aborde le domaine commun de la virtualisation de périphérique mobile dans un cloud avec la possibilité d&amp;rsquo;exporter tout le contexte d&amp;rsquo;exécution pour en minimiser sa consommation énergétique [4], [7].&lt;/p&gt;
-
-&lt;p&gt;Les résultats obtenus dans cette thèse vont pouvoir directement être intégrés dans les travaux préparatoires effectués au sein de la société LO. Nous pouvons citer : la définition d&amp;rsquo;une architecture logicielle pour la virtualisation de poste mobile, l&amp;rsquo;isolation de machine virtuelle par container, la mise en place d&amp;rsquo;une architecture tolérante aux pannes (« fault tolerance ») pour assurer à l&amp;rsquo;utilisateur la disponibilité de son poste virtualisé. Le suivi régulier de ces travaux est aussi un moyen pour assurer la montée en compétence des ingénieurs sur ces sujets et ainsi développer l&amp;rsquo;activité de recherche et de développement de la société LO.&lt;/p&gt;
-
-&lt;h2 id=&#34;objectif&#34;&gt;Objectif&lt;/h2&gt;
-
-&lt;p&gt;Les périphériques mobiles représentent un des axes stratégiques de développement de la recherche actuelle [6]. La mise au point de ce mécanisme inédit de haute disponibilité des communications doit permettre d’ouvrir la voie à des applications industrielles innovantes. Ce mécanisme consiste à communiquer par l’emploi d’agents mobiles envoyés directement au périphérique destinataire quand celui-ci est joignable. En cas d’indisponibilité du périphérique destinataire, les agents mobiles s’adresseront à un « clone » (une image virtuelle) du périphérique destinataire présent dans un environnement cloud. De cette manière, la communication est assurée entre l’expéditeur et le destinataire. Lorsque le destinataire sera de nouveau joignable, la synchronisation avec son clone sera réalisée par des agents mobiles.&lt;/p&gt;
-
-&lt;p&gt;Le développement d’un prototype logiciel illustrant ce mécanisme – de communication indirecte par l’emploi d’agents mobiles dans un environnement cloud – est l’une des contributions apportées par ce projet de recherche. Avant cela, il sera impératif d’élaborer une spécification formelle qui décrit de manière unique cette haute disponibilité des communications (la garantie que les messages échangés aboutissent malgré une indisponibilité partielle du destinataire). Un modèle temporel devra également être établi afin de vérifier la spécification ainsi que les propriétés temporelles exprimées par cette logique.&lt;/p&gt;
-
-&lt;h2 id=&#34;organisation-des-travaux-de-recherche&#34;&gt;Organisation des travaux de recherche&lt;/h2&gt;
-
-&lt;h3 id=&#34;première-année&#34;&gt;Première année&lt;/h3&gt;
-
-&lt;p&gt;Des travaux seront menés pour valider l’applicabilité de travaux antérieurs portant sur différentes stratégies de communication directe par agents mobiles [2], [3], [8]. Il faudra ensuite les développer pour proposer une stratégie de communication indirecte par cloud.&lt;/p&gt;
-
-&lt;h4 id=&#34;communication-directe&#34;&gt;Communication directe&lt;/h4&gt;
-
-&lt;p&gt;Il s’agira de développer une application distribuée sur deux périphériques embarqués et connectés par un réseau Wifi : le but est de montrer la possibilité d’échanger en direct un agent mobile entre deux tablettes. L’agent échangé – disposant de droits pour s’exécuter sur la plate-forme cible – effectuera une collection d’information avant de retourner sur la plate-forme de départ. Ce cas d’étude se raffine par une configuration initiale de l’agent afin de visiter une suite de périphériques embarqués avec retour. Un point important sera placé sur la description de la demande effectuée par les plates-formes ainsi que la gestion des permissions lors des visites. Un premier rapport de développement sera fourni pour montrer que les principes sont assimilés.&lt;/p&gt;
-
-&lt;h4 id=&#34;communication-indirecte-par-cloud&#34;&gt;Communication indirecte par cloud&lt;/h4&gt;
-
-&lt;p&gt;Le mode de communication précédent présente des limites évidentes. La disponibilité est essentielle, or dans le cadre de périphérique mobile, il faut que ceux-ci soient joignables par le réseau. De plus, l’aspect embarqué des périphériques implique une indisponibilité partielle de parties logicielles en regard des interruptions supportées : appels entrant, alarmes, batterie insuffisante, etc. Il est indispensable d’envisager un autre mode de communication non synchrone dans le cas où le mode précédent ne peut pas être utilisé. Ce mode alternatif consistera pour la partie communicante à envoyer un agent à destination non pas du receveur mais d’une image de ce dernier dans le cloud. Ce clone assurera les services d’accueil de la plate-forme absente. Lorsque celle-ci sera de nouveau disponible, le clone se chargera de sa mise à jour. L’application illustrant ce mode de communication devra être optimisée pour  un système réparti multi-échelle [5].
-Un bilan de cette étude sera rédigé en mettant en valeur la pertinence des critères de réalisation. Un point important sera placé sur la description du clone et l’ensemble de son cycle de vie.&lt;/p&gt;
-
-&lt;p&gt;Les stratégies de communication précédemment introduites doivent donner lieu à une validation par prototypage. Chaque prototype sera défini au préalable pour s’assurer des observations faites, puis validé pour s’assurer de l’adéquation avec ce qu’il est censé montrer. Un bilan de cette première année devra être rédigé en anglais afin qu’une publication puisse paraître. Ce bilan devra conclure sur la poursuite du travail réalisé.&lt;/p&gt;
-
-&lt;h3 id=&#34;deuxième-année&#34;&gt;Deuxième année&lt;/h3&gt;
-
-&lt;p&gt;Sur la base du travail réalisé en première année, une application type sera à définir. Elle aura pour principal concept la mobilité d’agents (le plus autonome possible) entre plates-formes nomades. La rédaction des spécifications de cette application devra être menée à son terme pour ensuite débuter sa conception.&lt;/p&gt;
-
-&lt;h4 id=&#34;spécification-formelle&#34;&gt;Spécification formelle&lt;/h4&gt;
-
-&lt;p&gt;Le langage de spécification formelle Pi calcul d’ordre supérieur sera utilisé pour la rédaction des spécifications [10] : ce langage offre un pourvoir d’expression utile pour la description d’agents mobiles. Son étude est un impératif pour pouvoir ensuite décrire de façon formelle le contexte de la communication au sein du réseau.&lt;/p&gt;&lt;/p&gt;
-
-&lt;h4 id=&#34;preuve-de-propriétés&#34;&gt;Preuve de propriétés&lt;/h4&gt;
-
-&lt;p&gt;A partir des spécifications formelles, des propriétés temporelles seront exprimées par l’emploi d’une logique temporelle telle que TCTL [9]. Un modèle temporel sera construit à partir de la spécification en pi calcul. Les propriétés seront ensuite prouvées par model checking, telle que la transparence de communication. Le but est d’assurer que ces propriétés sont préservées lors de la construction du prototype résultat. Un outil tel qu’UPPAAL pourra être utilisé pour la construction d’automates temporisés.&lt;/p&gt;
-
-&lt;p&gt;Un bilan de cette étude formelle sera rédigé en insistant sur le cycle de vie d’un clone de plate-forme (e.g. comme la terminaison d’un clone de plate-forme).&lt;/p&gt;
-
-&lt;h3 id=&#34;troisième-année&#34;&gt;Troisième année&lt;/h3&gt;
-
-&lt;p&gt;Une fois l’application type spécifiée, son prototypage pourra commencer en veillant à respecter les propriétés établies. L’objectif n’est pas d’obtenir une application distribuée utilisable dans le monde de l’industrie mais de valider les résultats de la première année et surtout d’appliquer les points spécifiés au cours de la deuxième année. Les choix techniques de réalisation ainsi que les aspects liés aux propriétés temporelles devront être consignés dans des documents spécifiques.&lt;/p&gt;
-
-&lt;p&gt;Chaque année de recherche donnera lieu à la présentation des résultats dans une conférence internationale reconnue dans le domaine : le travail réalisé y sera présenté. Les publications de la seconde et de la troisième année feront l’objet d’une version étendue afin d’être publiée dans une revue internationale de qualité.&lt;/p&gt;
-
-&lt;h2 id=&#34;références&#34;&gt;Références&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;[1]   H. FLORES, S. N. SRIRAMA, R. BUYYA, “Computational Offloading or Data Binding? Bridging the Cloud Infrastructureto the Proximity of the Mobile User”, in Mobile Cloud Computing, Services, and Engineering, Second IEEE International Conference, 2014&lt;/li&gt;
-&lt;li&gt;[2]   C. DUMONT, “Système d’agents mobiles pour les architectures de calculs auto-adaptatifs”, PhD Thesis, 2014&lt;/li&gt;
-&lt;li&gt;[3]   C. MAHMOUDI, F. MOURLIN, “Adaptivity of Business Process”, in The Eighth International Conference on Systems, ICONS, 2013&lt;/li&gt;
-&lt;li&gt;[4]   S. SIMANTA, K. HA, G. LEWIS, E. MORRIS, M. Satyanarayanan, “A Reference Architecture for Mobile Code Offload in Hostile Environments”, in Software Architecture and European Conference on Software Architecture, 2012&lt;/li&gt;
-&lt;li&gt;[5]   S. ROTTENBERG, S. LERICHE,C. LECOCQ, C. TACONET, “Vers une définition d’un système réparti multi-échelle”, in Ubimob, 2012&lt;/li&gt;
-&lt;li&gt;[6]   M. SATYANARAYANAN, “Mobile Computing: the Next Decade”, in The First ACM     Workshop on Mobile on Mobile Cloud Computing and Services, 2010&lt;/li&gt;
-&lt;li&gt;[7]   M. SATYANARAYANAN, P. BAHL, R. CACERES, N. DAVIES, “The Case for VM-based Cloudlets in Mobile Computing”, in Pervasive Computing, vol. 8, 2009&lt;/li&gt;
-&lt;li&gt;[8]   M. BERNICHI, “Surveillance logicielle à base d’une communauté d’agents mobiles”, PhD Thesis, 2009&lt;/li&gt;
-&lt;li&gt;[9]   P. BOUYER, “Model-checking Timed Temporal Logics”, in Electronic Notes in Theoretical Computer Science, vol. 231, 2009&lt;/li&gt;
-&lt;li&gt;[10]  R. MILNER, “The polyadic p-calculus: a tutorial”, in Technical Report ECS-LFCS-91-180, 1993&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;contact&#34;&gt;Contact&lt;/h2&gt;
-
-&lt;h3 id=&#34;société-leuville-objects&#34;&gt;Société Leuville Objects&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Laurent Nel&lt;/strong&gt;&lt;br /&gt;
-3 rue de la Porte de Buc, 78000 Versailles&lt;br /&gt;
-+33(0)1 39 50 20 00 – laurent.nel@leuville.com&lt;/p&gt;
-
-&lt;h3 id=&#34;directeur-de-thèse&#34;&gt;Directeur de thèse&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Fabrice Mourlin&lt;/strong&gt;&lt;br /&gt;
-LACL, 61 avenue du Général de Gaulle, 94010 Créteil Cedex&lt;br /&gt;
-+33(0)6.15.05.15.51 – fabrice.mourlin@u-pec.fr&lt;/p&gt;
-
-&lt;h3 id=&#34;doctorant&#34;&gt;Doctorant&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Steven Enten&lt;/strong&gt;&lt;br /&gt;
-21 rue Charles Floquet, 94400 Vitry-sur-Seine&lt;br /&gt;
-+33(0)7 70 32 27 55 – steven@enten.fr&lt;/p&gt;
 </description>
     </item>
     

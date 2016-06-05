@@ -68,7 +68,7 @@
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://enten.github.io/steven/touch-icon-144-precomposed.png">
 <link href="http://enten.github.io/steven/favicon.png" rel="icon">
 
-<meta name="generator" content="Hugo 0.14" />
+<meta name="generator" content="Hugo 0.15" />
 
   <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -194,7 +194,7 @@
   <div class="container content">
   
 
-<h2 id="introduction">Introduction</h2>
+<h2 id="introduction:305cc891b1c6a1a1f424f416b465955e">Introduction</h2>
 
 <p>Les dernières branches d&rsquo;<a href="https://source.android.com/">Android Open Source Project</a> (AOSP) – branches <code>android-5.x</code> – proposent différentes configurations d&rsquo;assemblages d&rsquo;<a href="https://www.android.com/versions/lollipop-5-0/">Android 5 Lollipop</a>.
 Chaque configuration d&rsquo;assemblage correspond à un produit adapté à un type de plateformes d&rsquo;exécutions. Pour compiler une version complète d&rsquo;Android 5 pour plateformes ARM, il faut utiliser la configuration d&rsquo;assemblage <code>aosp_arm-eng</code> (pour les plateformes ARM 32-bits) ou <code>aosp_arm64-eng</code> (pour les plateformes ARM 64-bits).</p>
@@ -203,7 +203,7 @@ Chaque configuration d&rsquo;assemblage correspond à un produit adapté à un t
 
 <ul>
 <li><strong><code>ranchu_arm64-eng</code></strong> : la compilation de ce produit permet d&rsquo;obtenir une version complète d&rsquo;Android 5 ARM 64-bits destinée à être exécutée dans une machine virtuelle (VM) Qemu ;</li>
-<li>__<code>mini_emulator_arm64-userdebug</code>__ : ce produit est similaire à <code>ranchu_arm64-eng</code> à la différence que sa compilation permet d&rsquo;obtenir une version simplifiée d&rsquo;Android 5 embarquant le minimum de composants nécessaires à son fonctionnement.</li>
+<li><strong><code>mini_emulator_arm64-userdebug</code></strong> : ce produit est similaire à <code>ranchu_arm64-eng</code> à la différence que sa compilation permet d&rsquo;obtenir une version simplifiée d&rsquo;Android 5 embarquant le minimum de composants nécessaires à son fonctionnement.</li>
 </ul>
 
 <p>La compilation d&rsquo;un de ces produits créer des images de systèmes de fichiers (<code>ramdisk.img</code>, <code>system.img</code>, <code>cache.img</code> et <code>userdata.img</code>) devant être utilisées avec le <a href="http://qemu.org/">logiciel de virtualisation Qemu</a>.
@@ -214,7 +214,7 @@ La compilation des sources du projet <code>qemu-android</code> permet d&rsquo;ob
 
 <p>Dans les sections suivantes, nous allons voir comment compiler Android 5 (produit <code>ranchu_arm64-eng</code> ou <code>mini_emulator_arm64-userdebug</code>) et le virtualiser dans une VM Qemu.</p>
 
-<h2 id="prérequis">Prérequis</h2>
+<h2 id="prérequis:305cc891b1c6a1a1f424f416b465955e">Prérequis</h2>
 
 <ul>
 <li>Capacités processeur et mémoire importantes (la compilation nécessite parfois jusqu’à 4 Go de RAM) ;</li>
@@ -225,7 +225,7 @@ La compilation des sources du projet <code>qemu-android</code> permet d&rsquo;ob
 
 <p><em>Note : les manipulations décritent ci-dessous ont été réalisées sur un ordinateur disposant d’un processeur Intel Core i5 (2 cœurs cadencés à 1.8 Ghz supportant jusqu’à 4 threads par coeur), de 8 Go de mémoire RAM et de la distribution <a href="http://releases.ubuntu.com/14.04.1">Ubuntu 14.04.1 LTS</a> 64-bits.</em></p>
 
-<h2 id="préparer-l-environnement-d-assemblage">Préparer l&rsquo;environnement d&rsquo;assemblage</h2>
+<h2 id="préparer-l-environnement-d-assemblage:305cc891b1c6a1a1f424f416b465955e">Préparer l&rsquo;environnement d&rsquo;assemblage</h2>
 
 <p>Installer la machine virtuelle Java (JVM) Open JDK 7 (nécessaire pour compiler les dernières branches d&rsquo;Android)</p>
 
@@ -256,7 +256,7 @@ $ curl https://storage.googleapis.com/git-repo-downloads/repo &gt; ~/bin/repo
 $ chmod a+x ~/bin/repo
 </code></pre>
 
-<h2 id="récupérer-les-sources-d-aosp">Récupérer les sources d&rsquo;AOSP</h2>
+<h2 id="récupérer-les-sources-d-aosp:305cc891b1c6a1a1f424f416b465955e">Récupérer les sources d&rsquo;AOSP</h2>
 
 <p>Créer un répertoire pour le dépôt des sources d&rsquo;AOSP</p>
 
@@ -273,7 +273,7 @@ $ chmod a+x ~/bin/repo
 <pre><code class="language-bash">$ repo sync
 </code></pre>
 
-<h2 id="corriger-les-configurations-d-assemblage">Corriger les configurations d&rsquo;assemblage</h2>
+<h2 id="corriger-les-configurations-d-assemblage:305cc891b1c6a1a1f424f416b465955e">Corriger les configurations d&rsquo;assemblage</h2>
 
 <p>Les premières branches d&rsquo;Android 5 souffrent de petits bugs nécessitant une modification manuelle des sources pour pouvoir compiler les produits <code>ranchu_arm64-eng</code> et <code>mini_emulator_arm64-userdebug</code> :</p>
 
@@ -289,7 +289,7 @@ $ wget https://dl.dropboxusercontent.com/u/2930979/fixit.tar.gz
 $ tar -xvf fixit.tar.gz -C aosp/device/generic
 </code></pre>
 
-<h2 id="compiler-les-sources-d-aosp">Compiler les sources d&rsquo;AOSP</h2>
+<h2 id="compiler-les-sources-d-aosp:305cc891b1c6a1a1f424f416b465955e">Compiler les sources d&rsquo;AOSP</h2>
 
 <p>Se placer dans le dossier principal des sources d&rsquo;AOSP</p>
 
@@ -320,7 +320,7 @@ $ tar -xvf fixit.tar.gz -C aosp/device/generic
 <li>Pour <code>mini_emulator_arm64-userdebug</code> : out/target/product/mini-emulator-arm64/</li>
 </ul>
 
-<h2 id="virtualiser-la-version-compilée-d-android-avec-qemu">Virtualiser la version compilée d&rsquo;Android avec Qemu</h2>
+<h2 id="virtualiser-la-version-compilée-d-android-avec-qemu:305cc891b1c6a1a1f424f416b465955e">Virtualiser la version compilée d&rsquo;Android avec Qemu</h2>
 
 <p>Pour virtualiser une version d&rsquo;Android 5 ARM 64-bits, nous avons besoin du programme <code>qemu-system-aarch64</code> modifié par Google pour supporter l&rsquo;exécution de la machine virtuelle &laquo;ranchu&raquo; (et du type de processeur &laquo;cortex-v57&raquo;).</p>
 
@@ -372,15 +372,13 @@ $ make -j8
 
 <p><strong>Aperçu de <code>ranchu_arm64-eng</code></strong> :</p>
 
-<p><a href="/assets/images/fig/ranchu_arm64-eng.png"><img src="/assets/images/fig/ranchu_arm64-eng-tiny.png" alt="ranchu_arm64-eng preview" />
-</a></p>
+<p><a href="/assets/images/fig/ranchu_arm64-eng.png"><img src="/assets/images/fig/ranchu_arm64-eng-tiny.png" alt="ranchu_arm64-eng preview" /></a></p>
 
 <p><strong>Aperçu de <code>mini_emulator_arm64-userdebug</code></strong> :</p>
 
-<p><a href="/assets/images/fig/mini_emulator_arm64-userdebug.png"><img src="/assets/images/fig/mini_emulator_arm64-userdebug-tiny.png" alt="mini_emulator_arm64-userdebug preview" />
-</a></p>
+<p><a href="/assets/images/fig/mini_emulator_arm64-userdebug.png"><img src="/assets/images/fig/mini_emulator_arm64-userdebug-tiny.png" alt="mini_emulator_arm64-userdebug preview" /></a></p>
 
-<h2 id="références">Références</h2>
+<h2 id="références:305cc891b1c6a1a1f424f416b465955e">Références</h2>
 
 <ul>
 <li><a href="https://source.android.com/source/building.html">AOSP documentation - Downloading and Building</a></li>

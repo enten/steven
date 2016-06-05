@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Restau on enten.fr</title>
+    <link>http://enten.github.io/steven/tags/restau/</link>
+    <description>Recent content in Restau on enten.fr</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-FR</language>
+    <copyright>(c) 2015 Steven Enten</copyright>
+    <lastBuildDate>Sat, 04 Jun 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://enten.github.io/steven/tags/restau/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Les prémices d&#39;un nouveau framework orienté micro-services</title>
+      <link>http://enten.github.io/steven/2016/06/04/les-pr%C3%A9mices-dun-nouveau-framework-orient%C3%A9-micro-services/</link>
+      <pubDate>Sat, 04 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://enten.github.io/steven/2016/06/04/les-pr%C3%A9mices-dun-nouveau-framework-orient%C3%A9-micro-services/</guid>
+      <description>
+
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;Chaque année, les étudiants de nombreux cursus informatiques se préparent à intégrer des deux pieds le monde de l&amp;rsquo;entreprise. Jeune ingénieur en poste depuis quelques mois, je souhaite partager mon expérience d&amp;rsquo;insertion professionnelle.&lt;/p&gt;
+
+&lt;p&gt;A travers une série d&amp;rsquo;articles, je tenterai de présenter le contexte de travail qui m&amp;rsquo;a conduit à concevoir et à implémenter un framework pour encadrer et optimiser le développement logiciel.&lt;/p&gt;
+
+&lt;h2 id=&#34;pourquoi-un-nouveau-framework&#34;&gt;Pourquoi un nouveau framework ?&lt;/h2&gt;
+
+&lt;p&gt;Je pense que pour chaque besoin il existe une ou plusieurs solutions. Je ne suis pas de ceux qui aiment ré-inventer la roue. Au contraire. Seulement, mon contexte de travail actuel m&amp;rsquo;a amené à penser que parfois il n&amp;rsquo;existe pas de solution qui répond parfaitement à nos besoins.&lt;/p&gt;
+
+&lt;p&gt;J&amp;rsquo;évolue dans une PME où le service informatique est composé d&amp;rsquo;un responsable matériel (the sysadmin) et de deux développeurs (dont votre serviteur).&lt;/p&gt;
+
+&lt;p&gt;Aujourd&amp;rsquo;hui l&amp;rsquo;entreprise à besoin de concevoir ses systèmes en micro-services ré-utilisables. De nombreuses solutions dans différents languages existent et permettent de mettre rapidement en place ce type de plateformes.&lt;/p&gt;
+
+&lt;p&gt;J&amp;rsquo;ai commencé mon travail en m&amp;rsquo;appuyant sur un framework existant. J&amp;rsquo;ai pu rapidement mettre en place deux services :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Service A&lt;/strong&gt; : gestion d&amp;rsquo;utilisateurs (création de nouveaux comptes et de jetons d&amp;rsquo;authentification)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Service B&lt;/strong&gt; : gestion de documents (création, lecture et modification)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;[Server A]                             :  [Server B]                
+                                       :                            
+                 Service A             :                   Service B
+                     |                 :                       |    
+    GET /profile/123 |                 :      GET /doc/321     |    
+    ----------------&amp;gt;|                 :      ----------------&amp;gt;|    
+    &amp;lt; - - - - - - - -|                 :      &amp;lt; - - - - - - - -|    
+      profile(json)  |                 :        doc(json)      |    
+                     |                 :                       |    
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ainsi, ces services peuvent être ré-utilisés à travers différents projets. Le backend était presque complet. Il ne manquait qu&amp;rsquo;à écrire un troisième service : le &lt;strong&gt;service C&lt;/strong&gt; qui conjugue et enrichi les services A et B pour proposer un service permettant de gérer des utilisateurs ayant des documents privés (sans lien direct entre un utilisateur et ses documents).&lt;/p&gt;
+
+&lt;p&gt;C&amp;rsquo;est là où se sont présentés différents problèmes. Des problèmes qui m&amp;rsquo;ont poussés à changer de framework. Mais les problèmes étaient toujours là.&lt;/p&gt;
+
+&lt;h2 id=&#34;un-problème-de-conception&#34;&gt;Un problème de conception&lt;/h2&gt;
+
+&lt;p&gt;A ce stade, nous avons déjà 2 composants implémentés : &lt;code&gt;Services A&lt;/code&gt; (gestion des utilisateurs) et &lt;code&gt;Service B&lt;/code&gt; (gestion de documents).&lt;/p&gt;
+
+&lt;p&gt;Le composant &lt;code&gt;Service C&lt;/code&gt; doit utiliser les services A et B. Il nous faut écrire 2 autres composants qui sont les clients permettant d&amp;rsquo;utiliser les services A et B : ce sont eux qui savent comment dialoguer avec les services (appeler les bonnes routes avec les bons paramètres).&lt;/p&gt;
+
+&lt;p&gt;Nous appelerons ces composants &lt;code&gt;Service A Client&lt;/code&gt; et &lt;code&gt;Service B Client&lt;/code&gt;. Ils pourront être réutilisés par d&amp;rsquo;autres composants qui souhaiteraient s&amp;rsquo;interfacer avec un de ces services (A ou B).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[Server C]                               :  [Server A]               
+                                         :                           
+                 Service A Client        :         Service A         
+                         |               :             |             
+                         |               :             |             
+    cltA.getProfile(123) |               :             |             
+    --------------------&amp;gt;|      GET /profile/123       |             
+                         |----------------------------&amp;gt;|             
+                         |&amp;lt; - - - - - - - - - - - - - -|             
+    &amp;lt; - - - - - - - - - -|       profile(json)         |             
+        profile(json)    |               :             |             
+                         |               :             |             
+                                         :                           
+                                         :...........................
+                                         :                           
+                                         : [Server B]                
+                                         :                           
+                 Service B Client        :         Service B         
+                         |               :             |             
+                         |               :             |             
+    cltB.getDoc(321)     |               :             |             
+    --------------------&amp;gt;|        GET /doc/321         |             
+                         |----------------------------&amp;gt;|             
+                         |&amp;lt; - - - - - - - - - - - - - -|             
+    &amp;lt; - - - - - - - - - -|         doc(json)           |             
+          doc(json)      |               :             |             
+                         |               :             |             
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Nous pouvons maintenant écrire le service C. Et c&amp;rsquo;est là où émerge la principale problématique.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Si les services A et B évoluent, il faut mettre à jour les composants clients respectifs.&lt;/strong&gt; Il en va de même pour un éventuel futur composant &lt;code&gt;Service C Client&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Dans le cas du service C, lorsqu&amp;rsquo;un utilisateur souhaite récupérer son profil, le service C utilise le composant client du service utilisateur (&lt;code&gt;Service A Client&lt;/code&gt;) pour contacter le service distant (&lt;code&gt;Service A&lt;/code&gt;) et retransmet la réponse à l&amp;rsquo;utilisateur.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[Server C]                                                     : [Server A]    
+                                                               :               
+                     Service C          Service A Client       :    Service A
+                         |                     |               :        |      
+ ( )    GET /profile/123 |                     |               :        |      
+--|--   ----------------&amp;gt;| clt.getProfile(123) |               :        |      
+ / \                     |--------------------&amp;gt;|    GET /profile/123    |      
+User                     |                     |-----------------------&amp;gt;|      
+                         |                     |&amp;lt; - - - - - - - - - - - |      
+                         |&amp;lt; - - - - - - - - - -|     profile(json)      |      
+        &amp;lt;- - - - - - - - |    profile(json)    |               :        |      
+          profile(json)  |                     |               :        |      
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Si la route du service A pour afficher le profile change, il faudra modifier le client (et éventuellement le service C si on veut être cohérent avec les routes du service A) pour pointer vers la nouvelle route.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Et c&amp;rsquo;est là où la majorité des frameworks montrent leurs limites : ils sont orientés serveur et n&amp;rsquo;apportent aucune aide pour s&amp;rsquo;interfacer avec les services écris.&lt;/strong&gt; Faire évoluer un service devient alors pénible puisqu&amp;rsquo;il faut faire évoluer ses dépendances.&lt;/p&gt;
+
+&lt;h2 id=&#34;la-solution-idéale&#34;&gt;La solution idéale&lt;/h2&gt;
+
+&lt;p&gt;Nous avons constaté que les frameworks de micro-services sont orientés serveur : ils permettent d&amp;rsquo;écrire des services mais ne proposent pas de solution rapide pour s&amp;rsquo;interfacer avec ces derniers.&lt;/p&gt;
+
+&lt;p&gt;La solution idéale doit permettre aux développeurs :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;de se concentrer sur le code métier des services ;&lt;/li&gt;
+&lt;li&gt;et de fournir des moyens simples pour les utiliser aussi bien du côté serveur que du côté client.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Nous devrions pouvoir écrire un service de la manière suivante :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// HelloService.js
+
+class HelloService {
+  sayHello(inputs) {
+    return &#39;hello &#39; + (inputs.who || &#39;world&#39;);
+  }
+}
+
+module.exports = HelloService;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ce service ne propose qu&amp;rsquo;une seule route &lt;code&gt;GET /sayHello&lt;/code&gt; qui retourne un message selon les paramètres d&amp;rsquo;appels :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;L&amp;rsquo;appel &lt;code&gt;GET /sayHello&lt;/code&gt; affiche &lt;em&gt;Hello world&lt;/em&gt; ;&lt;/li&gt;
+&lt;li&gt;L&amp;rsquo;appel &lt;code&gt;GET /sayHello?who=jd&lt;/code&gt; affiche &lt;em&gt;Hello jd&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Notre framework doit être capable de charger des services et de proposer de les exécuter en mode serveur ou en mode client.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// app.js
+var NotreSuperFramework = require(&#39;notre-super-framework&#39;);
+var HelloService = require(&#39;./HelloService&#39;);
+
+var app = new NotreSuperFramework();
+
+// charge le service HelloService sur la route /hello
+app.use(&#39;/hello&#39;, HelloService);
+
+module.exports = app;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// server.js
+var app = require(&#39;./app&#39;);
+
+// lance le serveur de services http://localhost:1337
+app.listen(1337);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// test.js
+var app = require(&#39;./app&#39;);
+
+// créer un client vers le serveur de services http://localhost:1337
+var api = app.client(1337);
+
+// appel la route GET http://localhost:1337/hello/sayHello?who=jd
+api.HelloService.sayHello({ who: &#39;jd&#39; }, function (err, res) {
+  if (err) {
+    console.error(err);
+    return;
+  }
+
+  // affiche &amp;quot;Hello jd&amp;quot;
+  console.log(res.body);
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Nul besoin d&amp;rsquo;être un développeur NodeJS confirmé pour comprendre la simplicité d&amp;rsquo;utilisation recherchée : c&amp;rsquo;est le framework qui s&amp;rsquo;occupe de générer le serveur ou le client.&lt;/p&gt;
+
+&lt;p&gt;On peut même imaginer un troisième mode qui permettrait de monter automatiquement les routes de services distants.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// app-b.js
+var NotreSuperFramework = require(&#39;notre-super-framework&#39;);
+var appA = require(&#39;./app&#39;);
+
+var appB = new NotreSuperFramework();
+
+// monte les services du serveur distant http://localhost:1337
+appB.use(&#39;/&#39;, appA.remote(1337));
+
+module.exports = appB;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// server.js
+var appB = require(&#39;./app-b&#39;);
+
+// lance le serveur http://localhost:1338
+appB.listen(1338);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Une requête adressée à la route &lt;code&gt;GET http://localhost:1338/hello/sayHello&lt;/code&gt; est relayée via le client vers la route &lt;code&gt;GET http://localhost:1337/hello/sayHello&lt;/code&gt; et la réponse retransmise à l&amp;rsquo;utilisateur à l&amp;rsquo;origine de la requête.&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;N&amp;rsquo;ayant pas trouvé de framework permettant d&amp;rsquo;écrire et d&amp;rsquo;interfacer simplement des micro-services, je vais tenter de développer une idée de framework de micro-services universels (pouvant être utiliser dans différents modes dynamiquement).&lt;/p&gt;
+
+&lt;p&gt;Dans les prochains articles, nous allons développer les spécifications de notre solution idéale.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Les prémices d&#39;un nouveau framework orienté micro-services</title>
+      <link>http://enten.github.io/steven/2016/06/04/les-pr%C3%A9mices-dun-nouveau-framework-orient%C3%A9-micro-services/</link>
+      <pubDate>Sat, 04 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://enten.github.io/steven/2016/06/04/les-pr%C3%A9mices-dun-nouveau-framework-orient%C3%A9-micro-services/</guid>
+      <description>
+
+&lt;h2 id=&#34;introduction:783f16718fbcc4ca301dabebe6e38d41&#34;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;Chaque année, les étudiants de nombreux cursus informatiques se préparent à intégrer des deux pieds le monde de l&amp;rsquo;entreprise. Jeune ingénieur en poste depuis quelques mois, je souhaite partager mon expérience d&amp;rsquo;insertion professionnelle.&lt;/p&gt;
+
+&lt;p&gt;A travers une série d&amp;rsquo;articles, je tenterai de présenter le contexte de travail qui m&amp;rsquo;a conduit à concevoir et à implémenter un framework pour encadrer et optimiser le développement logiciel.&lt;/p&gt;
+
+&lt;h2 id=&#34;pourquoi-un-nouveau-framework:783f16718fbcc4ca301dabebe6e38d41&#34;&gt;Pourquoi un nouveau framework ?&lt;/h2&gt;
+
+&lt;p&gt;Je pense que pour chaque besoin il existe une ou plusieurs solutions. Je ne suis pas de ceux qui aiment ré-inventer la roue. Au contraire. Seulement, mon contexte de travail actuel m&amp;rsquo;a amené à penser que parfois il n&amp;rsquo;existe pas de solution qui répond parfaitement à nos besoins.&lt;/p&gt;
+
+&lt;p&gt;J&amp;rsquo;évolue dans une PME où le service informatique est composé d&amp;rsquo;un responsable matériel (the sysadmin) et de deux développeurs (dont votre serviteur).&lt;/p&gt;
+
+&lt;p&gt;Aujourd&amp;rsquo;hui l&amp;rsquo;entreprise à besoin de concevoir ses systèmes en micro-services ré-utilisables. De nombreuses solutions dans différents languages existent et permettent de mettre rapidement en place ce type de plateformes.&lt;/p&gt;
+
+&lt;p&gt;J&amp;rsquo;ai commencé mon travail en m&amp;rsquo;appuyant sur un framework existant. J&amp;rsquo;ai pu rapidement mettre en place deux services :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Service A&lt;/strong&gt; : gestion d&amp;rsquo;utilisateurs (création de nouveaux comptes et de jetons d&amp;rsquo;authentification)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Service B&lt;/strong&gt; : gestion de documents (création, lecture et modification)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;[Server A]                             :  [Server B]                
+                                       :                            
+                 Service A             :                   Service B
+                     |                 :                       |    
+    GET /profile/123 |                 :      GET /doc/321     |    
+    ----------------&amp;gt;|                 :      ----------------&amp;gt;|    
+    &amp;lt; - - - - - - - -|                 :      &amp;lt; - - - - - - - -|    
+      profile(json)  |                 :        doc(json)      |    
+                     |                 :                       |    
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ainsi, ces services peuvent être ré-utilisés à travers différents projets. Le backend était presque complet. Il ne manquait qu&amp;rsquo;à écrire un troisième service : le &lt;strong&gt;service C&lt;/strong&gt; qui conjugue et enrichi les services A et B pour proposer un service permettant de gérer des utilisateurs ayant des documents privés (sans lien direct entre un utilisateur et ses documents).&lt;/p&gt;
+
+&lt;p&gt;C&amp;rsquo;est là où se sont présentés différents problèmes. Des problèmes qui m&amp;rsquo;ont poussés à changer de framework. Mais les problèmes étaient toujours là.&lt;/p&gt;
+
+&lt;h2 id=&#34;un-problème-de-conception:783f16718fbcc4ca301dabebe6e38d41&#34;&gt;Un problème de conception&lt;/h2&gt;
+
+&lt;p&gt;A ce stade, nous avons déjà 2 composants implémentés : &lt;code&gt;Services A&lt;/code&gt; (gestion des utilisateurs) et &lt;code&gt;Service B&lt;/code&gt; (gestion de documents).&lt;/p&gt;
+
+&lt;p&gt;Le composant &lt;code&gt;Service C&lt;/code&gt; doit utiliser les services A et B. Il nous faut écrire 2 autres composants qui sont les clients permettant d&amp;rsquo;utiliser les services A et B : ce sont eux qui savent comment dialoguer avec les services (appeler les bonnes routes avec les bons paramètres).&lt;/p&gt;
+
+&lt;p&gt;Nous appelerons ces composants &lt;code&gt;Service A Client&lt;/code&gt; et &lt;code&gt;Service B Client&lt;/code&gt;. Ils pourront être réutilisés par d&amp;rsquo;autres composants qui souhaiteraient s&amp;rsquo;interfacer avec un de ces services (A ou B).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[Server C]                               :  [Server A]               
+                                         :                           
+                 Service A Client        :         Service A         
+                         |               :             |             
+                         |               :             |             
+    cltA.getProfile(123) |               :             |             
+    --------------------&amp;gt;|      GET /profile/123       |             
+                         |----------------------------&amp;gt;|             
+                         |&amp;lt; - - - - - - - - - - - - - -|             
+    &amp;lt; - - - - - - - - - -|       profile(json)         |             
+        profile(json)    |               :             |             
+                         |               :             |             
+                                         :                           
+                                         :...........................
+                                         :                           
+                                         : [Server B]                
+                                         :                           
+                 Service B Client        :         Service B         
+                         |               :             |             
+                         |               :             |             
+    cltB.getDoc(321)     |               :             |             
+    --------------------&amp;gt;|        GET /doc/321         |             
+                         |----------------------------&amp;gt;|             
+                         |&amp;lt; - - - - - - - - - - - - - -|             
+    &amp;lt; - - - - - - - - - -|         doc(json)           |             
+          doc(json)      |               :             |             
+                         |               :             |             
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Nous pouvons maintenant écrire le service C. Et c&amp;rsquo;est là où émerge la principale problématique.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Si les services A et B évoluent, il faut mettre à jour les composants clients respectifs.&lt;/strong&gt; Il en va de même pour un éventuel futur composant &lt;code&gt;Service C Client&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Dans le cas du service C, lorsqu&amp;rsquo;un utilisateur souhaite récupérer son profil, le service C utilise le composant client du service utilisateur (&lt;code&gt;Service A Client&lt;/code&gt;) pour contacter le service distant (&lt;code&gt;Service A&lt;/code&gt;) et retransmet la réponse à l&amp;rsquo;utilisateur.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[Server C]                                                     : [Server A]    
+                                                               :               
+                     Service C          Service A Client       :    Service A
+                         |                     |               :        |      
+ ( )    GET /profile/123 |                     |               :        |      
+--|--   ----------------&amp;gt;| clt.getProfile(123) |               :        |      
+ / \                     |--------------------&amp;gt;|    GET /profile/123    |      
+User                     |                     |-----------------------&amp;gt;|      
+                         |                     |&amp;lt; - - - - - - - - - - - |      
+                         |&amp;lt; - - - - - - - - - -|     profile(json)      |      
+        &amp;lt;- - - - - - - - |    profile(json)    |               :        |      
+          profile(json)  |                     |               :        |      
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Si la route du service A pour afficher le profile change, il faudra modifier le client (et éventuellement le service C si on veut être cohérent avec les routes du service A) pour pointer vers la nouvelle route.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Et c&amp;rsquo;est là où la majorité des frameworks montrent leurs limites : ils sont orientés serveur et n&amp;rsquo;apportent aucune aide pour s&amp;rsquo;interfacer avec les services écris.&lt;/strong&gt; Faire évoluer un service devient alors pénible puisqu&amp;rsquo;il faut faire évoluer ses dépendances.&lt;/p&gt;
+
+&lt;h2 id=&#34;la-solution-idéale:783f16718fbcc4ca301dabebe6e38d41&#34;&gt;La solution idéale&lt;/h2&gt;
+
+&lt;p&gt;Nous avons constaté que les frameworks de micro-services sont orientés serveur : ils permettent d&amp;rsquo;écrire des services mais ne proposent pas de solution rapide pour s&amp;rsquo;interfacer avec ces derniers.&lt;/p&gt;
+
+&lt;p&gt;La solution idéale doit permettre aux développeurs :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;de se concentrer sur le code métier des services ;&lt;/li&gt;
+&lt;li&gt;et de fournir des moyens simples pour les utiliser aussi bien du côté serveur que du côté client.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Nous devrions pouvoir écrire un service de la manière suivante :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// HelloService.js
+
+class HelloService {
+  sayHello(inputs) {
+    return &#39;hello &#39; + (inputs.who || &#39;world&#39;);
+  }
+}
+
+module.exports = HelloService;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ce service ne propose qu&amp;rsquo;une seule route &lt;code&gt;GET /sayHello&lt;/code&gt; qui retourne un message selon les paramètres d&amp;rsquo;appels :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;L&amp;rsquo;appel &lt;code&gt;GET /sayHello&lt;/code&gt; affiche &lt;em&gt;Hello world&lt;/em&gt; ;&lt;/li&gt;
+&lt;li&gt;L&amp;rsquo;appel &lt;code&gt;GET /sayHello?who=jd&lt;/code&gt; affiche &lt;em&gt;Hello jd&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Notre framework doit être capable de charger des services et de proposer de les exécuter en mode serveur ou en mode client.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// app.js
+var NotreSuperFramework = require(&#39;notre-super-framework&#39;);
+var HelloService = require(&#39;./HelloService&#39;);
+
+var app = new NotreSuperFramework();
+
+// charge le service HelloService sur la route /hello
+app.use(&#39;/hello&#39;, HelloService);
+
+module.exports = app;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// server.js
+var app = require(&#39;./app&#39;);
+
+// lance le serveur de services http://localhost:1337
+app.listen(1337);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// test.js
+var app = require(&#39;./app&#39;);
+
+// créer un client vers le serveur de services http://localhost:1337
+var api = app.client(1337);
+
+// appel la route GET http://localhost:1337/hello/sayHello?who=jd
+api.HelloService.sayHello({ who: &#39;jd&#39; }, function (err, res) {
+  if (err) {
+    console.error(err);
+    return;
+  }
+
+  // affiche &amp;quot;Hello jd&amp;quot;
+  console.log(res.body);
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Nul besoin d&amp;rsquo;être un développeur NodeJS confirmé pour comprendre la simplicité d&amp;rsquo;utilisation recherchée : c&amp;rsquo;est le framework qui s&amp;rsquo;occupe de générer le serveur ou le client.&lt;/p&gt;
+
+&lt;p&gt;On peut même imaginer un troisième mode qui permettrait de monter automatiquement les routes de services distants.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// app-b.js
+var NotreSuperFramework = require(&#39;notre-super-framework&#39;);
+var appA = require(&#39;./app&#39;);
+
+var appB = new NotreSuperFramework();
+
+// monte les services du serveur distant http://localhost:1337
+appB.use(&#39;/&#39;, appA.remote(1337));
+
+module.exports = appB;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// server.js
+var appB = require(&#39;./app-b&#39;);
+
+// lance le serveur http://localhost:1338
+appB.listen(1338);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Une requête adressée à la route &lt;code&gt;GET http://localhost:1338/hello/sayHello&lt;/code&gt; est relayée via le client vers la route &lt;code&gt;GET http://localhost:1337/hello/sayHello&lt;/code&gt; et la réponse retransmise à l&amp;rsquo;utilisateur à l&amp;rsquo;origine de la requête.&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusion:783f16718fbcc4ca301dabebe6e38d41&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;N&amp;rsquo;ayant pas trouvé de framework permettant d&amp;rsquo;écrire et d&amp;rsquo;interfacer simplement des micro-services, je vais tenter de développer une idée de framework de micro-services universels (pouvant être utiliser dans différents modes dynamiquement).&lt;/p&gt;
+
+&lt;p&gt;Dans les prochains articles, nous allons développer les spécifications de notre solution idéale.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

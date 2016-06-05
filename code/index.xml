@@ -11,191 +11,6 @@
     <atom:link href="http://enten.github.io/steven/code/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>confectioner</title>
-      <link>http://enten.github.io/steven/confectioner/</link>
-      <pubDate>Mon, 01 Jun 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://enten.github.io/steven/confectioner/</guid>
-      <description>
-
-&lt;p&gt;Simpliest configuration builder which used the environment.&lt;/p&gt;
-
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;npm install confectioner --save
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// example.js
-
-var confectioner = require(&#39;confectioner&#39;);
-
-var config = confectioner({
-    env: { envname: &#39;NODE_ENV&#39;, defaultValue: &#39;development&#39; },
-    hostname: { envname: &#39;MY_HOST&#39;, defaultValue: &#39;localhost&#39; },
-    port: { envname: &#39;MY_PORT&#39;, defaultValue: 1337, type: &#39;int&#39; },
-    baseuri: { envname: &#39;MY_BASEURI&#39;, defaultValue: &#39;/myapp&#39; }
-});
-
-console.log(config.getValuesMap());
-
-// $ NODE_ENV=production MY_PORT=80 node --harmony example.js
-// { env: &#39;production&#39;,
-//   hostname: &#39;localhost&#39;,
-//   port: &#39;80&#39;,
-//   baseuri: &#39;/myapp&#39; }
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;api&#34;&gt;API&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://cdn.rawgit.com/enten/confectioner/master/docs/confectioner/0.1.2/index.html&#34;&gt;API documentation&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;tests&#34;&gt;Tests&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;npm test
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;release-history&#34;&gt;Release History&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;0.1.0 Initial release&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;credits&#34;&gt;Credits&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/enten&#34;&gt;Steven Enten&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/enten/confectioner/blob/master/LICENSE&#34;&gt;MIT&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>dotresolver</title>
-      <link>http://enten.github.io/steven/dotresolver/</link>
-      <pubDate>Mon, 13 Apr 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://enten.github.io/steven/dotresolver/</guid>
-      <description>
-
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;npm install dotresolver --save
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;basic-usage&#34;&gt;Basic usage&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var R = require(&#39;dotresolver&#39;)(&#39;.&#39;);
-
-// displays the root path .
-console.log(R());
-
-// displays the path ./src/controllers/hello.js
-console.log(R(&#39;src.controllers&#39;, &#39;hello.js&#39;));
-
-// imports the module hello.js
-var hello = R(&#39;src.controllers&#39;, &#39;hello.js&#39;, true);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;builder-usage&#34;&gt;Builder usage&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var Resolver = require(&#39;dotresolver&#39;);
-
-// builds resolver with some aliases
-var R = Resolver.Builder(__dirname)
-            .set(&#39;ctrl&#39;, &#39;src.controllers&#39;)
-            .set(&#39;css&#39;, &#39;public.styles&#39;)
-            .get();
-
-// displays the path /home/steven/myapp/public/src/styles/base.css
-console.log(R(&#39;css&#39;, &#39;base.css&#39;));
-
-// imports the module hello.js
-var hello = R(&#39;ctrl&#39;, &#39;hello.js&#39;, true);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;api&#34;&gt;API&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://cdn.rawgit.com/enten/dotresolver/master/docs/dotresolver/0.3.0/index.html&#34;&gt;API documentation&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;tests&#34;&gt;Tests&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;npm test
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;release-history&#34;&gt;Release History&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;0.2.8 Fix issue &lt;a href=&#34;https://github.com/enten/dotresolver/issues/3&#34;&gt;#3&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;0.2.7 Add helper to create URI resolver&lt;/li&gt;
-&lt;li&gt;0.2.6 Fix issue &lt;a href=&#34;https://github.com/enten/dotresolver/issues/2&#34;&gt;#2&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;0.2.5 Support object of aliases with setAlias()&lt;/li&gt;
-&lt;li&gt;0.2.3 Improve the path building&lt;/li&gt;
-&lt;li&gt;0.2.0 Remove real root path features&lt;/li&gt;
-&lt;li&gt;0.1.0 Initial release&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;credits&#34;&gt;Credits&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/enten&#34;&gt;Steven Enten&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/enten/dotresolver/blob/master/LICENSE&#34;&gt;MIT&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>gitbook-boilerplate</title>
-      <link>http://enten.github.io/steven/gitbook-boilerplate/</link>
-      <pubDate>Tue, 28 Jul 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://enten.github.io/steven/gitbook-boilerplate/</guid>
-      <description>
-
-&lt;h2 id=&#34;demo&#34;&gt;Demo&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://enten.github.io/gitbook-boilerplate/&#34;&gt;Github Pages&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/enten/gitbook-boilerplate/wiki&#34;&gt;Github Wiki&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;cd ~/code
-
-git clone https://github.com/enten/gitbook-boilerplate.git awesome-project
-
-cd awesome-project
-
-rm -fr .git
-
-vi package.json
-# edit repository.url and repository.wiki
-
-git remote add origin &amp;lt;url&amp;gt;
-
-npm run build
-# or
-# npm run generate-gitbook &amp;amp;&amp;amp; npm run generate-wiki
-
-npm run deploy
-# or
-# npm run deploy-gitbook &amp;amp;&amp;amp; npm run deploy-wiki
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Important&lt;/strong&gt;: Wiki must be created on Github&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>hugo-boilerplate</title>
       <link>http://enten.github.io/steven/hugo-boilerplate/</link>
       <pubDate>Sat, 15 Aug 2015 00:00:00 +0000</pubDate>
@@ -205,14 +20,13 @@ npm run deploy
 
 &lt;p&gt;Boilerplate to start fast with &lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;demo-http-enten-github-io-hugo-boilerplate&#34;&gt;&lt;a href=&#34;http://enten.github.io/hugo-boilerplate/&#34;&gt;Demo&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;demo-http-enten-github-io-hugo-boilerplate:0306c62339fddd9fdbd4e96f726ada1f&#34;&gt;&lt;a href=&#34;http://enten.github.io/hugo-boilerplate/&#34;&gt;Demo&lt;/a&gt;&lt;/h2&gt;
 
-&lt;h2 id=&#34;screenshot&#34;&gt;Screenshot&lt;/h2&gt;
+&lt;h2 id=&#34;screenshot:0306c62339fddd9fdbd4e96f726ada1f&#34;&gt;Screenshot&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/enten/hugo-boilerplate/master/themes/hyde-y/images/screenshot.png&#34; alt=&#34;preview&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/enten/hugo-boilerplate/master/themes/hyde-y/images/screenshot.png&#34; alt=&#34;preview&#34; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;requirements&#34;&gt;Requirements&lt;/h2&gt;
+&lt;h2 id=&#34;requirements:0306c62339fddd9fdbd4e96f726ada1f&#34;&gt;Requirements&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://git-scm.com&#34;&gt;git&lt;/a&gt;&lt;/li&gt;
@@ -221,7 +35,7 @@ npm run deploy
 &lt;li&gt;&lt;a href=&#34;https://www.npmjs.com/about&#34;&gt;npm&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;h2 id=&#34;installation:0306c62339fddd9fdbd4e96f726ada1f&#34;&gt;Installation&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# clone hugo-boilerplate into new project folder
 git clone https://github.com/enten/hugo-boilerplate awesome-site
@@ -240,9 +54,9 @@ Press Ctrl+C to stop
 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;deployment&#34;&gt;Deployment&lt;/h2&gt;
+&lt;h2 id=&#34;deployment:0306c62339fddd9fdbd4e96f726ada1f&#34;&gt;Deployment&lt;/h2&gt;
 
-&lt;h3 id=&#34;github-pages-https-pages-github-com&#34;&gt;&lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;github-pages-https-pages-github-com:0306c62339fddd9fdbd4e96f726ada1f&#34;&gt;&lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt;&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd awesome-site
 
@@ -263,7 +77,7 @@ npm run deploy:gh
 &lt;li&gt;static site is rebuilt in &lt;code&gt;public/&lt;/code&gt; folder when &lt;code&gt;deploy:gh&lt;/code&gt; is fired&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;ftp&#34;&gt;FTP&lt;/h3&gt;
+&lt;h3 id=&#34;ftp:0306c62339fddd9fdbd4e96f726ada1f&#34;&gt;FTP&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd awesome-site
 
@@ -293,7 +107,7 @@ npm run deploy
 &lt;li&gt;&lt;strong&gt;BUG&lt;/strong&gt;: several attempts are needed to deploy all files&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+&lt;h2 id=&#34;license:0306c62339fddd9fdbd4e96f726ada1f&#34;&gt;License&lt;/h2&gt;
 
 &lt;p&gt;Open sourced under the &lt;a href=&#34;https://github.com/enten/hugo-boilerplate/blob/master/LICENSE&#34;&gt;MIT license&lt;/a&gt;.&lt;/p&gt;
 </description>
@@ -527,6 +341,237 @@ Done, without errors.
     </item>
     
     <item>
+      <title>gitbook-boilerplate</title>
+      <link>http://enten.github.io/steven/gitbook-boilerplate/</link>
+      <pubDate>Tue, 28 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://enten.github.io/steven/gitbook-boilerplate/</guid>
+      <description>
+
+&lt;h2 id=&#34;demo:72f3bc852abfc2d1affdf6374f76f28e&#34;&gt;Demo&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://enten.github.io/gitbook-boilerplate/&#34;&gt;Github Pages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/enten/gitbook-boilerplate/wiki&#34;&gt;Github Wiki&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;installation:72f3bc852abfc2d1affdf6374f76f28e&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;cd ~/code
+
+git clone https://github.com/enten/gitbook-boilerplate.git awesome-project
+
+cd awesome-project
+
+rm -fr .git
+
+vi package.json
+# edit repository.url and repository.wiki
+
+git remote add origin &amp;lt;url&amp;gt;
+
+npm run build
+# or
+# npm run generate-gitbook &amp;amp;&amp;amp; npm run generate-wiki
+
+npm run deploy
+# or
+# npm run deploy-gitbook &amp;amp;&amp;amp; npm run deploy-wiki
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Important&lt;/strong&gt;: Wiki must be created on Github&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>losh</title>
+      <link>http://enten.github.io/steven/losh/</link>
+      <pubDate>Wed, 15 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://enten.github.io/steven/losh/</guid>
+      <description>
+
+&lt;h2 id=&#34;purpose:32f3f166d09bd9089c5f0bac3d828b66&#34;&gt;Purpose&lt;/h2&gt;
+
+&lt;p&gt;Used one script to rule the others. The losh script wraps the usage of the others. Technically, losh looks for &lt;code&gt;CMDUSAGE&lt;/code&gt; and &lt;code&gt;CMDDESC&lt;/code&gt; variables into the others scripts. That variables allow losh to print the usage of every scripts.&lt;/p&gt;
+
+&lt;h2 id=&#34;installation:32f3f166d09bd9089c5f0bac3d828b66&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Change directory into your awesome project
+$ cd ~/code/awesome-project
+
+# Create directory to store your scripts
+$ mkdir scripts
+
+# Change directory into the new scripts directory
+$ cd scripts
+
+# Install losh
+$ curl https://enten.github.io/losh/install-losh | sh
+Install losh (from http://enten.github.io/losh/losh)
+Install update-losh (from http://enten.github.io/losh/install-losh)
+
+# Test losh
+$ ./losh
+NAME:
+    losh - Lord of the shell scripts (one script to rull them all)
+
+VERSION:
+    0.0.1
+
+USAGE:
+    losh [command] [arg...]
+
+COMMANDS:
+    losh update-losh
+                Update losh
+    losh [?|h|help]
+                Print this help message
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;test:32f3f166d09bd9089c5f0bac3d828b66&#34;&gt;Test&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Change directory into the scripts directory
+$ cd ~/awesome-project/scripts
+
+$ echo &#39;#!/bin/bash
+CMDUSAGE=&amp;quot;&amp;lt;username&amp;gt;&amp;quot;
+CMDDESC=&amp;quot;Print custom welcome message&amp;quot;
+echo &amp;quot;Hello $1&amp;quot;&#39; &amp;gt; hello
+
+$ chmod +x hello
+
+$ ./losh
+NAME:
+    losh - Lord of the shell scripts (one script to rull them all)
+
+VERSION:
+    0.0.1
+
+USAGE:
+    losh [command] [arg...]
+
+COMMANDS:
+    losh hello &amp;lt;username&amp;gt;
+                Print custom welcome message
+    losh update-losh
+                Update losh
+    losh [?|h|help]
+                Print this help message
+
+$ ./losh hello world
+Hello world
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ps-loyaltydiscount</title>
+      <link>http://enten.github.io/steven/ps-loyaltydiscount/</link>
+      <pubDate>Sun, 05 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://enten.github.io/steven/ps-loyaltydiscount/</guid>
+      <description>
+
+&lt;h2 id=&#34;présentation:f2eb191022e0f993832328245abd281b&#34;&gt;Présentation&lt;/h2&gt;
+
+&lt;p&gt;Module &lt;a href=&#34;http://doc.prestashop.com/display/PS16/&#34;&gt;PrestaShop 1.6&lt;/a&gt; permettant de gérer
+des remises conditionnées par l&amp;rsquo;achat.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Illustration : l&amp;rsquo;achat d&amp;rsquo;un produit A par un client lui fait bénéficier d&amp;rsquo;une remise sur un produit B.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;installation:f2eb191022e0f993832328245abd281b&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;cd &amp;lt;PRESTASHOP_HOME&amp;gt;/modules
+git clone https://github.com/enten/ps-loyaltydiscount loyaltydiscount
+chown -R www-data loyaltydiscount
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Se rendre dans le menu &lt;code&gt;Modules&lt;/code&gt; de l&amp;rsquo;interface d&amp;rsquo;administration et
+installer le nouveau module &lt;code&gt;Loyalty Discount&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;administration:f2eb191022e0f993832328245abd281b&#34;&gt;Administration&lt;/h2&gt;
+
+&lt;p&gt;L&amp;rsquo;installation du module ajoute le lien &lt;code&gt;Loyalty Discount&lt;/code&gt; dans le menu &lt;code&gt;Price Rules&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;L&amp;rsquo;interface proposée permet de configurer simplement de nouvelles réductions de fidélité.&lt;/p&gt;
+
+&lt;h2 id=&#34;fonctionnement:f2eb191022e0f993832328245abd281b&#34;&gt;Fonctionnement&lt;/h2&gt;
+
+&lt;h3 id=&#34;tables-de-données:f2eb191022e0f993832328245abd281b&#34;&gt;Tables de données&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;+-------------------------------+
+|        loyaltydiscount        |
++-------------------------------+
+| - id_loyaltydiscount : int    |
+| - id_product_purchased : int  |
+| - id_product_discounted : int |
+| - rate : float                |
+| - active : bit                |
+| - date_add : datetime         |
+| - date_upd : datetime         |
+|                               |
+| PK: id_loyaltydiscount        |
++-------------------------------+
+    |  |
+    |  |    +------------------------------------------+
+    |  +---&amp;gt;|           loyaltydiscount_lang           |
+    |       +------------------------------------------+
+    |       | - id_loyaldiscount : int                 |
+    |       | - id_shop : int                          |
+    |       | - id_lang : int                          |
+    |       | - name : varchar                         |
+    |       | - description : text                     |
+    |       |                                          |
+    |       | PK: id_loyaltydiscount, id_shop, id_lang |
+    |       +------------------------------------------+
+    |
+    |       +---------------------------------+
+    +------&amp;gt;|       loyaltydiscount_shop      |
+            +---------------------------------+
+            | - id_loyaldiscount : int        |
+            | - id_shop : int                 |
+            |                                 |
+            | PK: id_loyaltydiscount, id_shop |
+            +---------------------------------+
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;surcharge-de-la-classe-specificprice-https-github-com-prestashop-prestashop-blob-1-6-classes-specificprice-php:f2eb191022e0f993832328245abd281b&#34;&gt;Surcharge de la classe &lt;a href=&#34;https://github.com/PrestaShop/PrestaShop/blob/1.6/classes/SpecificPrice.php&#34;&gt;SpecificPrice&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;La méthode &lt;a href=&#34;https://github.com/PrestaShop/PrestaShop/blob/1.6/classes/SpecificPrice.php#L201&#34;&gt;getSpecificPrice&lt;/a&gt;
+de la classe &lt;a href=&#34;https://github.com/PrestaShop/PrestaShop/blob/1.6/classes/SpecificPrice.php&#34;&gt;SpecificPrice&lt;/a&gt; est
+surchargée pour appliquer une éventuelle réduction conditionnée par l&amp;rsquo;achat d&amp;rsquo;un autre produit.&lt;/p&gt;
+
+&lt;p&gt;L&amp;rsquo;application d&amp;rsquo;une éventuelle réduction est réalisée sous plusieures conditions :
+* Le module &lt;code&gt;loyaltydiscount&lt;/code&gt; est activé ;
+* Le produit a acheter fait l&amp;rsquo;objet d&amp;rsquo;une réduction de fidélité (il existe au moins une
+  ligne dans la table &lt;code&gt;loyaltydiscount&lt;/code&gt; où la colonne &lt;code&gt;id_product_discounted&lt;/code&gt; est
+  égale à celle du produit à acheter) ;
+* La réduction de fidélité est activée (colonne &lt;code&gt;active&lt;/code&gt; égale à &lt;code&gt;1&lt;/code&gt;);
+* L&amp;rsquo;acheteur a une commande validée avec le produit désigné par la colonne &lt;code&gt;id_product_purchased&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;attention:f2eb191022e0f993832328245abd281b&#34;&gt;Attention&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Les réductions de fidélité se cumulent!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Par exemple, si l&amp;rsquo;achat du produit A donne 5% de réduction sur le produit C et que l&amp;rsquo;achat
+du produit B donne 10% de réduction sur le produit C, un acheteur peut cumuler 15% de réduction
+(s&amp;rsquo;il a des commandes valides contenant l&amp;rsquo;achat des produits A et B).&lt;/p&gt;
+
+&lt;p&gt;Ce comportement est dû à l&amp;rsquo;incrémentation dans la fonction statique &lt;code&gt;applyPossibleDiscount&lt;/code&gt;
+de la classe &lt;code&gt;LoyaltyDiscount&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;if ($res[&#39;n&#39;] &amp;gt; 0)
+	$rate += $row[&#39;rate&#39;];
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;Note: remplacer &lt;code&gt;+=&lt;/code&gt; par &lt;code&gt;=&lt;/code&gt; annule ce comportement.&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>kaio</title>
       <link>http://enten.github.io/steven/kaio/</link>
       <pubDate>Sun, 14 Jun 2015 00:00:00 +0000</pubDate>
@@ -657,190 +702,144 @@ $ curl http://localhost:1333/api/books/The%2520Two%2520Towers
     </item>
     
     <item>
-      <title>losh</title>
-      <link>http://enten.github.io/steven/losh/</link>
-      <pubDate>Wed, 15 Jul 2015 00:00:00 +0000</pubDate>
+      <title>confectioner</title>
+      <link>http://enten.github.io/steven/confectioner/</link>
+      <pubDate>Mon, 01 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://enten.github.io/steven/losh/</guid>
+      <guid>http://enten.github.io/steven/confectioner/</guid>
       <description>
 
-&lt;h2 id=&#34;purpose&#34;&gt;Purpose&lt;/h2&gt;
+&lt;p&gt;Simpliest configuration builder which used the environment.&lt;/p&gt;
 
-&lt;p&gt;Used one script to rule the others. The losh script wraps the usage of the others. Technically, losh looks for &lt;code&gt;CMDUSAGE&lt;/code&gt; and &lt;code&gt;CMDDESC&lt;/code&gt; variables into the others scripts. That variables allow losh to print the usage of every scripts.&lt;/p&gt;
+&lt;h2 id=&#34;installation:3a969c21e86aabc01d4c4213a8e45604&#34;&gt;Installation&lt;/h2&gt;
 
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;npm install confectioner --save
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Change directory into your awesome project
-$ cd ~/code/awesome-project
+&lt;h2 id=&#34;example:3a969c21e86aabc01d4c4213a8e45604&#34;&gt;Example&lt;/h2&gt;
 
-# Create directory to store your scripts
-$ mkdir scripts
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// example.js
 
-# Change directory into the new scripts directory
-$ cd scripts
+var confectioner = require(&#39;confectioner&#39;);
 
-# Install losh
-$ curl https://enten.github.io/losh/install-losh | sh
-Install losh (from http://enten.github.io/losh/losh)
-Install update-losh (from http://enten.github.io/losh/install-losh)
+var config = confectioner({
+    env: { envname: &#39;NODE_ENV&#39;, defaultValue: &#39;development&#39; },
+    hostname: { envname: &#39;MY_HOST&#39;, defaultValue: &#39;localhost&#39; },
+    port: { envname: &#39;MY_PORT&#39;, defaultValue: 1337, type: &#39;int&#39; },
+    baseuri: { envname: &#39;MY_BASEURI&#39;, defaultValue: &#39;/myapp&#39; }
+});
 
-# Test losh
-$ ./losh
-NAME:
-    losh - Lord of the shell scripts (one script to rull them all)
+console.log(config.getValuesMap());
 
-VERSION:
-    0.0.1
-
-USAGE:
-    losh [command] [arg...]
-
-COMMANDS:
-    losh update-losh
-                Update losh
-    losh [?|h|help]
-                Print this help message
+// $ NODE_ENV=production MY_PORT=80 node --harmony example.js
+// { env: &#39;production&#39;,
+//   hostname: &#39;localhost&#39;,
+//   port: &#39;80&#39;,
+//   baseuri: &#39;/myapp&#39; }
 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;test&#34;&gt;Test&lt;/h2&gt;
+&lt;h2 id=&#34;api:3a969c21e86aabc01d4c4213a8e45604&#34;&gt;API&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Change directory into the scripts directory
-$ cd ~/awesome-project/scripts
+&lt;p&gt;&lt;a href=&#34;https://cdn.rawgit.com/enten/confectioner/master/docs/confectioner/0.1.2/index.html&#34;&gt;API documentation&lt;/a&gt;&lt;/p&gt;
 
-$ echo &#39;#!/bin/bash
-CMDUSAGE=&amp;quot;&amp;lt;username&amp;gt;&amp;quot;
-CMDDESC=&amp;quot;Print custom welcome message&amp;quot;
-echo &amp;quot;Hello $1&amp;quot;&#39; &amp;gt; hello
+&lt;h2 id=&#34;tests:3a969c21e86aabc01d4c4213a8e45604&#34;&gt;Tests&lt;/h2&gt;
 
-$ chmod +x hello
-
-$ ./losh
-NAME:
-    losh - Lord of the shell scripts (one script to rull them all)
-
-VERSION:
-    0.0.1
-
-USAGE:
-    losh [command] [arg...]
-
-COMMANDS:
-    losh hello &amp;lt;username&amp;gt;
-                Print custom welcome message
-    losh update-losh
-                Update losh
-    losh [?|h|help]
-                Print this help message
-
-$ ./losh hello world
-Hello world
+&lt;pre&gt;&lt;code&gt;npm test
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;release-history:3a969c21e86aabc01d4c4213a8e45604&#34;&gt;Release History&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;0.1.0 Initial release&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;credits:3a969c21e86aabc01d4c4213a8e45604&#34;&gt;Credits&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/enten&#34;&gt;Steven Enten&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;license:3a969c21e86aabc01d4c4213a8e45604&#34;&gt;License&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/enten/confectioner/blob/master/LICENSE&#34;&gt;MIT&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>ps-loyaltydiscount</title>
-      <link>http://enten.github.io/steven/ps-loyaltydiscount/</link>
-      <pubDate>Sun, 05 Jul 2015 00:00:00 +0000</pubDate>
+      <title>dotresolver</title>
+      <link>http://enten.github.io/steven/dotresolver/</link>
+      <pubDate>Mon, 13 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://enten.github.io/steven/ps-loyaltydiscount/</guid>
+      <guid>http://enten.github.io/steven/dotresolver/</guid>
       <description>
 
-&lt;h2 id=&#34;présentation&#34;&gt;Présentation&lt;/h2&gt;
+&lt;h2 id=&#34;installation:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;Installation&lt;/h2&gt;
 
-&lt;p&gt;Module &lt;a href=&#34;http://doc.prestashop.com/display/PS16/&#34;&gt;PrestaShop 1.6&lt;/a&gt; permettant de gérer
-des remises conditionnées par l&amp;rsquo;achat.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Illustration : l&amp;rsquo;achat d&amp;rsquo;un produit A par un client lui fait bénéficier d&amp;rsquo;une remise sur un produit B.&lt;/em&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;cd &amp;lt;PRESTASHOP_HOME&amp;gt;/modules
-git clone https://github.com/enten/ps-loyaltydiscount loyaltydiscount
-chown -R www-data loyaltydiscount
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;npm install dotresolver --save
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Se rendre dans le menu &lt;code&gt;Modules&lt;/code&gt; de l&amp;rsquo;interface d&amp;rsquo;administration et
-installer le nouveau module &lt;code&gt;Loyalty Discount&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;basic-usage:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;Basic usage&lt;/h2&gt;
 
-&lt;h2 id=&#34;administration&#34;&gt;Administration&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var R = require(&#39;dotresolver&#39;)(&#39;.&#39;);
 
-&lt;p&gt;L&amp;rsquo;installation du module ajoute le lien &lt;code&gt;Loyalty Discount&lt;/code&gt; dans le menu &lt;code&gt;Price Rules&lt;/code&gt;.&lt;/p&gt;
+// displays the root path .
+console.log(R());
 
-&lt;p&gt;L&amp;rsquo;interface proposée permet de configurer simplement de nouvelles réductions de fidélité.&lt;/p&gt;
+// displays the path ./src/controllers/hello.js
+console.log(R(&#39;src.controllers&#39;, &#39;hello.js&#39;));
 
-&lt;h2 id=&#34;fonctionnement&#34;&gt;Fonctionnement&lt;/h2&gt;
-
-&lt;h3 id=&#34;tables-de-données&#34;&gt;Tables de données&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;+-------------------------------+
-|        loyaltydiscount        |
-+-------------------------------+
-| - id_loyaltydiscount : int    |
-| - id_product_purchased : int  |
-| - id_product_discounted : int |
-| - rate : float                |
-| - active : bit                |
-| - date_add : datetime         |
-| - date_upd : datetime         |
-|                               |
-| PK: id_loyaltydiscount        |
-+-------------------------------+
-    |  |
-    |  |    +------------------------------------------+
-    |  +---&amp;gt;|           loyaltydiscount_lang           |
-    |       +------------------------------------------+
-    |       | - id_loyaldiscount : int                 |
-    |       | - id_shop : int                          |
-    |       | - id_lang : int                          |
-    |       | - name : varchar                         |
-    |       | - description : text                     |
-    |       |                                          |
-    |       | PK: id_loyaltydiscount, id_shop, id_lang |
-    |       +------------------------------------------+
-    |
-    |       +---------------------------------+
-    +------&amp;gt;|       loyaltydiscount_shop      |
-            +---------------------------------+
-            | - id_loyaldiscount : int        |
-            | - id_shop : int                 |
-            |                                 |
-            | PK: id_loyaltydiscount, id_shop |
-            +---------------------------------+
-
+// imports the module hello.js
+var hello = R(&#39;src.controllers&#39;, &#39;hello.js&#39;, true);
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;surcharge-de-la-classe-specificprice-https-github-com-prestashop-prestashop-blob-1-6-classes-specificprice-php&#34;&gt;Surcharge de la classe &lt;a href=&#34;https://github.com/PrestaShop/PrestaShop/blob/1.6/classes/SpecificPrice.php&#34;&gt;SpecificPrice&lt;/a&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;builder-usage:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;Builder usage&lt;/h2&gt;
 
-&lt;p&gt;La méthode &lt;a href=&#34;https://github.com/PrestaShop/PrestaShop/blob/1.6/classes/SpecificPrice.php#L201&#34;&gt;getSpecificPrice&lt;/a&gt;
-de la classe &lt;a href=&#34;https://github.com/PrestaShop/PrestaShop/blob/1.6/classes/SpecificPrice.php&#34;&gt;SpecificPrice&lt;/a&gt; est
-surchargée pour appliquer une éventuelle réduction conditionnée par l&amp;rsquo;achat d&amp;rsquo;un autre produit.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var Resolver = require(&#39;dotresolver&#39;);
 
-&lt;p&gt;L&amp;rsquo;application d&amp;rsquo;une éventuelle réduction est réalisée sous plusieures conditions :
-* Le module &lt;code&gt;loyaltydiscount&lt;/code&gt; est activé ;
-* Le produit a acheter fait l&amp;rsquo;objet d&amp;rsquo;une réduction de fidélité (il existe au moins une
-  ligne dans la table &lt;code&gt;loyaltydiscount&lt;/code&gt; où la colonne &lt;code&gt;id_product_discounted&lt;/code&gt; est
-  égale à celle du produit à acheter) ;
-* La réduction de fidélité est activée (colonne &lt;code&gt;active&lt;/code&gt; égale à &lt;code&gt;1&lt;/code&gt;);
-* L&amp;rsquo;acheteur a une commande validée avec le produit désigné par la colonne &lt;code&gt;id_product_purchased&lt;/code&gt;.&lt;/p&gt;
+// builds resolver with some aliases
+var R = Resolver.Builder(__dirname)
+            .set(&#39;ctrl&#39;, &#39;src.controllers&#39;)
+            .set(&#39;css&#39;, &#39;public.styles&#39;)
+            .get();
 
-&lt;h3 id=&#34;attention&#34;&gt;Attention&lt;/h3&gt;
+// displays the path /home/steven/myapp/public/src/styles/base.css
+console.log(R(&#39;css&#39;, &#39;base.css&#39;));
 
-&lt;p&gt;&lt;strong&gt;Les réductions de fidélité se cumulent!&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Par exemple, si l&amp;rsquo;achat du produit A donne 5% de réduction sur le produit C et que l&amp;rsquo;achat
-du produit B donne 10% de réduction sur le produit C, un acheteur peut cumuler 15% de réduction
-(s&amp;rsquo;il a des commandes valides contenant l&amp;rsquo;achat des produits A et B).&lt;/p&gt;
-
-&lt;p&gt;Ce comportement est dû à l&amp;rsquo;incrémentation dans la fonction statique &lt;code&gt;applyPossibleDiscount&lt;/code&gt;
-de la classe &lt;code&gt;LoyaltyDiscount&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;if ($res[&#39;n&#39;] &amp;gt; 0)
-	$rate += $row[&#39;rate&#39;];
+// imports the module hello.js
+var hello = R(&#39;ctrl&#39;, &#39;hello.js&#39;, true);
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;em&gt;Note: remplacer &lt;code&gt;+=&lt;/code&gt; par &lt;code&gt;=&lt;/code&gt; annule ce comportement.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;api:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;API&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://cdn.rawgit.com/enten/dotresolver/master/docs/dotresolver/0.3.0/index.html&#34;&gt;API documentation&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;tests:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;Tests&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;npm test
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;release-history:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;Release History&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;0.2.8 Fix issue &lt;a href=&#34;https://github.com/enten/dotresolver/issues/3&#34;&gt;#3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;0.2.7 Add helper to create URI resolver&lt;/li&gt;
+&lt;li&gt;0.2.6 Fix issue &lt;a href=&#34;https://github.com/enten/dotresolver/issues/2&#34;&gt;#2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;0.2.5 Support object of aliases with setAlias()&lt;/li&gt;
+&lt;li&gt;0.2.3 Improve the path building&lt;/li&gt;
+&lt;li&gt;0.2.0 Remove real root path features&lt;/li&gt;
+&lt;li&gt;0.1.0 Initial release&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;credits:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;Credits&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/enten&#34;&gt;Steven Enten&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;license:32c9d7f2e03dc5fb9db4e279d8bc6785&#34;&gt;License&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/enten/dotresolver/blob/master/LICENSE&#34;&gt;MIT&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

@@ -18,14 +18,14 @@
       <guid>http://enten.github.io/steven/ps-loyaltydiscount/</guid>
       <description>
 
-&lt;h2 id=&#34;présentation&#34;&gt;Présentation&lt;/h2&gt;
+&lt;h2 id=&#34;présentation:f2eb191022e0f993832328245abd281b&#34;&gt;Présentation&lt;/h2&gt;
 
 &lt;p&gt;Module &lt;a href=&#34;http://doc.prestashop.com/display/PS16/&#34;&gt;PrestaShop 1.6&lt;/a&gt; permettant de gérer
 des remises conditionnées par l&amp;rsquo;achat.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Illustration : l&amp;rsquo;achat d&amp;rsquo;un produit A par un client lui fait bénéficier d&amp;rsquo;une remise sur un produit B.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;h2 id=&#34;installation:f2eb191022e0f993832328245abd281b&#34;&gt;Installation&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;cd &amp;lt;PRESTASHOP_HOME&amp;gt;/modules
 git clone https://github.com/enten/ps-loyaltydiscount loyaltydiscount
@@ -35,15 +35,15 @@ chown -R www-data loyaltydiscount
 &lt;p&gt;Se rendre dans le menu &lt;code&gt;Modules&lt;/code&gt; de l&amp;rsquo;interface d&amp;rsquo;administration et
 installer le nouveau module &lt;code&gt;Loyalty Discount&lt;/code&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;administration&#34;&gt;Administration&lt;/h2&gt;
+&lt;h2 id=&#34;administration:f2eb191022e0f993832328245abd281b&#34;&gt;Administration&lt;/h2&gt;
 
 &lt;p&gt;L&amp;rsquo;installation du module ajoute le lien &lt;code&gt;Loyalty Discount&lt;/code&gt; dans le menu &lt;code&gt;Price Rules&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;L&amp;rsquo;interface proposée permet de configurer simplement de nouvelles réductions de fidélité.&lt;/p&gt;
 
-&lt;h2 id=&#34;fonctionnement&#34;&gt;Fonctionnement&lt;/h2&gt;
+&lt;h2 id=&#34;fonctionnement:f2eb191022e0f993832328245abd281b&#34;&gt;Fonctionnement&lt;/h2&gt;
 
-&lt;h3 id=&#34;tables-de-données&#34;&gt;Tables de données&lt;/h3&gt;
+&lt;h3 id=&#34;tables-de-données:f2eb191022e0f993832328245abd281b&#34;&gt;Tables de données&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;+-------------------------------+
 |        loyaltydiscount        |
@@ -82,7 +82,7 @@ installer le nouveau module &lt;code&gt;Loyalty Discount&lt;/code&gt;.&lt;/p&gt;
 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;surcharge-de-la-classe-specificprice-https-github-com-prestashop-prestashop-blob-1-6-classes-specificprice-php&#34;&gt;Surcharge de la classe &lt;a href=&#34;https://github.com/PrestaShop/PrestaShop/blob/1.6/classes/SpecificPrice.php&#34;&gt;SpecificPrice&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;surcharge-de-la-classe-specificprice-https-github-com-prestashop-prestashop-blob-1-6-classes-specificprice-php:f2eb191022e0f993832328245abd281b&#34;&gt;Surcharge de la classe &lt;a href=&#34;https://github.com/PrestaShop/PrestaShop/blob/1.6/classes/SpecificPrice.php&#34;&gt;SpecificPrice&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;La méthode &lt;a href=&#34;https://github.com/PrestaShop/PrestaShop/blob/1.6/classes/SpecificPrice.php#L201&#34;&gt;getSpecificPrice&lt;/a&gt;
 de la classe &lt;a href=&#34;https://github.com/PrestaShop/PrestaShop/blob/1.6/classes/SpecificPrice.php&#34;&gt;SpecificPrice&lt;/a&gt; est
@@ -96,7 +96,7 @@ surchargée pour appliquer une éventuelle réduction conditionnée par l&amp;rs
 * La réduction de fidélité est activée (colonne &lt;code&gt;active&lt;/code&gt; égale à &lt;code&gt;1&lt;/code&gt;);
 * L&amp;rsquo;acheteur a une commande validée avec le produit désigné par la colonne &lt;code&gt;id_product_purchased&lt;/code&gt;.&lt;/p&gt;
 
-&lt;h3 id=&#34;attention&#34;&gt;Attention&lt;/h3&gt;
+&lt;h3 id=&#34;attention:f2eb191022e0f993832328245abd281b&#34;&gt;Attention&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;Les réductions de fidélité se cumulent!&lt;/strong&gt;&lt;/p&gt;
 

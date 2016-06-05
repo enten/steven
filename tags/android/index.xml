@@ -18,7 +18,7 @@
       <guid>http://enten.github.io/steven/2015/06/15/android-5.1.1-x86_64/</guid>
       <description>
 
-&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;h2 id=&#34;introduction:eb32e07afaade8725df5826d2da1209e&#34;&gt;Introduction&lt;/h2&gt;
 
 &lt;p&gt;Le projet &lt;a href=&#34;http://www.android-x86.org/&#34;&gt;android-x86&lt;/a&gt; est un fork d&amp;rsquo;Android Open Source Project (&lt;a href=&#34;http://source.android.com/&#34;&gt;AOSP&lt;/a&gt;) permettant d&amp;rsquo;installer Android sur PC (la compilation de ses sources produit une image CD bootable). Ce fork fût longtemps la seule solution pour compiler simplement Android pour plateforme x86.&lt;/p&gt;
 
@@ -27,7 +27,7 @@ En effet la compilation de ces 2 projets ne produit pas le même résultat (une 
 
 &lt;p&gt;&lt;strong&gt;Nous discuterons dans cette article uniquement d&amp;rsquo;AOSP et de la manière de compiler ses sources pour des architectures 64-bits.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;contexte&#34;&gt;Contexte&lt;/h2&gt;
+&lt;h2 id=&#34;contexte:eb32e07afaade8725df5826d2da1209e&#34;&gt;Contexte&lt;/h2&gt;
 
 &lt;p&gt;Peu de temps après notre expérience de &lt;a href=&#34;http://enten.github.io/steven/page/virtualiser-android-5-lollipop-avec-qemu/&#34;&gt;virtualisation d&amp;rsquo;Android 5 Lollipop avec Qemu&lt;/a&gt;, nous avons constaté que des images 64-bits précompilées d&amp;rsquo;Android étaient proposées en téléchargement par le &lt;a href=&#34;http://developer.android.com/tools/help/sdk-manager.html&#34;&gt;SDK Manager&lt;/a&gt;.&lt;/p&gt;
 
@@ -94,13 +94,13 @@ En effet la compilation de ces 2 projets ne produit pas le même résultat (une 
 
 &lt;p&gt;Nous sommes maintenant certains qu&amp;rsquo;il est possible de compiler AOSP pour des architectures x86_64, et ce depuis la version 5.0.1 d&amp;rsquo;Android.&lt;/p&gt;
 
-&lt;h2 id=&#34;expérience&#34;&gt;Expérience&lt;/h2&gt;
+&lt;h2 id=&#34;expérience:eb32e07afaade8725df5826d2da1209e&#34;&gt;Expérience&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;Dans cette section, nous allons compiler Android pour architecture x86_64 à partir des sources du projet officiel (AOSP).&lt;/strong&gt; Les images résultantes de la compilation pourront être utilisées directement avec Qemu ou l&amp;rsquo;outil &lt;a href=&#34;http://developer.android.com/tools/help/emulator.html&#34;&gt;emulator&lt;/a&gt; du SDK. &lt;strong&gt;Nous souhaitons également recompiler un kernel  Linux compatible&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;L&amp;rsquo;expérience semble simple. Toute fois, des problèmes de compatibilité de versions peuvent rendrent l&amp;rsquo;expérience moins évidente.&lt;/p&gt;
 
-&lt;h3 id=&#34;prérequis-matériel&#34;&gt;Prérequis matériel&lt;/h3&gt;
+&lt;h3 id=&#34;prérequis-matériel:eb32e07afaade8725df5826d2da1209e&#34;&gt;Prérequis matériel&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Processeur amd64&lt;/li&gt;
@@ -109,7 +109,7 @@ En effet la compilation de ces 2 projets ne produit pas le même résultat (une 
 &lt;li&gt;Système d&amp;rsquo;exploitation GNU/Linux récent&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;versions&#34;&gt;Versions&lt;/h3&gt;
+&lt;h3 id=&#34;versions:eb32e07afaade8725df5826d2da1209e&#34;&gt;Versions&lt;/h3&gt;
 
 &lt;p&gt;Voici les différentes versions des composants utilisés pour compiler AOSP x86_64.&lt;/p&gt;
 
@@ -124,9 +124,9 @@ En effet la compilation de ces 2 projets ne produit pas le même résultat (une 
 &lt;p&gt;&lt;strong&gt;WARNING&lt;/strong&gt;
 Pour pouvoir compiler un kernel Linux compatible avec les images résultantes de la compilation d&amp;rsquo;AOSP branche &lt;code&gt;android-5.1.1_r4&lt;/code&gt;, il est important d&amp;rsquo;utiliser la branche &lt;code&gt;android-goldfish-3.10&lt;/code&gt; du projet &lt;code&gt;kernel/goldfish&lt;/code&gt; à son état du 16 sept. 2014 (commit 43dbfdb838).&lt;/p&gt;
 
-&lt;h3 id=&#34;préparer-l-environnement-d-assemblage&#34;&gt;Préparer l&amp;rsquo;environnement d&amp;rsquo;assemblage&lt;/h3&gt;
+&lt;h3 id=&#34;préparer-l-environnement-d-assemblage:eb32e07afaade8725df5826d2da1209e&#34;&gt;Préparer l&amp;rsquo;environnement d&amp;rsquo;assemblage&lt;/h3&gt;
 
-&lt;h4 id=&#34;jdk-7&#34;&gt;JDK 7&lt;/h4&gt;
+&lt;h4 id=&#34;jdk-7:eb32e07afaade8725df5826d2da1209e&#34;&gt;JDK 7&lt;/h4&gt;
 
 &lt;p&gt;Installer un JDK 7 (Java Open JDK 7 par exemple).&lt;/p&gt;
 
@@ -139,7 +139,7 @@ Pour pouvoir compiler un kernel Linux compatible avec les images résultantes de
 $ sudo update-alternatives --config javac
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;packages-requis&#34;&gt;Packages requis&lt;/h4&gt;
+&lt;h4 id=&#34;packages-requis:eb32e07afaade8725df5826d2da1209e&#34;&gt;Packages requis&lt;/h4&gt;
 
 &lt;p&gt;Installer les packages nécessaires pour compiler AOSP.&lt;/p&gt;
 
@@ -163,7 +163,7 @@ $ PATH=~/bin:$PATH
 
 &lt;p&gt;&lt;small&gt;Référence : &lt;a href=&#34;http://source.android.com/source/initializing.html#setting-up-a-linux-build-environment&#34;&gt;Setting up a Linux build environment&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;sources-d-aosp&#34;&gt;Sources d&amp;rsquo;AOSP&lt;/h3&gt;
+&lt;h3 id=&#34;sources-d-aosp:eb32e07afaade8725df5826d2da1209e&#34;&gt;Sources d&amp;rsquo;AOSP&lt;/h3&gt;
 
 &lt;p&gt;Nous allons maintenant récupérer les sources officielles d&amp;rsquo;Android.&lt;/p&gt;
 
@@ -177,7 +177,7 @@ $ repo sync
 
 &lt;p&gt;&lt;strong&gt;Attention&lt;/strong&gt; La synchronisation des sources d&amp;rsquo;AOSP dure plusieurs heures (à la faveur d&amp;rsquo;une connexion Internet grand public).&lt;/p&gt;
 
-&lt;h3 id=&#34;compiler-aosp&#34;&gt;Compiler AOSP&lt;/h3&gt;
+&lt;h3 id=&#34;compiler-aosp:eb32e07afaade8725df5826d2da1209e&#34;&gt;Compiler AOSP&lt;/h3&gt;
 
 &lt;p&gt;Une fois les sources d&amp;rsquo;AOSP récupérées, quelques lignes de commandes suffisent à charger la configuration d&amp;rsquo;assemblage &lt;code&gt;aosp_x86_64-eng&lt;/code&gt; pour produire des images x86_64 d&amp;rsquo;Android.&lt;/p&gt;
 
@@ -209,7 +209,7 @@ $ lunch aosp_x86_64-eng
 
 &lt;p&gt;&lt;strong&gt;A la fin de la comilation, les images des systèmes de fichiers créées sont disponibles dans le répertoire &lt;code&gt;&amp;lt;aosp&amp;gt;/out/target/production/generic_x86_64&lt;/code&gt;.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;compiler-goldfish&#34;&gt;Compiler Goldfish&lt;/h3&gt;
+&lt;h3 id=&#34;compiler-goldfish:eb32e07afaade8725df5826d2da1209e&#34;&gt;Compiler Goldfish&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://android.googlesource.com/kernel/goldfish&#34;&gt;Goldfish&lt;/a&gt; est une version du kernel Linux adaptée pour Android. Lorsque l&amp;rsquo;on utilise l&amp;rsquo;&lt;a href=&#34;http://developer.android.com/tools/help/avd-manager.html&#34;&gt;AVD Manager&lt;/a&gt; pour créer des émulateurs, des images pré-compilées du kernel Goldfish sont utilisées.&lt;/p&gt;
 
@@ -241,7 +241,7 @@ make -j8
 
 &lt;p&gt;&lt;strong&gt;A la fin de la comilation, le kernel compilé est disponible dans le répertoire &lt;code&gt;&amp;lt;goldfish&amp;gt;/arch/x86/boot&lt;/code&gt; sous le nom &lt;code&gt;bzImage&lt;/code&gt;.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;tester&#34;&gt;Tester&lt;/h3&gt;
+&lt;h3 id=&#34;tester:eb32e07afaade8725df5826d2da1209e&#34;&gt;Tester&lt;/h3&gt;
 
 &lt;p&gt;Nous disposons maintenant de tous les fichiers nécessaires pour lancer un émulateur Android x86_64 100% custom (recompilé par nos soins).&lt;/p&gt;
 
@@ -272,7 +272,7 @@ make -j8
       <guid>http://enten.github.io/steven/2014/12/30/lxc-et-android-5-arm64/</guid>
       <description>
 
-&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;h2 id=&#34;introduction:73f568a5d974ee5ceff045d666741606&#34;&gt;Introduction&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://linuxcontainers.org/lxc/introduction/&#34;&gt;LXC&lt;/a&gt; (contraction de &lt;em&gt;Linux Containers&lt;/em&gt;) est un logiciel permettant de gérer des conteneurs logiciels. Conrètement, LXC peut isole l&amp;rsquo;exécution de plusieurs environnements Linux sur une même machine. L&amp;rsquo;isolation est réalisée grâce à l&amp;rsquo;exploitation des modules de gestion de namespaces du Kernel Linux.&lt;/p&gt;
 
@@ -282,11 +282,11 @@ make -j8
 
 &lt;p&gt;LXC n&amp;rsquo;étant pas une application du Google Play Store, son installation sur Android n&amp;rsquo;est pas évidente. L&amp;rsquo;utilisateur qui souhaite se lancer sur cette voie est rapidement confronté à des problèmes systèmes. &lt;strong&gt;Dans la sections suivantes, nous décrivons les principaux problèmes que nous avons rencontrés pour installer et utiliser LXC sur Android 5 Lollipop&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;contexte&#34;&gt;Contexte&lt;/h2&gt;
+&lt;h2 id=&#34;contexte:73f568a5d974ee5ceff045d666741606&#34;&gt;Contexte&lt;/h2&gt;
 
 &lt;p&gt;Avant d&amp;rsquo;aborder les problèmes d&amp;rsquo;installation de LXC sur Android que nous avons rencontrés, il est important que le lecteur ait connaissance de notre plateforme de test.&lt;/p&gt;
 
-&lt;h3 id=&#34;matériel&#34;&gt;Matériel&lt;/h3&gt;
+&lt;h3 id=&#34;matériel:73f568a5d974ee5ceff045d666741606&#34;&gt;Matériel&lt;/h3&gt;
 
 &lt;p&gt;Nous avons souhaité réaliser ces tests sur un appareil disposant d&amp;rsquo;une architecture ARM 64-bits (ARMv8). Ce type d&amp;rsquo;appareil n&amp;rsquo;étant pas encore démocratisé, nous avons fait le choix d&amp;rsquo;utiliser une machine virtuelle Qemu.&lt;/p&gt;
 
@@ -294,7 +294,7 @@ make -j8
 
 &lt;p&gt;Une fois lancé, notre appareil virtuel dispose d&amp;rsquo;un CPU cortex-a57 et de 4Go de mémoire vive. Il dispose également de 16Go de mémoire disque (en modifiant la taille de l&amp;rsquo;image &lt;code&gt;data.img&lt;/code&gt;, voir section suivante).&lt;/p&gt;
 
-&lt;h3 id=&#34;système-d-exploitation&#34;&gt;Système d&amp;rsquo;exploitation&lt;/h3&gt;
+&lt;h3 id=&#34;système-d-exploitation:73f568a5d974ee5ceff045d666741606&#34;&gt;Système d&amp;rsquo;exploitation&lt;/h3&gt;
 
 &lt;p&gt;Notre choix d&amp;rsquo;architecture ARM 64-bits nous impose l&amp;rsquo;utilisation de la version 5 (Lollipop) d&amp;rsquo;Android car c&amp;rsquo;est la seule version supportant ce type d&amp;rsquo;architecture.&lt;/p&gt;
 
@@ -309,7 +309,7 @@ resize2fs userdata.img
 e2fsck -f userdata.img
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;kernel-linux&#34;&gt;Kernel Linux&lt;/h3&gt;
+&lt;h3 id=&#34;kernel-linux:73f568a5d974ee5ceff045d666741606&#34;&gt;Kernel Linux&lt;/h3&gt;
 
 &lt;p&gt;Nous utilisons une version dérivée du noyau Linux. Cette version correspond à la version 3.10 du noyau officiel. Ce noyau est précompilé dans les sources d&amp;rsquo;AOSP et est disponible dans le répertoire &lt;code&gt;prebuilts/qemu-kernel/arm64&lt;/code&gt; sous le fichier &lt;code&gt;kernel-qemu&lt;/code&gt;.&lt;/p&gt;
 
@@ -317,23 +317,23 @@ e2fsck -f userdata.img
 
 &lt;p&gt;&lt;em&gt;Note : &lt;code&gt;goldfish&lt;/code&gt; désigne les modules des périphériques virtuels nécessaires pour virtualiser Android avec Qemu. Nous vous recommandons la lecture de &lt;a href=&#34;https://android.googlesource.com/platform/external/qemu.git/+/master/docs/GOLDFISH-VIRTUAL-HARDWARE.TXT&#34;&gt;GOLDFISH-VIRTUAL-HARDWARE.TXT&lt;/a&gt; pour en savoir plus.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;configuration-réseau&#34;&gt;Configuration réseau&lt;/h3&gt;
+&lt;h3 id=&#34;configuration-réseau:73f568a5d974ee5ceff045d666741606&#34;&gt;Configuration réseau&lt;/h3&gt;
 
 &lt;p&gt;Pour que notre appareil fictif ait sa propre adresse IP, nous avons configuré une interface réseau virtuelle connectée à la machine host (utilisée pour les tests) via une interface bridge.&lt;/p&gt;
 
 &lt;p&gt;Ainsi, lorsque l&amp;rsquo;appareil virtuel Android est démarré, il suffit de lancer la directive &lt;code&gt;dhcpcd eth0&lt;/code&gt; pour demander au DHCP du réseau l&amp;rsquo;attribution d&amp;rsquo;une adresse IP (grâce à l&amp;rsquo;interface bridge, le DHCP traite la requête de notre périphérique virtuel comme celle de n&amp;rsquo;importe quelle machine physique du réseau).&lt;/p&gt;
 
-&lt;h2 id=&#34;problèmes-fondamentaux&#34;&gt;Problèmes fondamentaux&lt;/h2&gt;
+&lt;h2 id=&#34;problèmes-fondamentaux:73f568a5d974ee5ceff045d666741606&#34;&gt;Problèmes fondamentaux&lt;/h2&gt;
 
-&lt;h3 id=&#34;système-unix-restreint&#34;&gt;Système Unix restreint&lt;/h3&gt;
+&lt;h3 id=&#34;système-unix-restreint:73f568a5d974ee5ceff045d666741606&#34;&gt;Système Unix restreint&lt;/h3&gt;
 
-&lt;h4 id=&#34;problème&#34;&gt;Problème&lt;/h4&gt;
+&lt;h4 id=&#34;problème:73f568a5d974ee5ceff045d666741606&#34;&gt;Problème&lt;/h4&gt;
 
 &lt;p&gt;Android est un système d&amp;rsquo;exploitation Linux destiné à piloter des systèmes embarqués. La philosophie d&amp;rsquo;Android a conduit ses développeurs à intégrer les outils systèmes uniquement nécessaire à son fonctionnement.&lt;/p&gt;
 
 &lt;p&gt;Cette optimisation du système fait d&amp;rsquo;Android une &lt;strong&gt;distribution Linux &amp;laquo;restrictive&amp;raquo; dans le sens où les utilisateurs&lt;/strong&gt;, familiarisés à l&amp;rsquo;utilisation d&amp;rsquo;une des distribution Linux majeures (Debian par exemple), &lt;strong&gt;ne retrouvent pas les outils nécessaires à leurs usages habituels&lt;/strong&gt; (comme un gestionnaire de paquets).&lt;/p&gt;
 
-&lt;h4 id=&#34;solution&#34;&gt;Solution&lt;/h4&gt;
+&lt;h4 id=&#34;solution:73f568a5d974ee5ceff045d666741606&#34;&gt;Solution&lt;/h4&gt;
 
 &lt;p&gt;Pour pouvoir utiliser certains utilitaires UNIX absents d&amp;rsquo;Android, il est d&amp;rsquo;usage d&amp;rsquo;&lt;strong&gt;installer une version ARM de &lt;a href=&#34;http://busybox.net/about.html&#34;&gt;busybox&lt;/a&gt;&lt;/strong&gt; (en copiant son binaire dans le répertoire &lt;code&gt;/system/bin&lt;/code&gt;).&lt;/p&gt;
 
@@ -341,26 +341,26 @@ e2fsck -f userdata.img
 
 &lt;p&gt;On peut alors installer facilement LXC grâce à &lt;code&gt;pacman&lt;/code&gt;, le gestionnaire de paquets d&amp;rsquo;Archlinux.&lt;/p&gt;
 
-&lt;h3 id=&#34;echec-des-connexions-https&#34;&gt;Echec des connexions HTTPS&lt;/h3&gt;
+&lt;h3 id=&#34;echec-des-connexions-https:73f568a5d974ee5ceff045d666741606&#34;&gt;Echec des connexions HTTPS&lt;/h3&gt;
 
-&lt;h4 id=&#34;problème-1&#34;&gt;Problème&lt;/h4&gt;
+&lt;h4 id=&#34;problème-1:73f568a5d974ee5ceff045d666741606&#34;&gt;Problème&lt;/h4&gt;
 
 &lt;p&gt;Une fois le rootfs Archlinux installé et configuré, nous avons souhaité mettre à jour les paquets et installer le paquet LXC. Au cours de cette manipulation, nous avons constaté l&amp;rsquo;&lt;strong&gt;impossibilité d&amp;rsquo;établir une connexion via le protocole &lt;code&gt;https&lt;/code&gt;&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;h4 id=&#34;solution-1&#34;&gt;Solution&lt;/h4&gt;
+&lt;h4 id=&#34;solution-1:73f568a5d974ee5ceff045d666741606&#34;&gt;Solution&lt;/h4&gt;
 
 &lt;p&gt;Ce problème est lié à la date du système. En effet, la date de notre appareil virtuel une fois lancé est assignée au 1/1/1970. Pour corriger ce problème, &lt;strong&gt;il suffit de mettre à jour la date du système&lt;/strong&gt; (avec l&amp;rsquo;utilitaire &lt;code&gt;rdate&lt;/code&gt; de &lt;code&gt;busybox&lt;/code&gt; par exemple).&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;busybox rdate -s ntp.unice.fr
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;modules-du-kernel-manquants&#34;&gt;Modules du Kernel manquants&lt;/h3&gt;
+&lt;h3 id=&#34;modules-du-kernel-manquants:73f568a5d974ee5ceff045d666741606&#34;&gt;Modules du Kernel manquants&lt;/h3&gt;
 
-&lt;h4 id=&#34;problème-2&#34;&gt;Problème&lt;/h4&gt;
+&lt;h4 id=&#34;problème-2:73f568a5d974ee5ceff045d666741606&#34;&gt;Problème&lt;/h4&gt;
 
 &lt;p&gt;Après avoir installé LXC avec &lt;code&gt;pacman&lt;/code&gt;, et avant de lancer notre premier test de conteneur, nous avons utilisé le script &lt;a href=&#34;https://github.com/lxc/lxc/blob/master/src/lxc/lxc-checkconfig.in&#34;&gt;lxc-checkconfig&lt;/a&gt;. Ce script lit la configuration du kernel utilisée pour sa compilation. Il vérifit la présence de certaines constantes nécessaires à la compilation des modules requis par LXC. Avec ce script, nous avons pu constater l&amp;rsquo;&lt;strong&gt;absence de modules (du kernel précompilé) nécessaires au bon fonctionnement de LXC&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;h4 id=&#34;solution-2&#34;&gt;Solution&lt;/h4&gt;
+&lt;h4 id=&#34;solution-2:73f568a5d974ee5ceff045d666741606&#34;&gt;Solution&lt;/h4&gt;
 
 &lt;p&gt;Nous avons &lt;strong&gt;recompilé le kernel&lt;/strong&gt; à partir des sources du projet &lt;code&gt;kernel/goldfish&lt;/code&gt;. Avant de recompiler le kernel, nous avons &lt;strong&gt;modifié la configuration de compilation &lt;code&gt;ranchu_defconfig&lt;/code&gt;&lt;/strong&gt; (fichier uniquement présent dans le répertoire &lt;code&gt;arch/arm64/configs/&lt;/code&gt; de la branche &lt;code&gt;android-goldfish-3.10&lt;/code&gt;) pour y ajouter les constantes suivantes :&lt;/p&gt;
 
@@ -392,13 +392,13 @@ CONFIG_CFQ_GROUP_IOSCHED=y
 
 &lt;p&gt;&lt;strong&gt;Important&lt;/strong&gt; : La constante &lt;code&gt;CONFIG_USER_NS&lt;/code&gt; est volontairement désactivée à cause d&amp;rsquo;un problème de compilation (lié à la version des sources de ce module).&lt;/p&gt;
 
-&lt;h3 id=&#34;impossibilité-de-lancer-des-binaires-non-pie&#34;&gt;Impossibilité de lancer des binaires non-PIE&lt;/h3&gt;
+&lt;h3 id=&#34;impossibilité-de-lancer-des-binaires-non-pie:73f568a5d974ee5ceff045d666741606&#34;&gt;Impossibilité de lancer des binaires non-PIE&lt;/h3&gt;
 
-&lt;h4 id=&#34;problème-3&#34;&gt;Problème&lt;/h4&gt;
+&lt;h4 id=&#34;problème-3:73f568a5d974ee5ceff045d666741606&#34;&gt;Problème&lt;/h4&gt;
 
 &lt;p&gt;Au cours de nos tests, nous avons rencontré une sécurité système propre à Android 5 (branche &lt;code&gt;android-5.0.0_r7&lt;/code&gt;). Ce test de sécurité &lt;strong&gt;bloque l&amp;rsquo;exécution de fichiers binaires non-&lt;a href=&#34;http://en.wikipedia.org/wiki/Position-independent_code&#34;&gt;PIE&lt;/a&gt;&lt;/strong&gt;. Pour qu&amp;rsquo;un exécutable soit PIE, il faut le spécifier à sa compilation.&lt;/p&gt;
 
-&lt;h4 id=&#34;solution-3&#34;&gt;Solution&lt;/h4&gt;
+&lt;h4 id=&#34;solution-3:73f568a5d974ee5ceff045d666741606&#34;&gt;Solution&lt;/h4&gt;
 
 &lt;p&gt;Pour outre passer cette sécurité, un &lt;a href=&#34;http://forum.xda-developers.com/google-nexus-5/development/fix-bypassing-pie-security-check-t2797731&#34;&gt;patch a été développé par un membre du forum XDA-Developers&lt;/a&gt;. Cette solution semble fonctionner selon certains utilisateurs. Nous avons préférés &lt;strong&gt;recompiler le code source en désactivant cette sécurité&lt;/strong&gt;. Pour cela nous avons commenter le bloc de code ci-dessous dans le fichier &lt;code&gt;bionic/linker/linker.cpp&lt;/code&gt;&lt;/p&gt;
 
@@ -408,13 +408,13 @@ CONFIG_CFQ_GROUP_IOSCHED=y
 2184    //}
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;cgroups-non-montés&#34;&gt;Cgroups non-montés&lt;/h3&gt;
+&lt;h3 id=&#34;cgroups-non-montés:73f568a5d974ee5ceff045d666741606&#34;&gt;Cgroups non-montés&lt;/h3&gt;
 
-&lt;h4 id=&#34;problème-4&#34;&gt;Problème&lt;/h4&gt;
+&lt;h4 id=&#34;problème-4:73f568a5d974ee5ceff045d666741606&#34;&gt;Problème&lt;/h4&gt;
 
 &lt;p&gt;Lorsque non consultons le fichier &lt;code&gt;/proc/cgroups&lt;/code&gt;, nous constatons la présence plusieurs cgroups. Or lorsque nous consultons les périphériques montés (avec la commande &lt;code&gt;mount&lt;/code&gt;), nous avons constaté que seul le cgroup &lt;code&gt;memory&lt;/code&gt; était monté. &lt;strong&gt;La majorité des cgroups ne sont donc pas montés&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;h4 id=&#34;solution-4&#34;&gt;Solution&lt;/h4&gt;
+&lt;h4 id=&#34;solution-4:73f568a5d974ee5ceff045d666741606&#34;&gt;Solution&lt;/h4&gt;
 
 &lt;p&gt;Il faut &lt;strong&gt;monter les cgroups manquants&lt;/strong&gt;. Pour cela nous nous sommes basés sur les &lt;a href=&#34;https://github.com/tianon/cgroupfs-mount/&#34;&gt;scripts de tianon&lt;/a&gt; à la différence que nous montons les cgroups dans la racine de notre rootfs Archlinux (étant donné que nous utilisons LXC à travers ce rootfs).&lt;/p&gt;
 
@@ -428,13 +428,13 @@ done
 
 &lt;p&gt;&lt;strong&gt;Important&lt;/strong&gt; : si l&amp;rsquo;arborescence des cgroups n&amp;rsquo;est pas montée dans le rootfs, il ne sera pas possible de lancer plus d&amp;rsquo;un conteneur à la fois.&lt;/p&gt;
 
-&lt;h3 id=&#34;echec-d-utilisation-des-cgroups-dans-un-rootfs&#34;&gt;Echec d&amp;rsquo;utilisation des cgroups dans un rootfs&lt;/h3&gt;
+&lt;h3 id=&#34;echec-d-utilisation-des-cgroups-dans-un-rootfs:73f568a5d974ee5ceff045d666741606&#34;&gt;Echec d&amp;rsquo;utilisation des cgroups dans un rootfs&lt;/h3&gt;
 
-&lt;h4 id=&#34;problème-5&#34;&gt;Problème&lt;/h4&gt;
+&lt;h4 id=&#34;problème-5:73f568a5d974ee5ceff045d666741606&#34;&gt;Problème&lt;/h4&gt;
 
 &lt;p&gt;Bien que les cgroups soient montés, ceux-ci sont &lt;strong&gt;inutilisables à cause d&amp;rsquo;un problème d&amp;rsquo;autorisation d&amp;rsquo;écriture&lt;/strong&gt; semble-t-il. N&amp;rsquo;ayant aucune expérience en matière d&amp;rsquo;utilisation des modules de gestion des namespaces, nous ne savions pas comment corriger ce problème. Néanmoins, nous étions persuadés que le problème était propre à Android (et probablement au fait qu&amp;rsquo;on utilise LXC à travers un rootfs).&lt;/p&gt;
 
-&lt;h4 id=&#34;solution-5&#34;&gt;Solution&lt;/h4&gt;
+&lt;h4 id=&#34;solution-5:73f568a5d974ee5ceff045d666741606&#34;&gt;Solution&lt;/h4&gt;
 
 &lt;p&gt;Pour tenter de résoudre ce problème, nous avons analysés les &lt;a href=&#34;https://web.archive.org/web/20140723085319/https://qa.linuxcontainers.org/master/current/android-armel/lxc-android.tar.gz&#34;&gt;fichiers utilisés par S. Graber&lt;/a&gt; dans sa démonstration de décembre 2013. Nous avons constaté qu&amp;rsquo;il utilisait un programme appellé &lt;code&gt;sbin&lt;/code&gt; pour remonter recursivement la racine du téléphone &lt;code&gt;/&lt;/code&gt; en mode privé.&lt;/p&gt;
 
@@ -442,9 +442,9 @@ done
 
 &lt;p&gt;&lt;em&gt;Note : le programme &lt;code&gt;sbin&lt;/code&gt; récupérée dans l&amp;rsquo;archive de S. Graber est non-PIE. Il est inutilisable si le programme &lt;code&gt;linker&lt;/code&gt; d&amp;rsquo;Android 5 n&amp;rsquo;est pas patché (comme expliqué précédemment).&lt;/em&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;conteneur-sans-accès-réseau&#34;&gt;Conteneur sans accès réseau&lt;/h3&gt;
+&lt;h3 id=&#34;conteneur-sans-accès-réseau:73f568a5d974ee5ceff045d666741606&#34;&gt;Conteneur sans accès réseau&lt;/h3&gt;
 
-&lt;h4 id=&#34;problème-6&#34;&gt;Problème&lt;/h4&gt;
+&lt;h4 id=&#34;problème-6:73f568a5d974ee5ceff045d666741606&#34;&gt;Problème&lt;/h4&gt;
 
 &lt;p&gt;Par défaut, la configuration réseau d&amp;rsquo;un conteneur est vide. Sans configuration réseau, &lt;strong&gt;le conteneur ne dispose pas d&amp;rsquo;interface pour être connecté en réseau (pas d&amp;rsquo;adresse IP)&lt;/strong&gt;. La configuration réseau &amp;laquo;vide&amp;raquo; est indiquée dans le fichier de configuration d&amp;rsquo;un conteneur par la ligne suivante :&lt;/p&gt;
 
@@ -452,7 +452,7 @@ done
 lxc.network.type = empty
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;solution-6&#34;&gt;Solution&lt;/h4&gt;
+&lt;h4 id=&#34;solution-6:73f568a5d974ee5ceff045d666741606&#34;&gt;Solution&lt;/h4&gt;
 
 &lt;p&gt;Parmis les différents types de configuration réseau supportés par LXC, &lt;strong&gt;le type &lt;code&gt;macvlan&lt;/code&gt; et son mode &lt;code&gt;bridge&lt;/code&gt; nous ont permis d&amp;rsquo;obtenir une IP propre pour nos conteneurs&lt;/strong&gt;. Nous vous recommandons la lecture de cet &lt;a href=&#34;http://containerops.org/2013/11/19/lxc-networking/&#34;&gt;excellent article du blog containerops.org&lt;/a&gt; pour en savoir plus sur les différents types de configuration réseau de LXC.&lt;/p&gt;
 
@@ -465,14 +465,13 @@ lxc.network.link = eth0
 
 &lt;p&gt;&lt;strong&gt;Attention&lt;/strong&gt; ! Souvenez-vous que l&amp;rsquo;utilisation d&amp;rsquo;un type de configuration réseau dépend des modules du kernel et du matériel sur lequel il est installé (par exemple l&amp;rsquo;option &lt;code&gt;CONFIG_MACVLAN=y&lt;/code&gt; utilisée pour recompiler le kernel est nécessaire pour utiliser le type de configuration &lt;code&gt;macvlan&lt;/code&gt; de LXC).&lt;/p&gt;
 
-&lt;h2 id=&#34;démonstration&#34;&gt;Démonstration&lt;/h2&gt;
+&lt;h2 id=&#34;démonstration:73f568a5d974ee5ceff045d666741606&#34;&gt;Démonstration&lt;/h2&gt;
 
 &lt;p&gt;&lt;em&gt;Cliquer sur l&amp;rsquo;image pour voir la vidéo.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.youtube.com/watch?v=1rW_lFyVY_w&#34;&gt;&lt;img src=&#34;http://img.youtube.com/vi/1rW_lFyVY_w/0.jpg&#34; alt=&#34;LXC on Android - Test 1&#34; /&gt;
-&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.youtube.com/watch?v=1rW_lFyVY_w&#34;&gt;&lt;img src=&#34;http://img.youtube.com/vi/1rW_lFyVY_w/0.jpg&#34; alt=&#34;LXC on Android - Test 1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;h2 id=&#34;conclusion:73f568a5d974ee5ceff045d666741606&#34;&gt;Conclusion&lt;/h2&gt;
 
 &lt;p&gt;L&amp;rsquo;installation de LXC sur Android requiert différentes maniputions du système. Afin de capitaliser les bonnes pratiques pour utiliser LXC sur Android, nous avons développé le script &lt;a href=&#34;https://gist.github.com/enten/63cedaca9bf019feb71a&#34;&gt;alfred&lt;/a&gt;. Cet outil est utilisé dans notre vidéo de démonstration.&lt;/p&gt;
 </description>
@@ -486,7 +485,7 @@ lxc.network.link = eth0
       <guid>http://enten.github.io/steven/2014/11/30/virtualiser-android-5-lollipop-avec-qemu/</guid>
       <description>
 
-&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;h2 id=&#34;introduction:305cc891b1c6a1a1f424f416b465955e&#34;&gt;Introduction&lt;/h2&gt;
 
 &lt;p&gt;Les dernières branches d&amp;rsquo;&lt;a href=&#34;https://source.android.com/&#34;&gt;Android Open Source Project&lt;/a&gt; (AOSP) – branches &lt;code&gt;android-5.x&lt;/code&gt; – proposent différentes configurations d&amp;rsquo;assemblages d&amp;rsquo;&lt;a href=&#34;https://www.android.com/versions/lollipop-5-0/&#34;&gt;Android 5 Lollipop&lt;/a&gt;.
 Chaque configuration d&amp;rsquo;assemblage correspond à un produit adapté à un type de plateformes d&amp;rsquo;exécutions. Pour compiler une version complète d&amp;rsquo;Android 5 pour plateformes ARM, il faut utiliser la configuration d&amp;rsquo;assemblage &lt;code&gt;aosp_arm-eng&lt;/code&gt; (pour les plateformes ARM 32-bits) ou &lt;code&gt;aosp_arm64-eng&lt;/code&gt; (pour les plateformes ARM 64-bits).&lt;/p&gt;
@@ -495,7 +494,7 @@ Chaque configuration d&amp;rsquo;assemblage correspond à un produit adapté à 
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;&lt;code&gt;ranchu_arm64-eng&lt;/code&gt;&lt;/strong&gt; : la compilation de ce produit permet d&amp;rsquo;obtenir une version complète d&amp;rsquo;Android 5 ARM 64-bits destinée à être exécutée dans une machine virtuelle (VM) Qemu ;&lt;/li&gt;
-&lt;li&gt;__&lt;code&gt;mini_emulator_arm64-userdebug&lt;/code&gt;__ : ce produit est similaire à &lt;code&gt;ranchu_arm64-eng&lt;/code&gt; à la différence que sa compilation permet d&amp;rsquo;obtenir une version simplifiée d&amp;rsquo;Android 5 embarquant le minimum de composants nécessaires à son fonctionnement.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;mini_emulator_arm64-userdebug&lt;/code&gt;&lt;/strong&gt; : ce produit est similaire à &lt;code&gt;ranchu_arm64-eng&lt;/code&gt; à la différence que sa compilation permet d&amp;rsquo;obtenir une version simplifiée d&amp;rsquo;Android 5 embarquant le minimum de composants nécessaires à son fonctionnement.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;La compilation d&amp;rsquo;un de ces produits créer des images de systèmes de fichiers (&lt;code&gt;ramdisk.img&lt;/code&gt;, &lt;code&gt;system.img&lt;/code&gt;, &lt;code&gt;cache.img&lt;/code&gt; et &lt;code&gt;userdata.img&lt;/code&gt;) devant être utilisées avec le &lt;a href=&#34;http://qemu.org/&#34;&gt;logiciel de virtualisation Qemu&lt;/a&gt;.
@@ -506,7 +505,7 @@ La compilation des sources du projet &lt;code&gt;qemu-android&lt;/code&gt; perme
 
 &lt;p&gt;Dans les sections suivantes, nous allons voir comment compiler Android 5 (produit &lt;code&gt;ranchu_arm64-eng&lt;/code&gt; ou &lt;code&gt;mini_emulator_arm64-userdebug&lt;/code&gt;) et le virtualiser dans une VM Qemu.&lt;/p&gt;
 
-&lt;h2 id=&#34;prérequis&#34;&gt;Prérequis&lt;/h2&gt;
+&lt;h2 id=&#34;prérequis:305cc891b1c6a1a1f424f416b465955e&#34;&gt;Prérequis&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Capacités processeur et mémoire importantes (la compilation nécessite parfois jusqu’à 4 Go de RAM) ;&lt;/li&gt;
@@ -517,7 +516,7 @@ La compilation des sources du projet &lt;code&gt;qemu-android&lt;/code&gt; perme
 
 &lt;p&gt;&lt;em&gt;Note : les manipulations décritent ci-dessous ont été réalisées sur un ordinateur disposant d’un processeur Intel Core i5 (2 cœurs cadencés à 1.8 Ghz supportant jusqu’à 4 threads par coeur), de 8 Go de mémoire RAM et de la distribution &lt;a href=&#34;http://releases.ubuntu.com/14.04.1&#34;&gt;Ubuntu 14.04.1 LTS&lt;/a&gt; 64-bits.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;préparer-l-environnement-d-assemblage&#34;&gt;Préparer l&amp;rsquo;environnement d&amp;rsquo;assemblage&lt;/h2&gt;
+&lt;h2 id=&#34;préparer-l-environnement-d-assemblage:305cc891b1c6a1a1f424f416b465955e&#34;&gt;Préparer l&amp;rsquo;environnement d&amp;rsquo;assemblage&lt;/h2&gt;
 
 &lt;p&gt;Installer la machine virtuelle Java (JVM) Open JDK 7 (nécessaire pour compiler les dernières branches d&amp;rsquo;Android)&lt;/p&gt;
 
@@ -548,7 +547,7 @@ $ curl https://storage.googleapis.com/git-repo-downloads/repo &amp;gt; ~/bin/rep
 $ chmod a+x ~/bin/repo
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;récupérer-les-sources-d-aosp&#34;&gt;Récupérer les sources d&amp;rsquo;AOSP&lt;/h2&gt;
+&lt;h2 id=&#34;récupérer-les-sources-d-aosp:305cc891b1c6a1a1f424f416b465955e&#34;&gt;Récupérer les sources d&amp;rsquo;AOSP&lt;/h2&gt;
 
 &lt;p&gt;Créer un répertoire pour le dépôt des sources d&amp;rsquo;AOSP&lt;/p&gt;
 
@@ -565,7 +564,7 @@ $ chmod a+x ~/bin/repo
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ repo sync
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;corriger-les-configurations-d-assemblage&#34;&gt;Corriger les configurations d&amp;rsquo;assemblage&lt;/h2&gt;
+&lt;h2 id=&#34;corriger-les-configurations-d-assemblage:305cc891b1c6a1a1f424f416b465955e&#34;&gt;Corriger les configurations d&amp;rsquo;assemblage&lt;/h2&gt;
 
 &lt;p&gt;Les premières branches d&amp;rsquo;Android 5 souffrent de petits bugs nécessitant une modification manuelle des sources pour pouvoir compiler les produits &lt;code&gt;ranchu_arm64-eng&lt;/code&gt; et &lt;code&gt;mini_emulator_arm64-userdebug&lt;/code&gt; :&lt;/p&gt;
 
@@ -581,7 +580,7 @@ $ wget https://dl.dropboxusercontent.com/u/2930979/fixit.tar.gz
 $ tar -xvf fixit.tar.gz -C aosp/device/generic
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;compiler-les-sources-d-aosp&#34;&gt;Compiler les sources d&amp;rsquo;AOSP&lt;/h2&gt;
+&lt;h2 id=&#34;compiler-les-sources-d-aosp:305cc891b1c6a1a1f424f416b465955e&#34;&gt;Compiler les sources d&amp;rsquo;AOSP&lt;/h2&gt;
 
 &lt;p&gt;Se placer dans le dossier principal des sources d&amp;rsquo;AOSP&lt;/p&gt;
 
@@ -612,7 +611,7 @@ $ tar -xvf fixit.tar.gz -C aosp/device/generic
 &lt;li&gt;Pour &lt;code&gt;mini_emulator_arm64-userdebug&lt;/code&gt; : out/target/product/mini-emulator-arm64/&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;virtualiser-la-version-compilée-d-android-avec-qemu&#34;&gt;Virtualiser la version compilée d&amp;rsquo;Android avec Qemu&lt;/h2&gt;
+&lt;h2 id=&#34;virtualiser-la-version-compilée-d-android-avec-qemu:305cc891b1c6a1a1f424f416b465955e&#34;&gt;Virtualiser la version compilée d&amp;rsquo;Android avec Qemu&lt;/h2&gt;
 
 &lt;p&gt;Pour virtualiser une version d&amp;rsquo;Android 5 ARM 64-bits, nous avons besoin du programme &lt;code&gt;qemu-system-aarch64&lt;/code&gt; modifié par Google pour supporter l&amp;rsquo;exécution de la machine virtuelle &amp;laquo;ranchu&amp;raquo; (et du type de processeur &amp;laquo;cortex-v57&amp;raquo;).&lt;/p&gt;
 
@@ -664,15 +663,13 @@ $ make -j8
 
 &lt;p&gt;&lt;strong&gt;Aperçu de &lt;code&gt;ranchu_arm64-eng&lt;/code&gt;&lt;/strong&gt; :&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://enten.github.io/steven/assets/images/fig/ranchu_arm64-eng.png&#34;&gt;&lt;img src=&#34;http://enten.github.io/steven/assets/images/fig/ranchu_arm64-eng-tiny.png&#34; alt=&#34;ranchu_arm64-eng preview&#34; /&gt;
-&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://enten.github.io/steven/assets/images/fig/ranchu_arm64-eng.png&#34;&gt;&lt;img src=&#34;http://enten.github.io/steven/assets/images/fig/ranchu_arm64-eng-tiny.png&#34; alt=&#34;ranchu_arm64-eng preview&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Aperçu de &lt;code&gt;mini_emulator_arm64-userdebug&lt;/code&gt;&lt;/strong&gt; :&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://enten.github.io/steven/assets/images/fig/mini_emulator_arm64-userdebug.png&#34;&gt;&lt;img src=&#34;http://enten.github.io/steven/assets/images/fig/mini_emulator_arm64-userdebug-tiny.png&#34; alt=&#34;mini_emulator_arm64-userdebug preview&#34; /&gt;
-&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://enten.github.io/steven/assets/images/fig/mini_emulator_arm64-userdebug.png&#34;&gt;&lt;img src=&#34;http://enten.github.io/steven/assets/images/fig/mini_emulator_arm64-userdebug-tiny.png&#34; alt=&#34;mini_emulator_arm64-userdebug preview&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;références&#34;&gt;Références&lt;/h2&gt;
+&lt;h2 id=&#34;références:305cc891b1c6a1a1f424f416b465955e&#34;&gt;Références&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://source.android.com/source/building.html&#34;&gt;AOSP documentation - Downloading and Building&lt;/a&gt;&lt;/li&gt;

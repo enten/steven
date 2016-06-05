@@ -18,7 +18,7 @@
       <guid>http://enten.github.io/steven/2014/11/17/installer-apache-mesos-0.20.1-sur-ubuntu-14.04.1.lts/</guid>
       <description>
 
-&lt;h2 id=&#34;a-propos-d-apache-mesos&#34;&gt;A propos d&amp;rsquo;Apache Mesos&lt;/h2&gt;
+&lt;h2 id=&#34;a-propos-d-apache-mesos:b7befab35a9838149f8022b9c038a630&#34;&gt;A propos d&amp;rsquo;Apache Mesos&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://mesos.apache.org/&#34;&gt;Mesos&lt;/a&gt; est un projet de la fondation Apache présenté comme un noyau de systèmes distribués. Il permet d&amp;rsquo;exploiter les ressources de plusieurs machines comme un seul système. Il assure l&amp;rsquo;isolation et la haute disponibilité d&amp;rsquo;exécutions de programmes. Mesos fournit deux composants logiciels :&lt;/p&gt;
 
@@ -29,9 +29,9 @@
 
 &lt;p&gt;&lt;em&gt;En environnement de production, il est recommandé de configurer plusieurs noeuds mesos-master et d&amp;rsquo;utiliser &lt;a href=&#34;http://zookeeper.apache.org&#34;&gt;Apache Zookeeper&lt;/a&gt; pour l&amp;rsquo;élection du noeud master actif. Ainsi, quand le noeud master actif rencontre un problème, Zookeeper se charge d&amp;rsquo;élire un nouveau noeud master.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;exemple-d-utilisation-d-apache-mesos&#34;&gt;Exemple d&amp;rsquo;utilisation d&amp;rsquo;Apache Mesos&lt;/h2&gt;
+&lt;h2 id=&#34;exemple-d-utilisation-d-apache-mesos:b7befab35a9838149f8022b9c038a630&#34;&gt;Exemple d&amp;rsquo;utilisation d&amp;rsquo;Apache Mesos&lt;/h2&gt;
 
-&lt;h3 id=&#34;plateforme-cible&#34;&gt;Plateforme cible&lt;/h3&gt;
+&lt;h3 id=&#34;plateforme-cible:b7befab35a9838149f8022b9c038a630&#34;&gt;Plateforme cible&lt;/h3&gt;
 
 &lt;p&gt;L&amp;rsquo;objectif de nos manipulations est de configurer un système distribué avec Mesos. Nous allons configurer Mesos sur deux noeuds Ubuntu 14.04.1 LTS :&lt;/p&gt;
 
@@ -42,7 +42,7 @@
 
 &lt;p&gt;&lt;em&gt;En environnement de production, il est recommandé d&amp;rsquo;installer Zookeeper sur un noeud différent du noeud mesos-master car s&amp;rsquo;il rencontre un problème, Zookeeper ne sera plus disponible pour élire un nouveau noeud mesos-master et rediriger les noeuds mesos-slave.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;diagramme-de-déploiement&#34;&gt;Diagramme de déploiement&lt;/h3&gt;
+&lt;h3 id=&#34;diagramme-de-déploiement:b7befab35a9838149f8022b9c038a630&#34;&gt;Diagramme de déploiement&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;          192.168.1.101
 +---------------------------------+
@@ -59,9 +59,9 @@
 +---------------------------------+
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;installer-apache-mesos-sur-plusieurs-noeuds-ubuntu&#34;&gt;Installer Apache Mesos sur plusieurs noeuds Ubuntu&lt;/h2&gt;
+&lt;h2 id=&#34;installer-apache-mesos-sur-plusieurs-noeuds-ubuntu:b7befab35a9838149f8022b9c038a630&#34;&gt;Installer Apache Mesos sur plusieurs noeuds Ubuntu&lt;/h2&gt;
 
-&lt;h3 id=&#34;prérequis&#34;&gt;Prérequis&lt;/h3&gt;
+&lt;h3 id=&#34;prérequis:b7befab35a9838149f8022b9c038a630&#34;&gt;Prérequis&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://releases.ubuntu.com/14.04.1&#34;&gt;Ubuntu 14.04.1 LTS&lt;/a&gt; 64-bit est installé sur les noeuds master et slave&lt;/li&gt;
@@ -74,7 +74,7 @@ $ echo &amp;quot;deb http://repos.mesosphere.io/ubuntu trusty main&amp;quot; | s
 $ sudo apt-get update -y
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;configuration-du-noeud-master&#34;&gt;Configuration du noeud master&lt;/h3&gt;
+&lt;h3 id=&#34;configuration-du-noeud-master:b7befab35a9838149f8022b9c038a630&#34;&gt;Configuration du noeud master&lt;/h3&gt;
 
 &lt;p&gt;Installation du paquet &lt;strong&gt;mesos&lt;/strong&gt; et du paquet &lt;strong&gt;zookeeper&lt;/strong&gt; (par dépendance) :&lt;/p&gt;
 
@@ -107,7 +107,7 @@ $ sudo apt-get update -y
 $ sudo service mesos-master restart
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;configuration-du-noeud-slave&#34;&gt;Configuration du noeud slave&lt;/h3&gt;
+&lt;h3 id=&#34;configuration-du-noeud-slave:b7befab35a9838149f8022b9c038a630&#34;&gt;Configuration du noeud slave&lt;/h3&gt;
 
 &lt;p&gt;Installation du paquet &lt;strong&gt;mesos&lt;/strong&gt; sans le paquet &lt;strong&gt;zookeeper&lt;/strong&gt; :&lt;/p&gt;
 
@@ -131,7 +131,7 @@ $ echo 192.168.1.102 | sudo tee /etc/mesos-slave/hostname
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo service mesos-slave start
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;configuration-additionnelle&#34;&gt;Configuration additionnelle&lt;/h2&gt;
+&lt;h2 id=&#34;configuration-additionnelle:b7befab35a9838149f8022b9c038a630&#34;&gt;Configuration additionnelle&lt;/h2&gt;
 
 &lt;p&gt;Pour notre test, il est intéressant de configurer le noeud master pour pouvoir intégrer ses ressources au système distribué en démarrant le service mesos-slave. &lt;strong&gt;Attention!&lt;/strong&gt; Cette pratique est déconseillée en environnement de production.&lt;/p&gt;
 
@@ -143,7 +143,7 @@ $ echo 192.168.1.101 | sudo tee /etc/mesos-slave/hostname
 
 &lt;p&gt;La commande &lt;code&gt;sudo service mesos-slave start&lt;/code&gt; intégère les ressources du noeud master au système distribué (les ressources du noeud master peuvent alors être utilisées pour réaliser des traitements).&lt;/p&gt;
 
-&lt;h2 id=&#34;tester-l-installation-d-apache-mesos&#34;&gt;Tester l&amp;rsquo;installation d&amp;rsquo;Apache Mesos&lt;/h2&gt;
+&lt;h2 id=&#34;tester-l-installation-d-apache-mesos:b7befab35a9838149f8022b9c038a630&#34;&gt;Tester l&amp;rsquo;installation d&amp;rsquo;Apache Mesos&lt;/h2&gt;
 
 &lt;p&gt;Rendez-vous sur l&amp;rsquo;interface web de mesos-master en consultant l&amp;rsquo;URL &lt;a href=&#34;http://192.168.1.101:5050&#34;&gt;http://192.168.1.101:5050&lt;/a&gt;.
 Le cadre à gauche indique le nombre de noeud slaves actifs (1 si mesos-slave est démarré sur le noeud slave, 2 si mesos-slave est également démarré sur le noeud master ou 0 si mesos-slave est arrêté sur les deux noeuds).&lt;/p&gt;
@@ -169,7 +169,7 @@ Le cadre à gauche indique le nombre de noeud slaves actifs (1 si mesos-slave es
 
 &lt;p&gt;Marathon négocie avec Mesos l&amp;rsquo;exécution d&amp;rsquo;applications et assure quelles soient toujours actives : lorsqu&amp;rsquo;une application se termine, Marathon se charge de la relancer. Marathon fournit une &lt;a href=&#34;https://mesosphere.github.io/marathon/docs/rest-api.html&#34;&gt;API Rest&lt;/a&gt; pour réaliser des opérations par requêtes http.&lt;/p&gt;
 
-&lt;h2 id=&#34;références&#34;&gt;Références&lt;/h2&gt;
+&lt;h2 id=&#34;références:b7befab35a9838149f8022b9c038a630&#34;&gt;Références&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Apache Mesos : &lt;a href=&#34;http://mesos.apache.org&#34;&gt;http://mesos.apache.org&lt;/a&gt;&lt;/li&gt;

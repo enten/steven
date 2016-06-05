@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Les prémices d&#39;un nouveau framework orienté micro-services  &middot; enten.fr</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="description" content="" />
+
+<meta name="keywords" content="microservice, javascript, nodejs, restau, ">
+
+
+<meta property="og:title" content="Les prémices d&#39;un nouveau framework orienté micro-services  &middot; enten.fr ">
+<meta property="og:site_name" content="enten.fr"/>
+<meta property="og:url" content="http://enten.github.io/steven/2016/06/04/les-pr%C3%A9mices-dun-nouveau-framework-orient%C3%A9-micro-services/" />
+<meta property="og:locale" content="fr-FR">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content=""/>
+<meta property="og:article:published_time" content="2016-06-04T00:00:00Z" />
+<meta property="og:article:modified_time" content="2016-06-04T00:00:00Z" />
+
+  
+    
+<meta property="og:article:tag" content="microservice">
+    
+<meta property="og:article:tag" content="javascript">
+    
+<meta property="og:article:tag" content="nodejs">
+    
+<meta property="og:article:tag" content="restau">
+    
+  
+
+  
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "Les prémices d\x27un nouveau framework orienté micro-services",
+    "author": {
+      "@type": "Person",
+      "name": "http://profiles.google.com/+?rel=author"
+    },
+    "datePublished": "2016-06-04",
+    "description": "",
+    "wordCount":  1211 
+  }
+</script>
+
+
+
+<link rel="canonical" href="http://enten.github.io/steven/2016/06/04/les-pr%C3%A9mices-dun-nouveau-framework-orient%C3%A9-micro-services/" />
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://enten.github.io/steven/touch-icon-144-precomposed.png">
+<link href="http://enten.github.io/steven/favicon.png" rel="icon">
+
+<meta name="generator" content="Hugo 0.15" />
+
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link href='https://fonts.googleapis.com/css?family=Merriweather:300%7CRaleway%7COpen+Sans' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="http://enten.github.io/steven/css/font-awesome.min.css">
+<link rel="stylesheet" href="http://enten.github.io/steven/css/style.css">
+<link rel="stylesheet" href="http://enten.github.io/steven/css/highlight/default.css">
+
+  
+</head>
+<body>
+  <main id="main-wrapper" class="container main_wrapper has-sidebar">
+    <header id="main-header" class="container main_header">
+  <div class="container brand">
+  <div class="container title h1-like">
+  <a class="baselink" href="http://enten.github.io/steven/">
+  steven.paris
+
+</a>
+
+</div>
+
+  
+<div class="container topline">
+  
+  code by Steven Enten
+
+
+</div>
+
+
+</div>
+
+  <nav class="container nav primary no-print">
+  
+
+<a class="homelink" href="http://enten.github.io/steven/">home</a>
+
+
+  
+<a href="http://enten.github.io/steven/about">about</a>
+
+<a href="http://enten.github.io/steven/code">code</a>
+
+<a href="http://enten.github.io/steven/post" title="Show list of posts">posts</a>
+
+<a href="http://enten.github.io/steven/tags" title="Show list of tags">tags</a>
+
+
+</nav>
+
+<div class="container nav secondary no-print">
+  
+
+
+<a id="contact-link-github" class="contact_link" href="https://github.com/enten">
+  <span class="fa fa-github-square"></span><span>github</span></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a id="contact-link-rss" class="contact_link" href="" type="application/rss+xml">
+  <span class="fa fa-rss-square"></span><span>rss</span></a>
+
+
+
+</div>
+
+
+  
+
+</header>
+
+
+<article id="main-content" class="container main_content single">
+  <header class="container hat">
+  <h1>Les prémices d&#39;un nouveau framework orienté micro-services
+</h1>
+
+  <div class="metas">
+<time datetime="2016-06-04">4 Jun, 2016</time>
+
+
+  
+    &middot; by Steven Enten
+  
+  &middot; Read in about 6 min
+  &middot; (1211 Words)
+  <br>
+  
+<a class="label" href="http://enten.github.io/steven/tags/microservice">microservice</a>
+
+<a class="label" href="http://enten.github.io/steven/tags/javascript">javascript</a>
+
+<a class="label" href="http://enten.github.io/steven/tags/nodejs">nodejs</a>
+
+<a class="label" href="http://enten.github.io/steven/tags/restau">restau</a>
+
+
+
+</div>
+
+</header>
+
+  <div class="container content">
+  
+
+<h2 id="introduction:783f16718fbcc4ca301dabebe6e38d41">Introduction</h2>
+
+<p>Chaque année, les étudiants de nombreux cursus informatiques se préparent à intégrer des deux pieds le monde de l&rsquo;entreprise. Jeune ingénieur en poste depuis quelques mois, je souhaite partager mon expérience d&rsquo;insertion professionnelle.</p>
+
+<p>A travers une série d&rsquo;articles, je tenterai de présenter le contexte de travail qui m&rsquo;a conduit à concevoir et à implémenter un framework pour encadrer et optimiser le développement logiciel.</p>
+
+<h2 id="pourquoi-un-nouveau-framework:783f16718fbcc4ca301dabebe6e38d41">Pourquoi un nouveau framework ?</h2>
+
+<p>Je pense que pour chaque besoin il existe une ou plusieurs solutions. Je ne suis pas de ceux qui aiment ré-inventer la roue. Au contraire. Seulement, mon contexte de travail actuel m&rsquo;a amené à penser que parfois il n&rsquo;existe pas de solution qui répond parfaitement à nos besoins.</p>
+
+<p>J&rsquo;évolue dans une PME où le service informatique est composé d&rsquo;un responsable matériel (the sysadmin) et de deux développeurs (dont votre serviteur).</p>
+
+<p>Aujourd&rsquo;hui l&rsquo;entreprise à besoin de concevoir ses systèmes en micro-services ré-utilisables. De nombreuses solutions dans différents languages existent et permettent de mettre rapidement en place ce type de plateformes.</p>
+
+<p>J&rsquo;ai commencé mon travail en m&rsquo;appuyant sur un framework existant. J&rsquo;ai pu rapidement mettre en place deux services :</p>
+
+<ul>
+<li><strong>Service A</strong> : gestion d&rsquo;utilisateurs (création de nouveaux comptes et de jetons d&rsquo;authentification)</li>
+<li><strong>Service B</strong> : gestion de documents (création, lecture et modification)</li>
+</ul>
+
+<pre><code>[Server A]                             :  [Server B]                
+                                       :                            
+                 Service A             :                   Service B
+                     |                 :                       |    
+    GET /profile/123 |                 :      GET /doc/321     |    
+    ----------------&gt;|                 :      ----------------&gt;|    
+    &lt; - - - - - - - -|                 :      &lt; - - - - - - - -|    
+      profile(json)  |                 :        doc(json)      |    
+                     |                 :                       |    
+</code></pre>
+
+<p>Ainsi, ces services peuvent être ré-utilisés à travers différents projets. Le backend était presque complet. Il ne manquait qu&rsquo;à écrire un troisième service : le <strong>service C</strong> qui conjugue et enrichi les services A et B pour proposer un service permettant de gérer des utilisateurs ayant des documents privés (sans lien direct entre un utilisateur et ses documents).</p>
+
+<p>C&rsquo;est là où se sont présentés différents problèmes. Des problèmes qui m&rsquo;ont poussés à changer de framework. Mais les problèmes étaient toujours là.</p>
+
+<h2 id="un-problème-de-conception:783f16718fbcc4ca301dabebe6e38d41">Un problème de conception</h2>
+
+<p>A ce stade, nous avons déjà 2 composants implémentés : <code>Services A</code> (gestion des utilisateurs) et <code>Service B</code> (gestion de documents).</p>
+
+<p>Le composant <code>Service C</code> doit utiliser les services A et B. Il nous faut écrire 2 autres composants qui sont les clients permettant d&rsquo;utiliser les services A et B : ce sont eux qui savent comment dialoguer avec les services (appeler les bonnes routes avec les bons paramètres).</p>
+
+<p>Nous appelerons ces composants <code>Service A Client</code> et <code>Service B Client</code>. Ils pourront être réutilisés par d&rsquo;autres composants qui souhaiteraient s&rsquo;interfacer avec un de ces services (A ou B).</p>
+
+<pre><code>[Server C]                               :  [Server A]               
+                                         :                           
+                 Service A Client        :         Service A         
+                         |               :             |             
+                         |               :             |             
+    cltA.getProfile(123) |               :             |             
+    --------------------&gt;|      GET /profile/123       |             
+                         |----------------------------&gt;|             
+                         |&lt; - - - - - - - - - - - - - -|             
+    &lt; - - - - - - - - - -|       profile(json)         |             
+        profile(json)    |               :             |             
+                         |               :             |             
+                                         :                           
+                                         :...........................
+                                         :                           
+                                         : [Server B]                
+                                         :                           
+                 Service B Client        :         Service B         
+                         |               :             |             
+                         |               :             |             
+    cltB.getDoc(321)     |               :             |             
+    --------------------&gt;|        GET /doc/321         |             
+                         |----------------------------&gt;|             
+                         |&lt; - - - - - - - - - - - - - -|             
+    &lt; - - - - - - - - - -|         doc(json)           |             
+          doc(json)      |               :             |             
+                         |               :             |             
+
+</code></pre>
+
+<p>Nous pouvons maintenant écrire le service C. Et c&rsquo;est là où émerge la principale problématique.</p>
+
+<p><strong>Si les services A et B évoluent, il faut mettre à jour les composants clients respectifs.</strong> Il en va de même pour un éventuel futur composant <code>Service C Client</code>.</p>
+
+<p>Dans le cas du service C, lorsqu&rsquo;un utilisateur souhaite récupérer son profil, le service C utilise le composant client du service utilisateur (<code>Service A Client</code>) pour contacter le service distant (<code>Service A</code>) et retransmet la réponse à l&rsquo;utilisateur.</p>
+
+<pre><code>[Server C]                                                     : [Server A]    
+                                                               :               
+                     Service C          Service A Client       :    Service A
+                         |                     |               :        |      
+ ( )    GET /profile/123 |                     |               :        |      
+--|--   ----------------&gt;| clt.getProfile(123) |               :        |      
+ / \                     |--------------------&gt;|    GET /profile/123    |      
+User                     |                     |-----------------------&gt;|      
+                         |                     |&lt; - - - - - - - - - - - |      
+                         |&lt; - - - - - - - - - -|     profile(json)      |      
+        &lt;- - - - - - - - |    profile(json)    |               :        |      
+          profile(json)  |                     |               :        |      
+</code></pre>
+
+<p>Si la route du service A pour afficher le profile change, il faudra modifier le client (et éventuellement le service C si on veut être cohérent avec les routes du service A) pour pointer vers la nouvelle route.</p>
+
+<p><strong>Et c&rsquo;est là où la majorité des frameworks montrent leurs limites : ils sont orientés serveur et n&rsquo;apportent aucune aide pour s&rsquo;interfacer avec les services écris.</strong> Faire évoluer un service devient alors pénible puisqu&rsquo;il faut faire évoluer ses dépendances.</p>
+
+<h2 id="la-solution-idéale:783f16718fbcc4ca301dabebe6e38d41">La solution idéale</h2>
+
+<p>Nous avons constaté que les frameworks de micro-services sont orientés serveur : ils permettent d&rsquo;écrire des services mais ne proposent pas de solution rapide pour s&rsquo;interfacer avec ces derniers.</p>
+
+<p>La solution idéale doit permettre aux développeurs :</p>
+
+<ul>
+<li>de se concentrer sur le code métier des services ;</li>
+<li>et de fournir des moyens simples pour les utiliser aussi bien du côté serveur que du côté client.</li>
+</ul>
+
+<p>Nous devrions pouvoir écrire un service de la manière suivante :</p>
+
+<pre><code class="language-javascript">// HelloService.js
+
+class HelloService {
+  sayHello(inputs) {
+    return 'hello ' + (inputs.who || 'world');
+  }
+}
+
+module.exports = HelloService;
+</code></pre>
+
+<p>Ce service ne propose qu&rsquo;une seule route <code>GET /sayHello</code> qui retourne un message selon les paramètres d&rsquo;appels :</p>
+
+<ul>
+<li>L&rsquo;appel <code>GET /sayHello</code> affiche <em>Hello world</em> ;</li>
+<li>L&rsquo;appel <code>GET /sayHello?who=jd</code> affiche <em>Hello jd</em>.</li>
+</ul>
+
+<p>Notre framework doit être capable de charger des services et de proposer de les exécuter en mode serveur ou en mode client.</p>
+
+<pre><code class="language-javascript">// app.js
+var NotreSuperFramework = require('notre-super-framework');
+var HelloService = require('./HelloService');
+
+var app = new NotreSuperFramework();
+
+// charge le service HelloService sur la route /hello
+app.use('/hello', HelloService);
+
+module.exports = app;
+</code></pre>
+
+<pre><code class="language-javascript">// server.js
+var app = require('./app');
+
+// lance le serveur de services http://localhost:1337
+app.listen(1337);
+</code></pre>
+
+<pre><code class="language-javascript">// test.js
+var app = require('./app');
+
+// créer un client vers le serveur de services http://localhost:1337
+var api = app.client(1337);
+
+// appel la route GET http://localhost:1337/hello/sayHello?who=jd
+api.HelloService.sayHello({ who: 'jd' }, function (err, res) {
+  if (err) {
+    console.error(err);
+    return;
+  }
+
+  // affiche &quot;Hello jd&quot;
+  console.log(res.body);
+});
+</code></pre>
+
+<p>Nul besoin d&rsquo;être un développeur NodeJS confirmé pour comprendre la simplicité d&rsquo;utilisation recherchée : c&rsquo;est le framework qui s&rsquo;occupe de générer le serveur ou le client.</p>
+
+<p>On peut même imaginer un troisième mode qui permettrait de monter automatiquement les routes de services distants.</p>
+
+<pre><code class="language-javascript">// app-b.js
+var NotreSuperFramework = require('notre-super-framework');
+var appA = require('./app');
+
+var appB = new NotreSuperFramework();
+
+// monte les services du serveur distant http://localhost:1337
+appB.use('/', appA.remote(1337));
+
+module.exports = appB;
+</code></pre>
+
+<pre><code class="language-javascript">// server.js
+var appB = require('./app-b');
+
+// lance le serveur http://localhost:1338
+appB.listen(1338);
+</code></pre>
+
+<p>Une requête adressée à la route <code>GET http://localhost:1338/hello/sayHello</code> est relayée via le client vers la route <code>GET http://localhost:1337/hello/sayHello</code> et la réponse retransmise à l&rsquo;utilisateur à l&rsquo;origine de la requête.</p>
+
+<h2 id="conclusion:783f16718fbcc4ca301dabebe6e38d41">Conclusion</h2>
+
+<p>N&rsquo;ayant pas trouvé de framework permettant d&rsquo;écrire et d&rsquo;interfacer simplement des micro-services, je vais tenter de développer une idée de framework de micro-services universels (pouvant être utiliser dans différents modes dynamiquement).</p>
+
+<p>Dans les prochains articles, nous allons développer les spécifications de notre solution idéale.</p>
+
+</div>
+
+
+  <footer class="container">
+  <div class="container navigation no-print">
+  <h2>Navigation</h2>
+  
+  
+
+    
+    <a class="prev" href="http://enten.github.io/steven/2015/06/15/android-5.1.1-x86_64/" title="Android 5.1.1 x86_64">
+      Previous
+    </a>
+    
+
+    
+    <a class="next" href="http://enten.github.io/steven/2016/06/04/les-pr%C3%A9mices-dun-nouveau-framework-orient%C3%A9-micro-services/" title="Les prémices d&#39;un nouveau framework orienté micro-services">
+      Next
+    </a>
+    
+
+  
+
+
+</div>
+
+  <div class="container comments">
+  <h2>Comments</h2>
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  (function() {
+    
+    
+    if (window.location.hostname == "localhost")
+      return;
+
+    var dsq = document.createElement('script'); dsq.async = true; dsq.type = 'text/javascript';
+    dsq.src = '//enten.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+</div>
+
+</footer>
+
+</article>
+      <footer id="main-footer" class="container main_footer">
+  
+
+  <div class="container nav foot no-print">
+  
+
+  <a class="toplink" href="#">back to top</a>
+
+</div>
+
+  <div class="container credits">
+  
+<div class="container footline">
+  
+
+</div>
+
+
+  
+<div class="container copyright">
+  
+  &copy; 2015 Steven Enten
+
+
+</div>
+
+
+</div>
+
+</footer>
+
+    </main>
+    
+<script type="text/javascript">
+  (function() {
+    
+    
+    if (window.location.hostname == "localhost")
+      return;
+
+    var dsq = document.createElement('script'); dsq.async = true; dsq.type = 'text/javascript';
+    dsq.src = '//enten.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+
+<script src="http://enten.github.io/steven/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+    
+  </body>
+</html>
+

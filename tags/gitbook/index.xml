@@ -18,14 +18,14 @@
       <guid>http://enten.github.io/steven/gitbook-boilerplate/</guid>
       <description>
 
-&lt;h2 id=&#34;demo&#34;&gt;Demo&lt;/h2&gt;
+&lt;h2 id=&#34;demo:72f3bc852abfc2d1affdf6374f76f28e&#34;&gt;Demo&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://enten.github.io/gitbook-boilerplate/&#34;&gt;Github Pages&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/enten/gitbook-boilerplate/wiki&#34;&gt;Github Wiki&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;h2 id=&#34;installation:72f3bc852abfc2d1affdf6374f76f28e&#34;&gt;Installation&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;cd ~/code
 
