@@ -20,13 +20,13 @@
 
 &lt;p&gt;Boilerplate to start fast with &lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;demo-http-enten-github-io-hugo-boilerplate:0306c62339fddd9fdbd4e96f726ada1f&#34;&gt;&lt;a href=&#34;http://enten.github.io/hugo-boilerplate/&#34;&gt;Demo&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;demo-http-enten-github-io-hugo-boilerplate&#34;&gt;&lt;a href=&#34;http://enten.github.io/hugo-boilerplate/&#34;&gt;Demo&lt;/a&gt;&lt;/h2&gt;
 
-&lt;h2 id=&#34;screenshot:0306c62339fddd9fdbd4e96f726ada1f&#34;&gt;Screenshot&lt;/h2&gt;
+&lt;h2 id=&#34;screenshot&#34;&gt;Screenshot&lt;/h2&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/enten/hugo-boilerplate/master/themes/hyde-y/images/screenshot.png&#34; alt=&#34;preview&#34; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;requirements:0306c62339fddd9fdbd4e96f726ada1f&#34;&gt;Requirements&lt;/h2&gt;
+&lt;h2 id=&#34;requirements&#34;&gt;Requirements&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://git-scm.com&#34;&gt;git&lt;/a&gt;&lt;/li&gt;
@@ -35,7 +35,7 @@
 &lt;li&gt;&lt;a href=&#34;https://www.npmjs.com/about&#34;&gt;npm&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;installation:0306c62339fddd9fdbd4e96f726ada1f&#34;&gt;Installation&lt;/h2&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# clone hugo-boilerplate into new project folder
 git clone https://github.com/enten/hugo-boilerplate awesome-site
@@ -54,9 +54,9 @@ Press Ctrl+C to stop
 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;deployment:0306c62339fddd9fdbd4e96f726ada1f&#34;&gt;Deployment&lt;/h2&gt;
+&lt;h2 id=&#34;deployment&#34;&gt;Deployment&lt;/h2&gt;
 
-&lt;h3 id=&#34;github-pages-https-pages-github-com:0306c62339fddd9fdbd4e96f726ada1f&#34;&gt;&lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;github-pages-https-pages-github-com&#34;&gt;&lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt;&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd awesome-site
 
@@ -77,7 +77,7 @@ npm run deploy:gh
 &lt;li&gt;static site is rebuilt in &lt;code&gt;public/&lt;/code&gt; folder when &lt;code&gt;deploy:gh&lt;/code&gt; is fired&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;ftp:0306c62339fddd9fdbd4e96f726ada1f&#34;&gt;FTP&lt;/h3&gt;
+&lt;h3 id=&#34;ftp&#34;&gt;FTP&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd awesome-site
 
@@ -107,7 +107,7 @@ npm run deploy
 &lt;li&gt;&lt;strong&gt;BUG&lt;/strong&gt;: several attempts are needed to deploy all files&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;license:0306c62339fddd9fdbd4e96f726ada1f&#34;&gt;License&lt;/h2&gt;
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
 
 &lt;p&gt;Open sourced under the &lt;a href=&#34;https://github.com/enten/hugo-boilerplate/blob/master/LICENSE&#34;&gt;MIT license&lt;/a&gt;.&lt;/p&gt;
 </description>
@@ -126,11 +126,11 @@ npm run deploy
 &lt;p&gt;You can find a live site using this theme &lt;a href=&#34;http://enten.github.io/hugo-boilerplate/&#34;&gt;here&lt;/a&gt;
 and the corresponding source code &lt;a href=&#34;https://github.com/enten/hugo-boilerplate&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;screenshot:52a9d38876c6a2e91364a4dafc994456&#34;&gt;Screenshot&lt;/h2&gt;
+&lt;h2 id=&#34;screenshot&#34;&gt;Screenshot&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://enten.fr/hugo-boilerplate&#34;&gt;Preview&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;installation:52a9d38876c6a2e91364a4dafc994456&#34;&gt;Installation&lt;/h2&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;$ cd your_site_repo/
 $ mkdir themes
@@ -140,7 +140,7 @@ $ git clone https://github.com/enten/hyde-y
 
 &lt;p&gt;See the &lt;a href=&#34;http://gohugo.io/themes/installing&#34;&gt;official Hugo themes documentation&lt;/a&gt; for more info.&lt;/p&gt;
 
-&lt;h2 id=&#34;usage:52a9d38876c6a2e91364a4dafc994456&#34;&gt;Usage&lt;/h2&gt;
+&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
 
 &lt;p&gt;This theme expects a relatively standard Hugo blog/personal site layout:&lt;/p&gt;
 
@@ -158,9 +158,9 @@ $ git clone https://github.com/enten/hyde-y
 
 &lt;p&gt;Just run &lt;code&gt;hugo --theme=hyde-y&lt;/code&gt; to generate your site!&lt;/p&gt;
 
-&lt;h2 id=&#34;configuration:52a9d38876c6a2e91364a4dafc994456&#34;&gt;Configuration&lt;/h2&gt;
+&lt;h2 id=&#34;configuration&#34;&gt;Configuration&lt;/h2&gt;
 
-&lt;h3 id=&#34;hugo:52a9d38876c6a2e91364a4dafc994456&#34;&gt;Hugo&lt;/h3&gt;
+&lt;h3 id=&#34;hugo&#34;&gt;Hugo&lt;/h3&gt;
 
 &lt;p&gt;An example of what your site&amp;rsquo;s &lt;code&gt;config.toml&lt;/code&gt; could look like. All theme-specific parameters are under &lt;code&gt;[params]&lt;/code&gt; and standard Hugo parameters are used where possible.&lt;/p&gt;
 
@@ -247,7 +247,7 @@ disqusShortname = &amp;quot;your_disqus_shortname&amp;quot;
 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;menu:52a9d38876c6a2e91364a4dafc994456&#34;&gt;Menu&lt;/h3&gt;
+&lt;h3 id=&#34;menu&#34;&gt;Menu&lt;/h3&gt;
 
 &lt;p&gt;Create &lt;code&gt;data/Menu.toml&lt;/code&gt; to configure the sidebar navigation links. Example below.&lt;/p&gt;
 
@@ -266,7 +266,7 @@ disqusShortname = &amp;quot;your_disqus_shortname&amp;quot;
     URL = &amp;quot;/tags&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;foot-menu:52a9d38876c6a2e91364a4dafc994456&#34;&gt;Foot menu&lt;/h3&gt;
+&lt;h3 id=&#34;foot-menu&#34;&gt;Foot menu&lt;/h3&gt;
 
 &lt;p&gt;Create &lt;code&gt;data/FootMenu.toml&lt;/code&gt; to configure the footer navigation links. Example below.&lt;/p&gt;
 
@@ -275,7 +275,7 @@ disqusShortname = &amp;quot;your_disqus_shortname&amp;quot;
     URL = &amp;quot;/license&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;built-in-colour-themes:52a9d38876c6a2e91364a4dafc994456&#34;&gt;Built-in colour themes&lt;/h2&gt;
+&lt;h2 id=&#34;built-in-colour-themes&#34;&gt;Built-in colour themes&lt;/h2&gt;
 
 &lt;p&gt;You can rebuild the stylesheet. To do it you need &lt;a href=&#34;http://npmjs.com/&#34;&gt;npm&lt;/a&gt; and run the task &lt;code&gt;build:css&lt;/code&gt;.&lt;/p&gt;
 
@@ -299,7 +299,7 @@ Done, without errors.
 
 &lt;p&gt;The task &lt;code&gt;watch&lt;/code&gt; allows to rebuild the stylesheet when a change is spotted on &lt;code&gt;scss/*.less&lt;/code&gt; files.&lt;/p&gt;
 
-&lt;h2 id=&#34;tips:52a9d38876c6a2e91364a4dafc994456&#34;&gt;Tips&lt;/h2&gt;
+&lt;h2 id=&#34;tips&#34;&gt;Tips&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;If you&amp;rsquo;ve added &lt;code&gt;theme = &amp;quot;hyde-y&amp;quot;&lt;/code&gt; to your &lt;code&gt;config.toml&lt;/code&gt;, you don&amp;rsquo;t need to keep using the &lt;code&gt;--theme=hyde-y&lt;/code&gt; flag!&lt;/li&gt;
@@ -309,7 +309,7 @@ Done, without errors.
 &lt;li&gt;Pagination is set to 10 items by default, change it by updating &lt;code&gt;paginate = 10&lt;/code&gt; in your &lt;code&gt;config.toml&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;changes-and-enhancements-from-the-original-theme:52a9d38876c6a2e91364a4dafc994456&#34;&gt;Changes and enhancements from the original theme&lt;/h2&gt;
+&lt;h2 id=&#34;changes-and-enhancements-from-the-original-theme&#34;&gt;Changes and enhancements from the original theme&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Highly customizable: every layout blocks are pieces of HTML code individually stored.&lt;/li&gt;
@@ -326,15 +326,15 @@ Done, without errors.
 &lt;li&gt;&amp;hellip;many other small layout tweaks!&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;attribution:52a9d38876c6a2e91364a4dafc994456&#34;&gt;Attribution&lt;/h2&gt;
+&lt;h2 id=&#34;attribution&#34;&gt;Attribution&lt;/h2&gt;
 
 &lt;p&gt;Obviously largely a port of the awesome &lt;a href=&#34;https://github.com/poole/hyde&#34;&gt;Hyde&lt;/a&gt; and &lt;a href=&#34;https://github.com/zyro/hyde-x&#34;&gt;Hyde-X&lt;/a&gt; themes.&lt;/p&gt;
 
-&lt;h2 id=&#34;questions-ideas-bugs-pull-requests:52a9d38876c6a2e91364a4dafc994456&#34;&gt;Questions, ideas, bugs, pull requests?&lt;/h2&gt;
+&lt;h2 id=&#34;questions-ideas-bugs-pull-requests&#34;&gt;Questions, ideas, bugs, pull requests?&lt;/h2&gt;
 
 &lt;p&gt;All feedback is welcome! Head over to the &lt;a href=&#34;https://github.com/enten/hyde-y/issues&#34;&gt;issue tracker&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;license:52a9d38876c6a2e91364a4dafc994456&#34;&gt;License&lt;/h2&gt;
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
 
 &lt;p&gt;Open sourced under the &lt;a href=&#34;https://github.com/enten/hyde-y/blob/master/LICENSE&#34;&gt;MIT license&lt;/a&gt;.&lt;/p&gt;
 </description>
@@ -348,14 +348,14 @@ Done, without errors.
       <guid>http://enten.github.io/steven/gitbook-boilerplate/</guid>
       <description>
 
-&lt;h2 id=&#34;demo:72f3bc852abfc2d1affdf6374f76f28e&#34;&gt;Demo&lt;/h2&gt;
+&lt;h2 id=&#34;demo&#34;&gt;Demo&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://enten.github.io/gitbook-boilerplate/&#34;&gt;Github Pages&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/enten/gitbook-boilerplate/wiki&#34;&gt;Github Wiki&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;installation:72f3bc852abfc2d1affdf6374f76f28e&#34;&gt;Installation&lt;/h2&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;cd ~/code
 
@@ -391,11 +391,11 @@ npm run deploy
       <guid>http://enten.github.io/steven/losh/</guid>
       <description>
 
-&lt;h2 id=&#34;purpose:32f3f166d09bd9089c5f0bac3d828b66&#34;&gt;Purpose&lt;/h2&gt;
+&lt;h2 id=&#34;purpose&#34;&gt;Purpose&lt;/h2&gt;
 
 &lt;p&gt;Used one script to rule the others. The losh script wraps the usage of the others. Technically, losh looks for &lt;code&gt;CMDUSAGE&lt;/code&gt; and &lt;code&gt;CMDDESC&lt;/code&gt; variables into the others scripts. That variables allow losh to print the usage of every scripts.&lt;/p&gt;
 
-&lt;h2 id=&#34;installation:32f3f166d09bd9089c5f0bac3d828b66&#34;&gt;Installation&lt;/h2&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Change directory into your awesome project
 $ cd ~/code/awesome-project
@@ -430,7 +430,7 @@ COMMANDS:
 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;test:32f3f166d09bd9089c5f0bac3d828b66&#34;&gt;Test&lt;/h2&gt;
+&lt;h2 id=&#34;test&#34;&gt;Test&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Change directory into the scripts directory
 $ cd ~/awesome-project/scripts
@@ -581,14 +581,14 @@ de la classe &lt;code&gt;LoyaltyDiscount&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;A minimalist middleware to get started faster with Koa.&lt;/p&gt;
 
-&lt;h2 id=&#34;installation:c74451672c8917cbdd8a31298d7c991f&#34;&gt;Installation&lt;/h2&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;npm install kaio --save
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;example:c74451672c8917cbdd8a31298d7c991f&#34;&gt;Example&lt;/h2&gt;
+&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
 
-&lt;h3 id=&#34;requirements:c74451672c8917cbdd8a31298d7c991f&#34;&gt;Requirements&lt;/h3&gt;
+&lt;h3 id=&#34;requirements&#34;&gt;Requirements&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mkdir kaio-app
 cd kaio-app
@@ -650,12 +650,12 @@ function BookController() {
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;run-the-application:c74451672c8917cbdd8a31298d7c991f&#34;&gt;Run the application&lt;/h3&gt;
+&lt;h3 id=&#34;run-the-application&#34;&gt;Run the application&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ KO_PORT=1333 DEBUG=* node --harmony app.js
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;test-it:c74451672c8917cbdd8a31298d7c991f&#34;&gt;Test it&lt;/h3&gt;
+&lt;h3 id=&#34;test-it&#34;&gt;Test it&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# 3000 is the default port but it is overriden by KO_PORT (1333)
 
@@ -672,16 +672,16 @@ $ curl http://localhost:1333/api/books/The%2520Two%2520Towers
 {&amp;quot;title&amp;quot;:&amp;quot;The Two Towers&amp;quot;,&amp;quot;author&amp;quot;:&amp;quot;J. R. R. Tolkien&amp;quot;,&amp;quot;publication&amp;quot;:&amp;quot;1954-11-11&amp;quot;}
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;api:c74451672c8917cbdd8a31298d7c991f&#34;&gt;API&lt;/h2&gt;
+&lt;h2 id=&#34;api&#34;&gt;API&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://cdn.rawgit.com/enten/kaio/master/docs/kaio/0.5.4/index.html&#34;&gt;API documentation&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;tests:c74451672c8917cbdd8a31298d7c991f&#34;&gt;Tests&lt;/h2&gt;
+&lt;h2 id=&#34;tests&#34;&gt;Tests&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;npm test
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;release-history:c74451672c8917cbdd8a31298d7c991f&#34;&gt;Release History&lt;/h2&gt;
+&lt;h2 id=&#34;release-history&#34;&gt;Release History&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;0.5.0 Use confectioner module, add tests and upgrade public API&lt;/li&gt;
@@ -689,13 +689,13 @@ $ curl http://localhost:1333/api/books/The%2520Two%2520Towers
 &lt;li&gt;0.1.0 Initial release&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;credits:c74451672c8917cbdd8a31298d7c991f&#34;&gt;Credits&lt;/h2&gt;
+&lt;h2 id=&#34;credits&#34;&gt;Credits&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/enten&#34;&gt;Steven Enten&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;license:c74451672c8917cbdd8a31298d7c991f&#34;&gt;License&lt;/h2&gt;
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/enten/kaio/blob/master/LICENSE.md&#34;&gt;MIT&lt;/a&gt;&lt;/p&gt;
 </description>
@@ -711,12 +711,12 @@ $ curl http://localhost:1333/api/books/The%2520Two%2520Towers
 
 &lt;p&gt;Simpliest configuration builder which used the environment.&lt;/p&gt;
 
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;h2 id=&#34;installation:3a969c21e86aabc01d4c4213a8e45604&#34;&gt;Installation&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;npm install confectioner --save
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
+&lt;h2 id=&#34;example:3a969c21e86aabc01d4c4213a8e45604&#34;&gt;Example&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// example.js
 
@@ -739,28 +739,28 @@ console.log(config.getValuesMap());
 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;api&#34;&gt;API&lt;/h2&gt;
+&lt;h2 id=&#34;api:3a969c21e86aabc01d4c4213a8e45604&#34;&gt;API&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://cdn.rawgit.com/enten/confectioner/master/docs/confectioner/0.1.2/index.html&#34;&gt;API documentation&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;tests&#34;&gt;Tests&lt;/h2&gt;
+&lt;h2 id=&#34;tests:3a969c21e86aabc01d4c4213a8e45604&#34;&gt;Tests&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;npm test
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;release-history&#34;&gt;Release History&lt;/h2&gt;
+&lt;h2 id=&#34;release-history:3a969c21e86aabc01d4c4213a8e45604&#34;&gt;Release History&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;0.1.0 Initial release&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;credits&#34;&gt;Credits&lt;/h2&gt;
+&lt;h2 id=&#34;credits:3a969c21e86aabc01d4c4213a8e45604&#34;&gt;Credits&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/enten&#34;&gt;Steven Enten&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+&lt;h2 id=&#34;license:3a969c21e86aabc01d4c4213a8e45604&#34;&gt;License&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/enten/confectioner/blob/master/LICENSE&#34;&gt;MIT&lt;/a&gt;&lt;/p&gt;
 </description>

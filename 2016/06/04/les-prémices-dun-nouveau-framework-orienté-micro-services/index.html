@@ -186,13 +186,13 @@
   <div class="container content">
   
 
-<h2 id="introduction">Introduction</h2>
+<h2 id="introduction:e018ed27352cf2d0ec6862c43c22ff92">Introduction</h2>
 
 <p>Chaque année, les étudiants de nombreux cursus informatiques se préparent à intégrer des deux pieds le monde de l&rsquo;entreprise. Jeune ingénieur en poste depuis quelques mois, je souhaite partager mon expérience d&rsquo;insertion professionnelle.</p>
 
 <p>A travers une série d&rsquo;articles, je tenterai de présenter le contexte de travail qui m&rsquo;a conduit à concevoir et à implémenter un framework pour encadrer et optimiser le développement logiciel.</p>
 
-<h2 id="pourquoi-un-nouveau-framework">Pourquoi un nouveau framework ?</h2>
+<h2 id="pourquoi-un-nouveau-framework:e018ed27352cf2d0ec6862c43c22ff92">Pourquoi un nouveau framework ?</h2>
 
 <p>Je pense que pour chaque besoin il existe une ou plusieurs solutions. Je ne suis pas de ceux qui aiment ré-inventer la roue. Au contraire. Seulement, mon contexte de travail actuel m&rsquo;a amené à penser que parfois il n&rsquo;existe pas de solution qui répond parfaitement à nos besoins.</p>
 
@@ -222,7 +222,7 @@
 
 <p>C&rsquo;est là où se sont présentés différents problèmes. Des problèmes qui m&rsquo;ont poussés à changer de framework. Mais les problèmes étaient toujours là.</p>
 
-<h2 id="un-problème-de-conception">Un problème de conception</h2>
+<h2 id="un-problème-de-conception:e018ed27352cf2d0ec6862c43c22ff92">Un problème de conception</h2>
 
 <p>A ce stade, nous avons déjà 2 composants implémentés : <code>Services A</code> (gestion des utilisateurs) et <code>Service B</code> (gestion de documents).</p>
 
@@ -284,7 +284,7 @@ User                     |                     |-----------------------&gt;|
 
 <p><strong>Et c&rsquo;est là où la majorité des frameworks montrent leurs limites : ils sont orientés serveur et n&rsquo;apportent aucune aide pour s&rsquo;interfacer avec les services écris.</strong> Faire évoluer un service devient alors pénible puisqu&rsquo;il faut faire évoluer ses dépendances.</p>
 
-<h2 id="la-solution-idéale">La solution idéale</h2>
+<h2 id="la-solution-idéale:e018ed27352cf2d0ec6862c43c22ff92">La solution idéale</h2>
 
 <p>Nous avons constaté que les frameworks de micro-services sont orientés serveur : ils permettent d&rsquo;écrire des services mais ne proposent pas de solution rapide pour s&rsquo;interfacer avec ces derniers.</p>
 
@@ -379,7 +379,7 @@ appB.listen(1338);
 
 <p>Une requête adressée à la route <code>GET http://localhost:1338/hello/sayHello</code> est relayée via le client vers la route <code>GET http://localhost:1337/hello/sayHello</code> et la réponse retransmise à l&rsquo;utilisateur à l&rsquo;origine de la requête.</p>
 
-<h2 id="conclusion">Conclusion</h2>
+<h2 id="conclusion:e018ed27352cf2d0ec6862c43c22ff92">Conclusion</h2>
 
 <p>N&rsquo;ayant pas trouvé de framework permettant d&rsquo;écrire et d&rsquo;interfacer simplement des micro-services, je vais tenter de développer une idée de framework de micro-services universels (pouvant être utiliser dans différents modes dynamiquement).</p>
 
