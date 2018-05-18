@@ -1,0 +1,461 @@
+{
+  "basics": {
+    "name": "Steven Enten",
+    "birthDate": "1990-01-01",
+    "nationality": "FR",
+    "label": "Software engineer",
+    "picture": "http://enten.fr/steven.jpg",
+    "email": "steven@enten.fr",
+    "phone": "+33770322755",
+    "website": "http://enten.fr/steven/",
+    "summary": "I'm a software engineer specialized in distributed systems. I'm passionate about the Web from the 56K Dial-Up Internet to the PWA era. I'm keenly interested in Javascript to design Universal Web Application with latest technologies. I enjoy to experiment new ways to develop the Web of tomorrow into micro frontends architectures. Moreover, I like contributing to open source software.",
+    "location": {
+      "address": "28 avenue du Général Leclerc",
+      "postalCode": "94400",
+      "city": "Vitry-sur-Seine",
+      "countryCode": "FR",
+      "region": "Île-de-France"
+    },
+    "profiles": [
+      {
+        "network": "github",
+        "username": "enten",
+        "url": "https://github.com/enten"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "Le Crédit Lyonnais",
+      "position": "Software engineer",
+      "website": "https://www.lcl.fr",
+      "startDate": "2017-10",
+      "summary": "Le Crédit Lyonnais (LCL) is the reference bank in large french cities. LCL distributes its own insurance and banking services and those of the entire group Crédit Agricole. I work in the “Banque par Internet” service which manages digital customer endpoints. I'm in charge of rewrite the new universal web platform which merges most current endpoints into a micro frontend services architecture.",
+      "highlights": [
+        "Lead design and development of an universal Angular 5 web platform PoC",
+        "Working with IBM Israel to enhance security layer with Trusteer"
+      ],
+      "location": {
+        "address": "20 avenue de Paris",
+        "postalCode": "94800",
+        "city": "Villejuif",
+        "countryCode": "FR",
+        "region": "Île-de-France"
+      }
+    },
+    {
+      "company": "B3TSI",
+      "position": "Software engineer",
+      "website": "http://www.b3tsi.com/",
+      "startDate": "2016-02",
+      "endDate": "2017-10",
+      "summary": "B3TSI is a market research consulting company. Surveys are managed in a homemade mainframe system. I design, develop and deploy micro frontend services interfaced with the surveys system. The main purpose is to bring new features which cover internal and external communication needs.",
+      "highlights": [
+        "Create web platforms to collect survey responses from the web",
+        "Redesign and migrate data systems to bring an anonymization layer"
+      ],
+      "location": {
+        "address": "3 rue de la Grange Ory",
+        "postalCode": "94230",
+        "city": "Cachan",
+        "countryCode": "FR",
+        "region": "Île-de-France"
+      }
+    },
+    {
+      "company": "AutoVisual by L'argus",
+      "position": "Software engineer",
+      "website": "https://www.autovisual.com",
+      "startDate": "2015-10",
+      "endDate": "2017-12",
+      "summary": "AutoVisual by L'argus is an auto offers aggregator and price comparator. Several bots daily crawl new offers to score and index them. I manage the split of the procedural proof-of-concept system into reusable functional packages to be deployed in a containers environment. The main purpose is to remove deadlocks due to the initial procedural and monolithic approach.",
+      "highlights": [
+        "Design a distributed crawling system to feed a public offers registry",
+        "Implement a meta-crawling layer to feed an internalized vehicles registry"
+      ],
+      "location": {
+        "address": "13 rue des petits hotels",
+        "postalCode": "75010",
+        "city": "Paris",
+        "countryCode": "FR",
+        "region": "Île-de-France"
+      }
+    },
+    {
+      "company": "Orsys Formation",
+      "position": "Technology trainer",
+      "website": "http://www.orsys.fr",
+      "startDate": "2014-09",
+      "endDate": "2015-09",
+      "summary": "I conduct training sessions to teach technology courses from company trainees.",
+      "highlights": [
+        "Android: develop mobile apps",
+        "Java 8: discover new features by practice",
+        "Javascript: develop web applications full Javascript"
+      ],
+      "location": {
+        "address": "La grande Arche, Paroi Nord, La Défense, 1 Parvis de la defense",
+        "postalCode": "92044",
+        "city": "Paris La Défense",
+        "countryCode": "FR",
+        "region": "Île-de-France"
+      }
+    },
+    {
+      "company": "Leuville Objects",
+      "position": "Research and Development engineer",
+      "website": "https://www.leuville.com",
+      "startDate": "2014-09",
+      "endDate": "2015-09",
+      "summary": "Research and development in software mobility through the thesis subject “Communication in embedded systems with mobile agents”. The main purpose is to write a formal specification which describes a fault tolerant communication in a containers environment.",
+      "highlights": [
+        "Revision of the cloudlet architecture with software containers",
+        "Run software containers on Android 5 ARM64"
+      ],
+      "location": {
+        "address": "3 rue de la Porte de Buc",
+        "postalCode": "78000",
+        "city": "Versailles",
+        "countryCode": "FR",
+        "region": "Île-de-France"
+      }
+    },
+    {
+      "company": "Essilor International",
+      "position": "Data reporting manager",
+      "website": "https://www.essilor.com",
+      "startDate": "2011-09",
+      "endDate": "2014-09",
+      "summary": "Essilor is a leader in corrective lens manufacturing. Tens of thousands lense orders are registered each day. Within the operations department, I manage and develop a reporting system which handled orders of the France area. The reporting system provides indicators to assist decisions taken by services inside the operations department.",
+      "highlights": [
+        "Ensure reporting system integrity and availability",
+        "Develop reporting models to answer operational needs"
+      ],
+      "location": {
+        "address": "64bis avenue Aubert",
+        "postalCode": "94300",
+        "city": "Vincennes",
+        "countryCode": "FR",
+        "region": "Île-de-France"
+      }
+    },
+    {
+      "company": "Lycée Jean Macé",
+      "position": "Teaching assistant",
+      "website": "http://lyceejeanmace-vitry.fr",
+      "startDate": "2009-09",
+      "endDate": "2011-09",
+      "summary": "Provide courses and support to help students with their end-of-year information system projects and exams.",
+      "highlights": [
+        "Teach “Management information systems” course",
+        "Organize end-of-year projects development"
+      ],
+      "location": {
+        "address": "4 Rue Jules Ferry",
+        "postalCode": "94400",
+        "city": "Vitry-sur-Seine",
+        "countryCode": "FR",
+        "region": "Île-de-France"
+      }
+    },
+    {
+      "company": "Spill.net",
+      "position": "Junior web developer",
+      "website": "http://spill.net",
+      "startDate": "2008-06",
+      "endDate": "2009-08",
+      "summary": "Spill.net is a web agency expert in website development of luxurious brands. I support and develop e-commerce websites based on a homemade framework.",
+      "highlights": [
+        "Frontend development in HTML4, CSS2 and Javascript ES3",
+        "Backend development in PHP4 and PERL5"
+      ],
+      "location": {
+        "address": "129 rue de Turenne",
+        "postalCode": "75003",
+        "city": "Paris",
+        "countryCode": "FR",
+        "region": "Île-de-France"
+      }
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Angular",
+      "position": "Contributor",
+      "website": "https://angular.io/",
+      "startDate": "2018-04-13",
+      "endDate": "2018-04-25",
+      "summary": "Contribute to the Angular CLI Version 6 development by spotting and fixing two issues.",
+      "highlights": [
+        "Issue angular/devkit #698 ServerBuilder can't resolve lazy modules",
+        "Issue angular/devkit #700 DevServerBuilder: HMR not work"
+      ],
+      "location": {
+        "postalCode": "94035, 94039-94043",
+        "city": "Mountain View",
+        "countryCode": "US",
+        "region": "Californie"
+      }
+    },
+    {
+      "organization": "enten/angular-universal",
+      "position": "Author",
+      "website": "https://github.com/enten/angular-universal/",
+      "startDate": "2018-04-01",
+      "summary": "An universal Angular 6 starter kit based on the Angular CLI Version 6 featuring Server-Side Rendering and Hot Module Reloading on both browser/server sides. It uses the Universal Development Kit through Schematics to perform build and development tasks.",
+      "highlights": [
+        "Universal build task to compile for browser and server at once",
+        "Angular dev container to bring an extreme live development experience"
+      ],
+      "location": {
+        "postalCode": "94400",
+        "city": "Vitry-sur-Seine",
+        "countryCode": "FR",
+        "region": "Île-de-France"
+      }
+    },
+    {
+      "organization": "enten/udk",
+      "position": "Author",
+      "website": "https://github.com/enten/udk/",
+      "startDate": "2017-09-01",
+      "summary": "Universal Development Kit (udk) is a Webpack extension which improves universal Web application development. The main feature is the strict sequential multi-compilation according to the dependencies between bundles.",
+      "highlights": [
+        "Build mode: avoid bundle compilation if a dependency compilation failed",
+        "Watch mode: recompile bundles in dependency relations order",
+        "Dev container to avoid writing code for development purposes only"
+      ],
+      "location": {
+        "postalCode": "94400",
+        "city": "Vitry-sur-Seine",
+        "countryCode": "FR",
+        "region": "Île-de-France"
+      }
+    },
+    {
+      "organization": "React Universally",
+      "position": "Contributor",
+      "website": "https://github.com/ctrlplusb/react-universally/",
+      "startDate": "2016-10-01",
+      "endDate": "2017-12-31",
+      "summary": "A starter kit for universal React 15 applications. Written in 2016, it's a first attempt to elaborate an universal toolchain for universal React application development. One year later, I write the starter kit enten/reduction which puts universal React best practices together and gives a new way to develop by using the Universal Development Kit.",
+      "highlights": [
+        "Universal React Web Application",
+        "Extreme Hot Module Reloading with React 15 and Webpack 3"
+      ],
+      "location": {
+        "city": "London",
+        "countryCode": "EN",
+        "region": "Greater London"
+      }
+    },
+    {
+      "organization": "enten/alfred.sh",
+      "position": "Author",
+      "website": "https://gist.github.com/enten/63cedaca9bf019feb71a/",
+      "startDate": "2014-12-01",
+      "endDate": "2014-12-31",
+      "summary": "Manage setup of an ArchLinux rootfs which enables LXC usage on Android: it capitalizes operations needed to achieve that on a virtual Android 5 with custom Goldfish 3.10 kernel.",
+      "highlights": [
+        "Run LXC container identified by its own IP address on the network",
+        "Mount cgroups required to support LXC containers"
+      ],
+      "location": {
+        "postalCode": "94400",
+        "city": "Vitry-sur-Seine",
+        "countryCode": "FR",
+        "region": "Île-de-France"
+      }
+    }
+  ],
+  "education": [
+    {
+      "institution": "Université Paris-Est",
+      "area": "Mathématiques et Sciences et Technologies de l'Information et de la Communication",
+      "studyType": "Doctorat",
+      "startDate": "2014",
+      "endDate": "2015",
+      "gpa": "",
+      "courses": [],
+      "location": {
+        "address": "6-8 avenue Blaise-Pascal",
+        "postalCode": "77455",
+        "city": "Marne-la-Vallée",
+        "countryCode": "FR",
+        "region": "Île-de-France"
+      }
+    },
+    {
+      "institution": "Université Paris-Est Créteil",
+      "area": "Ingénierie des systèmes d’information distribués",
+      "studyType": "Master 2",
+      "startDate": "2012",
+      "endDate": "2014",
+      "gpa": "",
+      "courses": [],
+      "location": {
+        "address": "71 Rue Saint-Simon",
+        "postalCode": "94000",
+        "city": "Créteil",
+        "countryCode": "FR",
+        "region": "Île-de-France"
+      }
+    },
+    {
+      "institution": "Université Paris-Est Créteil",
+      "area": "Méthodes informatiques appliquées à la gestion des entreprises",
+      "studyType": "Licence 3",
+      "startDate": "2011",
+      "endDate": "2012",
+      "gpa": "",
+      "courses": [],
+      "location": {
+        "address": "71 Rue Saint-Simon",
+        "postalCode": "94000",
+        "city": "Créteil",
+        "countryCode": "FR",
+        "region": "Île-de-France"
+      }
+    },
+    {
+      "institution": "Université Paris Descartes",
+      "area": "Informatique",
+      "studyType": "Diplôme universitaire de technologie",
+      "startDate": "2009",
+      "endDate": "2011",
+      "gpa": "",
+      "courses": [],
+      "location": {
+        "address": "143 Avenue de Versailles",
+        "postalCode": "75016",
+        "city": "Paris",
+        "countryCode": "FR",
+        "region": "Île-de-France"
+      }
+    },
+    {
+      "institution": "Lycée Jean Macé",
+      "area": "Sciences et technologies de la gestion",
+      "studyType": "Baccalauréat",
+      "startDate": "2007",
+      "endDate": "2009",
+      "gpa": "",
+      "courses": [],
+      "location": {
+        "address": "4 Rue Jules Ferry",
+        "postalCode": "94400",
+        "city": "Vitry-sur-Seine",
+        "countryCode": "FR",
+        "region": "Île-de-France"
+      }
+    },
+    {
+      "institution": "Lycée Camille Claudel",
+      "area": "Comptabilité",
+      "studyType": " Brevet d’étude professionnelle",
+      "startDate": "2005",
+      "endDate": "2007",
+      "gpa": "",
+      "courses": [],
+      "location": {
+        "address": "4 Rue des Carrières",
+        "postalCode": "94400",
+        "city": "Vitry-sur-Seine",
+        "countryCode": "FR",
+        "region": "Île-de-France"
+      }
+    }
+  ],
+  "awards": [
+    {
+      "title": "Special thanks to everyone who participated in Angular CLI 6",
+      "date": "2018-05-04",
+      "awarder": "Angular Team",
+      "summary": "https://github.com/angular/angular-cli/releases/tag/v6.0.0"
+    }
+  ],
+  "publications": [
+    {
+      "name": "Mobile Application Validation through Virtualization",
+      "publisher": "IARIA",
+      "releaseDate": "2015-11-15",
+      "website": "https://www.thinkmind.org/index.php?view=article&articleid=valid_2015_1_20_40059",
+      "summary": "When several business applications use low level libraries which are not installed in the firmware of the device; a solution consists in building of a new firmware with the well-chosen libraries. After customizing a firmware, we focus on adding business software in place to monitor the embedded device. Thru, we use this firmware to virtualize an embedded device. Thus, we collect information to determine whether the firmware can be deployed on devices. The collected data are about memory usages, threads, and resource access and energy consumption. So, this reporting step sums up the validation of our firmware, then they are validated to a deployment step on mobile devices. Reports are delivered about the behaviors of embedded software.",
+      "location": {
+        "postalCode": "08.0XX",
+        "city": "Barcelona",
+        "countryCode": "ES"
+      }
+    },
+    {
+      "name": "LXC et Android 5 ARM64",
+      "publisher": "enten.fr",
+      "releaseDate": "2014-12-30",
+      "website": "http://www.enten.fr/steven/2014/12/30/lxc-et-android-5-arm64/",
+      "summary": "How to run LXC containers on a virtual Android 5 ARM64 with custom Goldfish 3.10 kernel run with QEMU Ranchu. The article summarizes every deadlocks encountered to achieve container execution and how we solved them.",
+      "location": {
+        "postalCode": "94400",
+        "city": "Vitry-sur-Seine",
+        "countryCode": "FR",
+        "region": "Île-de-France"
+      }
+    }
+  ],
+  "skills": [
+    {
+      "name": "Web Development",
+      "level": "Master",
+      "keywords": [
+        "Universal Application",
+        "Web Components",
+        "Angular",
+        "React",
+        "Webpack",
+        "End-to-End testing"
+      ]
+    },
+    {
+      "name": "Software Development",
+      "level": "Advanced",
+      "keywords": [
+        "Node.js",
+        "Java",
+        "Web services",
+        "GraphQL",
+        "ArangoDB",
+        "Test driven development"
+      ]
+    },
+    {
+      "name": "Project managment",
+      "level": "Advanced",
+      "keywords": [
+        "Agile",
+        "UML",
+        "Software design",
+        "Benchmarking",
+        "Documentation",
+        "Continuous integration"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Intermediate"
+    },
+    {
+      "language": "French",
+      "fluency": "Native speaker"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Sport"
+    },
+    {
+      "name": "Read"
+    }
+  ],
+  "references": []
+}
