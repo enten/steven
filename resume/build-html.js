@@ -26,10 +26,11 @@ function getResumeMarkup(ResumeComponent, jsonResume, cssFiles) {
         <head>
           <title>{jsonResume.basics.name} | {jsonResume.basics.label}</title>
           <meta charSet="utf-8" />
+          <meta name="description" content={`Resume of ${jsonResume.basics.name}, a ${jsonResume.basics.label.toLowerCase()} who works for ${jsonResume.work[0].company}`} />
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-          <link rel="icon" href="favicon.ico" />
           <meta name="theme-color" content="#000000" />
+          <link rel="icon" href="favicon.ico" />
           <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
           <script type="application/ld+json" dangerouslySetInnerHTML={{__html: jsonLdResumeLdRaw}} />
           <style dangerouslySetInnerHTML={{__html: css}} />
