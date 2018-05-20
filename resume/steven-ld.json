@@ -131,7 +131,7 @@
       "name": "Software engineer",
       "description": "AutoVisual by L'argus is an auto offers aggregator and price comparator. Several bots daily crawl new offers to score and index them. I manage the split of the procedural proof-of-concept system into reusable functional packages to be deployed in a containers environment. The main purpose is to remove deadlocks due to the initial procedural and monolithic approach.",
       "startDate": "2015-10",
-      "endDate": "2017-12",
+      "endDate": "2015-12",
       "location": {
         "@type": "Place",
         "@id": "autovisual-by-l'argus",
