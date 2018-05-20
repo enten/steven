@@ -20,6 +20,8 @@ function getResumeMarkup(ResumeComponent, jsonResume, cssFiles) {
   const css = getCssRaw(cssFiles);
   const resume = renderComponent(ResumeComponent, jsonResume);
 
+  const CANNONICAL_URL = 'http://www.enten.fr/steven/';
+
   return '<!doctype html>' + renderComponent(
     () => (
       <html lang="en">
@@ -30,6 +32,7 @@ function getResumeMarkup(ResumeComponent, jsonResume, cssFiles) {
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta name="theme-color" content="#000000" />
+          <link rel="canonical" href={CANNONICAL_URL} />
           <link rel="icon" href="favicon.ico" />
           <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
           <script type="application/ld+json" dangerouslySetInnerHTML={{__html: jsonLdResumeLdRaw}} />
