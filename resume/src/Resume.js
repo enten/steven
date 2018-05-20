@@ -20,50 +20,66 @@ export function Resume(props) {
         <section className="resume-work">
           <h2>Work</h2>
           <div>
-            {work.map(ResumeWork)}
+            {work.map((work, index) => (
+              <ResumeWork key={index} {...work} />
+            ))}
           </div>
         </section>
         <section className="resume-volunteer">
           <h2>Volunteer</h2>
           <div>
-            {volunteer.map(ResumeVolunteer)}
+            {volunteer.map((volunteer, index) => (
+              <ResumeVolunteer key={index} {...volunteer} />
+            ))}
           </div>
         </section>
         <aside>
           <section className="resume-education">
             <h2>Education</h2>
             <ul>
-              {education.map(ResumeEducation)}
+              {education.map((education, index) => (
+                <ResumeEducation key={index} {...education} />
+              ))}
             </ul>
           </section>
           <section className="resume-skills">
             <h2>Skills</h2>
             <div>
-              {skills.map(ResumeSkill)}
+              {skills.map((skill, index) => (
+                <ResumeSkill key={index} {...skill} />
+              ))}
             </div>
           </section>
           <section className="resume-languages">
             <h2>Languages</h2>
             <ul>
-              {languages.map(ResumeLanguage)}
+              {languages.map((language, index) => (
+                <ResumeLanguage key={index} {...language} />
+              ))}
             </ul>
           </section>
           <section className="resume-awards">
             <h2>Awards</h2>
             <ul>
-              {awards.map(ResumeAward)}
+              {awards.map((award, index) => (
+                <ResumeAward key={index} {...award} />
+              ))}
             </ul>
           </section>
           <section className="resume-publications">
             <h2>Publications</h2>
             <ul>
-              {publications.map(ResumePublication)}
+              {publications.map((publication, index) => (
+                <ResumePublication key={index} {...publication} />
+              ))}
             </ul>
           </section>
           <section className="resume-interests">
             <h2>Interests</h2>
             <ul>
-              {interests.map(ResumeInterest)}
+              {interests.map((interest, index) => (
+                <ResumeInterest key={index} {...interest} />
+              ))}
             </ul>
           </section>
         </aside>
@@ -203,7 +219,7 @@ export function ResumeSkill(props) {
     <div>
       <h3>{name}</h3>
       <ul>
-        {keywords.map(keyword => (<li>{keyword}</li>))}
+        {keywords.map(keyword => (<li key={keyword}>{keyword}</li>))}
       </ul>
     </div>
   );
@@ -235,7 +251,7 @@ export function ResumeVolunteer(props) {
       </h3>
       <p>{summary}</p>
       <ul>
-        {highlights.map(highlight => (<li>{highlight}</li>))}
+        {highlights.map(highlight => (<li key={highlight}>{highlight}</li>))}
       </ul>
     </div>
   );
@@ -270,7 +286,7 @@ export function ResumeWork(props) {
       </p>
       <p>{summary}</p>
       <ul>
-        {highlights.map(highlight => (<li>{highlight}</li>))}
+        {highlights.map(highlight => (<li key={highlight}>{highlight}</li>))}
       </ul>
     </div>
   );
