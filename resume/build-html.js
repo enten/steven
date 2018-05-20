@@ -27,6 +27,7 @@ function getResumeMarkup(ResumeComponent, jsonResume, cssFiles) {
           <title>{jsonResume.basics.name} | {jsonResume.basics.label}</title>
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+          <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <link rel="icon" href="favicon.ico" />
           <meta name="theme-color" content="#000000" />
           <script type="application/ld+json" dangerouslySetInnerHTML={{__html: jsonLdResumeLdRaw}} />
