@@ -31,21 +31,21 @@
   },
   "worksFor": {
     "@type": "Organization",
-    "@id": "work/le-credit-lyonnais",
-    "name": "Le Crédit Lyonnais",
-    "url": "https://www.lcl.fr",
-    "description": "Le Crédit Lyonnais (LCL) is the reference bank in large french cities. LCL distributes its own insurance and banking services and those of the entire group Crédit Agricole. I work in the “Banque par Internet” service which manages digital customer endpoints. I'm in charge of rewrite the new universal web platform which merges most current endpoints into a micro frontend services architecture.",
+    "@id": "work/b3tsi",
+    "name": "B3TSI",
+    "url": "http://www.b3tsi.com/",
+    "description": "B3TSI is a market research consulting company. Surveys are managed in a homemade mainframe system. I design, develop and deploy micro frontend services interfaced with the surveys system. The main purpose is to bring new features which cover internal and external communication needs.",
     "location": {
       "@type": "Place",
-      "@id": "le-credit-lyonnais",
-      "name": "Le Crédit Lyonnais",
+      "@id": "b3tsi",
+      "name": "B3TSI",
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "FR",
-        "addressLocality": "Villejuif",
+        "addressLocality": "Cachan",
         "addressRegion": "Île-de-France",
-        "postalCode": "94800",
-        "streetAddress": "20 avenue de Paris"
+        "postalCode": "94230",
+        "streetAddress": "3 rue de la Grange Ory"
       }
     }
   },
@@ -90,41 +90,6 @@
     }
   ],
   "performerIn": [
-    {
-      "@type": "BusinessEvent",
-      "@id": "work/b3tsi",
-      "name": "Software engineer",
-      "description": "B3TSI is a market research consulting company. Surveys are managed in a homemade mainframe system. I design, develop and deploy micro frontend services interfaced with the surveys system. The main purpose is to bring new features which cover internal and external communication needs.",
-      "startDate": "2016-02",
-      "endDate": "2017-10",
-      "location": {
-        "@type": "Place",
-        "@id": "b3tsi",
-        "name": "B3TSI",
-        "url": "http://www.b3tsi.com/",
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "FR",
-          "addressLocality": "Cachan",
-          "addressRegion": "Île-de-France",
-          "postalCode": "94230",
-          "streetAddress": "3 rue de la Grange Ory"
-        }
-      },
-      "workFeatured": [
-        {
-          "@type": "CreativeWork",
-          "name": "Create web platforms to collect survey responses from the web"
-        },
-        {
-          "@type": "CreativeWork",
-          "name": "Redesign and migrate data systems to bring an anonymization layer"
-        }
-      ],
-      "performer": {
-        "id": "steven-enten"
-      }
-    },
     {
       "@type": "BusinessEvent",
       "@id": "work/autovisual-by-l'argus",
