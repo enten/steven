@@ -24,11 +24,11 @@ function getResumeMarkup(ResumeComponent, jsonResume, cssFiles) {
     () => (
       <html lang="en">
         <head>
+          <title>{jsonResume.basics.name} | {jsonResume.basics.label}</title>
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
           <link rel="icon" href="favicon.ico" />
           <meta name="theme-color" content="#000000" />
-          <title>Steven Enten | Software engineer</title>
           <script type="application/ld+json" dangerouslySetInnerHTML={{__html: jsonLdResumeLdRaw}} />
           <style dangerouslySetInnerHTML={{__html: css}} />
         </head>
