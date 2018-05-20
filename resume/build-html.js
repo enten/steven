@@ -7,7 +7,7 @@ import { writeFileSync } from 'fs';
 import { getJsonLdFromResume } from './src/resume.lib';
 
 import { Resume } from './src/Resume';
-import CV from './src/resume.json';
+import CV from './resume.json';
 
 function getCssRaw(files) {
   return uglifycss.processFiles([].concat(files));

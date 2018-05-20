@@ -1,6 +1,6 @@
 import { getJsonLdFromResume } from './src/resume.lib';
 
-import CV from './src/resume.json';
+import CV from './resume.json';
 import { writeFileSync } from 'fs';
 
 const jsonLdResume = getJsonLdFromResume(CV);

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Resume } from './Resume';
-import CV from './resume.json';
+import CV from '../resume.json';
 
 import './App.css';
 
