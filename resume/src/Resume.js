@@ -103,7 +103,7 @@ export function ResumeBasics(props) {
   } = props;
 
   return (
-    <header>
+    <header className="resume-basics">
       <h1>{name}</h1>
       <div className="resume-basics-picture">
         <img src={picture} alt={'Photo of ' + name} />
