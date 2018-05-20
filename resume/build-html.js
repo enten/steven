@@ -30,6 +30,7 @@ function getResumeMarkup(ResumeComponent, jsonResume, cssFiles) {
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <link rel="icon" href="favicon.ico" />
           <meta name="theme-color" content="#000000" />
+          <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
           <script type="application/ld+json" dangerouslySetInnerHTML={{__html: jsonLdResumeLdRaw}} />
           <style dangerouslySetInnerHTML={{__html: css}} />
         </head>
