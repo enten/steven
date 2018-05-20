@@ -47,7 +47,6 @@ function getResumeMarkup(ResumeComponent, jsonResume, cssFiles) {
           <meta property="og:article:modified_time" content={(new Date()).toISOString()} />
           <meta property="og:description" content={metaDescription} />
           <script type="application/ld+json" dangerouslySetInnerHTML={{__html: jsonLdResumeLdRaw}} />
-          <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
           <style dangerouslySetInnerHTML={{__html: css}} />
         </head>
         <body dangerouslySetInnerHTML={{__html: resume}} />
