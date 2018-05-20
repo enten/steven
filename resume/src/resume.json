@@ -67,7 +67,7 @@
       "position": "Software engineer",
       "website": "https://www.autovisual.com",
       "startDate": "2015-10",
-      "endDate": "2017-12",
+      "endDate": "2015-12",
       "summary": "AutoVisual by L'argus is an auto offers aggregator and price comparator. Several bots daily crawl new offers to score and index them. I manage the split of the procedural proof-of-concept system into reusable functional packages to be deployed in a containers environment. The main purpose is to remove deadlocks due to the initial procedural and monolithic approach.",
       "highlights": [
         "Design a distributed crawling system to feed a public offers registry",
